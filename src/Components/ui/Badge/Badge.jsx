@@ -4,6 +4,7 @@ const Badge = ({
   color = "#23805e",
   bgColor = "#ecfdf5",
   text = "Custom Badge",
+  styles = null,
 }) => {
   return (
     <div
@@ -12,6 +13,7 @@ const Badge = ({
         color: color,
         backgroundColor: bgColor,
         border: `1px solid ${color}`,
+        ...styles,
       }}
     >
       {text}
