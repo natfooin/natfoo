@@ -3,10 +3,14 @@ import Input from "./Components/ui/Input/Input";
 import { SiTarget } from "react-icons/si";
 import "./App.css";
 import Badge from "./Components/ui/Badge/Badge";
+import Heading from "./Components/ui/Heading/Heading";
 const App = () => {
   return (
     <>
-      <Badge text="Offer" bgColor="#ecfdf5" color="#15805b"/>
+      <Heading
+        title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore id dignissimos deserunt explicabo in est voluptatem, expedita "
+      />
     </>
   );
 };
