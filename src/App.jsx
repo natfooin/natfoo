@@ -1,7 +1,11 @@
 import React from "react";
-
+import Input from "./Components/ui/Input/Input";
+import { SiTarget } from "react-icons/si";
+import './App.css'
 const App = () => {
-  return <h1 class="text-3xl font-bold bg-black text-white">Hello from App</h1>;
+  return (<>
+  <Input icon={<SiTarget color="gray"/>} placeholder="What a surpise"/>
+  </>)
 };
 
 export default App;
