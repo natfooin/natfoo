@@ -1,0 +1,28 @@
+.button-n-one {
+
+  padding: 1.2% 2.7%;
+  width: 15%;
+  border: none;
+  border-radius: 8px;
+  color: var(--site-white);
+  font-size: clamp(12px, 1rem, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    #d9212a,
+    #ee454e,
+    #d9212a
+  );
+
+  background-size: 200% 100%;
+  
+  background-position: left;
+
+  transition: background-position 0.5s ease-in-out;
+}
+
+.button-n-one:hover {
+  background-position: right;
+}
