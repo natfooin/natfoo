@@ -1,0 +1,65 @@
+.heading-container {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.sub-title {
+  font-size: 2rem;
+}
+
+/* Desktop */
+@media (max-width: 1280px) {
+  .title {
+    font-size: 3rem;
+  }
+  .sub-title {
+    font-size: 2rem;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 1rem;
+  }
+}
+
+/* Large mobiles */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 1rem;
+  }
+}
