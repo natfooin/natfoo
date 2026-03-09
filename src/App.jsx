@@ -1,7 +1,14 @@
 import React from "react";
-
+import Button from "./Components/ui/Button/Button";
+import Header from './Components/ui/Heading/Heading';
+import './index.css'
 const App = () => {
-  return <h1 class="text-3xl font-bold bg-black text-white">Hello from App</h1>;
+  return (
+    <>
+      {/* <Button buttonName="Click me" cn='button-n-one' /> */}
+      
+    </>
+  );
 };
 
 export default App;

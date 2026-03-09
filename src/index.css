@@ -1,0 +1,9 @@
+:root{
+    --site-red: #d9212a;
+    --site-green: #a6b538;
+    --site-white: #ffffff;
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
