@@ -16,6 +16,7 @@ const Badge = ({
         ...styles,
       }}
     >
+      {icon}
       {text}
     </div>
   );
