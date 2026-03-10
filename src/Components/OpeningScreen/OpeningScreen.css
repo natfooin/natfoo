@@ -1,0 +1,47 @@
+.opening-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: screenFade 1.5s ease forwards;
+}
+
+@keyframes screenFade {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Logo animation */
+
+.opening-logo {
+  width: 140px;
+  animation: logoIntro 1.25s ease forwards;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.25));
+}
+
+@keyframes logoIntro {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
