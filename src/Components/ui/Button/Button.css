@@ -1,28 +1,39 @@
 .button-n-one {
-
-  padding: 1.2% 2.7%;
-  width: 15%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 8px;
-  color: var(--site-white);
-  font-size: clamp(12px, 1rem, 1rem);
-  font-weight: 600;
   cursor: pointer;
-
-  background: linear-gradient(
-    90deg,
-    #d9212a,
-    #ee454e,
-    #d9212a
-  );
-
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  padding: 0.8em 1.6em;
+  width: auto;
+  min-width: 120px;
+  max-width: 100%;
+  white-space: nowrap;
+  color: #fff;
+  background: linear-gradient(90deg, #d9212a, #ae4540, #d9212a);
   background-size: 200% 100%;
-  
   background-position: left;
-
-  transition: background-position 0.5s ease-in-out;
+  box-shadow: 0 4px 15px rgba(217, 33, 42, 0.2);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .button-n-one:hover {
   background-position: right;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 33, 42, 0.4);
+}
+
+.button-n-one:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .button-n-one {
+    width: 100%;
+    padding: 1em;
+    display: none;
+  }
 }
