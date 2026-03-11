@@ -6,8 +6,7 @@ import Badge from "../Components/ui/Badge/Badge";
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
 
-console.log(productsData);
-const SingleProduct = ({setCartQuantity}) => {
+const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [productData, setProductData] = useState({});
@@ -16,7 +15,6 @@ const SingleProduct = ({setCartQuantity}) => {
       productsData.find((product, index) => product.id === parseInt(id)),
     );
   }, [id]);
-  console.log(productData?.price + productData?.price * 0.1);
   const subQuantity = () => {
     if (quantity < 2) {
       return;
@@ -26,6 +24,16 @@ const SingleProduct = ({setCartQuantity}) => {
   const addQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
+
+  const handleAddToCart = () => {
+    console.log(quantity + " PRODUCTS ADDED TO CART");
+    setCartQuantity((prevQuantity) => prevQuantity + quantity);
+    setCartProducts((prevProducts) => [
+      ...prevProducts,
+      { ...productData, quantity },
+    ]);
+  };
+
   return (
     <div className="single-product-page-container">
       <div className="product-wrapper">
@@ -62,7 +70,9 @@ const SingleProduct = ({setCartQuantity}) => {
                 +
               </button>
             </div>
-            <button className="add-to-cart-btn">Add to Cart</button>
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

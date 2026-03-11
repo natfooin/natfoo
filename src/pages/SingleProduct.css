@@ -27,7 +27,7 @@
   max-width: 850px; /* reduced from 1100px */
   display: flex;
   gap: 35px;
-  background: var(--cream-bg);
+  background-color: var(--cream-bg);
   border-radius: 16px;
   padding: 30px; /* reduced padding */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
@@ -73,7 +73,7 @@
 .product-desc {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--dark-olive-text);
+  color: var(--dark-olive-text) !important;
 }
 
 /* TRUST MESSAGE */
