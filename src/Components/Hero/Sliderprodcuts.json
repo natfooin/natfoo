@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "image" :"/src/assets/product-images/Ajwain-Mellow.jpg",
+        "name" : "Ajwain Mellow",
+        "desc" : "Product desc",
+        "category" : "Cookies",
+        "price" : "price"
+    },
+    {
+        "id": 2,
+        "image" :"/src/assets/product-images/Barnyard-Millet-Noodles.png",
+        "name" : "Barnyard Millet Noodles",
+        "desc" : "Product desc",
+        "category" : "Noodles",
+        "price" : "price"
+    },
+    {
+        "id": 3,
+        "image" :"/src/assets/product-images/Millet-Mango.jpg",
+        "name" : "Millet Mango",
+        "desc" : "Product desc",
+        "category" : "Cookies",
+        "price" : "price"
+    },
+    {
+        "id": 4,
+        "image" :"/src/assets/product-images/Spicy-Dhamaka.jpg",
+        "name" : "Spicy Dhamaka",
+        "desc" : "Product desc",
+        "category" : "Noodles",
+        "price" : "price"
+    },
+    {
+        "id": 5,
+        "image" :"/src/assets/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-05.jpg",
+        "name" : "Tuty Fruity Cookies Pouch",
+        "desc" : "Product desc",
+        "category" : "Cookies",
+        "price" : "price"
+    },
+    {
+        "id": 5,
+        "image" :"/src/assets/product-images/Kodo-Millet-Noodles.png",
+        "name" : "Kodo Millet Noodles",
+        "desc" : "Product desc",
+        "category" : "Noodles",
+        "price" : "price"
+    }
+]
