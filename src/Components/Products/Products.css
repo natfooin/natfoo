@@ -1,26 +1,28 @@
+/* Layout Wrapper */
 .page-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: var(--cream-bg);
-  padding: 1rem;
 }
 
 .vertical-card {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 16rem; 
+
+  width: 25vw;
+  min-width: 16.25rem;
+  max-width: 25rem;
+  min-height: 35rem;
+
   background: var(--dark-green);
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 }
 
+/* Image Container - Set to Portrait Ratio */
 .image-container {
   position: relative;
-  height: 14rem; 
+  width: 100%;
+  aspect-ratio: 3 / 4; /* This makes the image taller than it is wide */
   overflow: hidden;
 }
 
@@ -33,44 +35,48 @@
 
 .badge {
   position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
+  top: 1rem;
+  left: 1rem;
   background: var(--gold);
   color: var(--dark-green);
-  padding: 0.2rem 0.6rem;
-  border-radius: 1rem;
-  font-size: 0.6rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.65rem;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .content-container {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  flex-grow: 1; 
 }
 
 .category-tag {
   color: var(--gold);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  margin-bottom: 0.3rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .product-title {
   color: var(--site-white);
-  font-size: 1.2rem; 
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .product-desc {
   color: var(--cream-bg);
-  font-size: 0.8rem; 
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  opacity: 0.9;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
 }
 
 .footer-row {
@@ -78,32 +84,55 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding-top: 0.8rem;
-  border-top: 0.05rem solid rgba(245, 234, 215, 0.1);
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(245, 234, 215, 0.15);
 }
 
 .price-block {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   color: var(--gold);
 }
 
-.currency { font-size: 0.7rem; margin-top: 0.1rem; font-weight: 600; }
-.amount { font-size: 1.3rem; font-weight: 800; }
+.currency {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 2px;
+}
+.amount {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
 
 .add-btn {
   background: var(--button-red);
   color: var(--site-white);
   border: none;
-  padding: 0.5rem 1rem; 
-  border-radius: 0.4rem;
-  font-size: 0.85rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
-@media (max-width: 20rem) {
+.add-btn:hover {
+  background: #e63946; /* Slightly brighter red */
+  transform: scale(1.05);
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
   .vertical-card {
-    max-width: 100%;
+    width: 5vw; 
+    max-width: 30rem; 
   }
+}
+@media (max-width: 768px) {
+  .vertical-card {
+    width: 85vw;
+    min-height: auto;
+  }
+ 
 }

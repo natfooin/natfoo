@@ -6,12 +6,8 @@ import logo from "../../assets/logo.png";
 import Button from './../ui/Button/Button'
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({cartQuantity}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => {
-    setCount(prevCount => prevCount + 1);
-  };
   return (
     <nav className="navBar">
       <div className="logo">
@@ -30,9 +26,9 @@ function NavBar() {
           <ImSearch size={18} />
         </div>
         
-        <div className="cart" onClick={handleIncrement}>
+        <div className="cart">
           <PiShoppingCartBold size={22} />
-          <span className="cart-count" >{count}</span>  
+          <span className="cart-count" >{cartQuantity}</span>  
         </div>
 
         <Button cn={"button-n-one"} buttonName="shop now"  /> 

@@ -1,0 +1,29 @@
+.product-container {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-card {
+  flex: 0 0 calc(50% - 1.25rem);
+  max-width: calc(50% - 1.25rem);
+  box-sizing: border-box;
+}
+
+@media (min-width: 48rem) {
+  .product-container {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-card {
+    flex: 0 0 calc(50% - 1.25rem);
+    max-width: calc(50% - 1.25rem);
+    box-sizing: border-box;
+  }
+  .product-card {
+    flex: 0 0 15.625rem; 
+    max-width: 15.625rem;
+  }
+}
