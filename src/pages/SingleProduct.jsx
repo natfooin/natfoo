@@ -14,6 +14,7 @@ const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
     setProductData(
       productsData.find((product, index) => product.id === parseInt(id)),
     );
+    setQuantity(1)
   }, [id]);
   const subQuantity = () => {
     if (quantity < 2) {
@@ -32,6 +33,7 @@ const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
       ...prevProducts,
       { ...productData, quantity },
     ]);
+    setQuantity(1)
   };
 
   return (

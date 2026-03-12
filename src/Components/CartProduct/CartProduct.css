@@ -1,0 +1,114 @@
+.cart-product-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.cart-product-details {
+  display: flex;
+  flex: 4;
+  gap: 5px;
+}
+.cart-product-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  flex: 1;
+  padding: 1rem;
+}
+.cart-product-image {
+  width: 100%;
+  flex: 1;
+}
+.cart-product-image img {
+  width: 100%;
+  border-radius: 1rem;
+  display: inline-block;
+}
+.cart-product-mini-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex: 2;
+  padding: 1rem;
+}
+.cart-product-mini-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart-product-mini-content h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.cart-product-mini-content p {
+  color: var(--dark-olive);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.cart-product-mini-content .removeItem {
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.quantity-btn{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 2px;
+    color: black;
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+    margin: 5px;
+    &:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+  .cart-product-mini-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .cart-product-mini-content p {
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media (max-width: 435px) {
+    .cart-product-container {
+        padding: 5px;
+    }
+    .cart-product-mini-content p {
+      font-size: 0.7rem;
+    }
+    .cart-product-pricing h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 393px) {
+    .cart-product-container {
+        padding: 5px;
+    }
+    .cart-product-mini-content p {
+      font-size: 0.7rem;
+    }
+    .cart-product-pricing h2 {
+    font-size: 2rem;    
+  }
+}
