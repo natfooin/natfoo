@@ -21,7 +21,7 @@ const Products = ({ image, name, price }) => {
                 text={"Buy now"}
                 minWidth={70}
                 height={30}
-              />
+              />  
             </div>
           </div>
         </div>

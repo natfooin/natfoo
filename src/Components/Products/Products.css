@@ -18,11 +18,10 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 }
 
-/* Image Container - Set to Portrait Ratio */
 .image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4; /* This makes the image taller than it is wide */
+  aspect-ratio: 3 / 4; 
   overflow: hidden;
 }
 
@@ -119,14 +118,14 @@
 }
 
 .add-btn:hover {
-  background: #e63946; /* Slightly brighter red */
+  background: #e63946; 
   transform: scale(1.05);
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (max-width:2500px) {
   .vertical-card {
-    width: 5vw; 
-    max-width: 30rem; 
+    white-space: ;
+    min-width: 30rem; 
   }
 }
 @media (max-width: 768px) {

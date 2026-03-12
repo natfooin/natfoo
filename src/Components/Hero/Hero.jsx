@@ -64,7 +64,12 @@ function Hero() {
                   {product.name}
                 </h3>
                 <Link to={`/product/${product.id}`}>
-                  <button className={"buy-btn"}>Buy Now</button>
+                  <Button
+                cn={"button-n-one"}
+                text={"Buy now"}
+                minWidth={70}
+                height={30}
+              />
                 </Link>
               </div>
             </div>
