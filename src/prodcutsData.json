@@ -40,8 +40,8 @@
         "price" : 535
     },
     {
-        "id": 5,
-        "image" :"/src/assets/product-images/Kodo-Millet-Noodles.png",
+        "id": 6,
+        "image" :"",
         "name" : "Kodo Millet Noodles",
         "desc" : "Product desc",
         "category" : "Noodles",

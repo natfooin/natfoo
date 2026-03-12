@@ -1,10 +1,33 @@
-import React from "react";
-import './Button.css'
-const Button = ({ buttonName,cn }) => {
+import "./Button.css";
+
+const Button = ({
+  text = "Button",
+  icon = null,
+  color = "#ffffff",
+  bgColor = "#d94a3a",
+  borderColor = "#d94a3a",
+  minWidth = "auto",
+  height = "auto",
+  className = "",
+  styles = {},
+  onClick = () => {},
+}) => {
   return (
-    <>
-      <button className={cn}>{buttonName}</button>
-    </>
+    <button
+      className={`button-container ${className}`}
+      onClick={onClick}
+      style={{
+        color: color,
+        backgroundColor: bgColor,
+        border: `1px solid ${borderColor}`, 
+        minWidth: minWidth,
+        height: height,
+        ...styles,
+      }}
+    >
+      {icon}
+      {text}
+    </button>
   );
 };
 
