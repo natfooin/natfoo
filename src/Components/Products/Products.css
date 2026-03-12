@@ -1,17 +1,28 @@
-/* Layout Wrapper */
 .page-wrapper {
   display: flex;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-card {
+  flex: 0 0 auto;
 }
 
 .vertical-card {
   display: flex;
   flex-direction: column;
-
   width: 25vw;
   min-width: 16.25rem;
   max-width: 25rem;
   min-height: 35rem;
-
   background: var(--dark-green);
   border-radius: 1rem;
   overflow: hidden;
@@ -21,7 +32,7 @@
 .image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   overflow: hidden;
 }
 
@@ -50,7 +61,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .category-tag {
@@ -68,6 +79,9 @@
   margin-bottom: 0.8rem;
   font-weight: 700;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-desc {
@@ -98,6 +112,7 @@
   font-weight: 600;
   margin-right: 2px;
 }
+
 .amount {
   font-size: 1.8rem;
   font-weight: 800;
@@ -112,26 +127,54 @@
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .add-btn:hover {
-  background: #e63946; 
+  background: #e63946;
   transform: scale(1.05);
 }
 
-@media (max-width:2500px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .vertical-card {
-    white-space: ;
-    min-width: 30rem; 
+    width: 30vw;
+    max-width: 28rem;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
+  .product-card {
+    flex: 0 0 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+
   .vertical-card {
-    width: 85vw;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     min-height: auto;
   }
- 
+
+  .product-title {
+    font-size: 1.1rem;
+  }
+
+  .amount {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-container {
+    gap: 0.5rem;
+  }
+  
+  .product-card {
+    flex: 0 0 calc(50% - 0.25rem);
+    max-width: calc(50% - 0.25rem);
+  }
+
+  .content-container {
+    padding: 1rem;
+  }
 }
