@@ -62,7 +62,7 @@ const CartProduct = ({
       </div>
       <div className="cart-product-pricing">
         <h2>
-          <FaRupeeSign size={20} />
+          <FaRupeeSign size={window.innerWidth > 1280 ? 20 : 10} />
           {product?.price}
         </h2>
         <div className="cart-quantity-setter">

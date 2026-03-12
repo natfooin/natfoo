@@ -5,7 +5,7 @@ import Badge from "../Components/ui/Badge/Badge";
 
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
-
+import {FaRupeeSign} from "react-icons/fa"
 const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
@@ -56,7 +56,7 @@ const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
             </p>
           </div>
           <span>
-            <h3 className="price">{productData?.price}</h3>
+            <h3 className="price"><FaRupeeSign size={22}/>{productData?.price}</h3>
             <h3 className="old-price">
               {productData?.price + productData?.price * 0.1}
             </h3>

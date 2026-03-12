@@ -3,32 +3,43 @@ import Button from "./Components/ui/Button/Button";
 import Heading from "./Components/ui/Heading/Heading";
 import Badge from "./Components/ui/Badge/Badge";
 import NavBar from "./Components/NavBar/NavBar";
-import "./index.css";
 import Hero from "./Components/Hero/Hero";
+import "./App.css";
 import OpeningScreen from "./Components/OpeningScreen/OpeningScreen";
 import { Router, Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct";
 import Products from "./Components/Products/Products";
 import { FaSearch } from "react-icons/fa";
+import Cart from "./pages/Cart";
+import CartProduct from "./Components/CartProduct/CartProduct";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
-  const [cartProdcuts, setCartProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState([]);
   return (
     <>
-      <OpeningScreen />
-      {console.log(cartProdcuts)}
-      {/* <Hero /> */}
-      <Routes>
-        <Route
-          path="/product/:id"
-          element={
-            <SingleProduct
-              setCartQuantity={setCartQuantity}
-              setCartProducts={setCartProducts}
-            />
-          }
+      <NavBar />
+      <div className="app-container">
+        {/* <OpeningScreen /> */}
+        <Hero />
+        <Routes>
+          <Route
+            path="/product/:id"
+            element={
+              <SingleProduct
+                setCartQuantity={setCartQuantity}
+                setCartProducts={setCartProducts}
+              />
+            }
+          />
+        </Routes>
+        <Cart
+          cartProducts={cartProducts}
+          setCartProducts={setCartProducts}
+          cartQuantity={cartQuantity}
+          setCartQuantity={setCartQuantity}
         />
-      </Routes>
+        {console.log(cartQuantity)}
+      </div>
     </>
   );
 };

@@ -17,3 +17,7 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
+.app-container{
+  padding: 0 8rem;
+}
