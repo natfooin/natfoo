@@ -1,10 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import CartProduct from "../Components/CartProduct/CartProduct";
 import Heading from "../Components/ui/Heading/Heading";
 import { BiCartAlt } from "react-icons/bi";
-import {FaRupeeSign} from "react-icons/fa";
-const Cart = ({ cartProducts, setCartProducts, setCartQuantity }) => {
+import { FaRupeeSign } from "react-icons/fa";
+const Cart = ({
+  setCartPrice,
+  cartPrice,
+  cartProducts,
+  setCartProducts,
+  setCartQuantity,
+}) => {
   return (
     <>
       <Heading title="Cart" subTitle="Your cart products" />
@@ -15,6 +21,7 @@ const Cart = ({ cartProducts, setCartProducts, setCartQuantity }) => {
               return (
                 <>
                   <CartProduct
+                    setCartPrice={setCartPrice}
                     product={product}
                     setCartProducts={setCartProducts}
                     setCartQuantity={setCartQuantity}
@@ -30,18 +37,27 @@ const Cart = ({ cartProducts, setCartProducts, setCartQuantity }) => {
               <table>
                 <tr>
                   <td>Subtotal</td>
-                  <td className="amount-column"><FaRupeeSign size={12}/>21412</td>
+                  <td className="amount-column">
+                    <FaRupeeSign size={12} />
+                    {cartPrice + cartPrice * 0.1}
+                  </td>
                 </tr>
                 <tr>
                   <td>Discount</td>
-                  <td className="amount-column"><FaRupeeSign size={12} />823</td>
+                  <td className="amount-column">
+                    <FaRupeeSign size={12} />
+                    {cartPrice * 0.1}
+                  </td>
                 </tr>
                 <tr>
                   <td className="grand-total">
                     <b>Total</b>
                   </td>
                   <td className="amount-column grand-total">
-                    <b><FaRupeeSign size={window.innerWidth >= 1280 ? 18 : 12} />12342</b>
+                    <b>
+                      <FaRupeeSign size={window.innerWidth >= 1280 ? 18 : 12} />
+                      {cartPrice}
+                    </b>
                   </td>
                 </tr>
               </table>

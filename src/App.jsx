@@ -17,18 +17,20 @@ import Footer from "./Components/Footer/Footer"
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
+  const [cartPrice, setCartPrice] = useState(0);
   return (
     <>
       <NavBar cartQuantity={0} />
         <Hero />
       <div className="app-container">
         {/* <OpeningScreen /> */}
-        <AllProducts/>
+        <AllProducts />
         <Routes>
           <Route
             path="/product/:id"
             element={
               <SingleProduct
+                setCartPrice={setCartPrice}
                 setCartQuantity={setCartQuantity}
                 setCartProducts={setCartProducts}
               />
@@ -36,6 +38,8 @@ const App = () => {
           />
         </Routes>
         <Cart
+          setCartPrice={setCartPrice}
+          cartPrice={cartPrice}
           cartProducts={cartProducts}
           setCartProducts={setCartProducts}
           cartQuantity={cartQuantity}

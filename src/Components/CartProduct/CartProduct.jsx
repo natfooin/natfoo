@@ -6,17 +6,10 @@ import { FaRupeeSign } from "react-icons/fa";
 import { PiPlus } from "react-icons/pi";
 import { GrSubtract } from "react-icons/gr";
 const CartProduct = ({
-  product = {
-    category: "Cookies",
-    desc: "awidbawiudbawi dbawiud bawiud biubiuwuid waiu wu ice cahef saeiuc iuab iae bhab ckiha vyiasd viads bviasdb ihads bbads asdbuchis duba eoiuabui fiaeuyb haeb iuae bfiaeh faesf yiabseuiy bsaefbseai efaibeih fbahe",
-    id: 1,
-    image: "/src/assets/product-images/Ajwain-Mellow.jpg",
-    name: "Ajwain Mellow",
-    price: 1230,
-    quantity: 1,
-  },
+  product,
   setCartProducts,
   setCartQuantity,
+  setCartPrice,
 }) => {
   console.log(product);
   const [productQuantity, setProductQuantity] = useState(0);
@@ -24,21 +17,24 @@ const CartProduct = ({
     setProductQuantity(product.quantity);
   }, [product]);
 
-  const subCartProductQuantity = () => {
+  const subCartProductQuantity = (amount) => {
     if (productQuantity > 1) {
       setCartQuantity((prev) => prev - 1);
       setProductQuantity((prev) => prev - 1);
+      setCartPrice((prevPrice) => prevPrice - amount);
     }
   };
-  const addCartProductQuantity = () => {
+  const addCartProductQuantity = (amount) => {
     setCartQuantity((prev) => prev + 1);
     setProductQuantity((prev) => prev + 1);
+    setCartPrice((prevPrice) => prevPrice + amount);
   };
-  const removeFromCart = (IDToRemove) => {
+  const removeFromCart = (IDToRemove, amount) => {
     setCartProducts((prevProducts) =>
       prevProducts.filter((product) => product.id != IDToRemove),
     );
     setCartQuantity((prev) => prev - productQuantity);
+    setCartPrice((prevPrice) => prevPrice - amount);
   };
   return (
     <div className="cart-product-container">
@@ -54,7 +50,7 @@ const CartProduct = ({
           </div>
           <button
             className="removeItem"
-            onClick={() => removeFromCart(product?.id)}
+            onClick={() => removeFromCart(product?.id, product?.price)}
           >
             <BiTrash color="gray" />
           </button>
@@ -68,14 +64,14 @@ const CartProduct = ({
         <div className="cart-quantity-setter">
           <button
             className="btn-less quantity-btn"
-            onClick={subCartProductQuantity}
+            onClick={(amount) => subCartProductQuantity(product?.price)}
           >
             <GrSubtract />
           </button>
           <span>{productQuantity}</span>
           <button
             className="btn-add quantity-btn"
-            onClick={addCartProductQuantity}
+            onClick={(amount) => addCartProductQuantity(product?.price)}
           >
             <PiPlus />
           </button>

@@ -6,7 +6,7 @@ import Badge from "../Components/ui/Badge/Badge";
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
 import {FaRupeeSign} from "react-icons/fa"
-const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
+const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [productData, setProductData] = useState({});
@@ -26,14 +26,16 @@ const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (amount) => {
     console.log(quantity + " PRODUCTS ADDED TO CART");
+    console.log("Amount:" + amount)
     setCartQuantity((prevQuantity) => prevQuantity + quantity);
     setCartProducts((prevProducts) => [
       ...prevProducts,
       { ...productData, quantity },
     ]);
-    setQuantity(1)
+    setQuantity(1);
+    setCartPrice(prevPrice => prevPrice + (amount * quantity))
   };
 
   return (
@@ -72,7 +74,7 @@ const SingleProduct = ({ setCartQuantity, setCartProducts }) => {
                 +
               </button>
             </div>
-            <button className="add-to-cart-btn" onClick={handleAddToCart}>
+            <button className="add-to-cart-btn" onClick={(amount) => handleAddToCart(productData?.price)}>
               Add to Cart
             </button>
           </div>
