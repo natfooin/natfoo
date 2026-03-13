@@ -18,24 +18,41 @@ const CartProduct = ({
   }, [product]);
 
   const subCartProductQuantity = (amount) => {
-    if (productQuantity > 1) {
-      setCartQuantity((prev) => prev - 1);
-      setProductQuantity((prev) => prev - 1);
-      setCartPrice((prevPrice) => prevPrice - amount);
-    }
-  };
-  const addCartProductQuantity = (amount) => {
-    setCartQuantity((prev) => prev + 1);
-    setProductQuantity((prev) => prev + 1);
-    setCartPrice((prevPrice) => prevPrice + amount);
-  };
-  const removeFromCart = (IDToRemove, amount) => {
-    setCartProducts((prevProducts) =>
-      prevProducts.filter((product) => product.id != IDToRemove),
-    );
-    setCartQuantity((prev) => prev - productQuantity);
+  if (productQuantity > 1) {
+    setCartQuantity((prev) => prev - 1);
+    setProductQuantity((prev) => prev - 1);
     setCartPrice((prevPrice) => prevPrice - amount);
-  };
+
+    setCartProducts((prevProducts) =>
+      prevProducts.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  }
+};
+  const addCartProductQuantity = (amount) => {
+  setCartQuantity((prev) => prev + 1);
+  setProductQuantity((prev) => prev + 1);
+  setCartPrice((prevPrice) => prevPrice + amount);
+
+  setCartProducts((prevProducts) =>
+    prevProducts.map((item) =>
+      item.id === product.id
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+    )
+  );
+};
+  const removeFromCart = (IDToRemove, amount) => {
+  setCartProducts((prevProducts) =>
+    prevProducts.filter((item) => item.uid !== IDToRemove)
+  );
+
+  setCartQuantity((prev) => prev - productQuantity);
+  setCartPrice((prevPrice) => prevPrice - amount * productQuantity);
+};
   return (
     <div className="cart-product-container">
       <div className="cart-product-details">
@@ -50,7 +67,7 @@ const CartProduct = ({
           </div>
           <button
             className="removeItem"
-            onClick={() => removeFromCart(product?.id, product?.price)}
+            onClick={() => removeFromCart(product?.uid, product?.price)}
           >
             <BiTrash color="gray" />
           </button>

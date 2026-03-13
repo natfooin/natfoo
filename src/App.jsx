@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Components/ui/Button/Button";
 import Heading from "./Components/ui/Heading/Heading";
 import Badge from "./Components/ui/Badge/Badge";
@@ -12,16 +12,23 @@ import Products from "./Components/Products/Products";
 import { FaSearch } from "react-icons/fa";
 import Cart from "./pages/Cart";
 import CartProduct from "./Components/CartProduct/CartProduct";
-import AllProducts from "./pages/AllProducts/AllProducts"
-import Footer from "./Components/Footer/Footer"
+import AllProducts from "./pages/AllProducts/AllProducts";
+import Footer from "./Components/Footer/Footer";
+import OpenModal from "./Components/OrderModal/OrderModal";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartPrice, setCartPrice] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <NavBar cartQuantity={0} />
-        <Hero />
+      <NavBar cartQuantity={cartQuantity} />
+      <OpenModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        cartProducts={cartProducts}
+      />
+      <Hero />
       <div className="app-container">
         {/* <OpeningScreen /> */}
         <AllProducts />
@@ -36,16 +43,21 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                setCartPrice={setCartPrice}
+                cartPrice={cartPrice}
+                cartProducts={cartProducts}
+                setCartProducts={setCartProducts}
+                cartQuantity={cartQuantity}
+                setCartQuantity={setCartQuantity}
+                setShowModal={setShowModal}
+              />
+            }
+          />
         </Routes>
-        <Cart
-          setCartPrice={setCartPrice}
-          cartPrice={cartPrice}
-          cartProducts={cartProducts}
-          setCartProducts={setCartProducts}
-          cartQuantity={cartQuantity}
-          setCartQuantity={setCartQuantity}
-        />
-        {console.log(cartQuantity)}
       </div>
       <Footer />
     </>

@@ -10,7 +10,12 @@ const Cart = ({
   cartProducts,
   setCartProducts,
   setCartQuantity,
+  setShowModal
 }) => {
+
+  const checkOutHandler = () =>{
+    setShowModal(true)
+  }
   return (
     <>
       <Heading title="Cart" subTitle="Your cart products" />
@@ -62,7 +67,7 @@ const Cart = ({
                 </tr>
               </table>
               <hr />
-              <button className="place-order-btn">Place Order</button>
+              <button className="place-order-btn" onClick={checkOutHandler}>Checkout</button>
             </div>
           </div>
         </div>

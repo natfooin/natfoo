@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productsData from "./../prodcutsData.json";
 import Badge from "../Components/ui/Badge/Badge";
-
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
 import {FaRupeeSign} from "react-icons/fa"
+import CartProduct from "../Components/CartProduct/CartProduct";
 const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
@@ -32,7 +32,7 @@ const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
     setCartQuantity((prevQuantity) => prevQuantity + quantity);
     setCartProducts((prevProducts) => [
       ...prevProducts,
-      { ...productData, quantity },
+      { ...productData, quantity, uid:crypto.randomUUID()},
     ]);
     setQuantity(1);
     setCartPrice(prevPrice => prevPrice + (amount * quantity))
