@@ -12,22 +12,24 @@ import Products from "./Components/Products/Products";
 import { FaSearch } from "react-icons/fa";
 import Cart from "./pages/Cart";
 import CartProduct from "./Components/CartProduct/CartProduct";
-import AllProducts from "./pages/AllProducts/AllProducts"
+import AllProducts from "./pages/AllProducts/AllProducts";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
+  const [cartPrice, setCartPrice] = useState(0);
   return (
     <>
       <NavBar />
-        <Hero />
+      <Hero />
       <div className="app-container">
         {/* <OpeningScreen /> */}
-        <AllProducts/>
+        <AllProducts />
         <Routes>
           <Route
             path="/product/:id"
             element={
               <SingleProduct
+                setCartPrice={setCartPrice}
                 setCartQuantity={setCartQuantity}
                 setCartProducts={setCartProducts}
               />
@@ -35,6 +37,8 @@ const App = () => {
           />
         </Routes>
         <Cart
+          setCartPrice={setCartPrice}
+          cartPrice={cartPrice}
           cartProducts={cartProducts}
           setCartProducts={setCartProducts}
           cartQuantity={cartQuantity}
