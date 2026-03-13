@@ -15,13 +15,13 @@ function Footer() {
     
     <div className="footer">
       <div className="links">
-        <ul>
+        {/* <ul>
           <li><a href="">home</a></li>
           <li><a href="">home</a></li>
           <li><a href="">home</a></li>
           <li><a href="">home</a></li>
           <li><a href="">home</a></li>
-        </ul>
+        </ul> */}
       </div>
 
 
