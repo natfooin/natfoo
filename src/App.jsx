@@ -28,24 +28,35 @@ const App = () => {
         setShowModal={setShowModal}
         cartProducts={cartProducts}
       />
-      <Hero />
-      <div className="app-container">
-        {/* <OpeningScreen /> */}
-        <AllProducts />
-        <Routes>
-          <Route
-            path="/product/:id"
-            element={
-              <SingleProduct
-                setCartPrice={setCartPrice}
-                setCartQuantity={setCartQuantity}
-                setCartProducts={setCartProducts}
-              />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
+
+      <OpeningScreen />
+      {/* <AllProducts /> */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <div className="app-container">
+                <AllProducts />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={
+            <SingleProduct
+              setCartPrice={setCartPrice}
+              setCartQuantity={setCartQuantity}
+              setCartProducts={setCartProducts}
+            />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <div className="app-container">
               <Cart
                 setCartPrice={setCartPrice}
                 cartPrice={cartPrice}
@@ -55,10 +66,11 @@ const App = () => {
                 setCartQuantity={setCartQuantity}
                 setShowModal={setShowModal}
               />
-            }
-          />
-        </Routes>
-      </div>
+            </div>
+          }
+        />
+      </Routes>
+
       <Footer />
     </>
   );

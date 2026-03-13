@@ -4,9 +4,10 @@ import productsData from "./../prodcutsData.json";
 import Badge from "../Components/ui/Badge/Badge";
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
-import {FaRupeeSign} from "react-icons/fa"
-import CartProduct from "../Components/CartProduct/CartProduct";
-const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
+import { FaRupeeSign } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [productData, setProductData] = useState({});
@@ -14,7 +15,7 @@ const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
     setProductData(
       productsData.find((product, index) => product.id === parseInt(id)),
     );
-    setQuantity(1)
+    setQuantity(1);
   }, [id]);
   const subQuantity = () => {
     if (quantity < 2) {
@@ -28,14 +29,14 @@ const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
 
   const handleAddToCart = (amount) => {
     console.log(quantity + " PRODUCTS ADDED TO CART");
-    console.log("Amount:" + amount)
+    console.log("Amount:" + amount);
     setCartQuantity((prevQuantity) => prevQuantity + quantity);
     setCartProducts((prevProducts) => [
       ...prevProducts,
-      { ...productData, quantity, uid:crypto.randomUUID()},
+      { ...productData, quantity, uid: crypto.randomUUID() },
     ]);
     setQuantity(1);
-    setCartPrice(prevPrice => prevPrice + (amount * quantity))
+    setCartPrice((prevPrice) => prevPrice + amount * quantity);
   };
 
   return (
@@ -58,7 +59,10 @@ const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
             </p>
           </div>
           <span>
-            <h3 className="price"><FaRupeeSign size={22}/>{productData?.price}</h3>
+            <h3 className="price">
+              <FaRupeeSign size={22} />
+              {productData?.price}
+            </h3>
             <h3 className="old-price">
               {productData?.price + productData?.price * 0.1}
             </h3>
@@ -74,9 +78,16 @@ const SingleProduct = ({setCartPrice, setCartQuantity, setCartProducts }) => {
                 +
               </button>
             </div>
-            <button className="add-to-cart-btn" onClick={(amount) => handleAddToCart(productData?.price)}>
-              Add to Cart
-            </button>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              {" "}
+              {/* Redirection to /products */}
+              <button
+                className="add-to-cart-btn"
+                onClick={(amount) => handleAddToCart(productData?.price)}
+              >
+                Add to Cart
+              </button>
+            </Link>
           </div>
         </div>
       </div>

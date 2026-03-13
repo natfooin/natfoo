@@ -13,7 +13,7 @@
 
 .single-product-page-container {
   width: 100%;
-  background: var(--dark-green);
+  background-image: url("../assets/textured-bg.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
   max-width: 850px; /* reduced from 1100px */
   display: flex;
   gap: 35px;
-  background-color: var(--cream-bg);
+  background-color: #ffffff7c;
   border-radius: 16px;
   padding: 30px; /* reduced padding */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);

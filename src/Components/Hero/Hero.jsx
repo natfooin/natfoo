@@ -51,6 +51,7 @@ function Hero() {
           prevEl: ".swiper-button-prev",
           clickable: true,
         }}
+        
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="swiper_container"
       >
@@ -78,10 +79,10 @@ function Hero() {
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <FaChevronCircleLeft name="arrow-back-outline" />
+            <FaChevronCircleLeft name="arrow-back-outline"color="#926F52" />
           </div>
           <div className="swiper-button-next slider-arrow">
-            <FaChevronCircleRight name="arrow-forward-outline" />
+            <FaChevronCircleRight name="arrow-forward-outline" color="#926F52"/>
           </div>
           <div className="swiper-pagination"></div>
         </div>

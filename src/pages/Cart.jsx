@@ -4,18 +4,18 @@ import CartProduct from "../Components/CartProduct/CartProduct";
 import Heading from "../Components/ui/Heading/Heading";
 import { BiCartAlt } from "react-icons/bi";
 import { FaRupeeSign } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Cart = ({
   setCartPrice,
   cartPrice,
   cartProducts,
   setCartProducts,
   setCartQuantity,
-  setShowModal
+  setShowModal,
 }) => {
-
-  const checkOutHandler = () =>{
-    setShowModal(true)
-  }
+  const checkOutHandler = () => {
+    setShowModal(true);
+  };
   return (
     <>
       <Heading title="Cart" subTitle="Your cart products" />
@@ -67,17 +67,21 @@ const Cart = ({
                 </tr>
               </table>
               <hr />
-              <button className="place-order-btn" onClick={checkOutHandler}>Checkout</button>
+              <button className="place-order-btn" onClick={checkOutHandler}>
+                Checkout
+              </button>
             </div>
           </div>
         </div>
       ) : (
         <div className="no-records">
           <h1>Add products in cart.</h1>
-          <button>
-            <BiCartAlt size={22} />
-            Add Now
-          </button>
+          <Link to={"/"} style={{textDecoration:"none"}}>            {/* this should redirect to /products */}
+            <button>
+              <BiCartAlt size={22} />
+              Add Now
+            </button>
+          </Link>
         </div>
       )}
     </>

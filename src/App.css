@@ -1,3 +1,8 @@
 *{
     scrollbar-width: none;
 }
+
+.app-container{
+    background-image:url("./assets/textured-bg.png");
+    background-size: cover;
+}

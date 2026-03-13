@@ -40,7 +40,7 @@
         "price" : "price"
     },
     {
-        "id": 5,
+        "id": 6,
         "image" :"/src/assets/product-images/Kodo-Millet-Noodles.png",
         "name" : "Kodo Millet Noodles",
         "desc" : "Product desc",
