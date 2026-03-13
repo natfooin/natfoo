@@ -7,7 +7,9 @@ function FooterIcon({icon}) {
   return (
     <>
         <div className="FooterIcon">
-            {icon}
+            <div className="inner-FooterIcon">
+              {icon}
+            </div>
         </div>
     </>
   )

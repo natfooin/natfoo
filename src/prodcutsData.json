@@ -24,6 +24,14 @@
         "price" : 1230
     },
     {
+        "id": 99,
+        "image" :"/src/assets/product-images/Millet-Mango.jpg",
+        "name" : "Millet Mango",
+        "desc" : "Product desc",
+        "category" : "Cookies",
+        "price" : 1230
+    },
+    {
         "id": 4,
         "image" :"/src/assets/product-images/Spicy-Dhamaka.jpg",
         "name" : "Spicy Dhamaka",

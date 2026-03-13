@@ -43,21 +43,16 @@ const App = () => {
               />
             }
           />
-          <Route
-            path="/cart"
-            element={
-              <Cart
-                setCartPrice={setCartPrice}
-                cartPrice={cartPrice}
-                cartProducts={cartProducts}
-                setCartProducts={setCartProducts}
-                cartQuantity={cartQuantity}
-                setCartQuantity={setCartQuantity}
-                setShowModal={setShowModal}
-              />
-            }
-          />
         </Routes>
+        <Cart
+          setCartPrice={setCartPrice}
+          cartPrice={cartPrice}
+          cartProducts={cartProducts}
+          setCartProducts={setCartProducts}
+          cartQuantity={cartQuantity}
+          setCartQuantity={setCartQuantity}
+          setShowModal={setShowModal}
+        />
       </div>
       <Footer />
     </>
