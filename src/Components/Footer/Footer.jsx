@@ -14,20 +14,23 @@ function Footer() {
     <>
     
     <div className="footer">
-      <div className="links">
-        {/* <ul>
-          <li><a href="">home</a></li>
-          <li><a href="">home</a></li>
-          <li><a href="">home</a></li>
-          <li><a href="">home</a></li>
-          <li><a href="">home</a></li>
-        </ul> */}
+<div className="footer-top">
+        <div className="logo">
+        <img src={image} alt="logo" />
       </div>
 
+      <div className="links">
+        <ul>
+          <li><a href="">home</a></li>
+          <li><a href="">home</a></li>
+          <li><a href="">home</a></li>
+          <li><a href="">home</a></li>
+          <li><a href="">home</a></li>
+        </ul>
+      </div>
+</div>
 
-      {/* <div className="logo">
-        <img src={image} alt="logo" />
-      </div> */}
+
 
       <hr />
       <div className="footer-bottom">

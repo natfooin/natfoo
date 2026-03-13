@@ -3,7 +3,14 @@
 }
 .footer.links ul li a{
     text-decoration: none;
-    
+    color: white; 
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    justify-content: space-around;
 }
 .iconContainer{
     display: flex;
