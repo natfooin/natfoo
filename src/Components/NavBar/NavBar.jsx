@@ -31,7 +31,7 @@ function NavBar({cartQuantity}) {
           <span className="cart-count" >{cartQuantity}</span>  
         </div>
 
-        <Button cn={"button-n-one"} buttonName="shop now"  /> 
+        <Button cn={"button-n-one"} text="shop now"  /> 
         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
         </div>
