@@ -1,10 +1,12 @@
 import React from "react";
 import "./Input.css";
+
 const Input = ({
   type = "text",
   icon = null,
   styles = null,
   placeholder = "",
+  value = "",
   onChangeHandler,
 }) => {
   return (
@@ -14,6 +16,7 @@ const Input = ({
         type={type}
         style={styles}
         placeholder={placeholder}
+        value={value}
         className="input-field"
         onChange={(e) => onChangeHandler(e)}
       />

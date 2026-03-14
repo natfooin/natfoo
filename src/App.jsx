@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "./Components/ui/Button/Button";
 import Heading from "./Components/ui/Heading/Heading";
 import Badge from "./Components/ui/Badge/Badge";
+import MainProducts from  "./pages/MainProducts/MainProducts"
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import "./App.css";
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <>
       <NavBar cartQuantity={cartQuantity} />
+
       <OpenModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -70,7 +72,7 @@ const App = () => {
           }
         />
       </Routes>
-
+          <MainProducts />
       <Footer />
     </>
   );

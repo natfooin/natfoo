@@ -21,6 +21,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    border-top: 2px solid var(--gold);
+    border-bottom:2px solid var(--gold);
 }
 .site-rights{
     color: white;

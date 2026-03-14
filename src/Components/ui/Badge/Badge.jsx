@@ -5,6 +5,7 @@ const Badge = ({
   bgColor = "#ecfdf5",
   text = "Custom Badge",
   styles = null,
+  click=()=>{},
 }) => {
   return (
     <div
@@ -15,9 +16,11 @@ const Badge = ({
         border: `1px solid ${color}`,
         ...styles,
       }}
+      onClick={click}
     >
       {icon}
       {text}
+
     </div>
   );
 };

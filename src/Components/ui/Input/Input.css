@@ -17,6 +17,10 @@
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
   }
 }
+.input-main-container{
+  display: flex;
+  flex-direction: row;
+}
 .input-field {
   background-color: white;
   width: 100%;

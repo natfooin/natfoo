@@ -32,7 +32,7 @@ function Footer() {
 
 
 
-      <hr />
+  
       <div className="footer-bottom">
         <div className="site-rights">
           <h6>Copyrights2025&copy;natfoo.All Rights Reserved  </h6>
@@ -46,7 +46,7 @@ function Footer() {
           <FooterIcon icon={<FaInstagram size={30}color="white" />} />
         </div>
       </div>
-      <hr />
+      
       </div>
       
     </>
