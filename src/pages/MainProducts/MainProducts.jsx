@@ -36,7 +36,8 @@ function MainProducts() {
   return (
     <div className="main-products-wrapper">
       <div className="search-section">
-        <Input
+     <div className="input">
+         <Input
           placeholder="Search by name or category..."
           value={inputValue}
           onChangeHandler={(e) => {
@@ -44,9 +45,11 @@ function MainProducts() {
             setInputValue(value);
             setSearchTerm(value);
           }}
+         
         />
+     </div>
 
-        <Button text="Search" onClick={() => setSearchTerm(inputValue)} />
+        <Button height="5rem" text="Search"  onClick={() => setSearchTerm(inputValue)} />
       </div>
 
       <div className="filter-badges">
