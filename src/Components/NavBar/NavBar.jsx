@@ -45,10 +45,12 @@ function NavBar({ cartQuantity }) {
           </div>
         </Link>
         <Link to={"/products"}>
-          <Button cn={"button-n-one"} text="shop now" />
+        <div className="header-right">
+            <Button cn={"button-n-one"} text="shop now" />
           <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
           </div>
+        </div>
         </Link>
       </div>
     </nav>

@@ -14,7 +14,6 @@
   font-size: 2rem;
 }
 
-/* Desktop */
 @media (max-width: 1280px) {
   .title {
     font-size: 3rem;
@@ -24,7 +23,6 @@
   }
 }
 
-/* Laptop */
 @media (max-width: 1024px) {
   .title {
     font-size: 2rem;
@@ -34,7 +32,6 @@
   }
 }
 
-/* Tablet */
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;
@@ -44,7 +41,6 @@
   }
 }
 
-/* Large mobiles */
 @media (max-width: 600px) {
   .title {
     font-size: 2rem;
@@ -54,7 +50,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .title {
     font-size: 2rem;

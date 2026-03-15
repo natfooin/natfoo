@@ -9,6 +9,7 @@ const Input = ({
   value = "",
   onChangeHandler,
 }) => {
+  console.log(styles)
   return (
     <div className="input-container">
       {icon}
