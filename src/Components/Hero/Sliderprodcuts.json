@@ -5,7 +5,7 @@
         "name" : "Ajwain Mellow",
         "desc" : "Product desc",
         "category" : "Cookies",
-        "price" : "price"
+        "price" : 442
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "name" : "Barnyard Millet Noodles",
         "desc" : "Product desc",
         "category" : "Noodles",
-        "price" : "price"
+        "price" : 223
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "name" : "Millet Mango",
         "desc" : "Product desc",
         "category" : "Cookies",
-        "price" : "price"
+        "price" : 432
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "name" : "Spicy Dhamaka",
         "desc" : "Product desc",
         "category" : "Noodles",
-        "price" : "price"
+        "price" : 421
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "name" : "Tuty Fruity Cookies Pouch",
         "desc" : "Product desc",
         "category" : "Cookies",
-        "price" : "price"
+        "price" : 234
     },
     {
         "id": 6,
@@ -45,6 +45,6 @@
         "name" : "Kodo Millet Noodles",
         "desc" : "Product desc",
         "category" : "Noodles",
-        "price" : "price"
+        "price" : 123
     }
 ]

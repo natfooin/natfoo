@@ -18,7 +18,7 @@ const Cart = ({
   };
   return (
     <>
-      <Heading title="Cart" subTitle="Your cart products" />
+      <Heading title="Cart" subTitle="Your cart products" styles={{paddingTop : "2%"}}/>
       {cartProducts.length !== 0 ? (
         <div className="cart-container">
           <div className="products-list">
