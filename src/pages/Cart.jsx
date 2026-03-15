@@ -68,7 +68,7 @@ const Cart = ({
               </table>
               <hr />
               <button className="place-order-btn" onClick={checkOutHandler}>
-                Checkout
+                Proceed
               </button>
             </div>
           </div>

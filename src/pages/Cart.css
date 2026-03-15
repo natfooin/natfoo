@@ -98,7 +98,7 @@ table tr {
   }
 
   .grand-total {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 480px) {
