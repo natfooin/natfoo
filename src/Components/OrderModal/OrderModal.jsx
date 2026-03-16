@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./OrderModal.css";
-
+import logo from "../../assets/logo.png";
+import sendOrderToWhatsApp from "./whatsApp.js";
 function OrderModal({ showModal, setShowModal, cartProducts }) {
   const closeModal = () => {
     setShowModal(false);
@@ -20,6 +21,7 @@ function OrderModal({ showModal, setShowModal, cartProducts }) {
     buyData.products = cartProducts;
     console.log(buyData);
     closeModal();
+    sendOrderToWhatsApp(buyData);
   };
 
   return (
@@ -30,8 +32,10 @@ function OrderModal({ showModal, setShowModal, cartProducts }) {
             <button className="close-btn" onClick={closeModal}>
               ✖
             </button>
-
-            <h2>Registration Form</h2>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <img src={logo} width={"15%"} height={"10%"} alt="logo" />
+              <h2>Place your order</h2>
+            </div>
 
             <form onSubmit={handleSubmit} className="form">
               <input type="text" placeholder="Full Name" name="name" required />
