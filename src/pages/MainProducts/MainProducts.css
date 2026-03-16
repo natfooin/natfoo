@@ -191,3 +191,9 @@
 }
 
 }
+
+@media (max-width:400px){
+  .products-grid{
+    grid-template-columns:1fr;
+  }
+}

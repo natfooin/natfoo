@@ -25,7 +25,7 @@
   background:linear-gradient(
     90deg,
     var(--button-red),
-    var(--gold),
+    var(--button-red),
     var(--button-red)
   );
 

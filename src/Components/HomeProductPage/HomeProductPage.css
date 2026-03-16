@@ -1,19 +1,18 @@
 
 .product-container{
-  display:grid;
+   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:24px;
+  width:100%;
   max-width:1400px;
   margin:auto;
   padding:20px;
-  justify-items:center;
 }
 
 
 .product-card{
   width:100%;
-  max-width:300px;
-  transition:0.3s;
+
 }
 
 .product-card:hover{
@@ -48,6 +47,13 @@
 
 .product-card{
   max-width:100%;
+}
+
+}
+@media (max-width:400px){
+
+.product-container{
+  grid-template-columns:1fr;
 }
 
 }
