@@ -12,41 +12,67 @@
 /* SEARCH BAR */
 
 .search-section{
-  max-width:700px;
+  width:100%;
+  max-width:650px;
   margin:0 auto 2.5rem;
   display:flex;
+  align-items:center;
+  justify-content:center;
 }
+
+/* INPUT WRAPPER */
 
 .search-section .input{
   flex:1;
 }
 
+/* INPUT FIELD */
+
 .search-section input{
   width:100%;
-  height:45px;
-  padding:0 15px;
-  border:1px solid #e2e8f0;
-  border-radius:8px 0 0 8px;
-  outline:none;
+  height:48px;
+  padding:0 18px;
   font-size:1rem;
+  border:2px solid #e2e8f0;
+  border-right:none;
+  border-radius:10px 0 0 10px;
+  outline:none;
+  transition:all 0.25s ease;
+  background:#ffffff;
 }
+
+/* INPUT FOCUS EFFECT */
+
+.search-section input:focus{
+
+     transform:none;
+  box-shadow:none;
+  border:none;
+}
+
+/* SEARCH BUTTON */
 
 .search-section button{
-  height:45px;
-  padding:0 25px;
-  background:#4f46e5;
+  height:48px;
+  padding:0 28px;
+  font-size:1rem;
+  font-weight:600;
+  background:#926f52;
   color:white;
   border:none;
-  border-radius:0 8px 8px 0;
+  border-radius:0 10px 10px 0;
   cursor:pointer;
-  font-weight:600;
-  transition:0.2s;
+  transition:all 0.25s ease;
 }
+
+/* HOVER EFFECT */
 
 .search-section button:hover{
-  background:#3730a3;
+  background:#7a5c45;
+   transform:none;
+  box-shadow:none;
+ 
 }
-
 /* FILTER BADGES */
 
 .filter-badges{

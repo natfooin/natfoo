@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import productsJson from "./../../prodcutsData.json";
 import "./HomeProductPage.css";
 import Products from "../Products/Products";
-import Button from "./../ui/Button/Button"
+
 function HomeProductPage({ categoryArray }) {
 
   const [products, setProducts] = useState([]);
