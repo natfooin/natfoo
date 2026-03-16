@@ -32,7 +32,6 @@ const App = () => {
       />
 
       <OpeningScreen />
-      {/* <AllProducts /> */}
       <Routes>
         <Route
           path="/"
@@ -71,9 +70,10 @@ const App = () => {
             </div>
           }
         />
+        <Route path="/products" element={<MainProducts />} />
       </Routes>
-      <MainProducts />
-      {/* <Footer /> */}
+
+      <Footer />
     </>
   );
 };
