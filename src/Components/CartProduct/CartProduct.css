@@ -75,6 +75,7 @@
   height: 20px;
   font-weight: 600;
   margin: 5px;
+  background-color: transparent;
   &:hover {
     cursor: pointer;
     background-color: black;

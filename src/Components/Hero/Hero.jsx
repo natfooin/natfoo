@@ -21,12 +21,19 @@ import Heading from "../ui/Heading/Heading";
 import productData from "./Sliderprodcuts.json";
 import Button from "../ui/Button/Button";
 import { BiCookie } from "react-icons/bi";
-import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import {
+  FaChevronCircleRight,
+  FaChevronCircleLeft,
+  FaRupeeSign,
+} from "react-icons/fa";
 
 function Hero() {
   return (
     <div className="hero-container">
-      <Heading title="Traditional Grains, Modern Taste" subTitle="Nutritious cookies made from ancient grains for a healthier everyday snack." />
+      <Heading
+        title="Traditional Grains, Modern Taste"
+        subTitle="Nutritious cookies made from ancient grains for a healthier everyday snack."
+      />
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -51,7 +58,6 @@ function Hero() {
           prevEl: ".swiper-button-prev",
           clickable: true,
         }}
-        
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="swiper_container"
       >
@@ -62,15 +68,24 @@ function Hero() {
 
               <div className="slide-overlay">
                 <h3 className="product-name">
-                  {product.name}
+                  {product.name}{" "}
+                  <span>
+                    {/* <FaRupeeSign
+                      size={innerWidth >= 1280 ? 18 : 10}
+                      color="white"
+                    /> */}
+                    {/* {product.price} */}
+                    10%
+                  </span>
                 </h3>
+
                 <Link to={`/product/${product.id}`}>
                   <Button
-                cn={"button-n-one"}
-                text={"Buy now"}
-                minWidth={70}
-                height={30}
-              />
+                    cn={"button-n-one"}
+                    text={"Buy now"}
+                    minWidth={70}
+                    height={30}
+                  />
                 </Link>
               </div>
             </div>
@@ -79,10 +94,13 @@ function Hero() {
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <FaChevronCircleLeft name="arrow-back-outline"color="#926F52" />
+            <FaChevronCircleLeft name="arrow-back-outline" color="#926F52" />
           </div>
           <div className="swiper-button-next slider-arrow">
-            <FaChevronCircleRight name="arrow-forward-outline" color="#926F52"/>
+            <FaChevronCircleRight
+              name="arrow-forward-outline"
+              color="#926F52"
+            />
           </div>
           <div className="swiper-pagination"></div>
         </div>

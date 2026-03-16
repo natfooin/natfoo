@@ -6,15 +6,16 @@ import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
 import { FaRupeeSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DetailCard from "../Components/DetailCard/DetailCard";
 
 const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [productData, setProductData] = useState({});
   useEffect(() => {
-    setProductData(
-      productsData.find((product, index) => product.id === parseInt(id)),
-    );
+    const product = productsData.find((product) => product.id === parseInt(id));
+
+    setProductData(product);
     setQuantity(1);
   }, [id]);
   const subQuantity = () => {
@@ -90,6 +91,18 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
             </Link>
           </div>
         </div>
+      </div>
+        <h2 className="product-info-title">Product Information</h2>
+      <div className="details-section">
+        {" "}
+        <DetailCard
+          header="Why Choose NATFOO Foxtail Millet Noodles?"
+          content={productData?.content?.[0] || []}
+        ></DetailCard>
+        <DetailCard
+          header="Easy to Cook"
+          content={productData?.content?.[1] || []}
+        ></DetailCard>
       </div>
     </div>
   );
