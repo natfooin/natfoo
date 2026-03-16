@@ -6,9 +6,10 @@
   --dark-olive: #626135;
   --button-red: #d94a3a;
   --gold: #d4af37;
-  --heading: #6b4f3a;
+  --heading: rgb(107, 79, 58);
   --millet-cookies: #2b2b2b;
   --text-green: #1e4d2b;
+  --site-honey-badger : rgb(146, 111, 82);
 }
 
 *{
