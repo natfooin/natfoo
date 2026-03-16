@@ -60,7 +60,7 @@ function MainProducts() {
             click={() => setActiveCategory(cat)}
             color={activeCategory === cat ? "#ffffff" : "#926f52"}
             bgColor={activeCategory === cat ? "#926f52" : "#f1f5f9"}
-            styles={{height:"4rem", width:"7rem",fontSize:"1rem"}}
+            styles={{height:"2rem", width:"10rem",fontSize:"1rem"}}
           />
         ))}
       </div>
