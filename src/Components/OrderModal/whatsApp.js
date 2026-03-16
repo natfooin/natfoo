@@ -1,75 +1,70 @@
-const sendOrderToWhatsApp = (buyData) => {
-  const phoneNumber = "919042649000";
-
-  // Order ID
+const generateWhatsAppOrderMessage = (buyData) => {
   const orderId = "ORD-" + Date.now();
-
-  // Date & Time
   const dateTime = new Date().toLocaleString("en-IN");
 
-  // Subtotal
   const subtotal = buyData.products.reduce(
     (sum, p) => sum + p.price * p.quantity,
-    0
+    0,
   );
 
-  const grandTotal = subtotal;
-
-  // Product list
-  const productList = buyData.products
+  const productSection = buyData.products
     .map(
       (p, i) =>
-`*${i + 1}. ${p.name}*
-Category : ${p.category}
-Quantity : ${p.quantity}
-Price    : ₹${p.price}
-Subtotal : ₹${p.price * p.quantity}`
+        `*${i + 1}. ${p.name}*
+Qty  : ${p.quantity}
+Price: ₹${p.price}
+Total: ₹${p.price * p.quantity}`,
     )
     .join("\n\n");
 
-  const message = `
-🏢 *Natfoo Foods Pvt Ltd*
-━━━━━━━━━━━━━━━━━━━━
+  return `
+*NATFOO FOODS*
 
-🛒 *NEW ORDER RECEIVED*
+━━━━━━━━━━━━━━━━━━
 
-📦 *Order Details*
+🧾 *ORDER SUMMARY*
+
 Order ID : ${orderId}
 Date     : ${dateTime}
 
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
 
-👤 *Customer Details*
-Name     : ${buyData.name}
-Phone    : ${buyData.contact}
-Email    : ${buyData.email}
+*Customer Details*
 
-📍 *Delivery Address*
+${buyData.name}
+${buyData.contact}
+${buyData.email}
+
+
 ${buyData.address}
-Pincode  : ${buyData.pincode}
+${buyData.pincode}
 
-📝 *Customer Note*
-${buyData.note || "None"}
+━━━━━━━━━━━━━━━━━━
 
-━━━━━━━━━━━━━━━━━━━━
+*Products Ordered*
 
-📦 *Ordered Products*
+${productSection}
 
-${productList}
+━━━━━━━━━━━━━━━━━━
 
-━━━━━━━━━━━━━━━━━━━━
+*Subtotal*: ₹${subtotal}
+*Discount*: As applicable
 
-💰 *Order Summary*
-
-Total Price : ₹${grandTotal}
-
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
+*TOTAL*: ₹${subtotal}
+━━━━━━━━━━━━━━━━━━
 `;
+};
+
+const sendOrderToWhatsApp = (buyData) => {
+  const message = generateWhatsAppOrderMessage(buyData);
 
   const encodedMessage = encodeURIComponent(message);
+
+  const phoneNumber = "919042649000";
+
   const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
   window.open(url, "_blank");
 };
-
-export default sendOrderToWhatsApp
+export default sendOrderToWhatsApp;
