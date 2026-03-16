@@ -76,7 +76,7 @@ const Cart = ({
       ) : (
         <div className="no-records">
           <h1>Add products in cart.</h1>
-          <Link to={"/"} style={{textDecoration:"none"}}>            {/* this should redirect to /products */}
+          <Link to={"/products"} style={{textDecoration:"none"}}>
             <button>
               <BiCartAlt size={22} />
               Add Now

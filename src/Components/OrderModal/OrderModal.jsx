@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./OrderModal.css";
 import logo from "../../assets/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
+import sendOrderEmail from "./email.js";
 function OrderModal({ showModal, setShowModal, cartProducts }) {
   const closeModal = () => {
     setShowModal(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     alert("Form Submitted Successfully");
     const buyData = {};
@@ -21,7 +22,33 @@ function OrderModal({ showModal, setShowModal, cartProducts }) {
     buyData.products = cartProducts;
     console.log(buyData);
     closeModal();
-    sendOrderToWhatsApp(buyData);
+    {/* Send to manufacturer whatsapp  */}
+    // sendOrderToWhatsApp(buyData);
+    
+    {/* Send to manufacturer email  */}
+    sendOrderEmail(buyData)
+    
+
+    // const orderHTML = sendOrderEmail(buyData);
+    // const emailData = new FormData();
+    // emailData.append("access_key", "578ab598-4c33-4680-b3e2-937ddc9c7a3b");
+    // emailData.append("subject", "New Order Received - Natfoo");
+    // emailData.append("from_name", "Natfoo Orders");
+    // emailData.append("replyto", buyData.email);
+
+    // // IMPORTANT
+    // emailData.append("message", orderHTML);
+    // const response = await fetch("https://api.web3forms.com/submit", {
+    //   method: "POST",
+    //   body: emailData,
+    // });
+
+    // if (response.ok) {
+    //   alert("Order submitted successfully");
+    //   setShowModal(false);
+    // } else {
+    //   alert("Failed to submit order");
+    // }
   };
 
   return (
