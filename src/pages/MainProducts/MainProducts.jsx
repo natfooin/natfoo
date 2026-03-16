@@ -67,7 +67,7 @@ function MainProducts() {
       <div className="products-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
-            <Products
+            <Products 
               key={item.id}
               image={item.image}
               name={item.name}
