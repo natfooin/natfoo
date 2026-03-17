@@ -16,6 +16,8 @@ import CartProduct from "./Components/CartProduct/CartProduct";
 import AllProducts from "./pages/AllProducts/AllProducts";
 import Footer from "./Components/Footer/Footer";
 import OpenModal from "./Components/OrderModal/OrderModal";
+import Contact from './Components/Contact/Contact'
+import PolicyPage from "./Components/PolicyPage/PolicyPage";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -72,7 +74,7 @@ const App = () => {
         />
         <Route path="/products" element={<MainProducts />} />
       </Routes>
-
+          <PolicyPage/>
       <Footer />
     </>
   );
