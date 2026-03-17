@@ -126,5 +126,59 @@
       ]
     }
   }
+  ,
+  {
+    "id": 100,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
+  ,
+  {
+    "id": 109,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
+  ,
+  {
+    "id": 106,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
+  ,
+  {
+    "id": 101,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
+  ,
+  {
+    "id": 102,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
+  ,
+  {
+    "id": 103,
+    "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
+    "name": "Kodo Millet Noodles",
+    "desc": "Product desc",
+    "category": "cook",
+    "price": 25
+  }
 
 ]

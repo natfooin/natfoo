@@ -16,11 +16,8 @@ import CartProduct from "./Components/CartProduct/CartProduct";
 import AllProducts from "./pages/AllProducts/AllProducts";
 import Footer from "./Components/Footer/Footer";
 import OpenModal from "./Components/OrderModal/OrderModal";
-import Discount from "./Components/Discount/Discount";
-import ScrollToHash from "./Components/ScrollToHash/ScrollToHash";
-import About from "./pages/About/About";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import MainLayout from "./Components/MainLayout/MainLayout";
+import Contact from './Components/Contact/Contact'
+import PolicyPage from "./Components/PolicyPage/PolicyPage";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -102,8 +99,8 @@ const App = () => {
         </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-
-      {/* <Footer /> */}
+          <PolicyPage/>
+      <Footer />
     </>
   );
 };
