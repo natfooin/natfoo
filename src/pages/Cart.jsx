@@ -37,7 +37,7 @@ const Cart = ({
             })}
           </div>
           <div className="order-summary">
-            <div className="orer-summary-block">
+            <div className="order-summary-block">
               <h1>Order Summary</h1>
               <table>
                 <tr>
