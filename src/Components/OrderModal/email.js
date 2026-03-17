@@ -15,11 +15,6 @@ const sendOrderEmail = (buyData) => {
   const orderId = "ORD-" + Date.now();
   const date = new Date().toLocaleString("en-IN");
 
-  const total = buyData.products.reduce(
-    (sum, p) => sum + p.price * p.quantity,
-    0,
-  );
-
   const templateParams = {
     order_id: orderId,
     date: date,
@@ -29,7 +24,9 @@ const sendOrderEmail = (buyData) => {
     address: buyData.address,
     pincode: buyData.pincode,
     products: formatProducts(buyData.products),
-    total: total,
+    subtotal: buyData.subtotal,
+    discount: buyData.discountAmount,
+    total: buyData.total,
   };
 
   emailjs

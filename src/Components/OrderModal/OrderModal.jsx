@@ -3,7 +3,13 @@ import "./OrderModal.css";
 import logo from "../../assets/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
-function OrderModal({ showModal, setShowModal, cartProducts }) {
+function OrderModal({
+  showModal,
+  setShowModal,
+  cartProducts,
+  discount,
+  cartPrice,
+}) {
   const closeModal = () => {
     setShowModal(false);
   };
@@ -20,14 +26,21 @@ function OrderModal({ showModal, setShowModal, cartProducts }) {
     buyData.pincode = formData.get("pincode");
     buyData.note = formData.get("note");
     buyData.products = cartProducts;
+    buyData.subtotal = cartPrice;
+    buyData.discountAmount = discount;
+    buyData.total = cartPrice - discount;
+
     console.log(buyData);
     closeModal();
-    {/* Send to manufacturer whatsapp  */}
+    {
+      /* Send to manufacturer whatsapp  */
+    }
     // sendOrderToWhatsApp(buyData);
-    
-    {/* Send to manufacturer email  */}
-    sendOrderEmail(buyData)
-    
+
+    {
+      /* Send to manufacturer email  */
+    }
+    sendOrderEmail(buyData);
 
     // const orderHTML = sendOrderEmail(buyData);
     // const emailData = new FormData();

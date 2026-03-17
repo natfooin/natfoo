@@ -26,6 +26,8 @@ const App = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const [cartPrice, setCartPrice] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [discount, setDiscount] = useState(0.0);
+
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
@@ -34,6 +36,8 @@ const App = () => {
         showModal={showModal}
         setShowModal={setShowModal}
         cartProducts={cartProducts}
+        discount = {discount}
+        cartPrice = {cartPrice}
       />
 
       <OpeningScreen />
@@ -75,6 +79,8 @@ const App = () => {
                   cartQuantity={cartQuantity}
                   setCartQuantity={setCartQuantity}
                   setShowModal={setShowModal}
+                  discount={discount}
+                  setDiscount={setDiscount}
                 />
               </div>
             }
