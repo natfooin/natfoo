@@ -20,6 +20,7 @@ import Discount from "./Components/Discount/Discount";
 import ScrollToHash from "./Components/ScrollToHash/ScrollToHash";
 import About from "./pages/About/About";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import MainLayout from "./Components/MainLayout/MainLayout";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -27,7 +28,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <NavBar cartQuantity={cartQuantity} />
+      {/* <NavBar cartQuantity={cartQuantity} /> */}
 
       <OpenModal
         showModal={showModal}
@@ -39,64 +40,64 @@ const App = () => {
 
       <ScrollToHash />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <div className="app-container">
-                <AllProducts />
-                <Discount />
-              </div>
-            </>
-          }
-        />
-        <Route
-          path="/product/:id"
-          element={
-            <SingleProduct
-              setCartPrice={setCartPrice}
-              setCartQuantity={setCartQuantity}
-              setCartProducts={setCartProducts}
-            />
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <div className="app-container">
-              <Cart
+        <Route element={<MainLayout cartQuantity={cartQuantity}></MainLayout>}>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <div className="app-container">
+                  <AllProducts />
+                  <Discount />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <SingleProduct
                 setCartPrice={setCartPrice}
-                cartPrice={cartPrice}
-                cartProducts={cartProducts}
-                setCartProducts={setCartProducts}
-                cartQuantity={cartQuantity}
                 setCartQuantity={setCartQuantity}
-                setShowModal={setShowModal}
+                setCartProducts={setCartProducts}
               />
-            </div>
-          }
-        />
-        <Route path="/products" element={<MainProducts />} />
-        <Route
-          path="/about"
-          element={
-            <div className="app-container">
-              <About />
-            </div>
-          }
-        />
-        <Route path="/contact" />
-        <Route path="/terms-and-condition" />
-        <Route path="/privacy-policy" />
-        <Route path="/privacy-policy" />
-        <Route path="/shipping-and-delivery-policy" />
-        <Route path="/return-and-cancellation-policy" />
-
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <div className="app-container">
+                <Cart
+                  setCartPrice={setCartPrice}
+                  cartPrice={cartPrice}
+                  cartProducts={cartProducts}
+                  setCartProducts={setCartProducts}
+                  cartQuantity={cartQuantity}
+                  setCartQuantity={setCartQuantity}
+                  setShowModal={setShowModal}
+                />
+              </div>
+            }
+          />
+          <Route path="/products" element={<MainProducts />} />
+          <Route
+            path="/about"
+            element={
+              <div className="app-container">
+                <About />
+              </div>
+            }
+          />
+          <Route path="/contact" />
+          <Route path="/terms-and-condition" />
+          <Route path="/privacy-policy" />
+          <Route path="/shipping-and-delivery-policy" />
+          <Route path="/return-and-cancellation-policy" />
+        </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

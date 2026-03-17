@@ -1,11 +1,11 @@
 .error-page{
-  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
   background:var(--cream-bg);
   text-align:center;
   padding:20px;
+  height: 100vh
 }
 
 .error-container h1{
@@ -37,4 +37,10 @@
 
 .home-btn:hover{
   background:var(--dark-green);
+}
+
+@media(min-width:1500px){
+  .error-page{
+    height: 70vh;
+  }
 }
