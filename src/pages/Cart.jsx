@@ -6,15 +6,7 @@ import { BiCartAlt } from "react-icons/bi";
 import { FaRupeeSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import DiscountTooltip from "../Components/DiscountToolTip/DiscountToolTip";
-
-const slabs = [
-  { min: 500, max: 1000, discount: 10 },
-  { min: 1001, max: 1500, discount: 12 },
-  { min: 1501, max: 2000, discount: 15 },
-  { min: 2001, max: 5000, discount: 20 },
-  { min: 5000, max: 10000, discount: 25 },
-  { min: 10001, max: null, discount: 30 },
-];
+import slabs from "../DiscountSlabs.json";
 const Cart = ({
   setCartPrice,
   cartPrice,
