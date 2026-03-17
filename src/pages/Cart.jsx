@@ -15,13 +15,19 @@ const Cart = ({
   setCartQuantity,
   setShowModal,
   discount,
-  setDiscount
+  setDiscount,
 }) => {
   const checkOutHandler = () => {
     setShowModal(true);
-    // setCartProducts([])  After succesfull order - cartCleaning
-  };
 
+    // After succesfull order - cartCleaning
+
+    {
+      /* setCartProducts([]) 
+    setCartQuantity(0)
+    setCartPrice(0) */
+    }
+  };
 
   useEffect(() => {
     const newDiscountSlab = slabs.find((slab) => {
@@ -30,8 +36,9 @@ const Cart = ({
       );
     });
 
-
-    setDiscount(newDiscountSlab ? (newDiscountSlab.discount * cartPrice)/100 : 0);
+    setDiscount(
+      newDiscountSlab ? (newDiscountSlab.discount * cartPrice) / 100 : 0,
+    );
   }, [cartPrice]);
 
   return (
@@ -85,7 +92,7 @@ const Cart = ({
                   <td className="amount-column grand-total">
                     <b>
                       <FaRupeeSign size={window.innerWidth >= 1280 ? 18 : 12} />
-                      {cartPrice - (discount)}
+                      {cartPrice - discount}
                     </b>
                   </td>
                 </tr>
