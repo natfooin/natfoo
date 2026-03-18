@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./DiscountTooltip.css";
 
-const DiscountTooltip = ({ label = "View Offers", slabs = [] }) => {
+const DiscountTooltip = ({ label = "View Offers", slabs = [], styles=null }) => {
   const [show, setShow] = useState(false);
   const [style, setStyle] = useState({});
   const [position, setPosition] = useState("top");
@@ -63,7 +63,7 @@ const DiscountTooltip = ({ label = "View Offers", slabs = [] }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span className="offer-text">{label}</span>
+      <span className="offer-text" style={styles}>{label}</span>
 
       <div
         ref={tooltipRef}
