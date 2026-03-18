@@ -2,11 +2,6 @@ const generateWhatsAppOrderMessage = (buyData) => {
   const orderId = "ORD-" + Date.now();
   const dateTime = new Date().toLocaleString("en-IN");
 
-  const subtotal = buyData.products.reduce(
-    (sum, p) => sum + p.price * p.quantity,
-    0,
-  );
-
   const productSection = buyData.products
     .map(
       (p, i) =>
@@ -47,11 +42,11 @@ ${productSection}
 
 ━━━━━━━━━━━━━━━━━━
 
-*Subtotal*: ₹${subtotal}
-*Discount*: As applicable
+*Subtotal*: ₹${buyData.subtotal}
+*Discount*: ₹${buyData.discountAmount}
 
 ━━━━━━━━━━━━━━━━━━
-*TOTAL*: ₹${subtotal}
+*TOTAL*: ₹${buyData.subtotal - buyData.discountAmount}
 ━━━━━━━━━━━━━━━━━━
 `;
 };

@@ -1,0 +1,120 @@
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.offer-text {
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* TOOLTIP */
+.tooltip-box {
+  position: absolute;
+  background: #0f172a;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+
+  width: 260px;
+  max-width: calc(100vw - 20px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+/* SHOW */
+.tooltip-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+/* HEADER */
+.tooltip-box th {
+  padding: 8px 10px;
+  font-weight: 600;
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* BODY */
+.tooltip-box td {
+  padding: 8px 10px;
+  color: #cbd5f5;
+}
+
+/* 🔥 PERFECT COLUMN CONTROL */
+.tooltip-box th:first-child,
+.tooltip-box td:first-child {
+  text-align: left;
+  width: 65%;
+}
+
+.tooltip-box th:last-child,
+.tooltip-box td:last-child {
+  text-align: right; /* 🔥 key for clean look */
+  width: 35%;
+  font-variant-numeric: tabular-nums; /* 🔥 pro numeric alignment */
+}
+
+/* ROW DIVIDER */
+.tooltip-box tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* REMOVE LAST BORDER */
+.tooltip-box tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* HOVER */
+.tooltip-box tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+
+  bottom: 100%; /* 🔥 place arrow on top */
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+
+  /* 🔥 arrow pointing UP */
+  border-color: transparent transparent #0f172a transparent;
+}
+.tooltip-box.bottom::after {
+  content: "";
+  position: absolute;
+
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #0f172a transparent;
+}
+.tooltip-box.top::after {
+  content: "";
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: #0f172a transparent transparent transparent;
+}

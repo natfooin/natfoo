@@ -5,6 +5,8 @@ import Heading from "../Components/ui/Heading/Heading";
 import { BiCartAlt } from "react-icons/bi";
 import { FaRupeeSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DiscountTooltip from "../Components/DiscountToolTip/DiscountToolTip";
+import slabs from "../DiscountSlabs.json";
 const Cart = ({
   setCartPrice,
   cartPrice,
@@ -12,13 +14,43 @@ const Cart = ({
   setCartProducts,
   setCartQuantity,
   setShowModal,
+  discount,
+  setDiscount,
 }) => {
   const checkOutHandler = () => {
     setShowModal(true);
+
+    // After succesfull order - cartCleaning
+
+    {
+      /* setCartProducts([]) 
+    setCartQuantity(0)
+    setCartPrice(0) */
+    }
   };
+
+  useEffect(() => {
+    const newDiscountSlab = slabs.find((slab) => {
+      return (
+        cartPrice >= slab.min && (slab.max === null || cartPrice <= slab.max)
+      );
+    });
+
+    setDiscount(
+      newDiscountSlab ? (newDiscountSlab.discount * cartPrice) / 100 : 0,
+    );
+  }, [cartPrice]);
+  useEffect(() => {
+    document.title = "Cart";
+  }, []);
+
   return (
     <>
-      <Heading title="Cart" subTitle="Your cart products" styles={{paddingTop : "2%"}}/>
+      <Heading
+        title="Cart"
+        subTitle="Your cart products"
+        styles={{ paddingTop: "2%" }}
+      />
       {cartProducts.length !== 0 ? (
         <div className="cart-container">
           <div className="products-list">
@@ -44,14 +76,20 @@ const Cart = ({
                   <td>Subtotal</td>
                   <td className="amount-column">
                     <FaRupeeSign size={12} />
-                    {cartPrice + cartPrice * 0.1}
+                    {cartPrice}
                   </td>
                 </tr>
                 <tr>
-                  <td>Discount</td>
+                  <td>
+                    <Link to={"/#discount"}>
+                      <DiscountTooltip label="Discount" slabs={slabs} />
+                    </Link>
+                  </td>
                   <td className="amount-column">
-                    <FaRupeeSign size={12} />
-                    {cartPrice * 0.1}
+                    <FaRupeeSign size={12} color="#3b82f6" />
+                    <Link to={"/#discount"}>
+                      <DiscountTooltip label={`${discount}`} slabs={slabs} />
+                    </Link>
                   </td>
                 </tr>
                 <tr>
@@ -61,7 +99,7 @@ const Cart = ({
                   <td className="amount-column grand-total">
                     <b>
                       <FaRupeeSign size={window.innerWidth >= 1280 ? 18 : 12} />
-                      {cartPrice}
+                      {cartPrice - discount}
                     </b>
                   </td>
                 </tr>
@@ -76,7 +114,7 @@ const Cart = ({
       ) : (
         <div className="no-records">
           <h1>Add products in cart.</h1>
-          <Link to={"/products"} style={{textDecoration:"none"}}>
+          <Link to={"/products"} style={{ textDecoration: "none" }}>
             <button>
               <BiCartAlt size={22} />
               Add Now

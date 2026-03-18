@@ -16,13 +16,18 @@ import CartProduct from "./Components/CartProduct/CartProduct";
 import AllProducts from "./pages/AllProducts/AllProducts";
 import Footer from "./Components/Footer/Footer";
 import OpenModal from "./Components/OrderModal/OrderModal";
-import Contact from './Components/Contact/Contact'
-import PolicyPage from "./Components/PolicyPage/PolicyPage";
+import Discount from "./Components/Discount/Discount";
+import ScrollToHash from "./Components/ScrollToHash/ScrollToHash";
+import About from "./pages/About/About";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import MainLayout from "./Components/MainLayout/MainLayout";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartPrice, setCartPrice] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [discount, setDiscount] = useState(0.0);
+
   return (
     <>
       <NavBar cartQuantity={cartQuantity} />
@@ -31,51 +36,72 @@ const App = () => {
         showModal={showModal}
         setShowModal={setShowModal}
         cartProducts={cartProducts}
+        discount = {discount}
+        cartPrice = {cartPrice}
       />
 
       <OpeningScreen />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <div className="app-container">
-                <AllProducts />
-              </div>
-            </>
-          }
-        />
-        <Route
-          path="/product/:id"
-          element={
-            <SingleProduct
-              setCartPrice={setCartPrice}
-              setCartQuantity={setCartQuantity}
-              setCartProducts={setCartProducts}
-            />
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <div className="app-container">
-              <Cart
+        <Route element={<MainLayout cartQuantity={cartQuantity}></MainLayout>}>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <div className="app-container">
+                  <AllProducts />
+                  <Discount />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <SingleProduct
                 setCartPrice={setCartPrice}
-                cartPrice={cartPrice}
-                cartProducts={cartProducts}
-                setCartProducts={setCartProducts}
-                cartQuantity={cartQuantity}
                 setCartQuantity={setCartQuantity}
-                setShowModal={setShowModal}
+                setCartProducts={setCartProducts}
               />
-            </div>
-          }
-        />
-        <Route path="/products" element={<MainProducts />} />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <div className="app-container">
+                <Cart
+                  setCartPrice={setCartPrice}
+                  cartPrice={cartPrice}
+                  cartProducts={cartProducts}
+                  setCartProducts={setCartProducts}
+                  cartQuantity={cartQuantity}
+                  setCartQuantity={setCartQuantity}
+                  setShowModal={setShowModal}
+                  discount={discount}
+                  setDiscount={setDiscount}
+                />
+              </div>
+            }
+          />
+          <Route path="/products" element={<MainProducts />} />
+          <Route
+            path="/about"
+            element={
+              <div className="app-container">
+                <About />
+              </div>
+            }
+          />
+          <Route path="/contact" />
+          <Route path="/terms-and-condition" />
+          <Route path="/privacy-policy" />
+          <Route path="/shipping-and-delivery-policy" />
+          <Route path="/return-and-cancellation-policy" />
+        </Route>
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-          <PolicyPage/>
-      <Footer />
+
+      {/* <Footer /> */}
     </>
   );
 };

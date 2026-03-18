@@ -7,6 +7,8 @@ import { TiTick } from "react-icons/ti";
 import { FaRupeeSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import DetailCard from "../Components/DetailCard/DetailCard";
+import DiscountToolTip from "../Components/DiscountToolTip/DiscountToolTip";
+import slabs from "../DiscountSlabs.json";
 
 const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
@@ -40,6 +42,10 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
     setCartPrice((prevPrice) => prevPrice + amount * quantity);
   };
 
+  useEffect(() => {
+    document.title = `${productData.name}`;
+  }, [productData]);
+
   return (
     <div className="single-product-page-container">
       <div className="product-wrapper">
@@ -64,10 +70,18 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
               <FaRupeeSign size={22} />
               {productData?.price}
             </h3>
-            <h3 className="old-price">
-              {productData?.price + productData?.price * 0.1}
-            </h3>
-            <h3 className="discount-amount">10% Discount</h3>
+            <Link
+              to={"/#discount"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h3 className="discount-amount">
+                <DiscountToolTip
+                  label="View Discounts"
+                  styles={{ color: "white" }}
+                  slabs={slabs}
+                />
+              </h3>
+            </Link>
           </span>
           <div>
             <div className="quatity-setter">
@@ -92,18 +106,26 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
           </div>
         </div>
       </div>
-        <h2 className="product-info-title">Product Information</h2>
-      <div className="details-section">
-        {" "}
-        <DetailCard
-          header="Why Choose NATFOO Foxtail Millet Noodles?"
-          content={productData?.content?.[0] || []}
-        ></DetailCard>
-        <DetailCard
-          header="Easy to Cook"
-          content={productData?.content?.[1] || []}
-        ></DetailCard>
-      </div>
+      {productData?.content && (
+        <>
+          <h2 className="product-info-title">Product Information</h2>
+          <div className="details-section">
+            {" "}
+            {productData?.content?.[0] && (
+              <DetailCard
+                header="Why Choose NATFOO Foxtail Millet Noodles?"
+                content={productData?.content?.[0] || []}
+              />
+            )}
+            {productData?.content?.[0] && (
+              <DetailCard
+                header="Easy to Cook"
+                content={productData?.content?.[1] || []}
+              />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };
