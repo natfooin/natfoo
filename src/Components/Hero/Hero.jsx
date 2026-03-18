@@ -26,8 +26,11 @@ import {
   FaChevronCircleLeft,
   FaRupeeSign,
 } from "react-icons/fa";
-
+import { useEffect } from "react";
 function Hero() {
+  useEffect(() => {
+    document.title = "Natfoo";
+  }, []);
   return (
     <div className="hero-container">
       <Heading
@@ -69,14 +72,14 @@ function Hero() {
               <div className="slide-overlay">
                 <h3 className="product-name">
                   {product.name}{" "}
-                  <span>
-                    {/* <FaRupeeSign
+                  {/* <span>
+                    <FaRupeeSign
                       size={innerWidth >= 1280 ? 18 : 10}
                       color="white"
-                    /> */}
-                    {/* {product.price} */}
+                    />
+                    {product.price}
                     10%
-                  </span>
+                  </span> */}
                 </h3>
 
                 <Link to={`/product/${product.id}`}>

@@ -40,6 +40,9 @@ const Cart = ({
       newDiscountSlab ? (newDiscountSlab.discount * cartPrice) / 100 : 0,
     );
   }, [cartPrice]);
+  useEffect(() => {
+    document.title = "Cart";
+  }, []);
 
   return (
     <>

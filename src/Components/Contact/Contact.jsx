@@ -1,11 +1,10 @@
-import React from 'react'
-
+import React from "react";
+import { useEffect } from "react";
 function Contact() {
-  return (
-    <>
-    
-    </>
-  )
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
+  return <></>;
 }
 
-export default Contact
+export default Contact;

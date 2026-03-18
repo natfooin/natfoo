@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainProducts.css";
 import Badge from "../../Components/ui/Badge/Badge";
 import Input from "../../Components/ui/Input/Input";
@@ -32,24 +32,29 @@ function MainProducts() {
 
     return matchesSearch && matchesBadge;
   });
-
+  useEffect(() => {
+    document.title = "Products";
+  }, []);
   return (
     <div className="main-products-wrapper">
       <div className="search-section">
-     <div className="input">
-         <Input
-          placeholder="Search by name or category..."
-          value={inputValue}
-          onChangeHandler={(e) => {
-            const value = e.target.value;
-            setInputValue(value);
-            setSearchTerm(value);
-          }}
-         
-        />
-     </div>
+        <div className="input">
+          <Input
+            placeholder="Search by name or category..."
+            value={inputValue}
+            onChangeHandler={(e) => {
+              const value = e.target.value;
+              setInputValue(value);
+              setSearchTerm(value);
+            }}
+          />
+        </div>
 
-        <Button height="5rem" text="Search"  onClick={() => setSearchTerm(inputValue)} />
+        <Button
+          height="5rem"
+          text="Search"
+          onClick={() => setSearchTerm(inputValue)}
+        />
       </div>
 
       <div className="filter-badges">
@@ -60,7 +65,13 @@ function MainProducts() {
             click={() => setActiveCategory(cat)}
             color={activeCategory === cat ? "#ffffff" : "#926f52"}
             bgColor={activeCategory === cat ? "#926f52" : "#f1f5f9"}
-            styles={{height:"2rem", width:"10rem",fontSize:"1rem", whiteSpace:"nowrap" , fontWeight:"700"}}
+            styles={{
+              height: "2rem",
+              width: "10rem",
+              fontSize: "1rem",
+              whiteSpace: "nowrap",
+              fontWeight: "700",
+            }}
           />
         ))}
       </div>
@@ -68,7 +79,7 @@ function MainProducts() {
       <div className="products-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
-            <Products 
+            <Products
               key={item.id}
               image={item.image}
               name={item.name}

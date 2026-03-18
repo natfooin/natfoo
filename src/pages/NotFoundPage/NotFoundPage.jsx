@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 import "./NotFoundPage.css";
 const NotFoundPage = () => {
+  useEffect(() => {
+      document.title = "Page Not Found";
+    }, []);
   return (
     <div className="error-page">
       <div className="error-container">
