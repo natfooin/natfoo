@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar cartQuantity={cartQuantity} />
+      {/* <NavBar cartQuantity={cartQuantity} /> */}
 
       <OpenModal
         showModal={showModal}
