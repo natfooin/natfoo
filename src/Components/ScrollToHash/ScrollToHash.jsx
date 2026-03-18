@@ -1,17 +1,33 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function ScrollToHash() {
-  const { hash } = useLocation();
+const ScrollToHash = () => {
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // If URL has hash like #discount
     if (hash) {
-      const el = document.querySelector(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      const el = document.getElementById(hash.replace("#", ""));
+      
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100); // delay ensures DOM is ready
+        return;
+      }
     }
-  }, [hash]);
+
+    // Default: scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname, hash]);
 
   return null;
-}
+};
 
 export default ScrollToHash;
