@@ -54,6 +54,7 @@
 .footer .links  {
     list-style: none;
     padding-top:2rem;
+    
 }
 
 .footer .links ul li {
@@ -126,7 +127,28 @@
         gap: 20px;
         text-align: center;
     }
-
+    .footer .footer-top .linkdiv .links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+    .footer .footer-top .linkdiv .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: fit-content;
+}
+    .footer .footer-top .linkdiv .links ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    
+}
     .site-rights {
         order: 2;
     }

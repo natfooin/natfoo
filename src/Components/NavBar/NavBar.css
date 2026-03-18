@@ -63,27 +63,45 @@
 
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; 
+   display: flex;
+    cursor: pointer;
+    color: var(--gold);
+    /* Extra insurance to keep it on top */
+    position: relative;
+    z-index: 3001;
   }
 
   .hide-mobile {
-    display: none;
+    display: flex;
   }
 
   .navElements {
     position: fixed;
-    top: 70px; 
-    left: -100%;
+    top: -100%;      
+    left: 0;         
     width: 100%;
-    height: calc(100vh - 70px);
+    height: auto;    
+    padding-bottom: 2rem; 
     background: var(--dark-green);
     transition: 0.4s ease-in-out;
     z-index: 1500;
+    border-bottom:3px solid var(--gold);
   }
 
   .navElements.active {
-    left: 0;
+    top:0;
+
     }
+    .header-right a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row; /* Arranges Shop Now and Hamburger in a row */
+    align-items: center;
+    gap: 1.2rem;
+    position: relative; 
+    /* CRITICAL: Must be higher than .navElements */
+    z-index: 30000;
+}
 
   .navElements ul {
     flex-direction: column;
@@ -91,11 +109,18 @@
     justify-content: center;
     height: 100%;
     gap: 3rem;
+    padding: 3rem ;
+    padding-top:6em;
   }
 
   .navElements ul a {
     font-size: 2rem; 
     color: var(--gold);
+    
+  }
+  .navElements ul a:hover {
+    font-size: 2rem; 
+    text-decoration: underline;
   }
 }
 

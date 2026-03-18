@@ -25,7 +25,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      {/* <NavBar cartQuantity={cartQuantity} /> */}
+      <NavBar cartQuantity={cartQuantity} />
 
       <OpenModal
         showModal={showModal}
@@ -34,64 +34,45 @@ const App = () => {
       />
 
       <OpeningScreen />
-
-      <ScrollToHash />
       <Routes>
-        <Route element={<MainLayout cartQuantity={cartQuantity}></MainLayout>}>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <div className="app-container">
-                  <AllProducts />
-                  <Discount />
-                </div>
-              </>
-            }
-          />
-          <Route
-            path="/product/:id"
-            element={
-              <SingleProduct
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <div className="app-container">
+                <AllProducts />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={
+            <SingleProduct
+              setCartPrice={setCartPrice}
+              setCartQuantity={setCartQuantity}
+              setCartProducts={setCartProducts}
+            />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <div className="app-container">
+              <Cart
                 setCartPrice={setCartPrice}
-                setCartQuantity={setCartQuantity}
+                cartPrice={cartPrice}
+                cartProducts={cartProducts}
                 setCartProducts={setCartProducts}
+                cartQuantity={cartQuantity}
+                setCartQuantity={setCartQuantity}
+                setShowModal={setShowModal}
               />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <div className="app-container">
-                <Cart
-                  setCartPrice={setCartPrice}
-                  cartPrice={cartPrice}
-                  cartProducts={cartProducts}
-                  setCartProducts={setCartProducts}
-                  cartQuantity={cartQuantity}
-                  setCartQuantity={setCartQuantity}
-                  setShowModal={setShowModal}
-                />
-              </div>
-            }
-          />
-          <Route path="/products" element={<MainProducts />} />
-          <Route
-            path="/about"
-            element={
-              <div className="app-container">
-                <About />
-              </div>
-            }
-          />
-          <Route path="/contact" />
-          <Route path="/terms-and-condition" />
-          <Route path="/privacy-policy" />
-          <Route path="/shipping-and-delivery-policy" />
-          <Route path="/return-and-cancellation-policy" />
-        </Route>
-        <Route path="/*" element={<NotFoundPage />} />
+            </div>
+          }
+        />
+        <Route path="/products" element={<MainProducts />} />
       </Routes>
           <PolicyPage/>
       <Footer />
