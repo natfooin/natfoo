@@ -51,8 +51,13 @@ function MainProducts() {
         </div>
 
         <Button
-          height="5rem"
           text="Search"
+          styles={{
+            borderRadius: "0 10px 10px 0",
+            borderLeft: "none",
+            height:"44px",
+            float:"left"
+          }}
           onClick={() => setSearchTerm(inputValue)}
         />
       </div>
@@ -70,7 +75,7 @@ function MainProducts() {
               width: "10rem",
               fontSize: "1rem",
               whiteSpace: "nowrap",
-              fontWeight: "700",
+              fontWeight: "800",
             }}
           />
         ))}
