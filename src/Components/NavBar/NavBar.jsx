@@ -4,7 +4,7 @@ import { PiShoppingCartBold } from "react-icons/pi";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import logo from "../../assets/logo.png";
 import Button from "./../ui/Button/Button";
-import "./NavBar.css"; // This line links the CSS file
+import "./NavBar.css"; 
 import { Link } from "react-router-dom";
 
 function NavBar({ cartQuantity }) {
@@ -29,8 +29,11 @@ function NavBar({ cartQuantity }) {
           <li onClick={() => setIsOpen(false)}>
             <Link to="/contact">Contact</Link>
           </li>
+
         </ul>
+        
       </div>
+      
 
       <div className="nav-actions">
         <div className="searchIcon">

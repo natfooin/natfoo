@@ -9,7 +9,7 @@
   top: 0;
   z-index: 2000;
   border-bottom: 2px solid var(--gold);
-  height: 70px; 
+  height: 70px;
 }
 
 .logo img {
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 1.0rem;
+  gap: 1rem;
   max-width: fit-content;
 }
 
@@ -64,17 +64,14 @@
 }
 
 @media (max-width: 820px) {
-  /* 1. Force the container to be a row */
   .header-right {
     display: flex !important;
-    flex-direction: row !important; /* Forces side-by-side */
+    flex-direction: row !important;
     align-items: center;
-    gap: 10px; /* Space between button and hamburger */
+    gap: 10px;
     position: relative;
-    /* z-index: 30000; Keeps it above the sliding menu */
   }
 
-  /* 2. Remove underline and fix button link */
   .header-right a {
     text-decoration: none;
     display: flex;
@@ -87,31 +84,31 @@
     z-index: 30001;
   }
 
-  /* 3. The Full Screen Menu */
   .navElements {
     position: fixed;
-    top: -100vh; /* Start completely off-screen */
+    top: -100vh;
     left: 0;
     width: 100%;
-    height: 30vh; /* Full screen height */
+    height: 30vh;
     background: var(--dark-green);
     transition: 0.4s ease-in-out;
-    z-index: 25000; /* Below the header-right icons */
+    z-index: 25000;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* font-size: 5rem; */
   }
 
   .navElements.active {
-    top: 0; 
+    top: 0;
     border: 0.2rem solid var(--gold);
 
   }
-.navElements:hover,.navElements.active ul li a:hover{
-  text-decoration: underline;
-  color: var(--gold);
-}
+  
+  .navElements:hover,
+  .navElements.active ul li a:hover {
+    text-decoration: underline;
+    color: var(--gold);
+  }
   .navElements ul {
     flex-direction: column;
     align-items: center;

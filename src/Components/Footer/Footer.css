@@ -127,11 +127,19 @@
         gap: 20px;
         text-align: center;
     }
-    .footer .footer-top .linkdiv .links ul{
+    .footer .footer-top .linkdiv .links ul {
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap; /* Allows links to wrap if there are too many */
+        gap: 1.5rem;      /* This creates the space between the li elements */
+        padding: 0;
+    
+}
+    .footer .footer-top .linkdiv .links ul li {
+margin-bottom: 0;
     
 }
     .footer .footer-top .linkdiv .links {
@@ -142,11 +150,8 @@
     max-width: fit-content;
 }
     .footer .footer-top .linkdiv .links ul li a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 5rem;
+ 
+    display: inline-block;
     
 }
     .site-rights {
