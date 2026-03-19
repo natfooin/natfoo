@@ -21,6 +21,7 @@ import ScrollToHash from "./Components/ScrollToHash/ScrollToHash";
 import About from "./pages/About/About";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MainLayout from "./Components/MainLayout/MainLayout";
+import Contact from "./Components/Contact/Contact";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -100,7 +101,7 @@ const App = () => {
         </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-
+            <Contact />
       {/* <Footer /> */}
     </>
   );
