@@ -1,8 +1,19 @@
 .footer {
     background-color: var(--dark-green);
-    padding-top: 5rem ;
-    padding-bottom: 1rem ;
+    padding: 5rem 1rem 1rem; 
     font-family: sans-serif;
+    letter-spacing: 0.7px;
+    position: relative;
+    overflow: hidden;
+    border-top: 2rem;
+}           
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 175, 82, 0.05) 0%, transparent 80%);
+    pointer-events: none;
 }
 
 .footer-top {
@@ -12,6 +23,7 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .footer .footer-left {
@@ -19,23 +31,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-  
 }
 
 .footer .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height:25rem;
-    max-width:25rem;
+    max-height: 25rem;
+    max-width: 25rem;
 }
-.footer .logo img{
+
+.footer .logo img {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height:5rem;
-    max-width:25rem;
+    max-height: 5rem;
+    max-width: 25rem;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer .logo img:hover {
+    transform: scale(1.1) rotate(3deg);
 }
 
 .footer .logo-para {
@@ -45,6 +61,7 @@
     margin-top: 15px;
     line-height: 1.5;
     text-align: justify;
+    opacity: 0.9;
 }
 
 .footer .linkdiv .links ul {
@@ -54,27 +71,96 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
-.footer .links  {
+
+.footer .links {
     list-style: none;
-    padding-top:2rem;
-    
+    padding-top: 2rem;
 }
 
 .footer .links ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
+/* 3. Smooth Underline Animation for Links */
 .footer .links ul li a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.footer .links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s ease-in-out;
 }
 
 .footer .links ul li a:hover {
     color: var(--gold);
-    text-decoration: underline;
+}
+
+.footer .links ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.6rem 0;
+    border-top: 1px solid rgba(212, 175, 82, 0.3); 
+    border-bottom: 1px solid rgba(212, 175, 82, 0.3);
+}
+
+.iconContainer {
+    display: flex;          
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.iconContainer div {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iconContainer div:hover {
+    background-color: var(--gold);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.site-rights {
+    color: white;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .footer-bottom {
@@ -130,7 +216,7 @@ color: var(--gold);
 color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .footer-top {
         flex-direction: column;
         align-items: center;
@@ -168,6 +254,35 @@ margin-bottom: 0;
     display: inline-block;
     
 }
+    .site-rights {
+        order: 2;
+    }
+
+    .iconContainer {
+        order: 1;
+    }
+}@media (max-width: 800px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer .footer-top .linkdiv .links ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem; 
+    }
+
+    .footer .footer-top .linkdiv .links ul li {
+        margin-bottom: 0;
+    }
+
     .site-rights {
         order: 2;
     }

@@ -1,7 +1,7 @@
   .top-homeProduct{
     width:100%;
     padding:clamp(20px,5vw,60px);
-    background:var(--cream-bg);
+    
   }
 
   .above-container{

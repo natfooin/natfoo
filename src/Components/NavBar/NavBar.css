@@ -27,7 +27,12 @@
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+}
+.navElements ul :hover {
+    color: var(--gold);
+    text-decoration: underline;
+    transition: all 0.3s;
 }
 
 .nav-actions {
