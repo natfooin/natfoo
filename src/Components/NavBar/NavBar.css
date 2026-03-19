@@ -100,13 +100,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 5rem;
+    /* font-size: 5rem; */
   }
 
   .navElements.active {
-    top: 0; /* Overlaps everything */
-  }
+    top: 0; 
+    border: 0.2rem solid var(--gold);
 
+  }
+.navElements:hover,.navElements.active ul li a:hover{
+  text-decoration: underline;
+  color: var(--gold);
+}
   .navElements ul {
     flex-direction: column;
     align-items: center;
