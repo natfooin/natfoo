@@ -39,6 +39,10 @@
   border: none;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
+  transition: all 0.05s ease-in-out;
+  &:hover{
+    transform: translateY(0);
+  }
 }
 
 .filter-badges {
