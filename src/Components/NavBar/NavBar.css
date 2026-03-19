@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   max-width: fit-content;
 }
 
@@ -101,19 +101,22 @@
   .navElements.active {
     top: 0;
     border: 0.2rem solid var(--gold);
-
   }
   
-  .navElements:hover,
+  
   .navElements.active ul li a:hover {
     text-decoration: underline;
     color: var(--gold);
+    cursor: pointer;
   }
   .navElements ul {
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
     padding-top: 2rem;
+  }
+  .nav-actions{
+    gap: 2rem;
   }
 }
 

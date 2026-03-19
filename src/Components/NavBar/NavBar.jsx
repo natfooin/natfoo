@@ -21,13 +21,13 @@ function NavBar({ cartQuantity }) {
       <div className={`navElements ${isOpen ? "active" : ""}`}>
         <ul>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/">Home</Link>
+           <Link to="/"> <a to="/">Home</a></Link>
           </li>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/products">Products</Link>
+            <Link to='/products'> <a to="/">products</a></Link>
           </li>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/contact">Contact</Link>
+            <Link to='/contact'><a to="/contact">Contact</a></Link>
           </li>
 
         </ul>
