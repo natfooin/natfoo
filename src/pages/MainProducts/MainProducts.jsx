@@ -56,7 +56,8 @@ function MainProducts() {
             borderRadius: "0 10px 10px 0",
             borderLeft: "none",
             height:"44px",
-            float:"left"
+            float:"left",
+            margin:"0",
           }}
           onClick={() => setSearchTerm(inputValue)}
         />
