@@ -133,8 +133,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        flex-wrap: wrap; /* Allows links to wrap if there are too many */
-        gap: 1.5rem;      /* This creates the space between the li elements */
+        flex-wrap: wrap; 
+        gap: 1.5rem;     
         padding: 0;
     
 }
