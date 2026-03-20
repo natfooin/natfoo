@@ -6,6 +6,7 @@ import MainProducts from "./pages/MainProducts/MainProducts";
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import "./App.css";
+import PolicyPage from './Components/PolicyPage/PolicyPage'
 import OpeningScreen from "./Components/OpeningScreen/OpeningScreen";
 import { Router, Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct";
@@ -32,7 +33,7 @@ const App = () => {
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
-
+    
       <OpenModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -102,7 +103,8 @@ const App = () => {
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {/* <Footer /> */}
-      <Contact />     
+      <Contact />    
+      <PolicyPage /> 
     </>
   );
 };

@@ -82,7 +82,9 @@
   font-weight: 700;
   color: var(--dark-olive);
 }
-
+.status-view{
+  max-height: 25rem;
+}
 .field input, 
 .field textarea {
   padding: 10px;

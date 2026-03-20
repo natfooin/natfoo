@@ -92,8 +92,11 @@ function Contact() {
               <div className="field">
                 <label>Phone no.</label>
                 <input 
-                  type="number" 
+                  type="tel" 
+                  name="phone"
                   required 
+                  pattern="[0-9]*"
+                  onInput="this.value=this.value.replace(/[^0-9]/g,'');"
                   value={formData.number}
                   onChange={(e) => setFormData({...formData, number: e.target.value})}
                 />
