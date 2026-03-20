@@ -108,19 +108,12 @@
   margin-top: 8px;
   padding: 11px;
 
-  background: var(--button-red);
-  color: var(--site-white);
-
   border: none;
   border-radius: 6px;
 
   font-weight: 500;
   cursor: pointer;
   transition: 0.25s;
-}
-
-.submit-btn:hover {
-  background: #b83c2e;
 }
 
 /* ANIMATION */
