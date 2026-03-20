@@ -28,7 +28,7 @@
   max-width: 850px; /* reduced from 1100px */
   display: flex;
   gap: 35px;
-  background-color: #ffffff7c;
+  background-color: var(--dark-green);
   border-radius: 16px;
   padding: 30px; /* reduced padding */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
@@ -60,13 +60,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
 }
 
 .product-head {
   font-size: 32px;
   font-weight: 700;
-  color: var(--heading-brown);
+  color: white;
 }
 
 /* DESCRIPTION */
@@ -74,7 +74,7 @@
 .product-desc {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--dark-olive-text) !important;
+  color: var(--cream-bg) !important;
 }
 
 /* TRUST MESSAGE */
@@ -97,12 +97,12 @@
 .price {
   font-size: 28px;
   font-weight: 700;
-  color: var(--millet-black);
+  color: var(--cream-bg);
 }
 
 .old-price {
   font-size: 18px;
-  color: var(--dark-olive-text);
+  color: var(--dark-olive);
   text-decoration: line-through;
 }
 
@@ -121,7 +121,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gold);
   padding: 7px 14px;
   border-radius: 8px;
   width: fit-content;
@@ -131,7 +131,8 @@
   width: 32px;
   height: 32px;
   border: none;
-  background: var(--cream-bg);
+  background: var(--dark-green);
+  color: var(--cream-bg);
   border-radius: 6px;
   font-size: 18px;
   font-weight: bold;
@@ -140,14 +141,14 @@
 }
 
 .quatity-setter button:hover {
-  background: var(--dark-green);
-  color: white;
+  background: var(--cream-bg);
+  color: black;
 }
 
 .quatity-setter span {
   font-size: 16px;
   font-weight: 600;
-  color: var(--text-green);
+  color: var(--cream-bg);
 }
 
 /* ADD TO CART BUTTON */
@@ -157,8 +158,8 @@
   padding: 14px 24px;
   border: none;
   border-radius: 10px;
-  background: var(--button-red);
-  color: white;
+  background: var(--cream-bg);
+  color: var(--millet-black);
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -166,7 +167,8 @@
 }
 
 .add-to-cart-btn:hover {
-  background: var(--heading-brown);
+  background: var(--button-red);
+  color: white;
 }
 
 /* DIVIDER */
@@ -236,13 +238,11 @@
 }
 
 @media (max-width: 480px) {
-
-  .details-section{
+  .details-section {
     grid-template-columns: 1fr;
   }
 
-  .detail-card-header h1{
+  .detail-card-header h1 {
     font-size: 22px;
   }
-
 }
