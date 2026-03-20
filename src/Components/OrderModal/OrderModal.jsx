@@ -3,6 +3,17 @@ import "./OrderModal.css";
 import logo from "../../assets/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
+
+const buttonNotReadyStyles = {
+  backgroundColor: "#808080",
+  color: "balck",
+  cursor: "not-allowed",
+};
+const buttonReadyStyles = {
+  backgroundColor: "var(--button-red)",
+  color: "white",
+  cursor: "poiter",
+};
 function OrderModal({
   showModal,
   setShowModal,
@@ -12,6 +23,58 @@ function OrderModal({
 }) {
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  const [nameData, setNameData] = useState("");
+  const [emailData, setEmailData] = useState("");
+  const [contactData, setContactData] = useState("");
+  const [addressData, setAddressData] = useState("");
+  const [pincodeData, setPincodeData] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
+  const [formFilled, setFormFilled] = useState(false);
+  useEffect(() => {
+    console.log(formFilled)
+    console.log(nameData)
+    console.log(emailData)
+    console.log(contactData)
+    console.log(addressData)
+    console.log(pincodeData)
+    console.log(isChecked)
+    if (
+      nameData &&
+      emailData &&
+      contactData &&
+      addressData &&
+      pincodeData && isChecked
+    ) {
+      setFormFilled(true);
+    } else {
+      setFormFilled(false);
+    }
+  }, [
+    nameData,
+    emailData,
+    contactData,
+    addressData,
+    pincodeData,
+    isChecked
+  ]);
+
+  const handleNameChange = (e) => {
+    setNameData(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmailData(e.target.value);
+  };
+  const handleAddressChange = (e) => {
+    setAddressData(e.target.value);
+  };
+  const handleContactChange = (e) => {
+    setContactData(e.target.value);
+  };
+  const handlePincodeChange = (e) => {
+    setPincodeData(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -29,6 +92,13 @@ function OrderModal({
     buyData.subtotal = cartPrice;
     buyData.discountAmount = discount;
     buyData.total = cartPrice - discount;
+
+    setAddressData("")
+    setPincodeData("")
+    setNameData("")
+    setEmailData("")
+    setContactData("")
+    setIsChecked(false)
 
     console.log(buyData);
     closeModal();
@@ -78,12 +148,19 @@ function OrderModal({
             </div>
 
             <form onSubmit={handleSubmit} className="form">
-              <input type="text" placeholder="Full Name" name="name" required />
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="name"
+                onChange={(e) => handleNameChange(e)}
+                required
+              />
 
               <input
                 type="email"
                 placeholder="Email Address"
                 name="email"
+                onChange={(e) => handleEmailChange(e)}
                 required
               />
 
@@ -91,6 +168,7 @@ function OrderModal({
                 type="tel"
                 placeholder="Phone Number"
                 name="phone"
+                onChange={(e) => handleContactChange(e)}
                 required
               />
 
@@ -98,6 +176,7 @@ function OrderModal({
                 placeholder="Address"
                 rows="2"
                 name="address"
+                onChange={(e) => handleAddressChange(e)}
                 required
               ></textarea>
 
@@ -105,6 +184,7 @@ function OrderModal({
                 type="text"
                 placeholder="Pincode"
                 name="pincode"
+                onChange={(e) => handlePincodeChange(e)}
                 required
               />
 
@@ -115,11 +195,20 @@ function OrderModal({
               ></textarea>
 
               <label className="checkbox">
-                <input type="checkbox" required />I agree to the Terms &
-                Conditions
+                <input
+                  type="checkbox"
+                  onChange={() => setIsChecked(!isChecked)}
+                  id="checkForTC"
+                  required
+                />
+                I agree to the Terms & Conditions
               </label>
 
-              <button type="submit" className="submit-btn">
+              <button
+                type="submit"
+                className="submit-btn"
+                style={formFilled ? buttonReadyStyles : buttonNotReadyStyles}
+              >
                 Place Order
               </button>
             </form>
