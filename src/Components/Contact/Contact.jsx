@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
 import Button from "../../Components/ui/Button/Button"; 
-
-const LoadingView = () => (
+import FooterIcon from "./../Footer/FooterIcon";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { CiYoutube } from "react-icons/ci";
+import { CiMail } from "react-icons/ci";
+const LoadingView = () => ( 
   <div className="status-view">
     <div className="loader"></div>
     <p>Sending...</p>
@@ -21,18 +27,14 @@ const SuccessView = ({ reset }) => (
 
 function Contact() {
   const [view, setView] = useState("form"); 
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  useEffect(() => {
-    document.title = "Contact | NatFoo";
-  }, []);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "",number:"" });
 
   const handleSubmit = (e) => {
     e.preventDefault();// stop the default behaviour of the browser
     setView("loading");
     setTimeout(() => {
       setView("success");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "" ,number:""});
     }, 1500);
   };
 
@@ -40,8 +42,7 @@ function Contact() {
     <div className="contact-wrapper">
       <div className="contact-card">
         <div className="contact-side">
-          <h2 className="side-title">Connect</h2>
-          <div className="side-group">
+            <div className="side-group">
             <div className="side-item">
               <FaPhoneAlt className="side-icon" />
               <span>+91 98765 43210</span>
@@ -52,13 +53,22 @@ function Contact() {
             </div>
             <div className="side-item">
               <FaMapMarkerAlt className="side-icon" />
-              <span>Tenkasi, Tamil Nadu</span>
+              <span>Trichy, Tamil Nadu</span>
             </div>
+          </div>
+            <div className="iconContainer">
+            <FooterIcon icon={<FaWhatsapp size={30} color="white" />} />
+            <FooterIcon icon={<CiMail size={30} color="white" />} />
+            <FooterIcon icon={<CiYoutube size={30} color="white" />} />
+            <FooterIcon icon={<FaXTwitter size={30} color="white" />} />
+            <FooterIcon icon={<FaFacebook size={50} color="white" />} />
+            <FooterIcon icon={<FaInstagram size={30} color="white" />} />
           </div>
         </div>
 
         <div className="contact-body">
           {view === "form" && (
+           <>
             <form className="contact-ui" onSubmit={handleSubmit}>
               <h3>Message Us</h3>
               <div className="field">
@@ -80,9 +90,18 @@ function Contact() {
                 />
               </div>
               <div className="field">
+                <label>Phone no.</label>
+                <input 
+                  type="number" 
+                  required 
+                  value={formData.number}
+                  onChange={(e) => setFormData({...formData, number: e.target.value})}
+                />
+              </div>
+              <div className="field">      
                 <label>Message</label>
                 <textarea 
-                  rows="4" 
+                  rows="9" 
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
@@ -90,10 +109,23 @@ function Contact() {
               </div>
               <Button text="Submit" styles={{width: "100%", height: "48px"}} />
             </form>
+            
+           </>
           )}
+
 
           {view === "loading" && <LoadingView />}
           {view === "success" && <SuccessView reset={() => setView("form")} />}
+         
+        </div>
+        <div className="contact-right">
+          <h1>C</h1>
+          <h1>O</h1>
+          <h1>N</h1>
+          <h1>T</h1>
+          <h1>A</h1>
+          <h1>C</h1>
+          <h1>T</h1>
         </div>
       </div>
     </div>

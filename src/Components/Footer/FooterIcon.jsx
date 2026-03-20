@@ -1,9 +1,7 @@
 import React from 'react'
 import './FooterIcon.css'
 function FooterIcon({icon}) {
-    const iconStyle={
-        
-    }
+
   return (
     <>
         <div className="FooterIcon">

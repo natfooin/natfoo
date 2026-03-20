@@ -8,13 +8,16 @@
   justify-content: center;
   padding: 2rem;
 }
-
+  .iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 .contact-card {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 320px 550px 400px;
   max-width: 950px;
   width: 100%;
-  background: var(--site-white);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -24,6 +27,9 @@
   background-color: var(--dark-green);
   padding: 3rem 2rem;
   color: var(--site-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .side-title {
@@ -50,10 +56,12 @@
 
 .contact-body {
   padding: 3rem;
-  min-height: 400px;
+  min-height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+
 }
 
 .contact-ui {
@@ -91,21 +99,43 @@
 .status-view {
   text-align: center;
 }
-
+.iconContainer{
+  padding-top: 2.5rem;
+}
 .loader {
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
   border-top: 4px solid var(--site-honey-badger);
-  border-radius: 50%;
+  border-radius: 50%;     
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
 }
-
+.contact-right{
+  background-color: var(--dark-green);
+  max-width: 20%;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 @media (max-width: 800px) {
   .contact-card { grid-template-columns: 1fr; }
-  .contact-side { text-align: center; }
+  .contact-side { text-align: center; order: 2;}
+  .contact-body { order: 1; }
   .side-item { justify-content: center; }
+  .contact-right{
+  background-color: var(--dark-green);
+  max-width: 100%;
+  min-width: 20%;
+  color: var(--gold);
+ display: grid;
+ place-items: center;
+ grid-template-columns: repeat(7,0.1fr) ;
+ direction: ltr;
+  padding: 1rem 14rem;
+}
 }

@@ -27,7 +27,7 @@ function HomeProductPage({ categoryArray }) {
   return (
     <div>
       <div className="product-container">
-        {products.slice(0,4).map((product) => (
+        {products.map((product) => (
           <div key={product.id} className="product-card">
             <Products
               image={product.image}
