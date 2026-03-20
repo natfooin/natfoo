@@ -101,8 +101,8 @@ const App = () => {
         </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-            <Contact />
       {/* <Footer /> */}
+      <Contact />     
     </>
   );
 };

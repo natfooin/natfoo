@@ -20,10 +20,6 @@
   box-sizing: border-box;
 }
 
-.product-card:hover {
-  transform: translateY(-6px);
-}
-
 @media (max-width: 921px) {
   .product-container {
     grid-template-columns: repeat(2, 1fr);
