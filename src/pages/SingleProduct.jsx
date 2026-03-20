@@ -54,16 +54,13 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
         </div>
         <div className="product-details">
           <h1 className="product-head">{productData?.name}</h1>
-          <hr />
+          <hr style={{border : "1px solid gold"}} />
           <p className="product-desc">{productData?.desc}</p>
           <div>
             <Badge
               text={productData?.category}
               styles={{ scale: "2", margin: "1rem" }}
             />
-            <p className="product-catch">
-              <TiTick color="green" size={20} /> Trusted by cutomers
-            </p>
           </div>
           <span>
             <h3 className="price">

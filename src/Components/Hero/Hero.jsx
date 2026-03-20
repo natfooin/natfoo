@@ -36,6 +36,8 @@ function Hero() {
       <Heading
         title="Traditional Grains, Modern Taste"
         subTitle="Nutritious cookies made from ancient grains for a healthier everyday snack."
+        titleColor="var(--heading)"
+        subTitleColor="var(--site-honey-badger)"
       />
       <Swiper
         effect={"coverflow"}
