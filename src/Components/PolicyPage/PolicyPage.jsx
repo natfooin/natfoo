@@ -3,10 +3,7 @@ import "./PolicyPage.css";
 import { FaUserShield, FaDatabase, FaCookieBite, FaLock } from "react-icons/fa";
 
 function PolicyPage() {
-  useEffect(() => {
-    document.title = "Privacy Policy | NatFoo";
-    window.scrollTo(0, 0);
-  }, []);
+
 
   return (
     <div className="policy-wrapper">
