@@ -50,6 +50,8 @@ const Cart = ({
         title="Cart"
         subTitle="Your cart products"
         styles={{ paddingTop: "2%" }}
+        titleColor="var(--heading)"
+        subTitleColor="var(--site-honey-badger)"
       />
       {cartProducts.length !== 0 ? (
         <div className="cart-container">

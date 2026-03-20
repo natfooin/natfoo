@@ -74,7 +74,7 @@ const CartProduct = ({
             onMouseEnter={() => setRemoveButtonEffect((prev) => !prev)}
             onMouseLeave={() => setRemoveButtonEffect((prev) => !prev)}
           >
-            <BiTrash color={removeButtonEffect ? "black" : "gray"} />
+            <BiTrash color={removeButtonEffect ? "white" : "fdd"} />
           </button>
         </div>
       </div>

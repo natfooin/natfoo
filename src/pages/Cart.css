@@ -34,6 +34,7 @@
 }
 
 .cart-container {
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
   min-height: 80vh;
@@ -51,10 +52,12 @@
 
 .order-summary h1 {
   text-align: center;
+  color: var(--heading);
 }
 
 .order-summary table {
   width: 100%;
+  color: var(--heading);
 }
 
 table tr {
@@ -78,7 +81,7 @@ table tr {
   white-space: nowrap;
   transition: 0.3s;
   &:hover {
-    background-color: black;
+    background-color: var(--site-honey-badger);
     color: white;
   }
 }
