@@ -52,7 +52,7 @@ const App = () => {
                 <Hero />
                 <div className="app-container">
                   <AllProducts />
-                  <Discount />
+                  {/* <Discount /> */}
                 </div>
               </>
             }

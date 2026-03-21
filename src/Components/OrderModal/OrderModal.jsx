@@ -5,12 +5,12 @@ import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
 
 const buttonNotReadyStyles = {
-  backgroundColor: "#808080",
-  color: "balck",
+  backgroundColor: "var(--button-red)",
+  color: "white",
   cursor: "not-allowed",
 };
 const buttonReadyStyles = {
-  backgroundColor: "var(--button-red)",
+  backgroundColor: "#04AA6D",
   color: "white",
   cursor: "poiter",
 };
@@ -31,8 +31,8 @@ function OrderModal({
   const [addressData, setAddressData] = useState("");
   const [pincodeData, setPincodeData] = useState("");
   const [isChecked, setIsChecked] = useState(false);
-
   const [formFilled, setFormFilled] = useState(false);
+  
   useEffect(() => {
     console.log(formFilled)
     console.log(nameData)
