@@ -293,5 +293,6 @@
 
   .iconContainer {
     order: 1;
+    padding-top: 0px;
   }
 }

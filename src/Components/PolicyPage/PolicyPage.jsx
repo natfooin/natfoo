@@ -4,7 +4,6 @@ import { FaUserShield, FaDatabase, FaCookieBite, FaLock } from "react-icons/fa";
 
 function PolicyPage() {
 
-
   return (
     <div className="policy-wrapper">
       <div className="policy-card">
