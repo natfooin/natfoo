@@ -1,29 +1,29 @@
-.detail-card-container{
+.detail-card-container {
   width: 100%;
   padding: 28px 32px;
   border-radius: 14px;
 
-  background: var(--site-white);
-  border: 1px solid rgba(0,0,0,0.05);
+  background: rgb(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
-.detail-card-container:hover{
+.detail-card-container:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
 }
 
 /* HEADER */
 
-.detail-card-header{
+.detail-card-header {
   border-left: 5px solid var(--gold);
   padding-left: 14px;
   margin-bottom: 20px;
 }
 
-.detail-card-header h1{
+.detail-card-header h1 {
   font-size: 24px;
   color: var(--heading);
   font-weight: 600;
@@ -31,8 +31,8 @@
 
 /* CONTENT */
 
-.detail-card-content ul{
-  list-style: none;
+.detail-card-content ul {
+  list-style: disc;
   padding: 0;
   margin: 0;
 
@@ -43,13 +43,12 @@
 
 /* FEATURE ITEM */
 
-.detail-card-content li{
+.detail-card-content li {
   width: 100%;
-
-  padding: 12px 16px;
+  list-style: circle;
+  /* padding: 12px 16px; */
   border-radius: 8px;
-
-  background: var(--cream-bg);
+  display: list-item;
   color: var(--millet-cookies);
 
   font-size: 15px;
@@ -58,40 +57,40 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
   transition: all 0.25s ease;
 }
 
 /* ICON */
-
-.detail-card-content li::before{
-  content: "✔";
-  color: var(--text-green);
-  font-weight: bold;
+.detail-card-content ul {
+  list-style: none;
+  padding-left: 0;
 }
 
+.detail-card-content li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-card-content li::before {
+  content: "•";
+  color: var(--gold);
+  font-size: 18px;
+}
 /* HOVER EFFECT */
 
-.detail-card-content li:hover{
-  background: var(--dark-green);
-  color: var(--site-white);
-  transform: translateX(6px);
-}
-
-.detail-card-content li:hover::before{
-  color: var(--gold);
+.detail-card-content li:hover {
+  scale: 1.05;
 }
 
 /* MOBILE */
 
-@media (max-width: 768px){
-
-  .detail-card-container{
+@media (max-width: 768px) {
+  .detail-card-container {
     padding: 22px;
   }
 
-  .detail-card-header h1{
+  .detail-card-header h1 {
     font-size: 20px;
   }
-
 }
