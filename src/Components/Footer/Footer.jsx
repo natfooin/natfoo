@@ -2,7 +2,6 @@ import React from "react";
 import "./Footer.css";
 import FooterIcon from "./FooterIcon";
 import { FaWhatsapp } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
@@ -111,7 +110,6 @@ function Footer() {
             <FooterIcon icon={<FaWhatsapp size={30} color="white" />} />
             <FooterIcon icon={<CiMail size={30} color="white" />} />
             <FooterIcon icon={<CiYoutube size={30} color="white" />} />
-            <FooterIcon icon={<FaXTwitter size={30} color="white" />} />
             <FooterIcon icon={<FaFacebook size={50} color="white" />} />
             <FooterIcon icon={<FaInstagram size={30} color="white" />} />
           </div>

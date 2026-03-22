@@ -23,6 +23,7 @@ import About from "./pages/About/About";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MainLayout from "./Components/MainLayout/MainLayout";
 import Contact from "./Components/Contact/Contact";
+import  TermsPage from './../src/Components/PolicyPage/TermsPage'
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -105,6 +106,7 @@ const App = () => {
       {/* <Footer /> */}
       <Contact />    
       <PolicyPage /> 
+    <TermsPage/>
     </>
   );
 };
