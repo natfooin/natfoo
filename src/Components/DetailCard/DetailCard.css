@@ -46,7 +46,7 @@
 .detail-card-content li {
   width: 100%;
   list-style: circle;
-  padding: 12px 16px;
+  /* padding: 12px 16px; */
   border-radius: 8px;
   display: list-item;
   color: var(--millet-cookies);
