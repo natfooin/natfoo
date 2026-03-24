@@ -24,15 +24,14 @@
 
 .product-wrapper {
   width: 100%;
-  max-width: 950px;
+  max-width: 780px; /* adjusted */
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 28px; /* reduced gap */
   background: linear-gradient(145deg, #2e361f, #3b4429);
   border-radius: 18px;
-  padding: 35px;
+  padding: 24px; /* reduced padding */
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-  scale: 0.77;  
 }
 
 /* IMAGE */
@@ -43,6 +42,7 @@
 
 .product-display > img {
   width: 100%;
+  max-height: 320px;
   border-radius: 14px;
   object-fit: cover;
   transition: transform 0.4s ease;
@@ -58,13 +58,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px; /* tighter spacing */
 }
 
 /* TITLE */
 
 .product-head {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   color: white;
   letter-spacing: 0.5px;
@@ -81,8 +81,8 @@
 /* DESCRIPTION */
 
 .product-desc {
-  font-size: 1.5rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #e8e2d6;
   opacity: 0.95;
 }
@@ -92,11 +92,11 @@
 .product-details span {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .price {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--gold);
 }
@@ -104,10 +104,10 @@
 /* DISCOUNT */
 
 .discount-amount {
-  font-size: 12px;
+  font-size: 11px;
   background: var(--gold);
   color: black;
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
@@ -118,21 +118,21 @@
 .quatity-setter {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 10px;
   width: fit-content;
 }
 
 .quatity-setter button {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: none;
   background: #ffffff15;
   color: white;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -143,7 +143,7 @@
 }
 
 .quatity-setter span {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: white;
 }
@@ -151,13 +151,13 @@
 /* ADD TO CART */
 
 .add-to-cart-btn {
-  margin-top: 20px;
-  padding: 14px 26px;
+  margin-top: 16px;
+  padding: 12px 20px;
   border: none;
   border-radius: 12px;
   background: linear-gradient(135deg, #d94a3a, #ff6b5a);
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -180,8 +180,8 @@
 
 .product-info-title {
   text-align: center;
-  font-size: 32px;
-  margin-top: 60px;
+  font-size: 30px;
+  margin-top: 50px;
   color: var(--heading-brown);
 }
 
@@ -189,15 +189,15 @@
   padding: 0 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 18px;
+  margin-top: 30px;
 }
 
 /* DETAIL CARDS */
 
 .detail-card-container {
   width: 100%;
-  padding: 24px;
+  padding: 20px;
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -207,13 +207,16 @@
 .detail-card-container:hover {
   transform: translateY(-5px);
 }
+
+/* SIMILAR PRODUCTS */
+
 .similar-products-container {
   margin-top: 20px;
 }
 
 .similar-products-container h3 {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--gold);
 }
 
@@ -225,16 +228,16 @@
 }
 
 .similar-product-item img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .similar-product-item span {
   margin-top: 10px;
-  font-size: 14px;
-  color: var(--site-white);
+  font-size: 13px;
+  color: white;
 }
 
 /* RESPONSIVE */
@@ -242,15 +245,13 @@
 @media (max-width: 900px) {
   .product-wrapper {
     flex-direction: column;
-    gap: 30px;
-    scale: 1;
+    gap: 25px;
   }
 
   .details-section {
     grid-template-columns: 1fr;
     padding: 0;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -259,10 +260,10 @@
   }
 
   .price {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .product-head {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
