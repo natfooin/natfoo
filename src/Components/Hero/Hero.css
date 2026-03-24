@@ -60,10 +60,10 @@ body {
 }
 
 .hero-container {
-  padding: 4rem 0;
+  padding:  0;
   width: 100%;
   margin: 0 auto;
-  background-image: url("../../assets/textured-bg.png");
+  background-image: url("../../assets/laptop-greenish-cream-texture.png");
   background-size: cover;
 }
 
