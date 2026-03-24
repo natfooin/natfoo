@@ -3,6 +3,7 @@
 }
 
 .app-container{
-    background-image:url("./assets/textured-bg.png");
+    background-image:url("./assets/laptop-cream-texture.png");
     background-size: cover;
+    background-attachment: fixed;
 }
