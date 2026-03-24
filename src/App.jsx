@@ -25,13 +25,14 @@ import MainLayout from "./Components/MainLayout/MainLayout";
 import Contact from "./Components/Contact/Contact";
 import TermsPage from "./../src/Components/PolicyPage/TermsPage";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
+import SuccessModal from "./Components/SuccessModal/SuccessModal";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [cartPrice, setCartPrice] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [discount, setDiscount] = useState(0.0);
-
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
@@ -42,6 +43,14 @@ const App = () => {
         cartProducts={cartProducts}
         discount={discount}
         cartPrice={cartPrice}
+        setShowSuccessModal={setShowSuccessModal}
+      />
+
+      <SuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        title="Order Placed!"
+        message="Your order has been sent successfully."
       />
 
       <OpeningScreen />
@@ -96,19 +105,19 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/contact" />
-          <Route path="/terms-and-condition" />
-          <Route path="/privacy-policy" />
-          <Route path="/shipping-and-delivery-policy" />
-          <Route path="/return-and-cancellation-policy" />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms-and-condition" element={<TermsPage />} />
+          <Route path="/privacy-policy" element={<PolicyPage />} />
+          <Route path="/shipping-and-delivery-policy" element={<TermsPage />} />
+          <Route
+            path="/return-and-cancellation-policy"
+            element={<TermsPage />}
+          />
         </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {/* <Footer /> */}
-      <Contact />
-      <PolicyPage />
-      <TermsPage />
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </>
   );
 };

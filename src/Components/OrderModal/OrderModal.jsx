@@ -12,7 +12,7 @@ const buttonNotReadyStyles = {
 const buttonReadyStyles = {
   backgroundColor: "#04AA6D",
   color: "white",
-  cursor: "poiter",
+  cursor: "pointer",
 };
 function OrderModal({
   showModal,
@@ -20,6 +20,7 @@ function OrderModal({
   cartProducts,
   discount,
   cartPrice,
+  setShowSuccessModal,
 }) {
   const closeModal = () => {
     setShowModal(false);
@@ -32,34 +33,28 @@ function OrderModal({
   const [pincodeData, setPincodeData] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [formFilled, setFormFilled] = useState(false);
-  
+
   useEffect(() => {
-    console.log(formFilled)
-    console.log(nameData)
-    console.log(emailData)
-    console.log(contactData)
-    console.log(addressData)
-    console.log(pincodeData)
-    console.log(isChecked)
+    console.log(formFilled);
+    console.log(nameData);
+    console.log(emailData);
+    console.log(contactData);
+    console.log(addressData);
+    console.log(pincodeData);
+    console.log(isChecked);
     if (
       nameData &&
       emailData &&
       contactData &&
       addressData &&
-      pincodeData && isChecked
+      pincodeData &&
+      isChecked
     ) {
       setFormFilled(true);
     } else {
       setFormFilled(false);
     }
-  }, [
-    nameData,
-    emailData,
-    contactData,
-    addressData,
-    pincodeData,
-    isChecked
-  ]);
+  }, [nameData, emailData, contactData, addressData, pincodeData, isChecked]);
 
   const handleNameChange = (e) => {
     setNameData(e.target.value);
@@ -87,21 +82,21 @@ function OrderModal({
     buyData.contact = formData.get("phone");
     buyData.address = formData.get("address");
     buyData.pincode = formData.get("pincode");
-    buyData.note = formData.get("note");
     buyData.products = cartProducts;
     buyData.subtotal = cartPrice;
     buyData.discountAmount = discount;
     buyData.total = cartPrice - discount;
 
-    setAddressData("")
-    setPincodeData("")
-    setNameData("")
-    setEmailData("")
-    setContactData("")
-    setIsChecked(false)
-
+    setAddressData("");
+    setPincodeData("");
+    setNameData("");
+    setEmailData("");
+    setContactData("");
+    setIsChecked(false);
     console.log(buyData);
     closeModal();
+
+    setShowSuccessModal(true);
     {
       /* Send to manufacturer whatsapp  */
     }
@@ -187,12 +182,6 @@ function OrderModal({
                 onChange={(e) => handlePincodeChange(e)}
                 required
               />
-
-              <textarea
-                placeholder="Additional Note"
-                name="note"
-                rows="2"
-              ></textarea>
 
               <label className="checkbox">
                 <input
