@@ -6,7 +6,7 @@ import MainProducts from "./pages/MainProducts/MainProducts";
 import NavBar from "./Components/NavBar/NavBar";
 import Hero from "./Components/Hero/Hero";
 import "./App.css";
-import PolicyPage from './Components/PolicyPage/PolicyPage'
+import PolicyPage from "./Components/PolicyPage/PolicyPage";
 import OpeningScreen from "./Components/OpeningScreen/OpeningScreen";
 import { Router, Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct";
@@ -23,7 +23,8 @@ import About from "./pages/About/About";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MainLayout from "./Components/MainLayout/MainLayout";
 import Contact from "./Components/Contact/Contact";
-import  TermsPage from './../src/Components/PolicyPage/TermsPage'
+import TermsPage from "./../src/Components/PolicyPage/TermsPage";
+import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -34,13 +35,13 @@ const App = () => {
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
-    
+
       <OpenModal
         showModal={showModal}
         setShowModal={setShowModal}
         cartProducts={cartProducts}
-        discount = {discount}
-        cartPrice = {cartPrice}
+        discount={discount}
+        cartPrice={cartPrice}
       />
 
       <OpeningScreen />
@@ -104,9 +105,10 @@ const App = () => {
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {/* <Footer /> */}
-      <Contact />    
-      <PolicyPage /> 
-    <TermsPage/>
+      <Contact />
+      <PolicyPage />
+      <TermsPage />
+      <WhatsAppButton/>
     </>
   );
 };
