@@ -4,7 +4,6 @@ import "./HomeProductPage.css";
 import Products from "../Products/Products";
 
 function HomeProductPage({ categoryArray }) {
-
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
 
@@ -14,11 +13,10 @@ function HomeProductPage({ categoryArray }) {
   }, []);
 
   const filterGroup = (data) => {
-
     const categories = categoryArray;
 
-    const filtered = data.filter(product =>
-      categories.includes(product.category)
+    const filtered = data.filter((product) =>
+      categories.includes(product.category),
     );
 
     setProducts(filtered);
@@ -30,6 +28,7 @@ function HomeProductPage({ categoryArray }) {
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <Products
+              id={product.id}
               image={product.image}
               price={product.price}
               name={product.name}
@@ -37,7 +36,6 @@ function HomeProductPage({ categoryArray }) {
           </div>
         ))}
       </div>
-      
     </div>
   );
 }

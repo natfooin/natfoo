@@ -3,9 +3,9 @@ import HomeProductPage from "../../Components/HomeProductPage/HomeProductPage";
 import "./AllProducts.css";
 import json from "./../../prodcutsData.json";
 import Button from "../../Components/ui/Button/Button";
+import { Link } from "react-router-dom";
 
 function AllProducts() {
-
   const categories = [...new Set(json.map((item) => item.category))];
 
   return (
@@ -14,7 +14,9 @@ function AllProducts() {
         <div className="top-homeProduct" key={index}>
           <div className="above-container">
             <h1>{cat}</h1>
-            <Button cn={"button-n-one"} text={"view more >>"} />
+            <Link to={"/products"}>
+              <Button cn={"button-n-one"} text={"view more >>"} />
+            </Link>
           </div>
 
           <HomeProductPage categoryArray={[cat]} />
