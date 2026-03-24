@@ -3,9 +3,11 @@
     "id": 1,
     "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
     "name": "Ajwain Mellow",
-    "desc": "awidbawiudbawi dbawiud bawiud biubiuwuid waiu wu ice cahef saeiuc iuab iae bhab ckiha vyiasd viads bviasdb ihads bbads asdbuchis duba eoiuabui fiaeuyb haeb iuae bfiaeh faesf yiabseuiy bsaefbseai efaibeih fbahe",
+    "desc1": "Crunch into wholesome goodness with our Ajwain Mellow - Millet Cookies, a perfect fusion of tradition and taste.",
+    "desc2": "Made with nutritious little millet and wheat, and infused with the aromatic warmth of ajwain, jeera, and pepper, these cookies deliver a savoury crunch that's both delicious and nourishing.",
+    "desc3": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.", 
     "category": "Cookies",
-    "price": 1230,
+    "price": 90,
     "devDoc": "// Needs to replaced",
     "content": [
       [
@@ -21,7 +23,8 @@
         "Stir-fry onion & vegetables in 2 tbsp oil for 2-3 minutes.",
         "Add spice mix & noodles, toss well and serve hot."
       ]
-    ]
+    ],
+    "similar-products" : [4]
   },
   {
     "id": 2,
@@ -125,8 +128,7 @@
         "Add spice mix & noodles, toss well and serve hot."
       ]
     }
-  }
-  ,
+  },
   {
     "id": 100,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -134,8 +136,7 @@
     "desc": "Product desc",
     "category": "cook",
     "price": 25
-  }
-  ,
+  },
   {
     "id": 109,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -143,8 +144,7 @@
     "desc": "Product desc",
     "category": "cook",
     "price": 25
-  }
-  ,
+  },
   {
     "id": 106,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -152,8 +152,7 @@
     "desc": "Product desc",
     "category": "cook",
     "price": 25
-  }
-  ,
+  },
   {
     "id": 101,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -161,8 +160,7 @@
     "desc": "Product desc",
     "category": "cook",
     "price": 25
-  }
-  ,
+  },
   {
     "id": 102,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -170,8 +168,7 @@
     "desc": "Product desc",
     "category": "cook",
     "price": 25
-  }
-  ,
+  },
   {
     "id": 103,
     "image": "src/assets/product-images/Kodo-Millet-Noodles.png",
@@ -180,5 +177,4 @@
     "category": "cook",
     "price": 25
   }
-
 ]
