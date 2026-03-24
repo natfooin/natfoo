@@ -1,20 +1,11 @@
-.royal-wrapper {
-  min-height: 100vh;
-  background-color: #12180b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem; 
-}
 
 .royal-viewport {
   display: grid;
   grid-template-columns: 450px 1fr;
   max-width: 1300px;
+  max-height: fit-content;
   width: 100%;
-  min-height: 650px; 
   background: var(--site-white);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
   border-radius: 8px; 
   overflow: hidden;
   position: relative;
@@ -97,7 +88,7 @@
   font-family: serif;
   font-size: 1.6rem;
   color: var(--heading);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: underline 1px var(--gold);
@@ -206,7 +197,7 @@
 
   .form-subtitle {
     position: static !important; 
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -218,7 +209,9 @@
   .royal-viewport {
     border-radius: 0;
   }
-
+  .form-subtitle{
+    margin-bottom: 4rem;
+  }
   .royal-title {
     font-size: 2.2rem;
   }

@@ -27,7 +27,7 @@ function Footer() {
         </div>
 
         <div className="policy">
-          <h6 style={{marginBottom:"0.5px"}}>policy information</h6>
+          <h6 style={{marginBottom:"1.2rem"}}>policy information</h6>
           <ul>
             <li>
               <Link to="/terms-conditions">terms & conditions</Link>
@@ -47,7 +47,7 @@ function Footer() {
         {/* Quick Links Section */}
         <div className="linkdiv">
           <div className="links">
-            <h6>quick links</h6>
+            <h6 style={{marginBottom:"1.2rem"}}>quick links</h6>
             <ul>
               <li>
                 <Link to="/">home</Link>

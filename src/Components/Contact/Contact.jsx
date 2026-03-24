@@ -138,7 +138,8 @@ function Contact() {
 
                 <div className="royal-input-group">
                   <textarea
-                    name="message"                     rows="5"
+                    name="message"             
+                            rows="5"
                     required
                     value={formData.message}
                     onChange={handleChange}
@@ -147,7 +148,7 @@ function Contact() {
                   <label>Your Inquiry</label>
                 </div>
 
-                <Button type="submit" className="royal-submit-btn">
+                <Button text={`send ${<FaChevronRight size={12} />}`} className="royal-submit-btn">
                   SEND MESSAGE <FaChevronRight size={12} />
                 </Button>
               </form>
