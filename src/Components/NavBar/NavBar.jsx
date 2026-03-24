@@ -4,7 +4,7 @@ import { PiShoppingCartBold } from "react-icons/pi";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import logo from "../../assets/logo.png";
 import Button from "./../ui/Button/Button";
-import "./NavBar.css"; 
+import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 function NavBar({ cartQuantity }) {
@@ -32,28 +32,31 @@ function NavBar({ cartQuantity }) {
           <li onClick={() => setIsOpen(false)}>
             <Link to="/contact">Contact</Link>
           </li>
-
         </ul>
-        
       </div>
-      
 
       <div className="nav-actions">
         <div className="searchIcon">
           <ImSearch size={18} />
         </div>
 
-        <Link to="/cart" className="cart-link">
+        <Link
+          to="/cart"
+          className="cart-link"
+          style={{ textDecoration: "none" }}
+        >
           <div className="cart">
             <PiShoppingCartBold size={22} color="white" />
-            <span className="cart-count">{cartQuantity}</span>
+            {cartQuantity !== 0 && (
+              <span className="cart-count">{cartQuantity}</span>
+            )}
           </div>
         </Link>
 
         <div className="header-right">
           <div className="header-right">
             <Link to="/products" className="hide-mobile">
-              <Button cn={"button-n-one"} text="shop now" />
+              <Button cn={"button-n-one"} text="Shop now" />
             </Link>
           </div>
           <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
