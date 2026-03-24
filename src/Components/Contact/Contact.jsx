@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import {
   FaPhoneAlt,
@@ -6,14 +6,14 @@ import {
   FaMapMarkerAlt,
   FaCheckCircle,
   FaChevronRight,
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
 } from "react-icons/fa";
+import { CiYoutube, CiMail } from "react-icons/ci";
 import Button from "../../Components/ui/Button/Button";
 import FooterIcon from "./../Footer/FooterIcon";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { CiYoutube } from "react-icons/ci";
-import { CiMail } from "react-icons/ci";
+
 const LoadingView = () => (
   <div className="royal-status">
     <div className="royal-spinner"></div>
@@ -27,29 +27,37 @@ const SuccessView = ({ reset }) => (
       <FaCheckCircle size={70} color="var(--gold)" />
     </div>
     <h2>Message Received</h2>
-    <p>
-      Your inquiry has been placed in our royal archives. We shall respond with
-      haste.
-    </p>
+    <p>Your inquiry has been placed in our royal archives. We shall respond with haste.</p>
     <Button text="Send Another" onClick={reset} />
   </div>
 );
 
 function Contact() {
   const [view, setView] = useState("form");
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
     number: "",
+    message: "",
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Submitting Data:", formData); 
+    
     setView("loading");
     setTimeout(() => {
       setView("success");
-      setFormData({ name: "", email: "", message: "", number: "" });
+      setFormData({ name: "", email: "", number: "", message: "" });
     }, 2000);
   };
 
@@ -59,10 +67,7 @@ function Contact() {
         <div className="heritage-panel">
           <div className="heritage-content">
             <span className="gold-tag">ESTD 2026</span>
-            <h1 className="royal-title">
-              Get In <br />
-              <span>Touch</span>
-            </h1>
+            <h1 className="royal-title">Get In <br /> <span>Touch</span></h1>
 
             <div className="contact-ledger">
               <div className="ledger-entry">
@@ -91,20 +96,17 @@ function Contact() {
 
         <div className="form-panel">
           <div className="form-inner">
-                <h3 className="form-subtitle" style={{ textAlign: "center" ,top:'30PX',position:"absolute",textDecoration:"1px underline",textDecorationColor:"var(--gold)"}}>
-                  Contact Us
-                </h3>
+            <h3 className="form-subtitle">Contact Us</h3>
+            
             {view === "form" && (
               <form className="royal-form" onSubmit={handleSubmit}>
-
                 <div className="royal-input-group">
                   <input
                     type="text"
+                    name="name"
                     required
                     value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
+                    onChange={handleChange}
                     placeholder=" "
                   />
                   <label>Full Name</label>
@@ -113,11 +115,10 @@ function Contact() {
                 <div className="royal-input-group">
                   <input
                     type="email"
+                    name="email" 
                     required
                     value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
+                    onChange={handleChange}
                     placeholder=" "
                   />
                   <label>Email Address</label>
@@ -126,11 +127,10 @@ function Contact() {
                 <div className="royal-input-group">
                   <input
                     type="tel"
+                    name="number"
                     required
                     value={formData.number}
-                    onChange={(e) =>
-                      setFormData({ ...formData, number: e.target.value })
-                    }
+                    onChange={handleChange}
                     placeholder=" "
                   />
                   <label>Phone Number</label>
@@ -138,27 +138,23 @@ function Contact() {
 
                 <div className="royal-input-group">
                   <textarea
-                    rows="5"
+                    name="message"                     rows="5"
                     required
                     value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
+                    onChange={handleChange}
                     placeholder=" "
                   ></textarea>
                   <label>Your Inquiry</label>
                 </div>
 
-                <Button name="submit" className="royal-submit-btn">
+                <Button type="submit" className="royal-submit-btn">
                   SEND MESSAGE <FaChevronRight size={12} />
                 </Button>
               </form>
             )}
 
             {view === "loading" && <LoadingView />}
-            {view === "success" && (
-              <SuccessView reset={() => setView("form")} />
-            )}
+            {view === "success" && <SuccessView reset={() => setView("form")} />}
           </div>
         </div>
       </div>
