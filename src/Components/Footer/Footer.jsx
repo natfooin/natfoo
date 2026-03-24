@@ -26,9 +26,8 @@ function Footer() {
           </div>
         </div>
 
-        {/* Policy Section */}
         <div className="policy">
-          <h6 style={{}}>policy information</h6>
+          <h6 style={{marginBottom:"0.5px"}}>policy information</h6>
           <ul>
             <li>
               <Link to="/terms-conditions">terms & conditions</Link>
