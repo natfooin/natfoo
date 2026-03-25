@@ -1,5 +1,6 @@
 import "./products.css";
 import React from "react";
+import { FaRupeeSign } from "react-icons/fa";
 import Button from "./../ui/Button/Button";
 import { Link } from "react-router-dom";
 const Products = ({id, image, name, price }) => {
@@ -14,7 +15,7 @@ const Products = ({id, image, name, price }) => {
           <h1 className="product-title">{name}</h1>
           <div className="footer-row">
             <div className="price-block">
-              <span className="amount">{price}</span>
+             <FaRupeeSign size={14} /> <span className="amount">{price}</span>
             </div>
             <div className="button">
               <Link to={`/product/${id}`}>

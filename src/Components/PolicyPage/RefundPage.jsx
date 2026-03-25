@@ -28,7 +28,7 @@ function RefundPage() {
           <section className="refund-item">
             <div className="item-header">
               <FaFileContract className="section-icon" />
-              <h2 className="item-title">6. Order & Cancellation:</h2>
+              <h2 className="item-title">1. Order & Cancellation:</h2>
             </div>
             <ul className="refund-bullets">
               <li>By placing an order on “www.natfoo.in”, the customer expressly acknowledges that such action constitutes a legally binding contract between the buyer and the seller.</li>
@@ -47,7 +47,7 @@ function RefundPage() {
           <section className="refund-item">
             <div className="item-header">
               <FaTimesCircle className="section-icon" />
-              <h2 className="item-title">9. Return, Refund & Replacement:</h2>
+              <h2 className="item-title">2. Return, Refund & Replacement:</h2>
             </div>
             <p>
               Company maintains a <strong>strict no return and no refund policy</strong> on all products purchased through the platform.

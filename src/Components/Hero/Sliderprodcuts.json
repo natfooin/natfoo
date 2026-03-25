@@ -1,50 +1,65 @@
 [
-    {
-        "id": 1,
-        "image" :"/src/assets/product-images/Ajwain-Mellow.jpg",
-        "name" : "Ajwain Mellow",
-        "desc" : "Product desc",
-        "category" : "Cookies",
-        "price" : 442
-    },
-    {
-        "id": 2,
-        "image" :"/src/assets/product-images/Barnyard-Millet-Noodles.png",
-        "name" : "Barnyard Millet Noodles",
-        "desc" : "Product desc",
-        "category" : "Noodles",
-        "price" : 223
-    },
-    {
-        "id": 3,
-        "image" :"/src/assets/product-images/Millet-Mango.jpg",
-        "name" : "Millet Mango",
-        "desc" : "Product desc",
-        "category" : "Cookies",
-        "price" : 432
-    },
-    {
-        "id": 4,
-        "image" :"/src/assets/product-images/Spicy-Dhamaka.jpg",
-        "name" : "Spicy Dhamaka",
-        "desc" : "Product desc",
-        "category" : "Noodles",
-        "price" : 421
-    },
-    {
-        "id": 5,
-        "image" :"/src/assets/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-05.jpg",
-        "name" : "Tuty Fruity Cookies Pouch",
-        "desc" : "Product desc",
-        "category" : "Cookies",
-        "price" : 234
-    },
-    {
-        "id": 6,
-        "image" :"/src/assets/product-images/Kodo-Millet-Noodles.png",
-        "name" : "Kodo Millet Noodles",
-        "desc" : "Product desc",
-        "category" : "Noodles",
-        "price" : 123
-    }
+  {
+    "id": 1,
+    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "name": "Ajwain Mellow - Millet Cookies",
+    "desc1": "Crunch into wholesome goodness with our Ajwain Mellow - Millet Cookies, a perfect fusion of tradition and taste. Made with nutritious little millet and wheat, and infused with the aromatic warmth of ajwain, jeera, and pepper, these cookies deliver a savoury crunch that's both delicious and nourishing.",
+    "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
+    "desc3": "",
+    "category": "Cookies",
+    "price": 90,
+    "devDoc": "// Needs to replaced",
+    "content": [[], []],
+    "similar-products": [7]
+  },
+  {
+    "id": 16,
+    "image": "src/assets/product-images/Barnyard-Millet-Noodles.png",
+    "name": "BARNYARD MILLET NOODLES",
+    "desc1": "Made with nutritious Barnyard Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
+    "desc2": " ",
+    "desc3": " ", 
+    "category": "Noodles",
+    "price": 90,
+    "content": [
+      [
+        "Low in Calories – Ideal for a healthy and balanced diet.",
+       " Rich in Dietary Fiber – Helps support good digestion.",
+"Low Glycemic Index – Helps manage blood sugar levels.",
+"Good Source of Iron – Supports energy levels and overall health."
+      ],
+      [
+ "Boil noodles in 600 ml water for 5 minutes.",
+"Drain and rinse with cold water.",
+"Mix with 1 spoon oil.",
+"Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
+"Add spice mix & noodles, toss well and serve hot."
+      ]
+    ]
+    
+  },
+  {
+    "id": 11,
+    "image": "/src/assets/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
+    "name": "Spicy Dhamaka – Millet Cookies Pouch",
+    "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
+    "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
+    "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.",
+    "category": "Cookies",
+    "price": 90,
+    "content": [[], []],
+    "similar-products": [5]
+  },
+  {
+    "id": 18,
+    "image": "src/assets/product-images/Foxtail-Millet-Laddu.jpg",
+    "name": "Foxtail Millet Laddu",
+    "desc1": "Made with a mix of nutritious Multi Millets, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
+    "desc2": "Beyond their exquisite flavour, these laddus support cardiac health, promote proper nervous system function, enhance immunity, and nourish your skin and hair.",
+    "desc3": "Perfect for gifting, festive celebrations, or a mindful moment of self-care—every bite is a golden embrace of wellness and elegance.  ",
+    "category": "Laddu",
+    "price": 90,
+    "content": [[], []]
+  }
+
 ]

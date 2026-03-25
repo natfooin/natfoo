@@ -46,7 +46,6 @@
   object-fit: cover;
   border-radius: 10px;
   transition: 0.3s;
-  border: 1px dashed var(--site-honey-badger);
 }
 
 .about-gallery img:hover {
