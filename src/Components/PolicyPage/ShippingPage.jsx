@@ -1,5 +1,6 @@
 import React from "react";
 import "./ShippingPage.css";
+import { useEffect } from "react";
 import { 
   FaTruck, 
   FaBoxOpen, 
@@ -11,6 +12,9 @@ import {
 import { MdOutlineLocalShipping } from "react-icons/md";
 
 function ShippingPage() {
+  useEffect(() => {
+        document.title = "Natfoo | Shipping and Delivery Policy";
+      }, []);
   return (
     <div className="shipping-wrapper">
       <div className="shipping-card">

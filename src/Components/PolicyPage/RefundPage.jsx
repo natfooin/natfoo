@@ -1,5 +1,6 @@
 import React from "react";
 import "./RefundPage.css";
+import { useEffect } from "react";
 import { 
   FaHistory, 
   FaFileContract, 
@@ -12,6 +13,9 @@ import {
 import { MdOutlineAssignmentReturn } from "react-icons/md";
 
 function RefundPage() {
+  useEffect(() => {
+        document.title = "Natfoo | Refund and Cancellation Policy";
+      }, []);
   return (
     <div className="refund-wrapper">
       <div className="refund-card">

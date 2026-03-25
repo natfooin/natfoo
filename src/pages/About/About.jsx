@@ -8,7 +8,7 @@ import img5 from "../../assets/product-images/Spicy-Dhamaka.jpg";
 import img6 from "../../assets/product-images/Ajwain-Mellow.jpg";
 const About = () => {
   useEffect(() => {
-    document.title = "About";
+    document.title = "Natfoo | About";
   }, []);
   return (
     <div className="about-section">

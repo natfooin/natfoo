@@ -1,5 +1,6 @@
 import React from "react";
 import "./TermsPage.css";
+import { useEffect } from "react";
 import { 
   FaGavel, FaUserShield, FaClipboardList, FaBoxOpen, 
   FaTag, FaFileContract, FaCreditCard, FaTruck, 
@@ -9,6 +10,9 @@ import {
 import { MdOutlinePolicy } from "react-icons/md";
 
 function TermsPage() {
+  useEffect(() => {
+        document.title = "Natfoo | Terms and Conditions";
+      }, []);
   return (
     <div className="terms-wrapper">
       <div className="terms-card">

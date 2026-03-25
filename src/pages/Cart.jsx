@@ -41,7 +41,7 @@ const Cart = ({
     );
   }, [cartPrice]);
   useEffect(() => {
-    document.title = "Cart";
+    document.title = "Natfoo | Cart";
   }, []);
 
   return (
