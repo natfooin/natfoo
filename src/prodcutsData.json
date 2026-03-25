@@ -7,16 +7,8 @@
     "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
+    "price": 100,
     "devDoc": "// Needs to replaced",
-    "content": [
-      [
-
-      ],
-      [
-       
-      ]
-    ],
     "similar-products" : [7]
   },
   {
@@ -27,16 +19,8 @@
     "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
+    "price": 10,
     "devDoc": "// Needs to replaced",
-    "content": [
-      [
-      
-      ],
-      [
-
-      ]
-    ],
     "similar-products" : [1]
   },
   {
@@ -47,7 +31,7 @@
     "desc2": "Each bite offers a perfect balance of traditional flavour and nourishing ingredients. These cookies are packed with antimicrobial properties, help support healthy blood glucose levels, and are a rich source of calcium for stronger bones. ",
     "desc3": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.", 
     "category": "Cookies",
-    "price": 90,
+    "price": 100,
     "content": [
       [
       ],
@@ -65,14 +49,7 @@
     "desc2": "Each bite offers a perfect balance of traditional flavour and nourishing ingredients. These cookies are packed with antimicrobial properties, help support healthy blood glucose levels, and are a rich source of calcium for stronger bones. ",
     "desc3": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 10,
     "similar-products" : [2]
   },
   {
@@ -83,14 +60,7 @@
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 100,
     "similar-products" : [9]
   },
   {
@@ -101,14 +71,7 @@
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 10,
     "similar-products" : [3]
   },
   {
@@ -119,14 +82,7 @@
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 100,
     "similar-products" : [10]
   },
   {
@@ -137,14 +93,7 @@
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 10,
     "similar-products" : [4]
   },
   {
@@ -155,14 +104,7 @@
     "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
     "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 100,
     "similar-products" : [11]
   },
   {
@@ -173,14 +115,7 @@
     "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
     "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 10,
     "similar-products" : [5]
   },
   {
@@ -191,14 +126,7 @@
     "desc2": "Packed with calcium for strong bones, dietary fiber for healthy digestion, and a low glycaemic index for balanced energy, they are also a good source of iron, making them a truly nourishing treat for all ages. ",
     "desc3": " ", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 100,
     "similar-products" : [12]
   },
   {
@@ -209,14 +137,7 @@
     "desc2": "Packed with calcium for strong bones, dietary fiber for healthy digestion, and a low glycaemic index for balanced energy, they are also a good source of iron, making them a truly nourishing treat for all ages. ",
     "desc3": " ", 
     "category": "Cookies",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
- 
-      ]
-    ],
+    "price": 10,
     "similar-products" : [6]
   },
   {
@@ -227,7 +148,7 @@
     "desc2": " ",
     "desc3": " ", 
     "category": "Noodles",
-    "price": 90,
+    "price": 95,
     "content": [
       [
         	"Supports Cardiac Health – Helps maintain a healthy heart.",
@@ -255,7 +176,7 @@
     "desc2": " ",
     "desc3": " ", 
     "category": "Noodles",
-    "price": 90,
+    "price": 95,
     "content": [
       [
         	"Prevents Constipation – Rich in dietary fiber that supports healthy digestion.",
@@ -285,7 +206,7 @@
     "desc2": " ",
     "desc3": " ", 
     "category": "Noodles",
-    "price": 90,
+    "price": 95,
     "content": [
       [
         	"Rich in Dietary Fiber – Supports healthy digestion and gut health.",
@@ -314,7 +235,7 @@
     "desc2": " ",
     "desc3": " ", 
     "category": "Noodles",
-    "price": 90,
+    "price": 95,
     "content": [
       [
         "Low in Calories – Ideal for a healthy and balanced diet.",
@@ -341,7 +262,7 @@
     "desc2": " ",
     "desc3": " ", 
     "category": "Noodles",
-    "price": 90,
+    "price": 95,
     "content": [
       [
       "Rich Source of Calcium – Supports strong bones and teeth.",
@@ -369,13 +290,7 @@
     "desc2": "Beyond their exquisite flavour, these laddus support cardiac health, promote proper nervous system function, enhance immunity, and nourish your skin and hair.",
     "desc3": "Perfect for gifting, festive celebrations, or a mindful moment of self-care—every bite is a golden embrace of wellness and elegance.  ", 
     "category": "Laddu",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-      ]
-    ]
+    "price": 150
     
   }
   ,
@@ -387,13 +302,8 @@
     "desc2": "These laddus support digestion, fortify the nervous system, and offer special metabolic care for post-menopausal women.",
     "desc3": "Perfect as a mindful snack, a sophisticated gift, or a sweet pause in your day—experience indulgence that nourishes from within.  ", 
     "category": "Laddu",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-      ]
-    ]
+    "price": 150
+
     
   }
   ,
@@ -405,207 +315,9 @@
     "desc2": "These laddus are a rich source of fiber, support heart health, and aid natural detoxification, making them a mindful indulgence that nourishes your body from within.",
     "desc3": "Perfect as a sophisticated snack, a thoughtful gift, or a golden pause in your day—experience the harmony of taste, tradition, and wellness in every bite.  ", 
     "category": "Laddu",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-      ]
-    ]
+    "price": 150
+ 
     
   }
-  ,
-  {
-    "id": 21,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Sprouted Health Mix",
-    "desc1": "Indulge in the exquisite richness of our Premium Sprouted Health Mix—a masterful fusion of ancient millets like foxtail, kodo, and finger millet, harmoniously blended with sorghum, emmer wheat, and select legumes.",
-    "desc2": "Enriched with the finest nuts—almond, cashew, and pistachio—and crowned with antioxidant-rich black sesame and urad dal, this blend is delicately infused with aromatic cardamom and warming dry ginger.",
-    "desc3": "Every grain and nut is sprouted to unlock unparalleled vitality, creating a sumptuous symphony of taste and wellness.  ", 
-    "category": "Healthmix",
-    "price": 90,
-    "content": [
-      [
-        "Sustained Energy & Vitality: Slow release of complex carbohydrates nourish your body for all-day vigour.",
-"Radiant Heart & Mind: Premium nuts and seeds deliver healthy fats and antioxidants for optimal brain and cardiovascular health.",
-"Digestive Elegance: High-fiber sprouted grains and soothing spices promote flawless digestion and gut harmony.",
-"Balanced Metabolism: Supports stable blood sugar levels and natural weight management.",
-"Immune Majesty: A potent blend of antioxidants and spices fortify your body’s defences with grace."
 
-      ],
-      [
-       " Mix 2 tsp of our NATFOO Sprouted health mix in 300ml of milk or water, stir well to avoid lumps. Cook on low flame for 3–5 minutes until it becomes a creamy porridge.",
-"Sweeten naturally with Jaggery Powder / Palm sugar / Honey (or) add a pinch of salt and pepper for a savoury twist.",
-"A quick, wholesome, and indulgent treat for your body and senses."
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 22,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Millet Penne Pasta",
-    "desc1": "Experience a bold, gourmet twist on comfort food with this Millet Penne Pasta—where ancient grains meet modern elegance. A curated blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat is shaped into classic penne tubes, designed to hold and embrace every layer of flavour. ",
-    "desc2": "Delicately seasoned with toasted coriander, cumin, and fennel, uplifted by turmeric and fragrant curry leaves, and finished with a whisper of cinnamon, clove, and nutmeg—each bite unfolds like a slow, spiced symphony. ",
-    "desc3": "Rooted in tradition yet styled for the refined palate, this is wholesome luxury redefined.  ", 
-    "category": "Pasta",
-    "price": 90,
-    "content": [
-      [
-        "Rich Source of Calcium – Supports strong bones and teeth.",
-"Aids in Weight Loss – Keeps you fuller for longer.",
-"Helps Reduce Blood Glucose Levels – Supports healthy sugar control.",
-"Rich in Dietary Fiber – Promotes better digestion and gut health."
-
-      ],
-      [
-        "Boil noodles in 800 ml water for 5 minutes.",
-       "Drain and rinse with cold water.",
-"Mix with 1 spoon oil.",
-"Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-"Add spice mix, Sauces & Pasta, toss well and serve hot."
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 23,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Millet Fusilli Pasta",
-    "desc1": "Savour a distinctive expression of Millet Fusilli Pasta, where heritage grains are transformed into graceful spirals of indulgence. An artful blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat creates a textured, earthy base—each twist of fusilli designed to cling effortlessly to layers of flavour. ",
-    "desc2": "Gently infused with coriander, cumin, and fennel, enriched by the golden warmth of turmeric and fragrant curry leaves, and elevated with delicate hints of cinnamon, clove, and nutmeg, the profile is both deep and refined. ",
-    "desc3": "An elegant interplay of form and flavour—crafted for those who appreciate subtle luxury in every bite.", 
-    "category": "Pasta",
-    "price": 90,
-    "content": [
-      [
-       "Rich Source of Calcium – Supports strong bones and teeth.",
-"Aids in Weight Loss – Keeps you fuller for longer.",
-"Helps Reduce Blood Glucose Levels – Supports healthy sugar control.",
-"Rich in Dietary Fiber – Promotes better digestion and gut health."
-
-
-      ],
-      [
-        "Boil noodles in 800 ml water for 5 minutes.",
-       "Drain and rinse with cold water.",
-"Mix with 1 spoon oil.",
-"Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-"Add spice mix, Sauces & Pasta, toss well and serve hot."
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 24,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Millet Elbow Pasta",
-    "desc1": "Delight in a refined take on Millet Elbow Pasta, where ancient grains are shaped into smooth, curved forms that cradle flavour with effortless elegance.  ",
-    "desc2": "A balanced blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat creates a wholesome, nutty foundation with a tender yet satisfying bite. ",
-    "desc3": "Gently layered with coriander, cumin, and fennel, brightened by turmeric and aromatic curry leaves, and rounded off with soft notes of cinnamon, clove, and nutmeg, each mouthful offers a comforting yet elevated warmth.", 
-    "category": "Pasta",
-    "price": 90,
-    "content": [
-      [
-       "Rich Source of Calcium – Supports strong bones and teeth.",
-"Aids in Weight Loss – Keeps you fuller for longer.",
-"Helps Reduce Blood Glucose Levels – Supports healthy sugar control.",
-"Rich in Dietary Fiber – Promotes better digestion and gut health."
-
-      ],
-      [
-        "Boil noodles in 800 ml water for 5 minutes.",
-       "Drain and rinse with cold water.",
-"Mix with 1 spoon oil.",
-"Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-"Add spice mix, Sauces & Pasta, toss well and serve hot."
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 25,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Foxtail Millet Vermicelli",
-    "desc1": "Foxtail millet vermicelli is a refined blend of premium foxtail millet flour and whole wheat, offering a delicate texture and a naturally elegant taste.   ",
-    "desc2": "Light, wholesome, and thoughtfully crafted, it brings a touch of sophistication to everyday meals. ",
-    "desc3": "Enriched with the goodness of millets, it supports improved glycaemic control and serves as a mindful, nourishing choice for those managing diabetes—where wellness meets understated luxury in every strand.", 
-    "category": "Vermicelli",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-    " Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).", 
-"Add a spoon of oil and mix gently. ",
-	"Heat 2 tbsp oil, add mustard seeds and urad dal." ,
-"Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes." ,
-"Add cooked vermicelli, cover for a minute, toss well." ,
-"Serve hot with chutney."
-
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 26,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Little Millet Vermicelli",
-    "desc1": "Little millet vermicelli is a refined celebration of wholesome grains, crafted from premium little millet flour and whole wheat. Light, delicate, and subtly nutty, it brings an air of quiet elegance to every dish.   ",
-    "desc2": "Beyond its graceful texture, it is naturally enriched with magnesium and niacin, supporting heart health and helping maintain healthy cholesterol levels.  ",
-    "desc3": "Enriched with the goodness of millets, it supports improved glycaemic control and serves as a mindful, nourishing choice for those managing diabetes—where wellness meets understated luxury in every strand.", 
-    "category": "Vermicelli",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-    " Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).", 
-"Add a spoon of oil and mix gently. ",
-	"Heat 2 tbsp oil, add mustard seeds and urad dal." ,
-"Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes." ,
-"Add cooked vermicelli, cover for a minute, toss well." ,
-"Serve hot with chutney."
-
-
-      ]
-    ]
-    
-  }
-  ,
-  {
-    "id": 27,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
-    "name": "Multi Millet Vermicelli",
-    "desc1": "Savour the goodness of six ancient millets—foxtail, kodo, little, barnyard, ragi, and bajra—crafted into delicate vermicelli for a wholesome, nourishing experience.    ",
-    "desc2": "Naturally rich in dietary fiber, it supports healthy digestion while adding a light, satisfying texture to your meals.",
-    "desc3": "Perfect for those who value refined taste and mindful nutrition, this gourmet vermicelli transforms everyday dishes into a healthful indulgence, blending tradition with sophistication.", 
-    "category": "Vermicelli",
-    "price": 90,
-    "content": [
-      [
-      ],
-      [
-    " Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).", 
-"Add a spoon of oil and mix gently. ",
-	"Heat 2 tbsp oil, add mustard seeds and urad dal." ,
-"Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes." ,
-"Add cooked vermicelli, cover for a minute, toss well." ,
-"Serve hot with chutney."
-
-
-      ]
-    ]
-    
-  }
 ]

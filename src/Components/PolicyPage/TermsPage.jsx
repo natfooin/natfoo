@@ -137,9 +137,9 @@ function TermsPage() {
               <h2 className="item-title">9. Return, Refund & Replacement:</h2>
             </div>
             <ul className="terms-bullets">
-              <li>Company maintains a <strong>strict no return and no refund policy</strong> on all products purchased through the platform.</li>
+              <li>Company maintains a strict no return and no refund policy on all products purchased through the platform.</li>
               <li>However, in the event that a product is received in a damaged conditions, due to unforeseen circumstances during transit, the company may, at its sole discretion, offer a replacement subject to the following conditions:</li>
-              <li className="sub-item">a) The customer must notify the damage to the company within <strong>24 hours</strong> of receipt of the product by sending an email to <strong>natfoocare@gmail.com</strong>, along with clear photographic evidence of the damaged product and packaging.</li>
+              <li className="sub-item">a) The customer must notify the damage to the company within 24 hours of receipt of the product by sending an email to natfoocare@gmail.com, along with clear photographic evidence of the damaged product and packaging.</li>
               <li className="sub-item">b) The reported damage shall be subject to verification and validation by the customer support team.</li>
               <li>Upon successful validation of the claim, company shall arrange for a replacement of the damaged product at no additional cost to the customer.</li>
               <li>Company reserves the right to reject any replacement request if the above conditions are not met or if the claim is found to be invalid upon inspection.</li>
