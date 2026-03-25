@@ -13,6 +13,18 @@
     "similar-products": [7]
   },
   {
+    "id": 11,
+    "image": "/src/assets/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
+    "name": "Spicy Dhamaka – Millet Cookies Pouch",
+    "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
+    "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
+    "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.",
+    "category": "Cookies",
+    "price": 90,
+    "content": [[], []],
+    "similar-products": [5]
+  },
+  {
     "id": 16,
     "image": "src/assets/product-images/Barnyard-Millet-Noodles.png",
     "name": "Barnyard Millet Noodles",
@@ -37,17 +49,42 @@
       ]
     ]
   },
+
   {
-    "id": 11,
-    "image": "/src/assets/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
-    "name": "Spicy Dhamaka – Millet Cookies Pouch",
-    "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
-    "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
-    "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.",
+    "id": 3,
+    "image": "/src/assets/product-images/Millet-Choc!.jpg",
+    "name": "Millet Choc – Millet Cookies",
+    "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
+    "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
+    "desc3": "",
     "category": "Cookies",
-    "price": 90,
-    "content": [[], []],
-    "similar-products": [5]
+    "price": 100,
+    "similar-products": [9]
+  },
+  {
+    "id": 15,
+    "image": "/src/assets/product-images/Little-Millet-Noodles.png",
+    "name": "Little Millet Noodles ",
+    "desc1": "Made with nutritious Little Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
+    "desc2": " ",
+    "desc3": " ",
+    "category": "Noodles",
+    "price": 95,
+    "content": [
+      [
+        "Rich in Dietary Fiber – Supports healthy digestion and gut health.",
+        "Improves Heart Health – Helps maintain a healthy cardiovascular system.",
+        "Rich in Niacin – Helps reduce cholesterol levels naturally.",
+        "Supports Body Detoxification – Helps cleanse the body and promote overall wellness."
+      ],
+      [
+        "Boil noodles in 600 ml water for 5 minutes.",
+        "Drain and rinse with cold water.",
+        "Mix with 1 spoon oil.",
+        "Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
+        "Add spice mix & noodles, toss well and serve hot."
+      ]
+    ]
   },
   {
     "id": 18,
@@ -59,42 +96,5 @@
     "category": "Laddu",
     "price": 90,
     "content": [[], []]
-  },{
-    "id": 3,
-    "image": "/src/assets/product-images/Millet-Choc!.jpg",
-    "name": "Millet Choc – Millet Cookies",
-    "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
-    "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
-    "desc3": "", 
-    "category": "Cookies",
-    "price": 100,
-    "similar-products" : [9]
-  },{
-    "id": 15,
-    "image": "/src/assets/product-images/Little-Millet-Noodles.png",
-    "name": "Little Millet Noodles ",
-    "desc1": "Made with nutritious Little Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
-    "desc2": " ",
-    "desc3": " ", 
-    "category": "Noodles",
-    "price": 95,
-    "content": [
-      [
-        	"Rich in Dietary Fiber – Supports healthy digestion and gut health.",
-"Improves Heart Health – Helps maintain a healthy cardiovascular system.",
-"Rich in Niacin – Helps reduce cholesterol levels naturally.",
-"Supports Body Detoxification – Helps cleanse the body and promote overall wellness."
-
-
-      ],
-      [
-     "Boil noodles in 600 ml water for 5 minutes.",
-"Drain and rinse with cold water.",
-"Mix with 1 spoon oil.",
-"Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-"Add spice mix & noodles, toss well and serve hot."
-      ]
-    ]
-    
   }
 ]
