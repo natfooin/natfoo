@@ -11,6 +11,7 @@
   display: flex;
   flex: 4;
   gap: 5px;
+  align-items: center;
 }
 .cart-product-pricing {
   display: flex;
