@@ -55,9 +55,9 @@ function MainProducts() {
           styles={{
             borderRadius: "0 10px 10px 0",
             borderLeft: "none",
-            height:"44px",
-            float:"left",
-            margin:"0",
+            height: "44px",
+            float: "left",
+            margin: "0",
           }}
           onClick={() => setSearchTerm(inputValue)}
         />
@@ -86,6 +86,7 @@ function MainProducts() {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
             <Products
+              id={item.id}
               key={item.id}
               image={item.image}
               name={item.name}

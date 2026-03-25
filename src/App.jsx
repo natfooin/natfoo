@@ -49,6 +49,10 @@ const App = () => {
       />
 
       <SuccessModal
+        setCartPrice={setCartPrice}
+        setDiscount={setDiscount}
+        setCartProducts={setCartProducts}
+        setCartQuantity={setCartQuantity}
         isOpen={showSuccessModal}
         onClose={() => setShowSuccessModal(false)}
         title="Order Placed!"
@@ -113,7 +117,7 @@ const App = () => {
           <Route path="/shipping-and-delivery-policy" element={<ShippingPage/>} />
           <Route path="/refund-and-cancellation-policy" element={<RefundPage/>} />
           <Route
-            path="/return-and-cancellation-policy"
+            path="/refund-and-cancellation-policy"
             element={<TermsPage />}
           />
         </Route>

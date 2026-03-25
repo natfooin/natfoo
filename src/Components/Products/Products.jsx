@@ -1,7 +1,8 @@
 import "./products.css";
 import React from "react";
 import Button from "./../ui/Button/Button";
-const Products = ({ image, name, price }) => {
+import { Link } from "react-router-dom";
+const Products = ({id, image, name, price }) => {
   return (
     <div className="page-wrapper">
       <div className="vertical-card">
@@ -16,12 +17,14 @@ const Products = ({ image, name, price }) => {
               <span className="amount">{price}</span>
             </div>
             <div className="button">
-              <Button
-                cn={"button-n-one"}
-                text={"Buy now"}
-                minWidth={70}
-                height={30}
-              />  
+              <Link to={`/product/${id}`}>
+                <Button
+                  cn={"button-n-one"}
+                  text={"Buy now"}
+                  minWidth={70}
+                  height={30}
+                />
+              </Link>
             </div>
           </div>
         </div>
