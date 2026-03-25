@@ -26,7 +26,7 @@ import Contact from "./Components/Contact/Contact";
 import TermsPage from "./../src/Components/PolicyPage/TermsPage";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import SuccessModal from "./Components/SuccessModal/SuccessModal";
-import ShippingPage from './Components/PolicyPage/ShippingPage';
+import ShippingPage from "./Components/PolicyPage/ShippingPage";
 import RefundPage from "./Components/PolicyPage/RefundPage";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
@@ -38,7 +38,7 @@ const App = () => {
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
-
+      <ScrollToHash />
       <OpenModal
         showModal={showModal}
         setShowModal={setShowModal}
@@ -114,8 +114,14 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-condition" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
-          <Route path="/shipping-and-delivery-policy" element={<ShippingPage/>} />
-          <Route path="/refund-and-cancellation-policy" element={<RefundPage/>} />
+          <Route
+            path="/shipping-and-delivery-policy"
+            element={<ShippingPage />}
+          />
+          <Route
+            path="/refund-and-cancellation-policy"
+            element={<RefundPage />}
+          />
           <Route
             path="/refund-and-cancellation-policy"
             element={<TermsPage />}
