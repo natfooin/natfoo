@@ -68,13 +68,14 @@ function Hero() {
       >
         {productData?.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className="slide-card">
-              <img src={product.image} alt={product.name} />
+            <a href={`#${product.category}-products`}>
+              <div className="slide-card">
+                <img src={product.image} alt={product.name} />
 
-              <div className="slide-overlay">
-                <h3 className="product-name">
-                  {product.name}{" "}
-                  {/* <span>
+                <div className="slide-overlay">
+                  <h3 className="product-name">
+                    {product.name}{" "}
+                    {/* <span>
                     <FaRupeeSign
                       size={innerWidth >= 1280 ? 18 : 10}
                       color="white"
@@ -82,18 +83,19 @@ function Hero() {
                     {product.price}
                     10%
                   </span> */}
-                </h3>
+                  </h3>
 
-                <Link to={`/product/${product.id}`}>
-                  <Button
-                    cn={"button-n-one"}
-                    text={"Buy now"}
-                    minWidth={70}
-                    height={30}
-                  />
-                </Link>
+                  <Link to={`/product/${product.id}`}>
+                    <Button
+                      cn={"button-n-one"}
+                      text={"Buy now"}
+                      minWidth={70}
+                      height={30}
+                    />
+                  </Link>
+                </div>
               </div>
-            </div>
+            </a>
           </SwiperSlide>
         ))}
 

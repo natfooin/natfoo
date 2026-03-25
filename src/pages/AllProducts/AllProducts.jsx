@@ -11,7 +11,7 @@ function AllProducts() {
   return (
     <>
       {categories.map((cat, index) => (
-        <div className="top-homeProduct" key={index}>
+        <div className="top-homeProduct" key={index} id={`${cat}-products`}>
           <div className="above-container">
             <h1>{cat}</h1>
             <Link to={"/products"}>
