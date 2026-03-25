@@ -68,14 +68,7 @@ const CartProduct = ({
             <p>{product?.desc1}</p>
             <Badge text={product?.category} />
           </div>
-          <button
-            className="removeItem"
-            onClick={() => removeFromCart(product?.uid, product?.price)}
-            onMouseEnter={() => setRemoveButtonEffect((prev) => !prev)}
-            onMouseLeave={() => setRemoveButtonEffect((prev) => !prev)}
-          >
-            <BiTrash color={removeButtonEffect ? "white" : "fdd"} />
-          </button>
+          
         </div>
       </div>
       <div className="cart-product-pricing">
@@ -98,6 +91,14 @@ const CartProduct = ({
             <PiPlus />
           </button>
         </div>
+        <button
+            className="removeItem"
+            onClick={() => removeFromCart(product?.uid, product?.price)}
+            onMouseEnter={() => setRemoveButtonEffect((prev) => !prev)}
+            onMouseLeave={() => setRemoveButtonEffect((prev) => !prev)}
+          >
+            <BiTrash color={removeButtonEffect ? "white" : "fdd"} />
+          </button>
       </div>
     </div>
   );

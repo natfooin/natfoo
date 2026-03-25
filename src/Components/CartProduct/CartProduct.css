@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 20px;
   max-width: 600px;
-  background-color: var(--dark-green);
+  background-image: url("../../assets/laptop-footer-texture.png");
   border-radius: 8px; 
 }
 
@@ -55,13 +55,14 @@
   margin-bottom: 5px;
 }
 
-.cart-product-mini-content .removeItem {
+ .removeItem {
   width: fit-content;
   background-color: transparent;
   border: none;
   display: flex;
   font-size: 1.2rem;
   margin-bottom: 5px;
+  margin-top: auto;
   &:hover {
     cursor: pointer;
   }
