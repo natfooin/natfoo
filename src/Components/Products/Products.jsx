@@ -1,4 +1,4 @@
-import "./products.css";
+import "./Products.css";
 import React from "react";
 import { FaRupeeSign } from "react-icons/fa";
 import Button from "./../ui/Button/Button";
