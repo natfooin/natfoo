@@ -7,10 +7,9 @@
 
 .footer {
   background-color: var(--dark-green);
-  background-image:
-    linear-gradient(to bottom, rgba(54, 63, 37, 0.98), rgba(18, 24, 11, 1)),
-    url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
-  padding: 4rem 5% 2rem; 
+  background-image: url("../../assets/laptop-footer-texture.png");
+  background-size: cover;
+  padding: 4rem 5% 2rem;
   border-top: 5px solid var(--gold);
 }
 
@@ -62,7 +61,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size:1.7rem;
+  font-size: 1.7rem;
 }
 
 .footer h6 {
@@ -112,10 +111,10 @@
 }
 
 .site-rights h6 {
-  font-size: 11px ;
-  color: var(--gold) ;
+  font-size: 11px;
+  color: var(--gold);
   opacity: 0.6;
-  font-style: normal ;
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
