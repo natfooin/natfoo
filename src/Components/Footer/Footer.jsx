@@ -39,7 +39,6 @@ function Footer() {
             </li>
             <li>
               <Link to="/shipping-and-delivery-policy">shipping policy</Link>
-              <Link to="/shipping-and-delivery-policy">shipping policy</Link>
             </li>
            
           </ul>
