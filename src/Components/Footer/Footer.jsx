@@ -18,28 +18,29 @@ function Footer() {
           </div>
           <div className="logo-para">
             <p>
-              Natfoo is dedicated to bringing the pure essence of nature to your doorstep. 
-              Specializing in premium, organic millet products and natural foods 
-              crafted for a healthier lifestyle.
+              Natfoo is dedicated to bringing the pure essence of nature to your
+              doorstep. Specializing in premium, organic millet products and
+              natural foods crafted for a healthier lifestyle.
             </p>
-          
           </div>
         </div>
 
         <div className="policy">
-          <h6 style={{marginBottom:"1.2rem"}}>policy information</h6>
+          <h6 style={{ marginBottom: "1.2rem" }}>policy information</h6>
           <ul>
             <li>
-              <Link to="/terms-conditions">terms & conditions</Link>
+              <Link to="/terms-and-condition">terms & conditions</Link>
             </li>
             <li>
               <Link to="/privacy-policy">privacy & policy</Link>
             </li>
             <li>
-              <Link to="/shipping-policy">shipping policy</Link>
+              <Link to="/shipping-and-delivery-policy">shipping policy</Link>
             </li>
             <li>
-              <Link to="/refund-policy">refund & cancellation</Link>
+              <Link to="/refund-and-cancellation-policy">
+                refund & cancellation
+              </Link>
             </li>
           </ul>
         </div>
@@ -47,7 +48,7 @@ function Footer() {
         {/* Quick Links Section */}
         <div className="linkdiv">
           <div className="links">
-            <h6 style={{marginBottom:"1.2rem"}}>quick links</h6>
+            <h6 style={{ marginBottom: "1.2rem" }}>quick links</h6>
             <ul>
               <li>
                 <Link to="/">home</Link>

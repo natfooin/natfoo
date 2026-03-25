@@ -115,7 +115,7 @@ const App = () => {
           <Route path="/privacy-policy" element={<PolicyPage />} />
           <Route path="/shipping-and-delivery-policy" element={<Sr />} />
           <Route
-            path="/return-and-cancellation-policy"
+            path="/refund-and-cancellation-policy"
             element={<TermsPage />}
           />
         </Route>

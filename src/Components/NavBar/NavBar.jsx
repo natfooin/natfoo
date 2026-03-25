@@ -36,9 +36,11 @@ function NavBar({ cartQuantity }) {
       </div>
 
       <div className="nav-actions">
-        <div className="searchIcon">
-          <ImSearch size={18} />
-        </div>
+        <Link to="/products" style={{color: "inherit"}}>
+          <div className="searchIcon">
+            <ImSearch size={18} />
+          </div>
+        </Link>
 
         <Link
           to="/cart"
