@@ -1,5 +1,6 @@
 *{
     scrollbar-width: none;
+    scroll-behavior:auto ;
 }
 
 .app-container{

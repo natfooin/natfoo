@@ -22,7 +22,6 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
     setProductData(product || null);
     setQuantity(1);
 
-    // 🔥 GET SIMILAR PRODUCTS
     if (product && product["similar-products"]) {
       const similar = productsData.filter((p) =>
         product["similar-products"].includes(p.id),
@@ -152,21 +151,21 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       </div>
 
       {/* PRODUCT INFO */}
-      {productData.content && (
+      {productData.content  && (
         <>
           <h2 className="product-info-title">Product Information</h2>
 
           <div className="details-section">
-            {Array.isArray(productData.content) && (
+            {Array.isArray(productData?.content) && (
               <>
-                {productData.content[0] && (
+                {productData?.content[0] && (
                   <DetailCard
                     header="Why Choose This Product?"
                     content={productData.content[0]}
                   />
                 )}
 
-                {productData.content[1] && (
+                {productData?.content[1] && (
                   <DetailCard
                     header="Easy to Cook"
                     content={productData.content[1]}
