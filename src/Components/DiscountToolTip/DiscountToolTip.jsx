@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./DiscountTooltip.css";
+import "./DiscountToolTip.css";
 
 const DiscountTooltip = ({ label = "View Offers", slabs = [], styles=null }) => {
   const [show, setShow] = useState(false);
