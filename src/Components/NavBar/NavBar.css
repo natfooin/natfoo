@@ -42,11 +42,22 @@
   gap: 2rem;
   max-width: fit-content;
 }
-
+.searchIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchIcon:hover{
+  color: var(--gold);
+}
 .cart {
   position: relative;
   display: flex;
   align-items: center;
+}
+.cart-link.cart:hover {
+  color: var(--gold);
+ 
 }
 
 .cart-count {

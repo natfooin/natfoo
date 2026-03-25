@@ -30,17 +30,18 @@ function Footer() {
           <h6 style={{marginBottom:"1.2rem"}}>policy information</h6>
           <ul>
             <li>
-              <Link to="/terms-conditions">terms & conditions</Link>
+              <Link to="/terms-and-condition">terms & conditions</Link>
+            </li>
+             <li>
+              <Link to="/refund-and-cancellation-policy">refund & cancellation</Link>
             </li>
             <li>
               <Link to="/privacy-policy">privacy & policy</Link>
             </li>
             <li>
-              <Link to="/shipping-policy">shipping policy</Link>
+              <Link to="/shipping-and-delivery-policy">shipping policy</Link>
             </li>
-            <li>
-              <Link to="/refund-policy">refund & cancellation</Link>
-            </li>
+           
           </ul>
         </div>
 
@@ -69,7 +70,7 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="site-rights">
-          <h6>Copyright 2026 &copy; natfoo. All Rights Reserved</h6>
+          <h6 style={{color:"white"}}>Copyright 2026 &copy; natfoo. All Rights Reserved</h6>
         </div>
 
         <div className="iconContainer">

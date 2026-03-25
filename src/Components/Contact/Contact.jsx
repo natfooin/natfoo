@@ -75,12 +75,14 @@ function Contact() {
                 <span>+91 98765 43210</span>
               </div>
               <div className="ledger-entry">
-                <FaEnvelope className="ledger-icon" />
+                <FaEnvelope className="ledger-icon"  />
                 <span>concierge@natfoo.com</span>
               </div>
               <div className="ledger-entry">
-                <FaMapMarkerAlt className="ledger-icon" />
-                <span>Trichy, Tamil Nadu</span>
+                <FaMapMarkerAlt className="ledger-icon" style={{alignItems: "flex-end"}}/>
+                <span>Varietas Green Energy Pvt Ltd 
+Registered Office: K 804, AWHO, Nerul, Navi Mumbai - 400706. Maharashtra. India.
+Corporate Office: 54, 2nd Street, Sriramapuram, Srirangam, Trichy - 620006. Tamilnadu. India.</span>
               </div>
             </div>
 

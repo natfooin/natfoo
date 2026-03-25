@@ -26,7 +26,8 @@ import Contact from "./Components/Contact/Contact";
 import TermsPage from "./../src/Components/PolicyPage/TermsPage";
 import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import SuccessModal from "./Components/SuccessModal/SuccessModal";
-import Sr from './Components/PolicyPage/sr'
+import ShippingPage from './Components/PolicyPage/ShippingPage';
+import RefundPage from "./Components/PolicyPage/RefundPage";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -109,7 +110,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-condition" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
-          <Route path="/shipping-and-delivery-policy" element={<Sr/>} />
+          <Route path="/shipping-and-delivery-policy" element={<ShippingPage/>} />
+          <Route path="/refund-and-cancellation-policy" element={<RefundPage/>} />
           <Route
             path="/return-and-cancellation-policy"
             element={<TermsPage />}

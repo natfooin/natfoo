@@ -1,14 +1,21 @@
+.royal-wrapper{
+  display: flex;
+  align-items: center;justify-content: center;
+  padding-bottom: 12%;
+  padding-top: 8%;
 
+}
 .royal-viewport {
   display: grid;
   grid-template-columns: 450px 1fr;
-  max-width: 1300px;
+  max-width: 1000px;
   max-height: fit-content;
   width: 100%;
   background: var(--site-white);
   border-radius: 8px; 
   overflow: hidden;
   position: relative;
+  
 }
 
 .heritage-panel {
@@ -17,7 +24,7 @@
     linear-gradient(rgba(54, 63, 37, 0.9), rgba(54, 63, 37, 0.9)),
     url("https://www.transparenttextures.com/patterns/dark-matter.png");
   color: white;
-  padding: 4rem 3rem;
+  padding: 4rem ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +69,9 @@
 .ledger-icon {
   color: var(--gold);
   flex-shrink: 0;
+  
 }
+
 
 .royal-socials {
   display: flex;
@@ -228,4 +237,12 @@
     padding: 14px 20px;
     font-size: 0.9rem;
   }
+}
+@media (max-width:330px){
+.royal-wrapper{
+
+  padding: 12%;
+  
+
+}
 }

@@ -12,6 +12,8 @@
     url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
   padding: 4rem 5% 2rem; 
   border-top: 5px solid var(--gold);
+  position: relative;
+  bottom: 0;
 }
 
 .footer-top {
@@ -66,7 +68,7 @@
 }
 
 .footer h6 {
-  color: var(--gold) !important;
+  color: var(--gold) ;
   font-size: 1.3rem !important;
   font-style: italic;
   letter-spacing: 1px;
@@ -113,8 +115,7 @@
 
 .site-rights h6 {
   font-size: 11px ;
-  color: var(--gold) ;
-  opacity: 0.6;
+    opacity: 0.6;
   font-style: normal ;
   text-transform: uppercase;
   letter-spacing: 1.5px;

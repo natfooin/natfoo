@@ -1,25 +1,21 @@
-.policy-wrapper {
+.shipping-wrapper {
   min-height: 100vh;
   background-color: #f5ead7;
-  background-image: linear-gradient(rgba(245, 234, 215, 0.95), rgba(245, 234, 215, 0.95)),
-    url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
-  padding: 5rem 5%;
+  padding: 5rem 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.policy-card {
-  max-width: 1000px;
+.shipping-card {
+  max-width: 1100px;
   width: 100%;
   background: #ffffff;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   border-top: 6px solid #D4AF37;
-  border-radius: 4px;
   overflow: hidden;
 }
 
-.policy-header {
+.shipping-header {
   background-color: #363F25;
   color: white;
   padding: 4rem 2rem;
@@ -27,84 +23,84 @@
 }
 
 .header-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border: 1px solid #D4AF37;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 4rem;
+  margin: 0 auto 1.5rem;
   color: #D4AF37;
   transform: rotate(45deg);
-  
 }
 
 .header-icon svg { transform: rotate(-45deg); }
 
 .main-title {
   font-family: serif;
-  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-size: 2.2rem;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;
+  padding-top: 2rem;
 }
 
 .effective-date {
   color: #D4AF37;
   margin-top: 15px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
-.policy-body {
-  padding: 4rem 10%;
+.shipping-body {
+  padding: 4rem 5rem;
 }
 
-.policy-item {
-  margin-bottom: 3.5rem;
+.shipping-item {
+  margin-bottom: 4rem;
 }
 
 .item-header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 1.2rem;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 8px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 10px;
 }
 
 .section-icon {
   color: #D4AF37;
-  font-size: 1.3rem;
-  flex-shrink: 0;
+  font-size: 1.4rem;
 }
 
 .item-title {
   font-family: serif;
   color: #363F25;
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-size: 1.4rem;
   margin: 0;
   font-weight: 700;
 }
 
-.policy-item p, .policy-bullets li {
+.shipping-item p, .shipping-bullets li {
   color: #444;
   line-height: 1.8;
   font-size: 1rem;
   margin-bottom: 12px;
 }
 
-.policy-bullets {
+.shipping-bullets {
   list-style: none;
   padding-left: 0;
 }
 
-.policy-bullets li {
+.shipping-bullets li {
   position: relative;
   padding-left: 30px;
 }
 
-.policy-bullets li::before {
+.shipping-bullets li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -113,10 +109,25 @@
   line-height: 1;
 }
 
-/* --- Universal Responsiveness --- */
+.sub-item {
+  padding-left: 50px ;
+  font-style: italic;
+  color: #555 ;
+}
+
+.sub-item::before { content: "" ; }
+
+.disclaimer-note {
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 3px solid #363F25;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
-  .policy-wrapper { padding: 2rem 15px; }
-  .policy-header { padding: 3rem 1.5rem; }
-  .policy-body { padding: 2.5rem 1.5rem; }
-  .main-title { font-size: 1.5rem; }
+  .shipping-body { padding: 3rem 1.5rem; }
+  .main-title { font-size: 1.6rem; }
+  .shipping-header { padding: 3rem 1rem; }
 }
