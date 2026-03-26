@@ -8,3 +8,9 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+@media(max-width:580px) {
+    .app-container{
+        background-image: url("/phone-bg.png");
+    }
+}
