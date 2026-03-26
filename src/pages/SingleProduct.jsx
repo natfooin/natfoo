@@ -44,11 +44,27 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const handleAddToCart = () => {
     if (!productData) return;
 
+    setCartProducts((prev) => {
+      const existingProductIndex = prev.findIndex(
+        (item) => item.id === productData.id,
+      );
+
+      if (existingProductIndex !== -1) {
+        const updatedProducts = [...prev];
+        updatedProducts[existingProductIndex] = {
+          ...updatedProducts[existingProductIndex],
+          quantity: updatedProducts[existingProductIndex].quantity + quantity,
+        };
+        return updatedProducts;
+      } else {
+        return [
+          ...prev,
+          { ...productData, quantity, uid: crypto.randomUUID() },
+        ];
+      }
+    });
+
     setCartQuantity((prev) => prev + quantity);
-    setCartProducts((prev) => [
-      ...prev,
-      { ...productData, quantity, uid: crypto.randomUUID() },
-    ]);
     setCartPrice((prev) => prev + productData.price * quantity);
 
     setQuantity(1);
@@ -69,7 +85,12 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-          <img src={productData.image} alt={productData.name} loading="lazy" decoding="async" />
+          <img
+            src={productData.image}
+            alt={productData.name}
+            loading="lazy"
+            decoding="async"
+          />
 
           {similarProducts.length > 0 && (
             <div className="similar-products-container">
@@ -81,7 +102,12 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   key={item.id}
                   className="similar-product-item"
                 >
-                  <img src={item.image} alt={item.name} loading="lazy" decoding="async"/>
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>{item.name}</span>
                 </Link>
               ))}
@@ -122,10 +148,6 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
               {productData.price}
             </h3>
 
-            <Link
-              to={"/#discount"}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
               <h3 className="discount-amount">
                 <DiscountToolTip
                   label="View Discounts"
@@ -133,7 +155,6 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   slabs={slabs}
                 />
               </h3>
-            </Link>
           </span>
 
           {/* QUANTITY */}
@@ -151,7 +172,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       </div>
 
       {/* PRODUCT INFO */}
-      {productData.content  && (
+      {productData.content && (
         <>
           <h2 className="product-info-title">Product Information</h2>
 

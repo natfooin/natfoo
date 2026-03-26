@@ -39,25 +39,6 @@ const App = () => {
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
       <ScrollToHash />
-      <OpenModal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        cartProducts={cartProducts}
-        discount={discount}
-        cartPrice={cartPrice}
-        setShowSuccessModal={setShowSuccessModal}
-      />
-
-      <SuccessModal
-        setCartPrice={setCartPrice}
-        setDiscount={setDiscount}
-        setCartProducts={setCartProducts}
-        setCartQuantity={setCartQuantity}
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-        title="Order Placed!"
-        message="Your order has been sent successfully."
-      />
 
       <OpeningScreen />
       <Routes>
@@ -131,6 +112,25 @@ const App = () => {
       </Routes>
       {/* <Footer /> */}
       <WhatsAppButton />
+      <OpenModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        cartProducts={cartProducts}
+        discount={discount}
+        cartPrice={cartPrice}
+        setShowSuccessModal={setShowSuccessModal}
+      />
+
+      <SuccessModal
+        setCartPrice={setCartPrice}
+        setDiscount={setDiscount}
+        setCartProducts={setCartProducts}
+        setCartQuantity={setCartQuantity}
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+        title="Order Placed!"
+        message="Your order has been sent successfully."
+      />
     </>
   );
 };
