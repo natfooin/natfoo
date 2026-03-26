@@ -91,11 +91,21 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
             loading="lazy"
             decoding="async"
           />
+          {/* {productData["similar-products"] && (
+            <div className="similar-products-container">
+              <h3>What you find inside</h3>
 
+              <div className="similar-product-item">
+                <img
+                  src={productData["similar-products"][0]}
+                  alt={productData["similar-products"][1]}
+                />
+                <span>{productData["similar-products"][1]}</span>
+              </div>
+            </div>
+          )} */}
           {similarProducts.length > 0 && (
             <div className="similar-products-container">
-              <h3>Similar Products</h3>
-
               {similarProducts.map((item) => (
                 <Link
                   to={`/product/${item.id}`}
@@ -148,13 +158,13 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
               {productData.price}
             </h3>
 
-              <h3 className="discount-amount">
-                <DiscountToolTip
-                  label="View Discounts"
-                  styles={{ color: "white" }}
-                  slabs={slabs}
-                />
-              </h3>
+            <h3 className="discount-amount">
+              <DiscountToolTip
+                label="View Discounts"
+                styles={{ color: "white" }}
+                slabs={slabs}
+              />
+            </h3>
           </span>
 
           {/* QUANTITY */}
