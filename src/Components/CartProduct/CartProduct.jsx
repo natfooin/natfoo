@@ -20,21 +20,20 @@ const CartProduct = ({
     setProductQuantity(product.quantity);
   }, [product]);
 
-  const subCartProductQuantity = (amount) => {
-    if (productQuantity > 1) {
-      setCartQuantity((prev) => prev - 1);
-      setProductQuantity((prev) => prev - 1);
-      setCartPrice((prevPrice) => prevPrice - amount);
-
-      setCartProducts((prevProducts) =>
-        prevProducts.map((item) =>
-          item.id === product.id
+  const subCartProductQuantity = () => {
+    if (product.quantity > 1) {
+      setCartProducts((prev) =>
+        prev.map((item) =>
+          item.uid === product.uid
             ? { ...item, quantity: item.quantity - 1 }
             : item,
         ),
       );
+      setCartQuantity((prev) => Math.max(0, prev - 1));
+      setCartPrice((prevPrice) => Math.max(0, prevPrice - product.price));
     }
   };
+
   const addCartProductQuantity = (amount) => {
     setCartQuantity((prev) => prev + 1);
     setProductQuantity((prev) => prev + 1);
@@ -48,19 +47,24 @@ const CartProduct = ({
       ),
     );
   };
-  const removeFromCart = (IDToRemove, amount) => {
-    setCartProducts((prevProducts) =>
-      prevProducts.filter((item) => item.uid !== IDToRemove),
-    );
+  const removeFromCart = () => {
+    setCartProducts((prev) => prev.filter((item) => item.uid !== product.uid));
 
-    setCartQuantity((prev) => prev - productQuantity);
-    setCartPrice((prevPrice) => prevPrice - amount * productQuantity);
+    setCartQuantity((prev) => Math.max(0, prev - product.quantity));
+    setCartPrice((prev) =>
+      Math.max(0, prev - product.price * product.quantity),
+    );
   };
   return (
     <div className="cart-product-container">
       <div className="cart-product-details">
         <div className="cart-product-image">
-          <img src={product?.image} alt={product?.name} loading="lazy" decoding="async" />
+          <img
+            src={product?.image}
+            alt={product?.name}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="cart-product-mini-content">
           <div>
@@ -68,7 +72,6 @@ const CartProduct = ({
             <p>{product?.desc1}</p>
             <Badge text={product?.category} />
           </div>
-          
         </div>
       </div>
       <div className="cart-product-pricing">
@@ -92,13 +95,13 @@ const CartProduct = ({
           </button>
         </div>
         <button
-            className="removeItem"
-            onClick={() => removeFromCart(product?.uid, product?.price)}
-            onMouseEnter={() => setRemoveButtonEffect((prev) => !prev)}
-            onMouseLeave={() => setRemoveButtonEffect((prev) => !prev)}
-          >
-            <BiTrash color={removeButtonEffect ? "white" : "fdd"} />
-          </button>
+          className="removeItem"
+          onClick={() => removeFromCart(product?.uid, product?.price)}
+          onMouseEnter={() => setRemoveButtonEffect((prev) => !prev)}
+          onMouseLeave={() => setRemoveButtonEffect((prev) => !prev)}
+        >
+          <BiTrash color={removeButtonEffect ? "white" : "fdd"} />
+        </button>
       </div>
     </div>
   );
