@@ -321,7 +321,7 @@
   }  ,
   {
     "id": 22,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "public/product-images/Pasta-Penne.jpg",
     "name": "Millet Penne Pasta",
     "desc1": "Experience a bold, gourmet twist on comfort food with this Millet Penne Pasta—where ancient grains meet modern elegance. A curated blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat is shaped into classic penne tubes, designed to hold and embrace every layer of flavour. ",
     "desc2": "Delicately seasoned with toasted coriander, cumin, and fennel, uplifted by turmeric and fragrant curry leaves, and finished with a whisper of cinnamon, clove, and nutmeg—each bite unfolds like a slow, spiced symphony. ",
@@ -350,7 +350,7 @@
   ,
   {
     "id": 23,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Pasta-Fusili.jpg",
     "name": "Millet Fusilli Pasta",
     "desc1": "Savour a distinctive expression of Millet Fusilli Pasta, where heritage grains are transformed into graceful spirals of indulgence. An artful blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat creates a textured, earthy base—each twist of fusilli designed to cling effortlessly to layers of flavour. ",
     "desc2": "Gently infused with coriander, cumin, and fennel, enriched by the golden warmth of turmeric and fragrant curry leaves, and elevated with delicate hints of cinnamon, clove, and nutmeg, the profile is both deep and refined. ",
@@ -380,7 +380,7 @@
   ,
   {
     "id": 24,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Pasta-Elbow.jpg",
     "name": "Millet Elbow Pasta",
     "desc1": "Delight in a refined take on Millet Elbow Pasta, where ancient grains are shaped into smooth, curved forms that cradle flavour with effortless elegance.  ",
     "desc2": "A balanced blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat creates a wholesome, nutty foundation with a tender yet satisfying bite. ",
@@ -409,7 +409,7 @@
   ,
   {
     "id": 25,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Foxtail-Millet-Vermicelli.png",
     "name": "Foxtail Millet Vermicelli",
     "desc1": "Foxtail millet vermicelli is a refined blend of premium foxtail millet flour and whole wheat, offering a delicate texture and a naturally elegant taste.   ",
     "desc2": "Light, wholesome, and thoughtfully crafted, it brings a touch of sophistication to everyday meals. ",
@@ -436,7 +436,7 @@
   ,
   {
     "id": 26,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Little-Millet-Vermicelli.png",
     "name": "Little Millet Vermicelli",
     "desc1": "Little millet vermicelli is a refined celebration of wholesome grains, crafted from premium little millet flour and whole wheat. Light, delicate, and subtly nutty, it brings an air of quiet elegance to every dish.   ",
     "desc2": "Beyond its graceful texture, it is naturally enriched with magnesium and niacin, supporting heart health and helping maintain healthy cholesterol levels.  ",
@@ -463,7 +463,7 @@
   ,
   {
     "id": 27,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Multi-Millet-Vermicelli.png",
     "name": "Multi Millet Vermicelli",
     "desc1": "Savour the goodness of six ancient millets—foxtail, kodo, little, barnyard, ragi, and bajra—crafted into delicate vermicelli for a wholesome, nourishing experience.    ",
     "desc2": "Naturally rich in dietary fiber, it supports healthy digestion while adding a light, satisfying texture to your meals.",
