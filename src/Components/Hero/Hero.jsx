@@ -70,7 +70,7 @@ function Hero() {
           <SwiperSlide key={index}>
             <a href={`#${product.category}-products`}>
               <div className="slide-card">
-                <img src={product.image} alt={product.name} />
+                <img src={product.image} alt={product.name} loading="lazy" />
 
                 <div className="slide-overlay">
                   <h3 className="product-name">

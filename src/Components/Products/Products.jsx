@@ -8,7 +8,7 @@ const Products = ({id, image, name, price }) => {
     <div className="page-wrapper">
       <div className="vertical-card">
         <div className="image-container">
-          <img src={image} alt="Product" className="card-img" />
+          <img src={image} alt="Product" className="card-img" loading="lazy"/>
         </div>
 
         <div className="content-container">

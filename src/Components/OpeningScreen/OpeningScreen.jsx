@@ -15,7 +15,7 @@ function OpeningScreen() {
 
   return (
     <div className="opening-screen">
-      <img src={logo} alt="logo" className="opening-logo" />
+      <img src={logo} alt="logo" className="opening-logo" loading="lazy"/>
     </div>
   );
 }

@@ -19,15 +19,15 @@ const About = () => {
 
       <div className="about-container">
         <div className="about-gallery">
-          <img src={img1} className="g1 big" />
-          <img src={img2} className="g2" />
-          <img src={img3} className="g3" />
-          <img src={img4} className="g4" />
-          <img src={img5} className="g5" />
-          <img src={img6} className="g6" />
-          {/* <img src={img1} className="g7"/>
-      <img src={img1} className="g8"/>
-      <img src={img1} className="g9"/> */}
+          <img src={img1} className="g1 big" loading="lazy" />
+          <img src={img2} className="g2" loading="lazy"/>
+          <img src={img3} className="g3" loading="lazy"/>
+          <img src={img4} className="g4" loading="lazy"/>
+          <img src={img5} className="g5" loading="lazy"/>
+          <img src={img6} className="g6" loading="lazy"/>
+          {/* <img src={img1} className="g7" loading="lazy"/>
+      <img src={img1} className="g8" loading="lazy"/>
+      <img src={img1} className="g9" loading="lazy"/> */}
         </div>
 
         <div className="about-text">
