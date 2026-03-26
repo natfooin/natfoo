@@ -83,15 +83,11 @@ const Cart = ({
                   </tr>
                   <tr>
                     <td>
-                      <Link to={"/#discount"}>
                         <DiscountTooltip label="Discount" slabs={slabs} />
-                      </Link>
                     </td>
                     <td className="amount-column">
                       <FaRupeeSign size={12} color="#3b82f6" />
-                      <Link to={"/#discount"}>
                         <DiscountTooltip label={`${discount}`} slabs={slabs} />
-                      </Link>
                     </td>
                   </tr>
                   <tr>

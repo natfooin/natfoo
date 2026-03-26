@@ -148,10 +148,6 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
               {productData.price}
             </h3>
 
-            <Link
-              to={"/#discount"}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
               <h3 className="discount-amount">
                 <DiscountToolTip
                   label="View Discounts"
@@ -159,7 +155,6 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   slabs={slabs}
                 />
               </h3>
-            </Link>
           </span>
 
           {/* QUANTITY */}
