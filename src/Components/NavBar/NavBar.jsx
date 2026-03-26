@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ImSearch } from "react-icons/im";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import logo from "../../assets/logo.png";
+import logo from "/logo.png";
 import Button from "./../ui/Button/Button";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ function NavBar({ cartQuantity }) {
     <nav className="navBar">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="Millet Logo" />
+          <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
         </Link>
       </div>
 

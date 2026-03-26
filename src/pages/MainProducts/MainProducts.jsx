@@ -33,7 +33,7 @@ function MainProducts() {
     return matchesSearch && matchesBadge;
   });
   useEffect(() => {
-    document.title = "Products";
+    document.title = "Natfoo | Products";
   }, []);
   return (
     <div className="main-products-wrapper">

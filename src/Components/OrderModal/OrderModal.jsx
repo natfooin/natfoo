@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./OrderModal.css";
-import logo from "../../assets/logo.png";
+import logo from "/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
 
@@ -138,7 +138,7 @@ function OrderModal({
               ✖
             </button>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <img src={logo} width={"15%"} height={"10%"} alt="logo" />
+              <img src={logo} width={"15%"} height={"10%"} alt="logo" loading="lazy"/>
               <h2>Place your order</h2>
             </div>
 

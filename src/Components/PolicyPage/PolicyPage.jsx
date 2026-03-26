@@ -1,5 +1,6 @@
 import React from "react";
 import "./PolicyPage.css";
+import { useEffect } from "react";
 import { 
   FaUserShield, FaDatabase, FaBullseye, FaShareAlt, 
   FaCookieBite, FaHistory, FaLock, FaUserEdit, 
@@ -7,6 +8,9 @@ import {
 } from "react-icons/fa";
 
 function PolicyPage() {
+  useEffect(() => {
+      document.title = "Natfoo | Privacy and Policy";
+    }, []);
   return (
     <div className="policy-wrapper">
       <div className="policy-card">

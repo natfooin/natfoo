@@ -3,7 +3,7 @@
   align-items: center;justify-content: center;
   padding-bottom: 12%;
   padding-top: 8%;
-  background-image: url("../../assets/laptop-cream-texture.png");
+  background-image: url("/laptop-cream-texture.png");
   background-attachment: fixed;
   background-size: contain;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import {
   FaPhoneAlt,
@@ -65,6 +65,10 @@ function Contact() {
     number: "",
     message: "",
   });
+
+  useEffect(() => {
+      document.title = "Natfoo | Contact";
+    }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

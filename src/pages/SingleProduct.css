@@ -13,7 +13,7 @@
 
 .single-product-page-container {
   width: 100%;
-  background-image: url("../assets/laptop-cream-texture.png");
+  background-image: url("/laptop-cream-texture.png");
   display: flex;
   flex-direction: column;
   align-items: center;

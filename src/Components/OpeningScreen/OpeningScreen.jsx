@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./OpeningScreen.css";
-import logo from "../../assets/logo.png"; // your logo
+import logo from "/logo.png"; // your logo
 
 function OpeningScreen() {
   const [show, setShow] = useState(true);
@@ -15,7 +15,7 @@ function OpeningScreen() {
 
   return (
     <div className="opening-screen">
-      <img src={logo} alt="logo" className="opening-logo" />
+      <img src={logo} alt="logo" className="opening-logo" loading="lazy" decoding="async"/>
     </div>
   );
 }

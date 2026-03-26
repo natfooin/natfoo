@@ -1,4 +1,4 @@
-import "./products.css";
+import "./Products.css";
 import React from "react";
 import { FaRupeeSign } from "react-icons/fa";
 import Button from "./../ui/Button/Button";
@@ -8,7 +8,7 @@ const Products = ({id, image, name, price }) => {
     <div className="page-wrapper">
       <div className="vertical-card">
         <div className="image-container">
-          <img src={image} alt="Product" className="card-img" />
+          <img src={image} alt="Product" className="card-img" loading="lazy" decoding="async"/>
         </div>
 
         <div className="content-container">

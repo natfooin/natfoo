@@ -4,7 +4,7 @@ import FooterIcon from "./FooterIcon";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import { CiYoutube, CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/logo.png";
+import logo from "/logo.png";
 
 function Footer() {
   return (
@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer-left">
           <div className="logo">
             <Link to="/">
-              <img src={logo} alt="Natfoo Logo" />
+              <img src={logo} alt="Natfoo Logo" loading="lazy" decoding="async" />
             </Link>
           </div>
           <div className="logo-para">

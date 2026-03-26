@@ -7,7 +7,7 @@
 
 .footer {
   background-color: var(--dark-green);
-  background-image: url("../../assets/laptop-footer-texture.png");
+  background-image: url("/laptop-footer-texture.png");
   background-size: cover;
   padding: 4rem 5% 2rem;
   border-top: 5px solid var(--gold);
