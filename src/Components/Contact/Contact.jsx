@@ -125,7 +125,7 @@ function Contact() {
                 <FaEnvelope className="ledger-icon"  />
                 <span>concierge@natfoo.com</span>
               </div>
-              <div className="ledger-entry"style={{alignItems: "flex-start",gap:"3px",textAlign:"left"}}>
+              <div className="ledger-entry"style={{alignItems: "flex-start",gap:"3px"}}>
           <div style={{paddingTop:"2px"}} >
                   <FaMapMarkerAlt color="gold"  />
           </div>

@@ -202,6 +202,7 @@
 
   .ledger-entry {
     justify-content: center;
+    text-align: center;
   }
 
   .royal-socials {
@@ -216,7 +217,7 @@
 
 @media (max-width: 480px) {
   .royal-wrapper {
-    padding: 0; 
+    padding: 5%; 
   }
   
   .royal-viewport {
@@ -241,12 +242,4 @@
     padding: 14px 20px;
     font-size: 0.9rem;
   }
-}
-@media (max-width:330px){
-.royal-wrapper{
-
-  padding: 12%;
-  
-
-}
 }

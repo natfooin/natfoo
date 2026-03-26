@@ -153,6 +153,9 @@
 }
 
 @media (max-width: 768px) {
+  .footer{
+    background-image: url('public/tab-phone-footer-contact-green.png');
+  }
   .footer-top {
     grid-template-columns: auto auto;
     justify-content: center;
