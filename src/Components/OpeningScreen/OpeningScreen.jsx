@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./OpeningScreen.css";
-import logo from "../../assets/logo.png"; // your logo
+import logo from "/logo.png"; // your logo
 
 function OpeningScreen() {
   const [show, setShow] = useState(true);

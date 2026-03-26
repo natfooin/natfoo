@@ -63,7 +63,7 @@ body {
   padding:  0;
   width: 100%;
   margin: 0 auto;
-  background-image: url("../../assets/laptop-greenish-cream-texture.png");
+  background-image: url("/laptop-greenish-cream-texture.png");
   background-size: cover;
 }
 

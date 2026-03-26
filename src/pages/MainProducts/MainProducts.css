@@ -4,7 +4,7 @@
   margin: auto;
   padding: 2rem;
   box-sizing: border-box;
-  background-image: url("../../assets/laptop-cream-texture.png");
+  background-image: url("/laptop-cream-texture.png");
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;

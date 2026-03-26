@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "/src/assets/product-images/Ajwain-Mellow.jpg",
+    "image": "/product-images/Ajwain-Mellow.jpg",
     "name": "Ajwain Mellow - Millet Cookies",
     "desc1": "Crunch into wholesome goodness with our Ajwain Mellow - Millet Cookies, a perfect fusion of tradition and taste. Made with nutritious little millet and wheat, and infused with the aromatic warmth of ajwain, jeera, and pepper, these cookies deliver a savoury crunch that's both delicious and nourishing.",
     "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
@@ -14,7 +14,7 @@
   },
   {
     "id": 11,
-    "image": "/src/assets/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
+    "image": "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
     "name": "Spicy Dhamaka – Millet Cookies Pouch",
     "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
     "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
@@ -26,7 +26,7 @@
   },
   {
     "id": 16,
-    "image": "src/assets/product-images/Barnyard-Millet-Noodles.png",
+    "image": "/product-images/Barnyard-Millet-Noodles.png",
     "name": "Barnyard Millet Noodles",
     "desc1": "Made with nutritious Barnyard Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
     "desc2": " ",
@@ -52,7 +52,7 @@
 
   {
     "id": 3,
-    "image": "/src/assets/product-images/Millet-Choc!.jpg",
+    "image": "/product-images/Millet-Choc!.jpg",
     "name": "Millet Choc – Millet Cookies",
     "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
@@ -63,7 +63,7 @@
   },
   {
     "id": 15,
-    "image": "/src/assets/product-images/Little-Millet-Noodles.png",
+    "image": "/product-images/Little-Millet-Noodles.png",
     "name": "Little Millet Noodles ",
     "desc1": "Made with nutritious Little Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
     "desc2": " ",
@@ -88,7 +88,7 @@
   },
   {
     "id": 18,
-    "image": "src/assets/product-images/Foxtail-Millet-Laddu.jpg",
+    "image": "/product-images/Foxtail-Millet-Laddu.jpg",
     "name": "Foxtail Millet Laddu",
     "desc1": "Made with a mix of nutritious Multi Millets, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
     "desc2": "Beyond their exquisite flavour, these laddus support cardiac health, promote proper nervous system function, enhance immunity, and nourish your skin and hair.",

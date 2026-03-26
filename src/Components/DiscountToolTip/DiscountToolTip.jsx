@@ -37,7 +37,7 @@ const DiscountTooltip = ({ label = "View Offers", slabs = [], styles=null }) => 
       }
     } else {
       top = wrapperRect.height + 10;
-      setPosition("bottom"); // 🔥 ALWAYS bottom on PC
+      setPosition("bottom"); 
     }
 
     // LEFT overflow

@@ -4,7 +4,7 @@ import FooterIcon from "./FooterIcon";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import { CiYoutube, CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/logo.png";
+import logo from "/logo.png";
 
 function Footer() {
   return (

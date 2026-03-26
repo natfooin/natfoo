@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./OrderModal.css";
-import logo from "../../assets/logo.png";
+import logo from "/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
 

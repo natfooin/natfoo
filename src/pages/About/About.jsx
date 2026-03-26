@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import img3 from "../../assets/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-01.jpg";
-import img2 from "../../assets/product-images/Crunchy-Cardamom.jpg";
-import img4 from "../../assets/product-images/Foxtail-Millet-Noodles.png";
-import img1 from "../../assets/product-images/Kodo-Millet-Laddu.jpg";
-import img5 from "../../assets/product-images/Spicy-Dhamaka.jpg";
-import img6 from "../../assets/product-images/Ajwain-Mellow.jpg";
+import img3 from "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-01.jpg";
+import img2 from "/product-images/Crunchy-Cardamom.jpg";
+import img4 from "/product-images/Foxtail-Millet-Noodles.png";
+import img1 from "/product-images/Kodo-Millet-Laddu.jpg";
+import img5 from "/product-images/Spicy-Dhamaka.jpg";
+import img6 from "/product-images/Ajwain-Mellow.jpg";
 const About = () => {
   useEffect(() => {
     document.title = "Natfoo | About";

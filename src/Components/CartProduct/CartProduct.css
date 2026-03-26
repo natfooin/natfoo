@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 20px;
   max-width: 600px;
-  background-image: url("../../assets/laptop-footer-texture.png");
+  background-image: url("/laptop-footer-texture.png");
   border-radius: 8px; 
 }
 
