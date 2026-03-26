@@ -112,17 +112,19 @@ function Contact() {
               Get In <br /> <span>Touch</span>
             </h1>
 
-            <div className="contact-ledger">
-              <div className="ledger-entry">
-                <FaPhoneAlt className="ledger-icon" />
+            <div className="contact-ledger"style={{gap:"2px"}}>
+              <div className="ledger-entry" style={{gap:"5px"}}>
+                <FaPhoneAlt className="ledger-icon"  />
                 <span>+91 98765 43210</span>
               </div>
-              <div className="ledger-entry">
+              <div className="ledger-entry"style={{gap:"5px"}}>
                 <FaEnvelope className="ledger-icon"  />
                 <span>concierge@natfoo.com</span>
               </div>
-              <div className="ledger-entry">
-                <FaMapMarkerAlt className="ledger-icon" style={{alignItems: "flex-end"}}/>
+              <div className="ledger-entry"style={{alignItems: "flex-start",gap:"3px",textAlign:"left"}}>
+          <div style={{paddingTop:"2px"}} >
+                  <FaMapMarkerAlt color="gold"  />
+          </div>
                 <span>Varietas Green Energy Pvt Ltd 
 Registered Office: K 804, AWHO, Nerul, Navi Mumbai - 400706. Maharashtra. India.
 Corporate Office: 54, 2nd Street, Sriramapuram, Srirangam, Trichy - 620006. Tamilnadu. India.</span>

@@ -182,12 +182,15 @@
     grid-template-columns: 1fr; 
     min-height: auto;
   }
-
+  .iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .form-panel {
     order: 1; 
     padding: 3rem 2rem;
   }
-
   .heritage-panel {
     order: 2; 
     padding: 3rem 2rem;
