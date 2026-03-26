@@ -69,7 +69,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-          <img src={productData.image} alt={productData.name} loading="lazy" />
+          <img src={productData.image} alt={productData.name} loading="lazy" decoding="async" />
 
           {similarProducts.length > 0 && (
             <div className="similar-products-container">
@@ -81,7 +81,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   key={item.id}
                   className="similar-product-item"
                 >
-                  <img src={item.image} alt={item.name} loading="lazy"/>
+                  <img src={item.image} alt={item.name} loading="lazy" decoding="async"/>
                   <span>{item.name}</span>
                 </Link>
               ))}

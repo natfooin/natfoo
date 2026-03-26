@@ -60,7 +60,7 @@ const CartProduct = ({
     <div className="cart-product-container">
       <div className="cart-product-details">
         <div className="cart-product-image">
-          <img src={product?.image} alt={product?.name} loading="lazy" />
+          <img src={product?.image} alt={product?.name} loading="lazy" decoding="async" />
         </div>
         <div className="cart-product-mini-content">
           <div>

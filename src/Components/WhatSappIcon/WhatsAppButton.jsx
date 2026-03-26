@@ -15,6 +15,7 @@ const WhatsAppButton = () => {
         alt="WhatsApp"
         className="whatsapp-icon"
         loading="lazy"
+        decoding="async"
       />
       <span className="whatsapp-text">WhatsApp</span>
     </div>
