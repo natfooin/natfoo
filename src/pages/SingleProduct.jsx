@@ -91,7 +91,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
             loading="lazy"
             decoding="async"
           />
-          {/* {productData["similar-products"] && (
+          {productData["similar-products"] && (
             <div className="similar-products-container">
               <h3>What you find inside</h3>
 
@@ -103,8 +103,9 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                 <span>{productData["similar-products"][1]}</span>
               </div>
             </div>
-          )} */}
-          {similarProducts.length > 0 && (
+          )}
+          {/* Can be used for future purpose */}
+          {/* {similarProducts.length > 0 && (
             <div className="similar-products-container">
               {similarProducts.map((item) => (
                 <Link
@@ -122,7 +123,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                 </Link>
               ))}
             </div>
-          )}
+          )} */}
         </div>
 
         {/* DETAILS */}

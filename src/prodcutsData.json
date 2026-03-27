@@ -9,19 +9,7 @@
     "category": "Cookies",
     "price": 100,
     "devDoc": "// Needs to replaced",
-    "similar-products" : [7]
-  },
-  {
-    "id": 7,
-    "image": "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-03.jpg",
-    "name": "Ajwain Mellow - Millet Cookies Pouch",
-    "desc1": "Crunch into wholesome goodness with our Ajwain Mellow - Millet Cookies, a perfect fusion of tradition and taste. Made with nutritious little millet and wheat, and infused with the aromatic warmth of ajwain, jeera, and pepper, these cookies deliver a savoury crunch that's both delicious and nourishing.",
-    "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
-    "desc3": "", 
-    "category": "Cookies",
-    "price": 10,
-    "devDoc": "// Needs to replaced",
-    "similar-products" : [1]
+    "similar-products" : ["/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-03.jpg", "Ajwain Mellow - Millet Cookies Pouches"]
   },
   {
     "id": 2,
@@ -39,18 +27,7 @@
  
       ]
     ],
-    "similar-products" : [8]
-  },
-  {
-    "id": 8,
-    "image": "/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-05.jpg",
-    "name": "Crunchy Cardamom - Millet Cookies Pouch",
-    "desc1": "Indulge in the delightful crunch of our Crunchy Cardamom - Millet Cookies, crafted with wholesome finger millet and wheat, sweetened naturally with jaggery powder, and enriched with the aromatic goodness of cardamom and coconut powder. ",
-    "desc2": "Each bite offers a perfect balance of traditional flavour and nourishing ingredients. These cookies are packed with antimicrobial properties, help support healthy blood glucose levels, and are a rich source of calcium for stronger bones. ",
-    "desc3": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.", 
-    "category": "Cookies",
-    "price": 10,
-    "similar-products" : [2]
+    "similar-products" : ["/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-05.jpg", "Crunchy Cardamom - Millet Cookies Pouches"]
   },
   {
     "id": 3,
@@ -61,18 +38,7 @@
     "desc3": "", 
     "category": "Cookies",
     "price": 100,
-    "similar-products" : [9]
-  },
-  {
-    "id": 9,
-    "image": "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-01.jpg",
-    "name": "Millet Choc – Millet Cookies Pouch",
-    "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
-    "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
-    "desc3": "", 
-    "category": "Cookies",
-    "price": 10,
-    "similar-products" : [3]
+    "similar-products" : ["/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-01.jpg", "Millet Choc – Millet Cookies Pouches"]
   },
   {
     "id": 4,
@@ -83,18 +49,7 @@
     "desc3": "", 
     "category": "Cookies",
     "price": 100,
-    "similar-products" : [10]
-  },
-  {
-    "id": 10,
-    "image": "/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-04.jpg",
-    "name": "Millet Mango – Millet Cookies Pouch",
-    "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets.  ",
-    "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
-    "desc3": "", 
-    "category": "Cookies",
-    "price": 10,
-    "similar-products" : [4]
+    "similar-products" : ["/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-04.jpg","Millet Mango – Millet Cookies Pouches"]
   },
   {
     "id": 5,
@@ -105,18 +60,7 @@
     "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.", 
     "category": "Cookies",
     "price": 100,
-    "similar-products" : [11]
-  },
-  {
-    "id": 11,
-    "image": "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
-    "name": "Spicy Dhamaka – Millet Cookies Pouch",
-    "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
-    "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
-    "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.", 
-    "category": "Cookies",
-    "price": 10,
-    "similar-products" : [5]
+    "similar-products" : ["/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg","Spicy Dhamaka – Millet Cookies Pouches"]
   },
   {
     "id": 6,
@@ -127,18 +71,7 @@
     "desc3": " ", 
     "category": "Cookies",
     "price": 100,
-    "similar-products" : [12]
-  },
-  {
-    "id": 12,
-    "image": "/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-06.jpg",
-    "name": "Tango Fruity – Millet Cookies Pouch ",
-    "desc1": "Bring a burst of fruity fun to your snack time with Tango Fruity - Millet Cookies! Made with a wholesome mix of foxtail, kodo, little, barnyard, and pearl millets, wheat, mixed natural fruit flavours, tutti-frutti, and jaggery powder, these cookies are a crunchy, naturally sweet delight.   ",
-    "desc2": "Packed with calcium for strong bones, dietary fiber for healthy digestion, and a low glycaemic index for balanced energy, they are also a good source of iron, making them a truly nourishing treat for all ages. ",
-    "desc3": " ", 
-    "category": "Cookies",
-    "price": 10,
-    "similar-products" : [6]
+    "similar-products" : ["/product-images/Natfoo Tuty-Fruity-Cookies-Pouch-Mockup-06.jpg","Tango Fruity – Millet Cookies Pouches "]
   },
   {
     "id": 13,
