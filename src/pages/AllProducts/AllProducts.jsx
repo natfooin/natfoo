@@ -13,7 +13,7 @@ function AllProducts() {
       {categories.map((cat, index) => (
         <div className="top-homeProduct" key={index} id={`${cat}-products`}>
           <div className="above-container">
-            <h1>{cat}</h1>
+            <h1>{cat !== "Heath Mix" ? `Millet ${cat}` : `Sprouted ${cat}`}</h1>
             <Link to={"/products"}>
               <Button cn={"button-n-one"} text={"view more >>"} />
             </Link>
