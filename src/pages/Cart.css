@@ -76,14 +76,15 @@ table tr {
   font-size: 2rem;
   font-weight: 600;
   border: 1px solid black;
-  background-color: transparent;
+  background: linear-gradient(135deg, #d94a3a, #ff6b5a);
+  color: white;
   border-radius: 6px;
   padding: 5px;
   white-space: nowrap;
   transition: 0.3s;
   &:hover {
-    background-color: var(--site-honey-badger);
-    color: white;
+    background: #00a66f;
+    cursor: pointer;
   }
 }
 

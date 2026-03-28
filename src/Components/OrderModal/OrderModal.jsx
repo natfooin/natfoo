@@ -3,7 +3,7 @@ import "./OrderModal.css";
 import logo from "/logo.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
-
+import { Link } from "react-router-dom";
 const buttonNotReadyStyles = {
   backgroundColor: "var(--button-red)",
   color: "white",
@@ -138,8 +138,14 @@ function OrderModal({
               ✖
             </button>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <img src={logo} width={"15%"} height={"10%"} alt="logo" loading="eager"/>
-              <h2>Place your order</h2>
+              <img
+                src={logo}
+                width={"15%"}
+                height={"10%"}
+                alt="logo"
+                loading="eager"
+              />
+              <h2>Delivery Details</h2>
             </div>
 
             <form onSubmit={handleSubmit} className="form">
@@ -190,7 +196,7 @@ function OrderModal({
                   id="checkForTC"
                   required
                 />
-                I agree to the Terms & Conditions
+                I agree to the <Link to={"/terms-and-condition"} style={{textDecoration:"none"}} onClick={()=> setShowModal(false)}>Terms & Conditions</Link>
               </label>
 
               <button
