@@ -5,7 +5,7 @@ import Badge from "../Components/ui/Badge/Badge";
 import "./SingleProduct.css";
 import { TiTick } from "react-icons/ti";
 import { FaRupeeSign } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DetailCard from "../Components/DetailCard/DetailCard";
 import DiscountToolTip from "../Components/DiscountToolTip/DiscountToolTip";
 import slabs from "../DiscountSlabs.json";
@@ -15,6 +15,8 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const [quantity, setQuantity] = useState(1);
   const [productData, setProductData] = useState(null);
   const [similarProducts, setSimilarProducts] = useState([]);
+
+  const navi = useNavigate();
 
   useEffect(() => {
     const product = productsData.find((product) => product.id === parseInt(id));
@@ -68,6 +70,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
     setCartPrice((prev) => prev + productData.price * quantity);
 
     setQuantity(1);
+    navi(-1)
   };
 
   useEffect(() => {

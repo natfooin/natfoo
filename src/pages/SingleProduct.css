@@ -29,6 +29,7 @@
   align-items: center;
   gap: 28px; /* reduced gap */
   background: linear-gradient(145deg, #2e361f, #3b4429);
+  background-image: url("/public/laptop-footer-texture.png");
   border-radius: 18px;
   padding: 24px; /* reduced padding */
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
@@ -167,7 +168,8 @@
 
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(217, 74, 58, 0.4);
+  background: #00a66f;
+  box-shadow: 0 10px 20px rgba(169, 217, 58, 0.4);
 }
 
 /* DIVIDER */
