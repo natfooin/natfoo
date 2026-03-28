@@ -2,7 +2,7 @@
   {
     "id": 1,
     "image": "/product-images/Ajwain-Mellow.jpg",
-    "name": "Ajwain Mellow - Millet Cookies",
+    "name": "Ajwain Mellow",
     "desc1": "Crunch into wholesome goodness with our Ajwain Mellow - Millet Cookies, a perfect fusion of tradition and taste. Made with nutritious little millet and wheat, and infused with the aromatic warmth of ajwain, jeera, and pepper, these cookies deliver a savoury crunch that's both delicious and nourishing.",
     "desc2": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.",
     "desc3": "", 
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "image": "/product-images/Crunchy-Cardamom.jpg",
-    "name": "Crunchy Cardamom - Millet Cookies",
+    "name": "Crunchy Cardamom",
     "desc1": "Indulge in the delightful crunch of our Crunchy Cardamom - Millet Cookies, crafted with wholesome finger millet and wheat, sweetened naturally with jaggery powder, and enriched with the aromatic goodness of cardamom and coconut powder. ",
     "desc2": "Each bite offers a perfect balance of traditional flavour and nourishing ingredients. These cookies are packed with antimicrobial properties, help support healthy blood glucose levels, and are a rich source of calcium for stronger bones. ",
     "desc3": "Packed with fiber for better digestion, heart-friendly nutrients, and niacin that helps manage cholesterol, every bite supports your wellness journey. The natural spices also help detoxify the body, making these cookies a smart snack you can enjoy guilt-free.", 
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "image": "/product-images/Millet-Choc!.jpg",
-    "name": "Millet Choc – Millet Cookies",
+    "name": "Millet Choc !",
     "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
@@ -43,7 +43,7 @@
   {
     "id": 4,
     "image": "/product-images/Millet-Mango.jpg",
-    "name": "Millet Mango – Millet Cookies ",
+    "name": "Millet Mango",
     "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets.  ",
     "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
     "desc3": "", 
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "image": "/product-images/Spicy-Dhamaka.jpg",
-    "name": "Spicy Dhamaka – Millet Cookies ",
+    "name": "Spicy Dhamaka",
     "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
     "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
     "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.", 
@@ -65,7 +65,7 @@
   {
     "id": 6,
     "image": "/product-images/Tango-Fruity.jpg",
-    "name": "Tango Fruity – Millet Cookies  ",
+    "name": "Tango Fruity",
     "desc1": "Bring a burst of fruity fun to your snack time with Tango Fruity - Millet Cookies! Made with a wholesome mix of foxtail, kodo, little, barnyard, and pearl millets, wheat, mixed natural fruit flavours, tutti-frutti, and jaggery powder, these cookies are a crunchy, naturally sweet delight.   ",
     "desc2": "Packed with calcium for strong bones, dietary fiber for healthy digestion, and a low glycaemic index for balanced energy, they are also a good source of iron, making them a truly nourishing treat for all ages. ",
     "desc3": " ", 
@@ -254,7 +254,7 @@
   }  ,
   {
     "id": 22,
-    "image": "public/product-images/Pasta-Penne.jpg",
+    "image": "/product-images/Pasta-Penne.jpg",
     "name": "Millet Penne Pasta",
     "desc1": "Experience a bold, gourmet twist on comfort food with this Millet Penne Pasta—where ancient grains meet modern elegance. A curated blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat is shaped into classic penne tubes, designed to hold and embrace every layer of flavour. ",
     "desc2": "Delicately seasoned with toasted coriander, cumin, and fennel, uplifted by turmeric and fragrant curry leaves, and finished with a whisper of cinnamon, clove, and nutmeg—each bite unfolds like a slow, spiced symphony. ",
