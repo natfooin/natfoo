@@ -62,11 +62,11 @@ function NavBar({ cartQuantity }) {
               <Button cn={"button-n-one"} text="Shop now" />
             </Link>
           </div>
+        </div>
+      </div>
           <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
           </div>
-        </div>
-      </div>
     </nav>
   );
 }
