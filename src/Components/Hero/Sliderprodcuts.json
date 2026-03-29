@@ -13,56 +13,6 @@
     "similar-products": [7]
   },
   {
-    "id": 16,
-    "image": "/product-images/Barnyard-Millet-Noodles.png",
-    "name": "Barnyard Millet Noodles",
-    "desc1": "Made with nutritious Barnyard Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
-    "desc2": " ",
-    "desc3": " ",
-    "category": "Noodles",
-    "price": 90,
-    "content": [
-      [
-        "Low in Calories – Ideal for a healthy and balanced diet.",
-        " Rich in Dietary Fiber – Helps support good digestion.",
-        "Low Glycemic Index – Helps manage blood sugar levels.",
-        "Good Source of Iron – Supports energy levels and overall health."
-      ],
-      [
-        "Boil noodles in 600 ml water for 5 minutes.",
-        "Drain and rinse with cold water.",
-        "Mix with 1 spoon oil.",
-        "Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-        "Add spice mix & noodles, toss well and serve hot."
-      ]
-    ]
-  },
-  {
-    "id": 27,
-    "image": "/product-images/Multi-Millet-Vermicelli.png",
-    "name": "Multi Millet Vermicelli",
-    "desc1": "Savour the goodness of six ancient millets—foxtail, kodo, little, barnyard, ragi, and bajra—crafted into delicate vermicelli for a wholesome, nourishing experience. ",
-    "category": "Vermicelli",
-    "price": 65,
-    "content": [
-      [
-        "Digestive Support: Naturally rich in dietary fiber to promote healthy digestion",
-        "Light & Satisfying: Offers a fulfilling yet gentle texture for everyday meals",
-        "Gut Wellness: Supports overall digestive balance and comfort",
-        "Mindful Nutrition: Ideal for those seeking a healthy and balanced diet",
-        "Wholesome Indulgence: Blends traditional goodness with refined, nourishing taste"
-      ],
-      [
-        "Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).",
-        "Add a spoon of oil and mix gently. ",
-        "Heat 2 tbsp oil, add mustard seeds and urad dal.",
-        "Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes.",
-        "Add cooked vermicelli, cover for a minute, toss well.",
-        "Serve hot with chutney."
-      ]
-    ]
-  },
-  {
     "id": 23,
     "image": "/product-images/Pasta-Fusili.jpg",
     "name": "Millet Fusilli Pasta",
@@ -88,17 +38,6 @@
     ]
   },
   {
-    "id": 18,
-    "image": "/product-images/Foxtail-Millet-Laddu.jpg",
-    "name": "Foxtail Millet Laddu",
-    "desc1": "Made with a mix of nutritious Multi Millets, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
-    "desc2": "Beyond their exquisite flavour, these laddus support cardiac health, promote proper nervous system function, enhance immunity, and nourish your skin and hair.",
-    "desc3": "Perfect for gifting, festive celebrations, or a mindful moment of self-care—every bite is a golden embrace of wellness and elegance.  ",
-    "category": "Laddu",
-    "price": 90,
-    "content": [[], []]
-  },
-  {
     "id": 28,
     "image": "/product-images/Sprouted-Heath-Mix.jpg",
     "name": "Sprouted Health Mix",
@@ -121,5 +60,68 @@
         "A quick, wholesome, and indulgent treat for your body and senses."
       ]
     ]
+  },
+  {
+    "id": 16,
+    "image": "/product-images/Barnyard-Millet-Noodles.png",
+    "name": "Barnyard Millet Noodles",
+    "desc1": "Made with nutritious Barnyard Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
+    "desc2": " ",
+    "desc3": " ",
+    "category": "Noodles",
+    "price": 90,
+    "content": [
+      [
+        "Low in Calories – Ideal for a healthy and balanced diet.",
+        " Rich in Dietary Fiber – Helps support good digestion.",
+        "Low Glycemic Index – Helps manage blood sugar levels.",
+        "Good Source of Iron – Supports energy levels and overall health."
+      ],
+      [
+        "Boil noodles in 600 ml water for 5 minutes.",
+        "Drain and rinse with cold water.",
+        "Mix with 1 spoon oil.",
+        "Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
+        "Add spice mix & noodles, toss well and serve hot."
+      ]
+    ]
+  },
+  {
+    "id": 26,
+    "image": "/product-images/Little-Millet-Vermicelli.png",
+    "name": "Little Millet Vermicelli",
+    "desc1": "Little millet vermicelli is a refined celebration of wholesome grains, crafted from premium little millet flour and whole wheat.",
+    "desc2": "Light, delicate, and subtly nutty, it brings an air of quiet elegance to every dish.",
+    "category": "Vermicelli",
+    "price": 65,
+    "content": [
+      [
+        "Heart Health Support: Naturally rich in magnesium to promote a healthy heart",
+        "Cholesterol Balance: Helps maintain healthy cholesterol levels with niacin content",
+        "Nutrient-Rich Nourishment: Provides essential vitamins and minerals for overall wellness",
+        "Light & Wholesome: Easy to digest while being gently nourishing",
+        "Elevated Everyday Nutrition: Combines health benefits with a refined, satisfying dining experience"
+      ],
+      [
+        "Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).",
+        "Add a spoon of oil and mix gently. ",
+        "Heat 2 tbsp oil, add mustard seeds and urad dal.",
+        "Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes.",
+        "Add cooked vermicelli, cover for a minute, toss well.",
+        "Serve hot with chutney."
+      ]
+    ]
+  },
+
+  {
+    "id": 18,
+    "image": "/product-images/Foxtail-Millet-Laddu.jpg",
+    "name": "Foxtail Millet Laddu",
+    "desc1": "Made with a mix of nutritious Multi Millets, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
+    "desc2": "Beyond their exquisite flavour, these laddus support cardiac health, promote proper nervous system function, enhance immunity, and nourish your skin and hair.",
+    "desc3": "Perfect for gifting, festive celebrations, or a mindful moment of self-care—every bite is a golden embrace of wellness and elegance.  ",
+    "category": "Laddu",
+    "price": 90,
+    "content": [[], []]
   }
 ]

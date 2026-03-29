@@ -31,7 +31,9 @@
   line-height: 1.8;
   color: var(--millet-cookies);
 }
-
+.about-text p{
+  text-align: justify;
+}
 /* Clean Bento */
 .about-gallery {
   display: grid;

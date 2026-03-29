@@ -152,7 +152,7 @@ function Contact() {
             </div>
 
             <div className="iconContainer">
-            <FooterIcon icon={<FaWhatsapp size={25} color="white" />} link={""}/>
+            <FooterIcon icon={<FaWhatsapp size={25} color="white" />} link={"https://wa.me/919042649000"}/>
           <FooterIcon icon={<CiMail size={25} color="white" />} link={"mailto:natfooin@gmail.com"}/>
           <FooterIcon icon={<CiYoutube size={25} color="white" />} link={"https://youtube.com/@natfookitchen95?si=4hSvWVSIKXkATsdg"} />
           <FooterIcon icon={<FaFacebook size={35} color="white" />} link={"https://www.facebook.com/share/1FYPUa9BeU/"} />
