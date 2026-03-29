@@ -23,7 +23,7 @@ body {
   width: 100%;
   overflow: hidden;
 
-  height: clamp(40px, 9vw, 80px);
+  height: clamp(90px, 10vw, 180px);
 
   background-image: url(/public/laptop-navbar.png);
   background-size: 110% 150%;
@@ -61,14 +61,14 @@ body {
 
 .logo {
   justify-self: center;
-  padding-bottom: clamp(0.5rem, 1.5vw, 1rem); 
+  padding-bottom: clamp(0.5rem, 1.5vw, 2.5rem); 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo img {
-  height: clamp(3rem, 6vw, 5rem); 
+  height: clamp(3rem, 7vw, 10rem); 
   width: auto; 
  padding-left: 1.25rem; 
   max-width: 100%; 
@@ -89,9 +89,8 @@ body {
 .nav-actions {
   display: flex;
   align-items: center;
-
   justify-content: flex-start;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
   gap: clamp(1.6rem, 4vw, 3.2rem);
 }
 
@@ -141,7 +140,21 @@ body {
   color: var(--gold);
 }
 
-
+@media (min-width: 1555px){
+.navBar{
+    height: clamp(40px, 9vw, 80px);
+}
+.navElements ul{
+    padding-bottom: 2rem;
+}
+logo {
+  padding-bottom: clamp(0.5rem, 1.5vw, 1rem); 
+}
+.logo img {
+  height: clamp(3rem, 6vw, 5rem); }
+.nav-actions {
+  padding-bottom: 3rem;
+}}
 @media (max-width: 1024px) {
 
   .navBar {
