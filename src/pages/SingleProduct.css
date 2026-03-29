@@ -160,16 +160,17 @@
   border-radius: 12px;
   background: linear-gradient(135deg, #d94a3a, #ff6b5a);
   color: white;
-  font-size: 15px;
+  font-size: larger;
   font-weight: 600;
   cursor: pointer;
+  font-style: bolder;
   transition: all 0.3s ease;
 }
 
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
-  background: #00a66f;
-  box-shadow: 0 10px 20px rgba(169, 217, 58, 0.4);
+  background: #25d366;
+  box-shadow: 0 10px 20px rgba(130, 217, 58, 0.4);
 }
 
 /* DIVIDER */
@@ -271,3 +272,33 @@
     font-size: 22px;
   }
 }
+
+.image-border-animate {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 4px; /* border thickness */
+  background: linear-gradient(270deg, #ff6b6b, #4ecdc4, #1a73e8, #ff6b6b);
+  background-size: 600% 600%;
+  animation: borderMove 6s ease infinite;
+}
+
+.image-border-animate img {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

@@ -60,7 +60,7 @@ body {
 }
 
 .hero-container {
-  padding: 2rem;
+  padding: 0;
   width: 100%;
   margin: 0 auto;
   background-image: url("/laptop-greenish-cream-texture.png");
