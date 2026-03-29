@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ImSearch } from "react-icons/im";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
@@ -9,11 +9,25 @@ import { Link } from "react-router-dom";
 
 function NavBar({ cartQuantity }) {
   const [isOpen, setIsOpen] = useState(false);
+ const navRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsOpen(false); 
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="navBar">
-     
-
+    <nav className="navBar" ref={navRef}>
+      
       <div className={`navElements ${isOpen ? "active" : ""}`}>
         <ul>
           <li onClick={() => setIsOpen(false)}>
@@ -30,7 +44,8 @@ function NavBar({ cartQuantity }) {
           </li>
         </ul>
       </div>
-       <div className="logo">
+
+      <div className="logo">
         <Link to="/">
           <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
         </Link>
@@ -57,16 +72,22 @@ function NavBar({ cartQuantity }) {
         </Link>
 
         <div className="header-right">
-          <div className="header-right">
-            <Link to="/products" className="hide-mobile">
-              <Button cn={"button-n-one"} text="Shop now" />
-            </Link>
-          </div>
+          <Link to="/products" className="hide-mobile">
+            <Button cn={"button-n-one"} text="Shop now" />
+          </Link>
         </div>
       </div>
-          <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
-          </div>
+
+      <div
+        className="hamburger"
+        onClick={(e) => {
+          e.stopPropagation(); 
+          setIsOpen(!isOpen);
+        }}
+      >
+        {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
+      </div>
+
     </nav>
   );
 }
