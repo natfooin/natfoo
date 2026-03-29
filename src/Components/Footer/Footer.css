@@ -74,7 +74,6 @@
 .footer h6 {
   color: var(--gold);
   font-size: 1.3rem !important;
-  font-style: italic;
   letter-spacing: 1px;
   text-transform: capitalize;
   position: relative;

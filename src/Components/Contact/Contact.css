@@ -1,4 +1,4 @@
-.royal-wrapper{
+  .royal-wrapper{
   display: flex;
   align-items: center;justify-content: center;
   padding-bottom: 12%;
@@ -36,13 +36,14 @@
   color: var(--gold);
   font-weight: 700;
   letter-spacing: 5px;
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   display: block;
+  padding-left: 0.7rem;
   margin-bottom: 1rem;
 }
 
 .royal-title {
-  font-size: 3.5rem;
+  font-size: 5rem;
   line-height: 1;
   margin-bottom: 2.5rem;
   font-family: serif;
@@ -63,7 +64,7 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 1.2rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   opacity: 0.9;
 }
 
@@ -216,10 +217,7 @@
 }
 
 @media (max-width: 480px) {
-  .royal-wrapper {
-    padding: 5%; 
-  }
-  
+
   .royal-viewport {
     border-radius: 0;
   }

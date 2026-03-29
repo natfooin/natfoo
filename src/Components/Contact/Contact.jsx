@@ -10,7 +10,7 @@ import {
   FaFacebook,
   FaInstagram,
 } from "react-icons/fa";
-import {IoSend} from "react-icons/io5"
+import { IoSend } from "react-icons/io5";
 import { CiYoutube, CiMail } from "react-icons/ci";
 import Button from "../../Components/ui/Button/Button";
 import FooterIcon from "./../Footer/FooterIcon";
@@ -67,8 +67,8 @@ function Contact() {
   });
 
   useEffect(() => {
-      document.title = "Natfoo | Contact";
-    }, []);
+    document.title = "Natfoo | Contact";
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -116,22 +116,38 @@ function Contact() {
               Get In <br /> <span>Touch</span>
             </h1>
 
-            <div className="contact-ledger"style={{gap:"2px"}}>
-              <div className="ledger-entry" style={{gap:"5px"}}>
-                <FaPhoneAlt className="ledger-icon"  />
+            <div className="contact-ledger" style={{ gap: "2px" }}>
+              <div className="ledger-entry" style={{ gap: "5px" }}>
+                <FaPhoneAlt className="ledger-icon" />
                 <span>+91 98765 43210</span>
               </div>
-              <div className="ledger-entry"style={{gap:"5px"}}>
-                <FaEnvelope className="ledger-icon"  />
+              <div className="ledger-entry" style={{ gap: "5px" }}>
+                <FaEnvelope className="ledger-icon" />
                 <span>concierge@natfoo.com</span>
               </div>
-              <div className="ledger-entry"style={{alignItems: "flex-start",gap:"3px"}}>
-          <div style={{paddingTop:"2px"}} >
-                  <FaMapMarkerAlt color="gold"  />
-          </div>
-                <span>Varietas Green Energy Pvt Ltd 
-Registered Office: K 804, AWHO, Nerul, Navi Mumbai - 400706. Maharashtra. India.
-Corporate Office: 54, 2nd Street, Sriramapuram, Srirangam, Trichy - 620006. Tamilnadu. India.</span>
+              <div
+                className="ledger-entry"
+                style={{ alignItems: "flex-start", gap: "3px" }}
+              >
+                <div style={{ paddingTop: "2px" }}>
+                  <FaMapMarkerAlt color="gold" />
+                </div>
+                <span>
+                  Varietas Green Energy Pvt Ltd Registered Office: K 804, AWHO,
+                  Nerul, Navi Mumbai - 400706. Maharashtra. India.
+                </span>
+              </div>
+              <div
+                className="ledger-entry"
+                style={{ alignItems: "flex-start", gap: "3px" }}
+              >
+                <div style={{ paddingTop: "2px" }}>
+                  <FaMapMarkerAlt color="gold" />
+                </div>
+                <span>
+                  Corporate Office: 54, 2nd Street, Sriramapuram, Srirangam,
+                  Trichy - 620006. Tamilnadu. India.
+                </span>
               </div>
             </div>
 

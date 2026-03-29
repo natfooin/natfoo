@@ -4,6 +4,7 @@
   padding: 5rem 1.5rem;
   display: flex;
   justify-content: center;
+   font-family: "Balooda2", sans-serif !important;
 }
 
 .terms-card {
@@ -37,9 +38,9 @@
 .header-icon svg { transform: rotate(-45deg); }
 
 .main-title {
-  font-family: serif;
+  /* font-family: serif; */
   font-size: 2.2rem;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   margin: 0;
   padding-top: 2rem;
 }
@@ -47,7 +48,7 @@
 .effective-date {
   color: #D4AF37;
   margin-top: 15px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -71,21 +72,21 @@
 
 .section-icon {
   color: #D4AF37;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .item-title {
-  font-family: serif;
+  
   color: #363F25;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin: 0;
   font-weight: 700;
 }
 
 .terms-item p, .terms-bullets li {
   color: #444;
-  line-height: 1.8;
-  font-size: 1rem;
+  /* line-height: 1.8; */
+  font-size: 1.2rem;
   margin-bottom: 12px;
 }
 
@@ -105,7 +106,7 @@
   left: 0;
   color: #D4AF37;
   font-size: 1.5rem;
-  line-height: 1;
+  /* line-height: 1; */
 }
 
 .sub-item {
