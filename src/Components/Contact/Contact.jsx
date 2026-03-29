@@ -123,7 +123,7 @@ function Contact() {
               </div>
               <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaEnvelope className="ledger-icon" />
-                <span>concierge@natfoo.com</span>
+                <span>natfooin@gmail.com</span>
               </div>
               <div
                 className="ledger-entry"
@@ -157,6 +157,30 @@ function Contact() {
           <FooterIcon icon={<CiYoutube size={25} color="white" />} link={"https://youtube.com/@natfookitchen95?si=4hSvWVSIKXkATsdg"} />
           <FooterIcon icon={<FaFacebook size={35} color="white" />} link={"https://www.facebook.com/share/1FYPUa9BeU/"} />
           <FooterIcon icon={<FaInstagram size={25} color="white" />} link={"https://www.instagram.com/natfoo_naturalfoods?igsh=MWxoam1oY2pkZTF2NQ=="} />
+              <FooterIcon
+                icon={<FaWhatsapp size={25} color="white" />}
+                link={""}
+              />
+              <FooterIcon
+                icon={<CiMail size={25} color="white" />}
+                link={"mailto:natfooin@gmail.com"}
+              />
+              <FooterIcon
+                icon={<CiYoutube size={25} color="white" />}
+                link={
+                  "https://youtube.com/@natfookitchen95?si=4hSvWVSIKXkATsdg"
+                }
+              />
+              <FooterIcon
+                icon={<FaFacebook size={35} color="white" />}
+                link={"https://www.facebook.com/share/1FYPUa9BeU/"}
+              />
+              <FooterIcon
+                icon={<FaInstagram size={25} color="white" />}
+                link={
+                  "https://www.instagram.com/natfoo_naturalfoods?igsh=MWxoam1oY2pkZTF2NQ=="
+                }
+              />
             </div>
           </div>
         </div>
@@ -198,7 +222,19 @@ function Contact() {
                     required
                     value={formData.number}
                     onChange={handleChange}
+                    onKeyDown={(e) => {
+                      if (
+                        !/[0-9]/.test(e.key) &&
+                        e.key !== "Backspace" &&
+                        e.key !== "ArrowLeft" &&
+                        e.key !== "ArrowRight" &&
+                        e.key !== "Tab"
+                      ) {
+                        e.preventDefault();
+                      }
+                    }}
                     placeholder=" "
+                    maxLength={10}
                   />
                   <label>Phone Number</label>
                 </div>
