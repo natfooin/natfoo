@@ -12,11 +12,7 @@ function NavBar({ cartQuantity }) {
 
   return (
     <nav className="navBar">
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
-        </Link>
-      </div>
+     
 
       <div className={`navElements ${isOpen ? "active" : ""}`}>
         <ul>
@@ -33,6 +29,11 @@ function NavBar({ cartQuantity }) {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+      </div>
+       <div className="logo">
+        <Link to="/">
+          <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
+        </Link>
       </div>
 
       <div className="nav-actions">

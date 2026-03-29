@@ -1,103 +1,203 @@
+body {
+  overflow-x: hidden;
+}
+
+
 .navBar {
-  display: flex;
-  justify-content: space-between;
+  margin-top: -8px;
+  display: grid;
+  
+
+  grid-template-columns: 1fr 1fr 1fr;
+
   align-items: center;
-  padding: 0.8rem 1.5rem;
-  background: var(--dark-green);
+
+  padding: 0 clamp(2rem, 4vw, 6rem);
+
   color: var(--cream-bg);
+
   position: sticky;
   top: 0;
   z-index: 2000;
-  border-bottom: 2px solid var(--gold);
-  height: 70px;
+
+  width: 100%;
+  overflow: hidden;
+
+  height: clamp(90px, 10vw, 180px);
+
+  background-image: url(/public/laptop-navbar.png);
+  background-size: 110% 150%;
+  background-repeat: no-repeat;
+  background-position: center 20%;
 }
 
-.logo img {
-  height: 3.5rem;
-  display: block;
+
+.navElements {
+  display: flex;
+  justify-content:flex-end;
 }
 
 .navElements ul {
   display: flex;
-  gap: 2.5rem;
+  gap: clamp(1rem, 2vw, 2rem);
   list-style: none;
+  font-size: clamp(0.85rem, 1.1vw, 1.3rem);
 }
 
-.navElements ul a {
+.navElements ul li a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  font-size: 1.5rem;
+  white-space: nowrap;
 }
-.navElements ul :hover {
-    color: var(--gold);
-    text-decoration: underline;
-    transition: all 0.3s;
+
+.navElements ul li:hover a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+
+
+.logo {
+  /* Using justify-self: center keeps it in the middle grid column */
+  justify-self: center;
+  /* Use padding-bottom with a responsive unit to keep it 
+     clear of the wavy "dip" at the bottom of your image */
+  padding-bottom: clamp(0.5rem, 1.5vw, 2.5rem); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: clamp(3rem, 7vw, 10rem); 
+  width: auto; 
+ padding-left: 1.25rem; 
+  max-width: 100%; 
+  
+  object-fit: contain; 
+  
+}
+
+
+.header-right {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+
+  gap: clamp(0.6rem, 1.5vw, 1.2rem);
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  gap: 2rem;
-  max-width: fit-content;
+
+  justify-content: flex-start;
+  padding-bottom: 1.5rem;
+  gap: clamp(1.6rem, 4vw, 3.2rem);
 }
-.searchIcon{
+
+
+.searchIcon,
+.cart {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-.searchIcon:hover{
+
+.searchIcon:hover,
+.cart:hover {
   color: var(--gold);
 }
+
 .cart {
   position: relative;
-  display: flex;
-  align-items: center;
-}
-.cart-link.cart:hover {
-  color: var(--gold);
- 
 }
 
 .cart-count {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -5px;
+  right: -5px;
   background: var(--gold);
   color: #000;
   border-radius: 50%;
-  padding: 2px 6px;
+  padding: 2px 5px;
   font-size: 10px;
-  font-weight: bold;
 }
+
+
+.header-right button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  background: var(--gold);
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 
 .hamburger {
   display: none;
   cursor: pointer;
   color: var(--gold);
-  align-items: center;
 }
 
-@media (max-width: 820px) {
-  .header-right {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center;
-    gap: 10px;
-    position: relative;
+
+@media (max-width: 1024px) {
+
+  .navBar {
+    height: 100px;
+    padding: 0 clamp(1rem, 3vw, 4rem);
   }
 
-  .header-right a {
-    text-decoration: none;
+  .navElements ul {
+    gap: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 820px) {
+
+  .navBar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1rem;
+
+    background-image: url(/public/tap-navbar.png);
+    background-size: 100% 100%;
+    background-position: center;
+
+    height: 75px;
   }
 
   .hamburger {
     display: flex;
-    cursor: pointer;
-    color: var(--gold);
     z-index: 30001;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+  }
+
+  .logo img {
+    height: 3rem;
+    width: auto;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .nav-actions {
+    gap: 0.4rem;
   }
 
   .navElements {
@@ -105,42 +205,25 @@
     top: -100vh;
     left: 0;
     width: 100%;
-    height: 45vh;
+    height: 100vh;
+
     background: var(--dark-green);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transition: 0.4s ease-in-out;
     z-index: 25000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .navElements.active {
     top: 0;
-    border: 0.2rem solid var(--gold);
   }
-  
-  
-  .navElements.active ul li a:hover {
-    text-decoration: underline;
-    color: var(--gold);
-    cursor: pointer;
-  }
+
   .navElements ul {
     flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-    padding-top: 2rem;
-  }
-  .nav-actions{
     gap: 2rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .navBar {
-    padding: 0.5rem 0.8rem;
-  }
-  .logo img {
-    height: 2.8rem;
+    font-size: 1.2rem;
   }
 }
