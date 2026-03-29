@@ -70,7 +70,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
     setCartPrice((prev) => prev + productData.price * quantity);
 
     setQuantity(1);
-    navi(-1)
+    navi(-1);
   };
 
   useEffect(() => {
@@ -88,12 +88,14 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-          <img
-            src={productData.image}
-            alt={productData.name}
-            loading="eager"
-            decoding="async"
-          />
+          <div class="image-border-animate">
+            <img
+              src={productData.image}
+              alt={productData.name}
+              loading="eager"
+              decoding="async"
+            />
+          </div>
           {productData["similar-products"] && (
             <div className="similar-products-container">
               <h3>What you find inside</h3>

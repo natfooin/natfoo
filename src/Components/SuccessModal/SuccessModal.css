@@ -21,11 +21,15 @@
   border-radius: 16px;
   text-align: center;
   width: 90%;
-  max-width: 350px;
+  max-width: 380px;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 
   animation: fadeInScale 0.3s ease;
+}
+
+.modal-box .modal-message, .modal-box .modal-title{
+  text-align: center;
 }
 
 /* Animation */

@@ -128,8 +128,8 @@ const App = () => {
         setCartQuantity={setCartQuantity}
         isOpen={showSuccessModal}
         onClose={() => setShowSuccessModal(false)}
-        title="Order Placed!"
-        message="Your order has been sent successfully."
+        title="Thank you! Your order has been placed successfully."
+        message="Please complete your purchase using the secure payment link sent to your email and mobile."
       />
     </>
   );

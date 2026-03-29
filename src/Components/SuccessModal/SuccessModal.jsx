@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./SuccessModal.css";
 import { useNavigate } from "react-router-dom";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 const SuccessModal = ({
   isOpen,
   onClose,
@@ -22,42 +24,59 @@ const SuccessModal = ({
     navi("/");
   };
 
-  useEffect(() => {
-    if (isOpen && autoClose) {
-      const timer = setTimeout(() => {
-        onClose();
-        clearer();
-      }, 4000); // auto close after 4s as of now
+  const { width, height } = useWindowSize();
 
-      return () => clearTimeout(timer);
-    }
-  }, [isOpen, autoClose, onClose]);
+  // useEffect(() => {
+  //   if (isOpen && autoClose) {
+  //     const timer = setTimeout(() => {
+  //       onClose();
+  //       clearer();
+  //     }, 4000); // auto close after 4s as of now
+
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [isOpen, autoClose, onClose]);
 
   if (!isOpen) return null;
   return (
-    <div className="modal-overlay">
-      <div className="modal-box">
-        {/* Success Icon */}
-        <div className="success-icon">✓</div>
+    <>
+      <Confetti
+        key={isOpen}
+        width={width || window.innerWidth}
+        height={height || window.innerHeight}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 20000,
+          pointerEvents: "none",
+        }}
+      />
 
-        {/* Title */}
-        <h2 className="modal-title">{title}</h2>
+      <div className="modal-overlay">
+        <div className="modal-box">
+          {/* Success Icon */}
+          <div className="success-icon"><img src="/package-done.gif" alt="Success" width={"55px"} style={{borderRadius:"50%"}}/></div>
 
-        {/* Message */}
-        <p className="modal-message">{message}</p>
+          {/* Title */}
+          <h2 className="modal-title">{title}</h2>
 
-        {/* Button */}
-        <button
-          className="modal-btn"
-          onClick={() => {
-            onClose();
-            clearer();
-          }}
-        >
-          OK
-        </button>
+          {/* Message */}
+          <p className="modal-message">{message}</p>
+
+          {/* Button */}
+          <button
+            className="modal-btn"
+            onClick={() => {
+              onClose();
+              clearer();
+            }}
+          >
+            OK
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

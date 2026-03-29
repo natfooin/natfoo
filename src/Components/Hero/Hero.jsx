@@ -34,8 +34,8 @@ function Hero() {
   return (
     <div className="hero-container">
       <Heading
-        title="Traditional Grains, Modern Taste"
-        subTitle="Nutritious cookies made from ancient grains for a healthier everyday snack."
+        title="Designed By Nature. Crafted For Well Being"
+        subTitle=""
         titleColor="var(--heading)"
         subTitleColor="var(--site-honey-badger)"
       />
