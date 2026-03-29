@@ -167,14 +167,23 @@ logo {
     font-size: 0.95rem;
   }
 }
+@media (max-width:1120px){
+.logo img {
+    height: 5rem;
+    width: auto;
+  }
+ .footer .footer-top .footer-left{
+    justify-content: center;
+  }
+}
 @media (max-width: 820px) {
 
   .navBar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 35rem;
 
-    padding: 0 1rem;
+    padding: 0 5rem;
 
     background-image: url(/public/tap-navbar.png);
     background-size: 100% 100%;
@@ -186,6 +195,7 @@ logo {
   .hamburger {
     display: flex;
     z-index: 30001;
+    order: 1;
   }
 
   .logo {
@@ -196,7 +206,7 @@ logo {
   }
 
   .logo img {
-    height: 3rem;
+    height: 5rem;
     width: auto;
   }
 
@@ -207,7 +217,7 @@ logo {
   }
 
   .nav-actions {
-    gap: 0.4rem;
+    gap: 2rem;
   }
 
   .navElements {
@@ -216,7 +226,7 @@ logo {
     left: 0;
     width: 100%;
     height: 100vh;
-
+    order: 2;
     background: var(--dark-green);
 
     display: flex;
@@ -229,6 +239,12 @@ logo {
 
   .navElements.active {
     top: 0;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--gold);
+    padding-top:3rem ;
   }
 
   .navElements ul {
@@ -236,4 +252,13 @@ logo {
     gap: 2rem;
     font-size: 1.2rem;
   }
+}
+@media (max-width: 420px) {
+.navBar{
+  gap: 40rem;
+  padding: 0 2rem;
+}
+.nav-actions{
+  gap: 0.4rem;
+}
 }
