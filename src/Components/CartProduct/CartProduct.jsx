@@ -62,7 +62,7 @@ const CartProduct = ({
           <img
             src={product?.image}
             alt={product?.name}
-            loading="lazy"
+            loading="eager"
             decoding="async"
           />
         </div>

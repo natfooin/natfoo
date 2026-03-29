@@ -29,14 +29,13 @@
 /* MODAL BOX */
 
 .modal-box {
-  background-image: url("../../assets/laptop-cream-texture.png") !important;
+  background-image: url("/public/phone-bg.png") !important;
   background-size: contain;
   width: 90%;
   max-width: 460px;
   padding: 28px 30px;
   border-radius: 14px;
 
-  border-top: 5px solid var(--gold);
 
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 
@@ -108,7 +107,7 @@
   border: none;
   border-radius: 6px;
 
-  font-weight: 500;
+  font-weight: 800;
   cursor: pointer;
   transition: 0.25s;
 }

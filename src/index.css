@@ -5,6 +5,14 @@
   font-family: Balooda2;
   src: url("/fonts/BALOODA2-REGULAR.TTF");
 }
+@font-face {
+  font-family: Balooda2-Bold;
+  src: url("/fonts/BALOODA2-BOLD.TTF");
+}
+@font-face {
+  font-family: Balooda2-ExtraBold;
+  src: url("/fonts/BALOODA2-EXTRABOLD.TTF");
+}
 
 :root {
   --site-white: #ffffff;
