@@ -23,7 +23,7 @@ body {
   width: 100%;
   overflow: hidden;
 
-  height: clamp(90px, 10vw, 180px);
+  height: clamp(40px, 9vw, 80px);
 
   background-image: url(/public/laptop-navbar.png);
   background-size: 110% 150%;
@@ -42,6 +42,7 @@ body {
   gap: clamp(1rem, 2vw, 2rem);
   list-style: none;
   font-size: clamp(0.85rem, 1.1vw, 1.3rem);
+  padding-bottom: 2rem;
 }
 
 .navElements ul li a {
@@ -59,22 +60,18 @@ body {
 
 
 .logo {
-  /* Using justify-self: center keeps it in the middle grid column */
   justify-self: center;
-  /* Use padding-bottom with a responsive unit to keep it 
-     clear of the wavy "dip" at the bottom of your image */
-  padding-bottom: clamp(0.5rem, 1.5vw, 2.5rem); 
+  padding-bottom: clamp(0.5rem, 1.5vw, 1rem); 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo img {
-  height: clamp(3rem, 7vw, 10rem); 
+  height: clamp(3rem, 6vw, 5rem); 
   width: auto; 
  padding-left: 1.25rem; 
   max-width: 100%; 
-  
   object-fit: contain; 
   
 }
@@ -94,7 +91,7 @@ body {
   align-items: center;
 
   justify-content: flex-start;
-  padding-bottom: 1.5rem;
+  padding-bottom: 3rem;
   gap: clamp(1.6rem, 4vw, 3.2rem);
 }
 
