@@ -155,15 +155,25 @@
     grid-column: span 2;
     margin-bottom: 2rem;
   }
+  .footer .footer-top .footer-left .logo {
+    position: relative;
+
+  }
 }
 
 @media (max-width: 768px) {
   .footer{
     background-image: url('public/tab-phone-footer-contact-green.png');
+      background-position: bottom center;
+
+  }
+  footer .footer-top .footer-left{
+    flex-direction: column;
   }
   .footer-top {
     grid-template-columns: auto auto;
     justify-content: center;
+    
   }
   .logo-para {
     padding-top: 2px;
