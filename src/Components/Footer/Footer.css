@@ -8,6 +8,7 @@
 .footer {
   background-color: var(--dark-green);
   background-image: url("/laptop-footer-texture.png");
+  background-position: bottom center;
   background-size: cover;
   padding: 4rem 5% 2rem;
   border-top: 5px solid var(--gold);
@@ -34,12 +35,16 @@
 
 .footer .logo {
   width: 100%;
+  justify-content: start;
+  padding: 0 0 0 0;
+  
 }
 
 .footer .logo img {
   max-height: 12rem;
+  padding: 0 0 0 0;
   max-width: 100%;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .logo-para {
