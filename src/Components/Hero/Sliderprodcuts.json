@@ -13,18 +13,6 @@
     "similar-products": [7]
   },
   {
-    "id": 11,
-    "image": "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-02.jpg",
-    "name": "Spicy Dhamaka – Millet Cookies Pouch",
-    "desc1": "Turn up the flavour with our Spicy Dhamaka - Millet Cookies, made with pearl millet and wheat, blended with bold spices like pepper, jeera, ajwain, and a touch of salt.   ",
-    "desc2": "These crunchy, savoury cookies deliver a burst of traditional spice in every bite and packed with wholesome goodness of millets. ",
-    "desc3": "They help reduce cholesterol, are a rich source of calcium, and promote heart health. With ingredients that support intestinal health and aid in weight management, these cookies are the perfect balance of spice and nutrition.",
-    "category": "Cookies",
-    "price": 90,
-    "content": [[], []],
-    "similar-products": [5]
-  },
-  {
     "id": 16,
     "image": "/product-images/Barnyard-Millet-Noodles.png",
     "name": "Barnyard Millet Noodles",
@@ -49,40 +37,53 @@
       ]
     ]
   },
-
   {
-    "id": 3,
-    "image": "/product-images/Millet-Choc!.jpg",
-    "name": "Millet Choc – Millet Cookies",
-    "desc1": "A delicious treat for kids love and parents trust! Millet Choc Cookies combine the goodness of finger millet and wheat with the rich taste of cocoa and natural chocolate flavour, sweetened naturally with jaggery powder. Every crunchy bite delivers the irresistible chocolaty taste packed with powerful nutrition of millets. ",
-    "desc2": "Loved by children for their chocolate flavour, these cookies also help support balanced blood glucose levels while providing calcium that contributes to strong bones and healthy growth. ",
-    "desc3": "",
-    "category": "Cookies",
-    "price": 100,
-    "similar-products": [9]
-  },
-  {
-    "id": 15,
-    "image": "/product-images/Little-Millet-Noodles.png",
-    "name": "Little Millet Noodles ",
-    "desc1": "Made with nutritious Little Millet, blended with wholesome wheat flour and natural cluster bean powder, this delicious Millet Noodles brings together traditional grains and a rich aromatic spice mix for a flavourful and healthy experience. Our special spice mix combines traditional ingredients like coriander, cumin, fennel, turmeric, curry leaves, cinnamon, clove, nutmeg, and more to create a perfectly balanced taste.",
-    "desc2": " ",
-    "desc3": " ",
-    "category": "Noodles",
-    "price": 95,
+    "id": 27,
+    "image": "/product-images/Multi-Millet-Vermicelli.png",
+    "name": "Multi Millet Vermicelli",
+    "desc1": "Savour the goodness of six ancient millets—foxtail, kodo, little, barnyard, ragi, and bajra—crafted into delicate vermicelli for a wholesome, nourishing experience. ",
+    "category": "Vermicelli",
+    "price": 65,
     "content": [
       [
-        "Rich in Dietary Fiber – Supports healthy digestion and gut health.",
-        "Improves Heart Health – Helps maintain a healthy cardiovascular system.",
-        "Rich in Niacin – Helps reduce cholesterol levels naturally.",
-        "Supports Body Detoxification – Helps cleanse the body and promote overall wellness."
+        "Digestive Support: Naturally rich in dietary fiber to promote healthy digestion",
+        "Light & Satisfying: Offers a fulfilling yet gentle texture for everyday meals",
+        "Gut Wellness: Supports overall digestive balance and comfort",
+        "Mindful Nutrition: Ideal for those seeking a healthy and balanced diet",
+        "Wholesome Indulgence: Blends traditional goodness with refined, nourishing taste"
       ],
       [
-        "Boil noodles in 600 ml water for 5 minutes.",
+        "Rinse vermicelli in water, drain, and steam for 10 minutes (idly pan or rice cooker).",
+        "Add a spoon of oil and mix gently. ",
+        "Heat 2 tbsp oil, add mustard seeds and urad dal.",
+        "Add onion, curry leaves, green chilies, vegetables, and salt; sauté for 2 minutes.",
+        "Add cooked vermicelli, cover for a minute, toss well.",
+        "Serve hot with chutney."
+      ]
+    ]
+  },
+  {
+    "id": 23,
+    "image": "/product-images/Pasta-Fusili.jpg",
+    "name": "Millet Fusilli Pasta",
+    "desc1": "Savour a distinctive expression of Millet Fusilli Pasta, where heritage grains are transformed into graceful spirals of indulgence. An artful blend of foxtail, kodo, little and barnyard millets, sorghum, and whole wheat creates a textured, earthy base—each twist of fusilli designed to cling effortlessly to layers of flavour. ",
+    "desc2": "Gently infused with coriander, cumin, and fennel, enriched by the golden warmth of turmeric and fragrant curry leaves, and elevated with delicate hints of cinnamon, clove, and nutmeg, the profile is both deep and refined. ",
+    "desc3": "An elegant interplay of form and flavour—crafted for those who appreciate subtle luxury in every bite.",
+    "category": "Pasta",
+    "price": 90,
+    "content": [
+      [
+        "Rich Source of Calcium – Supports strong bones and teeth.",
+        "Aids in Weight Loss – Keeps you fuller for longer.",
+        "Helps Reduce Blood Glucose Levels – Supports healthy sugar control.",
+        "Rich in Dietary Fiber – Promotes better digestion and gut health."
+      ],
+      [
+        "Boil noodles in 800 ml water for 5 minutes.",
         "Drain and rinse with cold water.",
         "Mix with 1 spoon oil.",
         "Stir-fry onion & vegetables in 2 tbsp oil for 2–3 minutes.",
-        "Add spice mix & noodles, toss well and serve hot."
+        "Add spice mix, Sauces & Pasta, toss well and serve hot."
       ]
     ]
   },
@@ -96,5 +97,29 @@
     "category": "Laddu",
     "price": 90,
     "content": [[], []]
+  },
+  {
+    "id": 28,
+    "image": "/product-images/Sprouted-Heath-Mix.jpg",
+    "name": "Sprouted Health Mix",
+    "desc1": "Our Premium Sprouted Health Mix is a nutrient-dense blend of ancient millets (foxtail, kodo, finger millet) and wholesome grains like sorghum and emmer wheat. Enriched with a protein-rich mix of legumes, urad dal, and black sesame, it features a luxury touch of almonds, cashews, and pistachios.",
+    "desc2": "Finished with warming cardamom and dry ginger, this mix offers an authentic, flavorful path to everyday wellness.",
+    "category": "Health Mix",
+    "price": 65,
+    "content": [
+      [
+        "Sprouted for Nutrition: Unlocks hidden vitamins and makes digestion effortless.",
+        "Lasting Energy: Slow-release carbs keep you fueled without the sugar crash.",
+        "Heart & Brain Health: Packed with healthy fats and antioxidants from premium nuts.",
+        "Digestive Aid: High fiber content paired with ginger and cardamom for gut comfort.",
+        "Metabolic Balance: Helps maintain stable blood sugar and a healthy metabolism.",
+        "Immune Support: A natural, traditional blend that strengthens overall body defenses."
+      ],
+      [
+        "Mix 2 tsp of our NATFOO Sprouted health mix in 300ml of milk or water, stir well to avoid lumps. Cook on low flame for 3–5 minutes until it becomes a creamy porridge.",
+        "Sweeten naturally with Jaggery Powder / Palm sugar / Honey (or) add a pinch of salt and pepper for a savoury twist.",
+        "A quick, wholesome, and indulgent treat for your body and senses."
+      ]
+    ]
   }
 ]
