@@ -52,7 +52,7 @@ const App = () => {
               <>
                 <Hero setActiveCategory={setActiveCategory} />
                 <div className="app-container">
-                  <AllProducts />
+                  <AllProducts setActiveCategory={setActiveCategory} />
                   {/* <Discount /> */}
                 </div>
               </>
