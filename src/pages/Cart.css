@@ -83,7 +83,7 @@ table tr {
   white-space: nowrap;
   transition: 0.3s;
   &:hover {
-    background: #00a66f;
+    background: #25D366;
     cursor: pointer;
   }
 }

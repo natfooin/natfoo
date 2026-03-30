@@ -10,7 +10,7 @@ const buttonNotReadyStyles = {
   cursor: "not-allowed",
 };
 const buttonReadyStyles = {
-  backgroundColor: "#04AA6D",
+  backgroundColor: "#25D366",
   color: "white",
   cursor: "pointer",
 };

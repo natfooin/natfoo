@@ -24,6 +24,9 @@
 }
 
 @media (max-width: 1024px) {
+  .heading-container{
+    padding-top: 20px;
+  }
   .title {
     font-size: 2rem;
   }
@@ -37,7 +40,7 @@
     font-size: 2rem;
   }
   .sub-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -46,13 +49,13 @@
     font-size: 2rem;
   }
   .sub-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .sub-title {
     font-size: 1rem;
