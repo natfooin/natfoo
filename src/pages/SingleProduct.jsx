@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import DetailCard from "../Components/DetailCard/DetailCard";
 import DiscountToolTip from "../Components/DiscountToolTip/DiscountToolTip";
 import slabs from "../DiscountSlabs.json";
+import { toast } from "react-toastify";
 
 const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
@@ -71,6 +72,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
 
     setQuantity(1);
     navi(-1);
+    toast(`${productData.name} added to cart!`, {type:"success"}, {position:"bottom-right"});
   };
 
   useEffect(() => {
@@ -88,12 +90,12 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-          <div class="image-border-animate">
+          <div className="image-border-animate">
             <img
               src={productData.image}
               alt={productData.name}
-              loading="eager"
-              decoding="async"
+              loading="       "
+              
             />
           </div>
           {productData["similar-products"] && (
@@ -121,8 +123,8 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    loading="eager"
-                    decoding="async"
+                    loading="lazy"
+                    
                   />
                   <span>{item.name}</span>
                 </Link>

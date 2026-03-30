@@ -12,6 +12,8 @@ import { Router, Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct";
 import Products from "./Components/Products/Products";
 import { FaSearch } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+
 import Cart from "./pages/Cart";
 import CartProduct from "./Components/CartProduct/CartProduct";
 import AllProducts from "./pages/AllProducts/AllProducts";
@@ -35,6 +37,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [discount, setDiscount] = useState(0.0);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("All");
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
@@ -47,9 +50,9 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero />
+                <Hero setActiveCategory={setActiveCategory} />
                 <div className="app-container">
-                  <AllProducts />
+                  <AllProducts setActiveCategory={setActiveCategory} />
                   {/* <Discount /> */}
                 </div>
               </>
@@ -83,7 +86,15 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/products" element={<MainProducts />} />
+          <Route
+            path="/products"
+            element={
+              <MainProducts
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+              />
+            }
+          />
           <Route
             path="/about"
             element={
@@ -131,6 +142,7 @@ const App = () => {
         title="Thank you! Your order has been placed successfully."
         message="Please complete your purchase using the secure payment link sent to your email and mobile."
       />
+      <ToastContainer position="bottom-left" />
     </>
   );
 };

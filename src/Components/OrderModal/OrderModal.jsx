@@ -143,7 +143,7 @@ function OrderModal({
                 width={"15%"}
                 height={"10%"}
                 alt="logo"
-                loading="eager"
+                loading="lazy"
               />
               <h2>Delivery Details</h2>
             </div>

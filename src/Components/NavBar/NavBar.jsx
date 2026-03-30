@@ -31,23 +31,23 @@ function NavBar({ cartQuantity }) {
       <div className={`navElements ${isOpen ? "active" : ""}`}>
         <ul>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/">Home</Link>
+            <Link to="/" className="LinkTags">Home</Link>
           </li>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/about">About</Link>
+            <Link to="/about" className="LinkTags">About</Link>
           </li>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/products">Products</Link>
+            <Link to="/products" className="LinkTags">Products</Link>
           </li>
           <li onClick={() => setIsOpen(false)}>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" className="LinkTags">Contact</Link>
           </li>
         </ul>
       </div>
 
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
+          <img src={logo} alt="Millet Logo" loading="lazy" />
         </Link>
       </div>
 
@@ -64,7 +64,7 @@ function NavBar({ cartQuantity }) {
           style={{ textDecoration: "none" }}
         >
           <div className="cart">
-            <PiShoppingCartBold size={22} color="white" />
+            <PiShoppingCartBold size={22} color="" />
             {cartQuantity !== 0 && (
               <span className="cart-count">{cartQuantity}</span>
             )}
