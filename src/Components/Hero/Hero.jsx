@@ -15,7 +15,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Badge from "../../Components/ui/Badge/Badge";
 import Heading from "../ui/Heading/Heading";
 import productData from "./Sliderprodcuts.json";
@@ -27,7 +27,8 @@ import {
   FaRupeeSign,
 } from "react-icons/fa";
 import { useEffect } from "react";
-function Hero() {
+function Hero({ setActiveCategory }) {
+  const navi = useNavigate();
   useEffect(() => {
     document.title = "Natfoo";
   }, []);
@@ -68,9 +69,19 @@ function Hero() {
       >
         {productData?.map((product, index) => (
           <SwiperSlide key={index}>
-            <a href={`#${product.category}-products`}>
+            <a
+              onClick={() => {
+                setActiveCategory(product.category);
+                navi("/products");
+              }}
+            >
               <div className="slide-card">
-                <img src={product.image} alt={product.name} loading="eager" decoding="async"/>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  loading="eager"
+                  decoding="async"
+                />
 
                 <div className="slide-overlay">
                   <h3 className="product-name">

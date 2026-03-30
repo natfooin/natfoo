@@ -11,10 +11,9 @@ const CATEGORIES = [
   ...new Set(ProductJson.map((item) => item.category)),
 ];
 
-function MainProducts() {
+function MainProducts({activeCategory, setActiveCategory}) {
   const [inputValue, setInputValue] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProducts = ProductJson.filter((product) => {
     const searchVal = searchTerm.toLowerCase();

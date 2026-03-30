@@ -37,6 +37,7 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [discount, setDiscount] = useState(0.0);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("All");
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}
@@ -49,7 +50,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero />
+                <Hero setActiveCategory={setActiveCategory} />
                 <div className="app-container">
                   <AllProducts />
                   {/* <Discount /> */}
@@ -85,7 +86,15 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/products" element={<MainProducts />} />
+          <Route
+            path="/products"
+            element={
+              <MainProducts
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+              />
+            }
+          />
           <Route
             path="/about"
             element={
