@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Contact.css";
+import { BsBuildingsFill } from "react-icons/bs";
+
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -49,8 +51,7 @@ const SuccessView = ({ reset }) => (
     </div>
     <h2>Message Received</h2>
     <p>
-      Your inquiry has been placed in our royal archives. We shall respond with
-      haste.
+      Your inquiry has been placed, our team will contact you soon. <br />Thank you !
     </p>
     <Button text="Send Another" onClick={reset} />
   </div>
@@ -122,21 +123,14 @@ function Contact() {
       <div className="royal-viewport">
         <div className="heritage-panel">
           <div className="heritage-content">
-            <span className="gold-tag">ESTD 2026</span>
-            <h1 className="royal-title">
-              Get In <br /> <span>Touch</span>
+            <h1 className="royal-title" style={{color:"var(--gold)"}}>
+              Get In Touch
             </h1>
-
-            <div className="contact-ledger" style={{ gap: "2px" }}>
-              <div className="ledger-entry" style={{ gap: "5px" }}>
-                <FaPhoneAlt className="ledger-icon" />
-                <span>+91 98765 43210</span>
+             <div className="ledger-entry" style={{ gap: "5px" }}>
+                <BsBuildingsFill className="ledger-icon" />
+                <span >NATFOO</span>
               </div>
-              <div className="ledger-entry" style={{ gap: "5px" }}>
-                <FaEnvelope className="ledger-icon" />
-                <span>natfooin@gmail.com</span>
-              </div>
-              <div
+               <div
                 className="ledger-entry"
                 style={{ alignItems: "flex-start", gap: "3px" }}
               >
@@ -161,8 +155,18 @@ function Contact() {
                 </span>
               </div>
             </div>
+              <div className="ledger-entry" style={{ gap: "5px" }}>
+                <FaEnvelope className="ledger-icon" />
+                <span>natfooin@gmail.com</span>
+              </div>
+            <div className="contact-ledger" style={{ gap: "2px" }}>
+              <div className="ledger-entry" style={{ gap: "5px" }}>
+                <FaPhoneAlt className="ledger-icon" />
+                <span>+91 98765 43210</span>
+              </div>
+             
 
-            <div className="iconContainer">
+            <div className="iconContainer" style={{paddingTop:"1rem"}}>
               <FooterIcon
                 icon={<FaWhatsapp size={25} color="white" />}
                 link={"https://wa.me/919042649000"}
@@ -193,7 +197,6 @@ function Contact() {
 
         <div className="form-panel">
           <div className="form-inner">
-            <h3 className="form-subtitle">Contact Us</h3>
 
             {view === "form" && (
               <form className="royal-form" onSubmit={handleSubmit}>
@@ -258,9 +261,9 @@ function Contact() {
                 </div>
 
                 <Button
-                  text={`send `}
-                  icon={<IoSend size={12} />}
+                  text={`submit `}
                   className="royal-submit-btn"
+                  styles={{fontSize:"1.5rem"}}
                 ></Button>
               </form>
             )}

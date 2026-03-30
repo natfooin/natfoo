@@ -21,7 +21,7 @@ function TermsPage() {
             <FaGavel size={45} />
           </div>
           <h1 className="main-title">TERMS AND CONDITIONS</h1>
-          <p className="effective-date">Effective Date: 25.03.2026</p>
+          <p className="effective-date" style={{fontSize:'1.4rem'}}>Effective Date: 25.03.2026</p>
         </header>
 
         <div className="terms-body">
