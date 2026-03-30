@@ -14,6 +14,11 @@ const buttonReadyStyles = {
   color: "white",
   cursor: "pointer",
 };
+
+const phoneRegex = /^[0-9]{10}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const pincodeRegex = /^[0-9]{6}$/;
+
 function OrderModal({
   showModal,
   setShowModal,
@@ -35,27 +40,19 @@ function OrderModal({
   const [formFilled, setFormFilled] = useState(false);
 
   useEffect(() => {
-    console.log(formFilled);
-    console.log(nameData);
-    console.log(emailData);
-    console.log(contactData);
-    console.log(addressData);
-    console.log(pincodeData);
-    console.log(isChecked);
-    if (
-      nameData &&
-      emailData &&
-      contactData &&
-      addressData &&
-      pincodeData &&
-      isChecked
-    ) {
-      setFormFilled(true);
-    } else {
-      setFormFilled(false);
-    }
-  }, [nameData, emailData, contactData, addressData, pincodeData, isChecked]);
-
+  if (
+    nameData &&
+    emailRegex.test(emailData) &&
+    phoneRegex.test(contactData) &&
+    addressData &&
+    pincodeRegex.test(pincodeData) &&
+    isChecked
+  ) {
+    setFormFilled(true);
+  } else {
+    setFormFilled(false);
+  }
+}, [nameData, emailData, contactData, addressData, pincodeData, isChecked]);
   const handleNameChange = (e) => {
     setNameData(e.target.value);
   };
@@ -73,61 +70,50 @@ function OrderModal({
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    alert("Form Submitted Successfully");
-    const buyData = {};
-    const formData = new FormData(e.target);
-    buyData.name = formData.get("name");
-    buyData.email = formData.get("email");
-    buyData.contact = formData.get("phone");
-    buyData.address = formData.get("address");
-    buyData.pincode = formData.get("pincode");
-    buyData.products = cartProducts;
-    buyData.subtotal = cartPrice;
-    buyData.discountAmount = discount;
-    buyData.total = cartPrice - discount;
+  e.preventDefault();
 
-    setAddressData("");
-    setPincodeData("");
-    setNameData("");
-    setEmailData("");
-    setContactData("");
-    setIsChecked(false);
-    console.log(buyData);
-    closeModal();
+  if (!phoneRegex.test(contactData)) {
+    alert("Phone number must be exactly 10 digits");
+    return;
+  }
 
-    setShowSuccessModal(true);
-    {
-      /* Send to manufacturer whatsapp  */
-    }
-    // sendOrderToWhatsApp(buyData);
+  if (!emailRegex.test(emailData)) {
+    alert("Enter a valid email address");
+    return;
+  }
 
-    {
-      /* Send to manufacturer email  */
-    }
-    sendOrderEmail(buyData);
+  if (!pincodeRegex.test(pincodeData)) {
+    alert("Pincode must be exactly 6 digits");
+    return;
+  }
 
-    // const orderHTML = sendOrderEmail(buyData);
-    // const emailData = new FormData();
-    // emailData.append("access_key", "578ab598-4c33-4680-b3e2-937ddc9c7a3b");
-    // emailData.append("subject", "New Order Received - Natfoo");
-    // emailData.append("from_name", "Natfoo Orders");
-    // emailData.append("replyto", buyData.email);
+  alert("Form Submitted Successfully");
 
-    // // IMPORTANT
-    // emailData.append("message", orderHTML);
-    // const response = await fetch("https://api.web3forms.com/submit", {
-    //   method: "POST",
-    //   body: emailData,
-    // });
+  const buyData = {};
+  const formData = new FormData(e.target);
 
-    // if (response.ok) {
-    //   alert("Order submitted successfully");
-    //   setShowModal(false);
-    // } else {
-    //   alert("Failed to submit order");
-    // }
-  };
+  buyData.name = formData.get("name");
+  buyData.email = formData.get("email");
+  buyData.contact = formData.get("phone");
+  buyData.address = formData.get("address");
+  buyData.pincode = formData.get("pincode");
+  buyData.products = cartProducts;
+  buyData.subtotal = cartPrice;
+  buyData.discountAmount = discount;
+  buyData.total = cartPrice - discount;
+
+  setAddressData("");
+  setPincodeData("");
+  setNameData("");
+  setEmailData("");
+  setContactData("");
+  setIsChecked(false);
+
+  closeModal();
+  setShowSuccessModal(true);
+
+  sendOrderEmail(buyData);
+};
 
   return (
     showModal && (
@@ -166,12 +152,30 @@ function OrderModal({
               />
 
               <input
-                type="tel"
-                placeholder="Phone Number"
-                name="phone"
-                onChange={(e) => handleContactChange(e)}
-                required
-              />
+  type="tel"
+  placeholder="Phone Number"
+  name="phone"
+  maxLength={10}
+  onChange={(e) => handleContactChange(e)}
+  onKeyDown={(e) => {
+    if (
+      !/[0-9]/.test(e.key) &&
+      e.key !== "Backspace" &&
+      e.key !== "ArrowLeft" &&
+      e.key !== "ArrowRight" &&
+      e.key !== "Tab"
+    ) {
+      e.preventDefault();
+    }
+  }}
+  onPaste={(e) => {
+    const paste = e.clipboardData.getData("text");
+    if (!/^[0-9]{10}$/.test(paste)) {
+      e.preventDefault();
+    }
+  }}
+  required
+/>
 
               <textarea
                 placeholder="Address"
@@ -182,12 +186,24 @@ function OrderModal({
               ></textarea>
 
               <input
-                type="text"
-                placeholder="Pincode"
-                name="pincode"
-                onChange={(e) => handlePincodeChange(e)}
-                required
-              />
+  type="text"
+  placeholder="Pincode"
+  name="pincode"
+  maxLength={6}
+  onChange={(e) => handlePincodeChange(e)}
+  onKeyDown={(e) => {
+    if (
+      !/[0-9]/.test(e.key) &&
+      e.key !== "Backspace" &&
+      e.key !== "ArrowLeft" &&
+      e.key !== "ArrowRight" &&
+      e.key !== "Tab"
+    ) {
+      e.preventDefault();
+    }
+  }}
+  required
+/>
 
               <label className="checkbox">
                 <input
