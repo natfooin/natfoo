@@ -94,8 +94,19 @@ function Contact() {
     setView("loading");
 
     setTimeout(() => {
-      sendToWhatsApp(formData);
-
+      // sendToWhatsApp(formData);
+      fetch(
+        "https://script.google.com/macros/s/AKfycbwnadt4j0uRJ9YpmqLarVn2dVp7vwbGJ7-NJKmke-ODQqeEvhkQ7fZUOPWO8Rueu-y3/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.number,
+            message: formData.message,
+          }),
+        },
+      );
       setView("success");
       setFormData({
         name: "",
@@ -151,7 +162,8 @@ function Contact() {
               </div>
             </div>
 
-            <div className="iconContainer"><FooterIcon
+            <div className="iconContainer">
+              <FooterIcon
                 icon={<FaWhatsapp size={25} color="white" />}
                 link={"https://wa.me/919042649000"}
               />

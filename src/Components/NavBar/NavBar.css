@@ -21,6 +21,7 @@ body {
   background-position: center 20%;
 }
 
+
 .navElements {
   display: flex;
   justify-content: flex-end;
@@ -43,7 +44,6 @@ body {
 
 .navElements ul li:hover a {
   color: var(--gold);
-  text-decoration: underline;
 }
 
 .logo {
@@ -85,6 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: white;
 }
 
 .searchIcon:hover,
