@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import img3 from "/product-images/Natfoo-Tuty-Fruity-Cookies-Pouch-Mockup-01.jpg";
-import img2 from "/product-images/Crunchy-Cardamom.jpg";
-import img4 from "/product-images/Foxtail-Millet-Noodles.png";
+import img3 from "/product-images/Pasta-Fusili.jpg";
+import img2 from "/product-images/Multi-Millet-Vermicelli.png";
+import img4 from "/public/product-images/Sprouted-Heath-Mix.jpg";
 import img1 from "/product-images/Kodo-Millet-Laddu.jpg";
-import img5 from "/product-images/Spicy-Dhamaka.jpg";
+import img5 from "/product-images/Barnyard-Millet-Noodles.png";
 import img6 from "/product-images/Ajwain-Mellow.jpg";
 const About = () => {
   useEffect(() => {
