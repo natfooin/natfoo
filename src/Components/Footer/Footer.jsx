@@ -44,7 +44,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Quick Links Section */}
         <div className="linkdiv">
           <div className="links">
             <h6 style={{ marginBottom: "1.2rem" }}>quick links</h6>
@@ -66,10 +65,9 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="site-rights">
-          <h6 style={{color:"white"}}>Copyright 2026 &copy; natfoo. All Rights Reserved</h6>
+          <h6 style={{color:"white"}}>Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. All Rights Reserved</h6>
         </div>
 
         <div className="iconContainer">

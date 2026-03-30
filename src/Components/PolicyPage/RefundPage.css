@@ -20,6 +20,8 @@
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+    font-family: "Balooda2", sans-serif !important; 
+
 }
 
 .header-icon {
@@ -37,12 +39,13 @@
 .header-icon svg { transform: rotate(-45deg); }
 
 .main-title {
-  font-family: serif;
   font-size: 2.2rem;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;  
   padding-top: 2rem;
+    font-family: "Balooda2", sans-serif !important; 
+
 }
 
 .effective-date {
@@ -51,14 +54,19 @@
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 1px;
+       font-family: 'poppins';
+
 }
 
 .refund-body {
   padding: 4rem 5rem;
+       font-family: 'poppins';
+
 }
 
 .refund-item {
   margin-bottom: 4rem;
+  font-family: 'poppins';
 }
 
 .item-header {
@@ -68,6 +76,7 @@
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #f2f2f2;
   padding-bottom: 10px;
+  
 }
 
 .section-icon {
@@ -81,6 +90,8 @@
   font-size: 1.4rem;
   margin: 0;
   font-weight: 700;
+    font-family: "Balooda2", sans-serif !important; 
+
 }
 
 .policy-highlight {
@@ -88,6 +99,7 @@
   padding: 2rem;
   border: 1px solid rgba(54, 63, 37, 0.1);
   background-color: #fffdf9;
+  
 }
 
 .refund-item p, .refund-bullets li {
@@ -95,6 +107,8 @@
   line-height: 1.3;
   font-size: 1.3rem;
   margin-bottom: 12px;
+  font-family: "poppins";
+
 }
 
 .refund-bullets {
@@ -118,20 +132,20 @@
 
 .sub-item {
   padding-left: 50px !important;
-  font-style: italic;
-  color: #555 !important;
   display: flex;
   align-items: center;
+    font-family: 'poppins';
+
 }
 
-.sub-item::before { content: "" !important; }
+.sub-item::before { content: "" ; }
 
 .disclaimer-note {
   background: #f9f9f9;
   padding: 15px;
   border-left: 3px solid #363F25;
   font-size: 0.9rem;
-  font-style: italic;
+  font-family: 'poppins';
   margin-top: 15px;
 }
 

@@ -4,7 +4,7 @@
   padding: 5rem 1.5rem;
   display: flex;
   justify-content: center;
-   font-family: "Balooda2", sans-serif !important;
+   font-family: 'poppins';
 }
 
 .terms-card {
@@ -21,6 +21,7 @@
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  font-family: "Balooda2", sans-serif !important; 
 }
 
 .header-icon {
@@ -43,14 +44,17 @@
   /* letter-spacing: 2px; */
   margin: 0;
   padding-top: 2rem;
+  font-family: "Balooda2", sans-serif !important; 
 }
 
 .effective-date {
   color: #D4AF37;
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
+     font-family: 'poppins';
+
 }
 
 .terms-body {
@@ -68,6 +72,8 @@
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #f2f2f2;
   padding-bottom: 10px;
+    font-family: "Balooda2", sans-serif !important; 
+
 }
 
 .section-icon {
@@ -76,7 +82,8 @@
 }
 
 .item-title {
-  
+      font-family: "Balooda2", sans-serif !important; 
+
   color: #363F25;
   font-size: 2rem;
   margin: 0;
@@ -85,7 +92,7 @@
 
 .terms-item p, .terms-bullets li {
   color: #444;
-  /* line-height: 1.8; */
+font-family: "poppins";
   font-size: 1.2rem;
   margin-bottom: 12px;
 }
