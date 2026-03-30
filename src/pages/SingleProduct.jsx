@@ -94,8 +94,8 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
             <img
               src={productData.image}
               alt={productData.name}
-              loading="eager"
-              decoding="async"
+              loading="       "
+              
             />
           </div>
           {productData["similar-products"] && (
@@ -123,8 +123,8 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    loading="eager"
-                    decoding="async"
+                    loading="lazy"
+                    
                   />
                   <span>{item.name}</span>
                 </Link>

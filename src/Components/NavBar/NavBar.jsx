@@ -47,7 +47,7 @@ function NavBar({ cartQuantity }) {
 
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="Millet Logo" loading="lazy" decoding="async"/>
+          <img src={logo} alt="Millet Logo" loading="lazy" />
         </Link>
       </div>
 

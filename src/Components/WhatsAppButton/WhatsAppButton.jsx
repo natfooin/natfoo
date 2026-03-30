@@ -14,8 +14,8 @@ const WhatsAppButton = () => {
         src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
         alt="WhatsApp"
         className="whatsapp-icon"
-        loading="eager"
-        decoding="async"
+        loading="lazy"
+        
       />
       <span className="whatsapp-text">WhatsApp</span>
     </div>

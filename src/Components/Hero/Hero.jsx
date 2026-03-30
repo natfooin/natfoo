@@ -79,8 +79,8 @@ function Hero({ setActiveCategory }) {
                 <img
                   src={product.image}
                   alt={product.name}
-                  loading="eager"
-                  decoding="async"
+                  loading="lazy"
+                  
                 />
 
                 <div className="slide-overlay">
