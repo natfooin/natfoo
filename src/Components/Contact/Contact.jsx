@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Contact.css";
-import { BsBuildingsFill } from "react-icons/bs";
+import { FaBuilding } from "react-icons/fa6";
 
 import {
   FaPhoneAlt,
@@ -127,7 +127,7 @@ function Contact() {
               Get In Touch
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
-                <BsBuildingsFill className="ledger-icon" />
+                <FaBuilding className="ledger-icon" />
                 <span >NATFOO</span>
               </div>
                <div
@@ -261,9 +261,9 @@ function Contact() {
                 </div>
 
                 <Button
-                  text={`submit `}
+                  text={`Submit `}
                   className="royal-submit-btn"
-                  styles={{fontSize:"1.5rem"}}
+                  styles={{fontSize:"1.8rem",fontWeight:"bold"}}
                 ></Button>
               </form>
             )}

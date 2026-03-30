@@ -67,7 +67,8 @@ function Footer() {
 
       <div className="footer-bottom">
         <div className="site-rights">
-          <h6 style={{color:"white"}}>Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. All Rights Reserved</h6>
+          <h6 style={{color:"white"}}>Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. <span style={{color:"white"}}> All Rights Reserved</span>
+          </h6>
         </div>
 
         <div className="iconContainer">

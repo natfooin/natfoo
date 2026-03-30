@@ -80,7 +80,7 @@
   width: fit-content;
 }
 
-.footer-bottom .site-rights h6 {
+.footer-bottom .site-rights h6 ,.site-rights h6 span{
   margin-bottom: 0;
 }
 
@@ -115,14 +115,14 @@
   margin: 0 auto;
 }
 
-.site-rights h6 {
-  font-size: 1.15rem;
+.site-rights h6,.site-rights h6 span {
+  font-size: 1.25rem;
   opacity: 0.6;
   text-transform: uppercase;
-  letter-spacing: 1.3px;
+  letter-spacing: 1px;
   
 }
-
+ 
 .iconContainer {
   display: flex;
   gap: 15px;
@@ -194,6 +194,11 @@
     order: 2;
   }
   .site-rights h6{
-    font-size: 0.7rem;
+    font-size: 1rem;
+  }
+  .site-rights h6 span{
+    display: block;
+    opacity: 1;
+    font-size: 1rem;
   }
 }
