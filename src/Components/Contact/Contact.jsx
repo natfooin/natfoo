@@ -142,7 +142,7 @@ function Contact() {
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaBuilding className="ledger-icon" />
-                <span >NATFOO</span>
+                <span style={{fontSize:"18px"}}>Varietas Green Energy Pvt Ltd</span>
               </div>
                <div
                 className="ledger-entry"
@@ -223,7 +223,7 @@ function Contact() {
                     onChange={handleChange}
                     placeholder=" "
                   />
-                  <label>Full Name</label>
+                  <label>Name</label>
                 </div>
 
                 <div className="royal-input-group">
@@ -235,7 +235,7 @@ function Contact() {
                     onChange={handleChange}
                     placeholder=" "
                   />
-                  <label>Email Address</label>
+                  <label>Email</label>
                 </div>
 
                 <div className="royal-input-group">
@@ -259,7 +259,7 @@ function Contact() {
                     placeholder=" "
                     maxLength={10}
                   />
-                  <label>Phone Number</label>
+                  <label>Mobile</label>
                 </div>
 
                 <div className="royal-input-group">

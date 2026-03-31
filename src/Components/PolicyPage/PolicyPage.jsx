@@ -47,9 +47,9 @@ function PolicyPage() {
             <div className="policy-sub-section">
               <h3 className="sub-heading">a. Personal Information</h3>
               <ul className="policy-bullets">
-                <li>Full Name</li>
-                <li>Email Address</li>
-                <li>Mobile Number</li>
+                <li>Name</li>
+                <li>Email</li>
+                <li>Mobile</li>
                 <li>Shipping Address</li>
               </ul>
             </div>

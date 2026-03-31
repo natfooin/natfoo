@@ -68,8 +68,8 @@ function MainProducts({activeCategory, setActiveCategory}) {
             key={index}
             text={cat}
             click={() => setActiveCategory(cat)}
-            color={activeCategory === cat ? "#ffffff" : "#926f52"}
-            bgColor={activeCategory === cat ? "#926f52" : "#f1f5f9"}
+            color={activeCategory === cat ? "#ffffff" : "var(--heading)"}
+            bgColor={activeCategory === cat ? "var(--heading)" : "#f1f5f9"}
             styles={{
               height: "2rem",
               width: "10rem",
