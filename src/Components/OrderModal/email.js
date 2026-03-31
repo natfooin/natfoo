@@ -34,7 +34,7 @@ const sendOrderEmail = (buyData) => {
       "service_lm1gf28",
       "template_3mz0zie",
       templateParams,
-      "g9FUM8zjSAqkVREQ7",
+      "Dz9dfdjwRWqf-Tii_",
     )
     .then(() => {
       console.log("Email sent successfully");
