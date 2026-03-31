@@ -12,7 +12,7 @@ import { Router, Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct";
 import Products from "./Components/Products/Products";
 import { FaSearch } from "react-icons/fa";
-// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 import Cart from "./pages/Cart";
 import CartProduct from "./Components/CartProduct/CartProduct";
@@ -145,7 +145,7 @@ const App = () => {
         title="Thank you! Your order has been placed successfully."
         message="Please complete your purchase using the secure payment link sent to your email and mobile."
       />
-      {/* <ToastContainer position="bottom-left" autoClose={2000}  /> */}
+      <ToastContainer position="bottom-left" autoClose={2000}  />
     </>
   );
 };

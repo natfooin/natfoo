@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import DetailCard from "../Components/DetailCard/DetailCard";
 import DiscountToolTip from "../Components/DiscountToolTip/DiscountToolTip";
 import slabs from "../DiscountSlabs.json";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
   const { id } = useParams();
@@ -72,7 +72,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
 
     setQuantity(1);
     navi(-1);
-    // toast(`${productData.name} added to cart!`, {type:"success"}, {position:"bottom-right"});
+    toast(`${productData.name} added to cart!`, {type:"success"}, {position:"bottom-right"});
   };
 
   useEffect(() => {
