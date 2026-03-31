@@ -223,7 +223,7 @@ function Contact() {
                     onChange={handleChange}
                     placeholder=" "
                   />
-                  <label>Full Name</label>
+                  <label>Name</label>
                 </div>
 
                 <div className="royal-input-group">
@@ -235,7 +235,7 @@ function Contact() {
                     onChange={handleChange}
                     placeholder=" "
                   />
-                  <label>Email Address</label>
+                  <label>Email</label>
                 </div>
 
                 <div className="royal-input-group">
@@ -259,7 +259,7 @@ function Contact() {
                     placeholder=" "
                     maxLength={10}
                   />
-                  <label>Phone Number</label>
+                  <label>Mobile</label>
                 </div>
 
                 <div className="royal-input-group">

@@ -137,7 +137,7 @@ function OrderModal({
             <form onSubmit={handleSubmit} className="form">
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Name"
                 name="name"
                 onChange={(e) => handleNameChange(e)}
                 required
