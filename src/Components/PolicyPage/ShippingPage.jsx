@@ -71,8 +71,8 @@ function ShippingPage() {
               In the event that the customer’s delivery address falls outside the serviceable area of delivery partners, the Company reserves the right to:
             </p>
             <ul className="shipping-bullets">
-              <li >a) Arrange delivery through alternative logistics providers; or</li>
-              <li >b) Cancel the order and initiate a refund to the customer.</li>
+              <li className="sub-items" >a) Arrange delivery through alternative logistics providers; or</li>
+              <li className="sub-items" >b) Cancel the order and initiate a refund to the customer.</li>
             </ul>
           </section>
 

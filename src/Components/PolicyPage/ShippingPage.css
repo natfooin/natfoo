@@ -128,13 +128,13 @@
   line-height: 1;
 }
 
-.sub-item {
+.sub-items{
   padding-left: 50px ;
-  font-style: italic;
+  /* font-style: italic; */
   color: #555 ;
 }
 
-.sub-item::before { content: "" ; }
+.sub-items::before { content: "" ; }
 
 .disclaimer-note {
   background: #f9f9f9;

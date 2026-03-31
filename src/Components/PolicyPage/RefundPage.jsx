@@ -35,9 +35,9 @@ function RefundPage() {
               <li>By placing an order on “www.natfoo.in”, the customer expressly acknowledges that such action constitutes a legally binding contract between the buyer and the seller.</li>
               <li>Company reserves the absolute right, at its sole discretion, to accept, reject, or cancel any order or cancellation request without prior notice.</li>
               <li>Company may refuse or cancel any order under, but not limited to, the following circumstances:</li>
-              <li >a) Submission of incomplete, false, or invalid address details.</li>
-              <li >b) Suspected fraudulent activity, misuse of the platform, or any form of malpractice.</li>
-              <li >c) Any violation of applicable laws, regulations, or platform policies.</li>
+              <li className="sub-items" >a) Submission of incomplete, false, or invalid address details.</li>
+              <li className="sub-items" >b) Suspected fraudulent activity, misuse of the platform, or any form of malpractice.</li>
+              <li className="sub-items" >c) Any violation of applicable laws, regulations, or platform policies.</li>
             </ul>
             <p className="disclaimer-note">
               In such cases, the company shall not be held liable for any damages, losses, or claims arising out of such cancellation or rejection.

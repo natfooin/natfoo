@@ -135,15 +135,15 @@
   line-height: 1;
 }
 
-.sub-item {
+.sub-items {
   padding-left: 50px !important;
-  display: flex;
-  align-items: center;
-    font-family: 'poppins';
-
+  /* display: flex; */
+  /* align-items: center; */
+    font-family: 'poppins' ;
+/* list-style: 0; */
 }
 
-.sub-item::before { content: "" ; }
+.sub-items::before { content: "" !important; } 
 
 .disclaimer-note {
   background: #f9f9f9;
