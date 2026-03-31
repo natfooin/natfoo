@@ -14,6 +14,9 @@
 .single-product-page-container {
   width: 100%;
   background-image: url("/laptop-cream-texture.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;

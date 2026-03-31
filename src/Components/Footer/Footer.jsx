@@ -74,8 +74,7 @@ function Footer() {
       <div className="footer-bottom">
         <div className="site-rights">
           <h6 style={{ color: "white" }}>
-            Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. All Rights
-            Reserved
+            Copyright 2026 &copy; Varietas Green Energy Pvt Ltd. All Rights Reserved.
           </h6>
         </div>
 

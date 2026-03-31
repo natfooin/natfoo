@@ -150,12 +150,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
           {productData.desc3 && (
             <p className="product-desc">{productData.desc3}</p>
           )}
-          <div>
-            <Badge
-              text={productData.category}
-              styles={{ scale: "1.5", margin: "1rem 0" }}
-            />
-          </div>
+          
 
           {/* PRICE */}
           <span>

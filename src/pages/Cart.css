@@ -36,14 +36,16 @@
 .cart-container {
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  gap: 40px;
   min-height: 80vh;
   overflow: hidden;
+  justify-content: center;
 }
 
 .cart-container .order-summary {
   border: 1px solid grey;
   padding: 4rem;
+  margin-top: 2.4px;
   border-radius: 20px;
   height: fit-content;
   display: flex;

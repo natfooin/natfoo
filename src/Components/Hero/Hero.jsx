@@ -60,8 +60,8 @@ function Hero({ setActiveCategory }) {
         }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-prev",
+          prevEl: ".swiper-button-next",
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}

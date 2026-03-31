@@ -45,7 +45,7 @@ const Cart = ({
     <>
       <Heading
         title="Cart"
-        subTitle="Your cart products"
+        subTitle=""
         styles={{ paddingTop: "2%" }}
         titleColor="var(--heading)"
         subTitleColor="var(--site-honey-badger)"
