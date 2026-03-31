@@ -31,7 +31,7 @@ body {
   display: flex;
   gap: clamp(1rem, 2vw, 2rem);
   list-style: none;
-  font-size: clamp(0.85rem, 1.1vw, 1.3rem);
+  font-size: clamp(0.85rem, 1.1vw, 1.5rem);
   padding-bottom: 2rem;
 }
 
@@ -128,7 +128,8 @@ body {
     height: clamp(40px, 9vw, 80px);
   }
   .navElements ul {
-    padding-bottom: 2rem;
+    padding-bottom: 2.7rem;
+
   }
   logo {
     padding-bottom: clamp(0.5rem, 1.5vw, 1rem);

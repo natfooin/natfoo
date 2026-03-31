@@ -273,12 +273,12 @@ function Contact() {
                   ></textarea>
                   <label>Your Inquiry</label>
                 </div>
-
-                <Button
+                <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+                  <Button
                   text={`Submit `}
                   className="royal-submit-btn"
-                  styles={{fontSize:"1.5rem"}}
-                ></Button>
+                  styles={{fontSize:"1.5rem",padding:"1rem 4rem"}}
+                ></Button> </div>     
               </form>
             )}
 

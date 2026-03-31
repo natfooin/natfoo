@@ -57,13 +57,15 @@
 .logo-para p {
   font-size: 14px;
   color: var(--cream);
-  line-height: 1.6;
+  line-height: 1.4;
   opacity: 0.85;
   max-width: 500px;
+  font-family: 'poppins';
 }
 
 .policy,
 .linkdiv {
+  padding-top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +185,7 @@ font-family: Poppins, "sans-serif";
     padding-bottom: 2px;
   }
   .logo-para p{
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .policy {
     max-width: fit-content;
@@ -209,4 +211,7 @@ font-family: Poppins, "sans-serif";
     opacity: 1;
     font-size: 1rem;
   }
+  .policy,
+.linkdiv {
+  padding-top: 0;}
 }
