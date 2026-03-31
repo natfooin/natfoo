@@ -142,7 +142,7 @@ function Contact() {
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaBuilding className="ledger-icon" />
-                <span >NATFOO</span>
+                <span style={{fontSize:"18px"}}>Varietas Green Energy Pvt Ltd</span>
               </div>
                <div
                 className="ledger-entry"
