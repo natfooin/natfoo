@@ -145,7 +145,7 @@ const App = () => {
         title="Thank you! Your order has been placed successfully."
         message="Please complete your purchase using the secure payment link sent to your email and mobile."
       />
-      <ToastContainer position="bottom-left" />
+      <ToastContainer position="bottom-left" autoClose={2000}  />
     </>
   );
 };
