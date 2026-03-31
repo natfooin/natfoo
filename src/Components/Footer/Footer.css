@@ -18,7 +18,7 @@
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto 50px auto;
@@ -37,15 +37,14 @@
   width: 100%;
   justify-content: start;
   padding: 0 0 0 0;
-  
+
 }
 
 .footer .logo img {
   max-height: 12rem;
   padding: 0 0 0 0;
   max-width: 100%;
-  /* margin-bottom: 1rem; */
-}
+          }
 
 .logo-para {
   border-left: 1px solid var(--gold);
@@ -155,14 +154,14 @@ font-family: Poppins, "sans-serif";
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
+    place-items: center;
   }
   .footer-left {
     grid-column: span 2;
     margin-bottom: 2rem;
   }
   .footer .footer-top .footer-left .logo {
-    position: relative;
-
+    position: relative; 
   }
 }
 
@@ -178,7 +177,7 @@ font-family: Poppins, "sans-serif";
   .footer-top {
     grid-template-columns: auto auto;
     justify-content: center;
-    
+
   }
   .logo-para {
     padding-top: 2px;

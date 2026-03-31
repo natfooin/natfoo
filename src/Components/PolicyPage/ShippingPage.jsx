@@ -19,11 +19,9 @@ function ShippingPage() {
     <div className="shipping-wrapper">
       <div className="shipping-card">
         <header className="shipping-header">
-          <div className="header-icon">
-            <FaTruck size={45} />
-          </div>
+          
           <h1 className="main-title">SHIPPING & DELIVERY POLICY</h1>
-          <p className="effective-date" style={{fontSize:'1.4rem'}}>Effective Date: 25.03.2026</p>
+          <p className="effective-date" style={{fontSize:'1.4rem',fontWeight:'600'}}>Effective Date: 01.04.2026</p>
         </header>
 
         <div className="shipping-body">
@@ -73,8 +71,8 @@ function ShippingPage() {
               In the event that the customer’s delivery address falls outside the serviceable area of delivery partners, the Company reserves the right to:
             </p>
             <ul className="shipping-bullets">
-              <li className="sub-item">a) Arrange delivery through alternative logistics providers; or</li>
-              <li className="sub-item">b) Cancel the order and initiate a refund to the customer.</li>
+              <li >a) Arrange delivery through alternative logistics providers; or</li>
+              <li >b) Cancel the order and initiate a refund to the customer.</li>
             </ul>
           </section>
 
@@ -85,7 +83,7 @@ function ShippingPage() {
               <h2 className="item-title">5. Delivery Timelines:</h2>
             </div>
             <p>
-              Estimated delivery timelines for orders within India are between <strong>2 to 15 business days</strong> from the date of dispatch.
+              Estimated delivery timelines for orders within India are between <>2 to 15 business days</> from the date of dispatch.
             </p>
             <p className="disclaimer-note">
               Such timelines are indicative and may vary due to factors beyond the Company’s control, including but not limited to logistics delays, weather conditions, or unforeseen circumstances.

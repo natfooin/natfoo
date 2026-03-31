@@ -20,15 +20,12 @@ function RefundPage() {
     <div className="refund-wrapper">
       <div className="refund-card">
         <header className="refund-header">
-          <div className="header-icon">
-            <FaHistory size={45} />
-          </div>
+     
           <h1 className="main-title">REFUND & CANCELLATION</h1>
-          <p className="effective-date" style={{fontSize:"1.4rem"}}>Effective Date: 25.03.2026</p>
+          <p className="effective-date" style={{fontSize:"1.4rem",fontWeight:'600'}}>Effective Date: 01.04.2026</p>
         </header>
 
         <div className="refund-body">
-          {/* 6. Order & Cancellation - From Image 7a6804 */}
           <section className="refund-item">
             <div className="item-header">
               <FaFileContract className="section-icon" />
@@ -38,9 +35,9 @@ function RefundPage() {
               <li>By placing an order on “www.natfoo.in”, the customer expressly acknowledges that such action constitutes a legally binding contract between the buyer and the seller.</li>
               <li>Company reserves the absolute right, at its sole discretion, to accept, reject, or cancel any order or cancellation request without prior notice.</li>
               <li>Company may refuse or cancel any order under, but not limited to, the following circumstances:</li>
-              <li className="sub-item">a) Submission of incomplete, false, or invalid address details.</li>
-              <li className="sub-item">b) Suspected fraudulent activity, misuse of the platform, or any form of malpractice.</li>
-              <li className="sub-item">c) Any violation of applicable laws, regulations, or platform policies.</li>
+              <li >a) Submission of incomplete, false, or invalid address details.</li>
+              <li >b) Suspected fraudulent activity, misuse of the platform, or any form of malpractice.</li>
+              <li >c) Any violation of applicable laws, regulations, or platform policies.</li>
             </ul>
             <p className="disclaimer-note">
               In such cases, the company shall not be held liable for any damages, losses, or claims arising out of such cancellation or rejection.
@@ -54,7 +51,7 @@ function RefundPage() {
               <h2 className="item-title">2. Return, Refund & Replacement:</h2>
             </div>
             <p>
-              Company maintains a <strong>strict no return and no refund policy</strong> on all products purchased through the platform.
+              Company maintains a <>strict no return and no refund policy</> on all products purchased through the platform.
             </p>
             <div className="policy-highlight">
               <div className="item-header">
@@ -65,15 +62,15 @@ function RefundPage() {
                 In the event that a product is received in a damaged condition due to unforeseen circumstances during transit, the company may, at its sole discretion, offer a replacement subject to the following conditions:
               </p>
               <ul className="refund-bullets">
-                <li className="sub-item">
+                <li >
                   <FaEnvelope style={{marginRight: '8px', color: '#D4AF37'}} /> 
-                  a) Notify damage within <strong>24 hours</strong> of receipt by emailing <strong>natfoocare@gmail.com</strong>.
+                  a) Notify damage within <>24 hours</> of receipt by emailing <>natfoocare@gmail.com</>.
                 </li>
-                <li className="sub-item">
+                <li>
                   <FaCamera style={{marginRight: '8px', color: '#D4AF37'}} /> 
                   b) Provide clear photographic evidence of the damaged product and packaging.
                 </li>
-                <li className="sub-item">
+                <li >
                   <FaCheckCircle style={{marginRight: '8px', color: '#D4AF37'}} /> 
                   c) Claims are subject to verification and validation by the customer support team.
                 </li>

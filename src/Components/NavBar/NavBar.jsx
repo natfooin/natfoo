@@ -33,15 +33,17 @@ function NavBar({ cartQuantity }) {
           <li onClick={() => setIsOpen(false)}>
             <Link to="/" className="LinkTags">Home</Link>
           </li>
+            <li onClick={() => setIsOpen(false)}>
+            <Link to="/products" className="LinkTags">Products</Link>
+          </li>
+           <li onClick={() => setIsOpen(false)}>
+            <Link to="/contact" className="LinkTags">Contact</Link>
+          </li>
           <li onClick={() => setIsOpen(false)}>
             <Link to="/about" className="LinkTags">About</Link>
           </li>
-          <li onClick={() => setIsOpen(false)}>
-            <Link to="/products" className="LinkTags">Products</Link>
-          </li>
-          <li onClick={() => setIsOpen(false)}>
-            <Link to="/contact" className="LinkTags">Contact</Link>
-          </li>
+        
+         
         </ul>
       </div>
 

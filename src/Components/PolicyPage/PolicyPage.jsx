@@ -15,11 +15,9 @@ function PolicyPage() {
     <div className="policy-wrapper">
       <div className="policy-card">
         <header className="policy-header">
-          <div className="header-icon">
-            <FaUserShield size={45} />
-          </div>
+         
           <h1 className="main-title">Privacy Policy</h1>
-          <p className="effective-date"  style={{fontSize:'1.4rem'}}>Effective Date : 25.03.2026</p>
+          <p className="effective-date"  style={{fontSize:'1.4rem',fontWeight:"600"}}>Effective Date : 01.04.2026</p>
         </header>
 
         <div className="policy-body">
@@ -30,8 +28,8 @@ function PolicyPage() {
               <h2 className="item-title">1. Introduction:</h2>
             </div>
             <p>
-              This Privacy Policy describes how <strong>“www.natfoo.in”</strong>, 
-              operated by <strong>“VARIETAS GREEN ENERGY PVT LTD”</strong> ("Company", 
+              This Privacy Policy describes how <>“www.natfoo.in”</>, 
+              operated by <>“VARIETAS GREEN ENERGY PVT LTD”</> ("Company", 
               "we", "our", "us"), collects, uses, and protects your personal information 
               when you use our website or mobile application ("Platform").
             </p>
@@ -56,7 +54,7 @@ function PolicyPage() {
             <div className="policy-sub-section">
               <h3 className="sub-heading">b. Payment Information</h3>
               <ul className="policy-bullets">
-                <li>Payment details will be processed securely through <strong>“CASHFREE”</strong>- third-party payment gateway.</li>
+                <li>Payment details will be processed securely through <>“CASHFREE”</>- third-party payment gateway.</li>
                 <li>We do not store card or banking details.</li>
               </ul>
             </div>
@@ -78,7 +76,7 @@ function PolicyPage() {
             </div>
             <p>We use your data to:</p>
             <ul className="policy-bullets">
-              <li>Process and dispatch orders via <strong>“INDIA POST”</strong>.</li>
+              <li>Process and dispatch orders via <>“INDIA POST”</>.</li>
               <li>Provide order updates and customer support.</li>
               <li>Improve platform functionality.</li>
               <li>Send offers and promotions (with opt-out option).</li>
@@ -94,7 +92,7 @@ function PolicyPage() {
             </div>
             <p>We may share your data with:</p>
             <ul className="policy-bullets">
-              <li><strong>“INDIA POST”</strong> for order delivery.</li>
+              <li><>“INDIA POST”</> for order delivery.</li>
               <li>Payment gateway providers.</li>
               <li>IT and analytics service providers.</li>
             </ul>
@@ -173,7 +171,7 @@ function PolicyPage() {
               <FaEnvelopeOpenText className="section-icon" />
               <h2 className="item-title">11. Contact Details:</h2>
             </div>
-            <p>Email: <strong>natfoocare@gmail.com</strong></p>
+            <p>Email: <>natfoocare@gmail.com</></p>
             <p>Address: K 804, Dara Enclave, AWHO, Nerul, Navi Mumbai – 400706. Maharashtra. India.</p>
           </section>
 
@@ -183,8 +181,8 @@ function PolicyPage() {
               <FaGavel className="section-icon" />
               <h2 className="item-title">12. Grievance Officer (As per IT Act, 2000):</h2>
             </div>
-            <p>Name: <strong>Ms.Varshini</strong></p>
-            <p>Email: <strong>natfoocare@gmail.com</strong></p>
+            <p>Name: <>Ms.Varshini</></p>
+            <p>Email: <>natfoocare@gmail.com</></p>
             <p>Response Time: Within 30 days</p>
           </section>
         </div>
