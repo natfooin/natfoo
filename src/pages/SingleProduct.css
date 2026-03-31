@@ -170,8 +170,7 @@
 
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
-  background: #25d366;
-  box-shadow: 0 10px 20px rgba(130, 217, 58, 0.4);
+  background: #25D366;
 }
 
 /* DIVIDER */
