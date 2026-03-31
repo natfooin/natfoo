@@ -2,7 +2,7 @@ import React from "react";
 import "./WhatsAppButton.css";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919042649000"; // replace with your number
+  const phoneNumber = "919962199321"; // replace with your number
 
   const handleClick = () => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
