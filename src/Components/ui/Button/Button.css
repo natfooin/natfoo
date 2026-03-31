@@ -22,12 +22,7 @@
 
   color:var(--site-white);
 
-  background:linear-gradient(
-    90deg,
-    var(--button-red),
-    var(--button-red),
-    var(--button-red)
-  );
+
 
   background-size:200% 100%;
   background-position:left;
@@ -45,7 +40,7 @@
 .button-container:hover{
 
   background-position:right;
-
+  background-color: #25D366 !important;
   transform:translateY(-2px);
 
   box-shadow:0 6px 22px rgba(217,74,58,0.35);
@@ -58,7 +53,6 @@
   transform:translateY(0);
 
 }
-
 
 @media (max-width:768px){
 

@@ -9,7 +9,7 @@ function AllProducts({setActiveCategory}) {
   const categories = [...new Set(json.map((item) => item.category))];
 
   return (
-    <>
+    <div  className="hello">
       {categories.map((cat, index) => (
         <div className="top-homeProduct" key={index} id={`${cat}-products`}>
           <div className="above-container">
@@ -22,7 +22,7 @@ function AllProducts({setActiveCategory}) {
           <HomeProductPage categoryArray={[cat]} />
         </div>
       ))}
-    </>
+    </div>
   );
 }
 

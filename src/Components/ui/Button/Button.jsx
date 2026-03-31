@@ -8,13 +8,13 @@ const Button = ({
   borderColor = "transparent",
   minWidth = "auto",
   height = "auto",
-  className = "",
+  cn = "",
   styles = {},
   onClick = () => {},
 }) => {
   return (
     <button
-      className={`button-container ${className}`}
+      className={`button-container ${cn}`}
       onClick={onClick}
       style={{
         color: color,

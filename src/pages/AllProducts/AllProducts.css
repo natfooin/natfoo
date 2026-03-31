@@ -1,7 +1,9 @@
-  .top-homeProduct{
+.hello{
+  margin-top: 2.5rem;
+}
+.top-homeProduct{
     width:100%;
-    padding:clamp(5px,4vw,30px);
-    
+    padding:clamp(5px,4vw,7px);
   }
 
   .above-container{
