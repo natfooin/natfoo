@@ -178,7 +178,7 @@ function OrderModal({
 />
 
               <textarea
-                placeholder="Address"
+                placeholder="Delivery Address"
                 rows="2"
                 name="address"
                 onChange={(e) => handleAddressChange(e)}

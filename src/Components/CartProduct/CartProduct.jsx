@@ -68,7 +68,6 @@ const CartProduct = ({
         <div className="cart-product-mini-content">
           <div>
             <h2>{product?.name}</h2>
-            <p>{product?.desc1}</p>
             <Badge text={product?.category} />
           </div>
         </div>

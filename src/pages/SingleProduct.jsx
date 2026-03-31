@@ -197,7 +197,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
               <>
                 {productData?.content[0] && (
                   <DetailCard
-                    header="Why Choose This Product?"
+                    header="Why choose this Product?"
                     content={productData.content[0]}
                   />
                 )}
