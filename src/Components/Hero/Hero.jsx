@@ -98,6 +98,7 @@ function Hero({ setActiveCategory }) {
 
                   <Link to={`/product/${product.id}`}>
                     <Button
+                    
                       cn={"button-n-one"}
                       text={"Buy now"}
                       minWidth={70}

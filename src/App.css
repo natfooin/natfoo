@@ -1,16 +1,20 @@
-*{
-    scrollbar-width: none;
-    scroll-behavior:auto ;
+* {
+  scrollbar-width: none;
+  scroll-behavior: auto;
+}
+.app-ct {
+  background-image: url("/laptop-cream-texture.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.app-container{
-    background-image:url("/laptop-cream-texture.png");
-    background-size: cover;
-    background-attachment: fixed;
+.app-container {
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-@media(max-width:580px) {
-    .app-container{
-        background-image: url("/phone-bg.png");
-    }
+@media (max-width: 580px) {
+  .app-container {
+    background-image: url("/phone-bg.png");
+  }
 }
