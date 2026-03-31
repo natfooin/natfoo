@@ -12,7 +12,7 @@ const Heading = ({
       <h1 className="title" style={{ color: titleColor }}>
         {title}
       </h1>
-      <h2 className="sub-title" style={{ color: subTitleColor }}>
+      <h2 className="sub-title" style={{ color: subTitleColor, fontWeight:"600", fontSize:"2.6rem" }}>
         {subTitle}
       </h2>
     </div>
