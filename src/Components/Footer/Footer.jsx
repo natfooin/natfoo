@@ -81,7 +81,7 @@ function Footer() {
         <div className="iconContainer">
           <FooterIcon
             icon={<FaWhatsapp size={25} color="white" />}
-            link={"https://wa.me/919042649000"}
+            link={"https://wa.me/919962199321"}
           />
           <FooterIcon
             icon={<CiMail size={25} color="white" />}

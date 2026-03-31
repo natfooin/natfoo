@@ -31,10 +31,10 @@ const sendOrderEmail = (buyData) => {
 
   emailjs
     .send(
-      "service_gd3qt7u",
-      "template_9zzjm15",
+      "service_lm1gf28",
+      "template_3mz0zie",
       templateParams,
-      "e4RfFs8z7DEUSchZj",
+      "Dz9dfdjwRWqf-Tii_",
     )
     .then(() => {
       console.log("Email sent successfully");

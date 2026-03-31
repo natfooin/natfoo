@@ -19,7 +19,7 @@ import FooterIcon from "./../Footer/FooterIcon";
 import { RxFontStyle } from "react-icons/rx";
 
 const sendToWhatsApp = (data) => {
-  const phoneNumber = "919042649000";
+  const phoneNumber = "919962199321";
 
   const message = `
 *NATFOO FOODS - CONTACT*
@@ -183,7 +183,7 @@ function Contact() {
             <div className="iconContainer" style={{paddingTop:"1rem"}}>
               <FooterIcon
                 icon={<FaWhatsapp size={25} color="white" />}
-                link={"https://wa.me/919042649000"}
+                link={"https://wa.me/919962199321"}
               />
               <FooterIcon
                 icon={<CiMail size={25} color="white" />}
