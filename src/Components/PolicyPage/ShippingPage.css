@@ -61,6 +61,10 @@
 
 }
 
+.item-header h2{
+  font-size: large;
+}
+
 .shipping-body {
   padding: 4rem 5rem;
 }

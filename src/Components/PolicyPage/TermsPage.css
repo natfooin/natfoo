@@ -16,6 +16,10 @@
   overflow: hidden;
 }
 
+.item-header h2{
+  font-size: large;
+}
+
 .terms-header {
   background-image: url("/public/laptop-footer-texture.png");
 
