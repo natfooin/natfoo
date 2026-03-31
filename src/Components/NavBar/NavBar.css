@@ -76,7 +76,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding-bottom: 2rem;
-  gap: clamp(1.6rem, 4vw, 3.2rem);
+  gap: clamp(1.6rem, 4vw, 5.2rem);
 }
 
 .searchIcon,
@@ -134,7 +134,7 @@ body {
     padding-bottom: clamp(0.5rem, 1.5vw, 1rem);
   }
   .logo img {
-    height: clamp(3rem, 6vw, 5rem);
+    height: clamp(3rem, 6vw, 5.5rem);
   }
   .nav-actions {
     padding-bottom: 3rem;
@@ -166,7 +166,7 @@ body {
     align-items: center;
     justify-content: space-between; /* ✅ clean alignment */
 
-    padding: 0 1rem; /* ✅ responsive spacing */
+    padding: 0 1rem; 
 
     background-image: url(/public/tap-navbar.png);
     background-size: 100% 100%;
@@ -261,7 +261,7 @@ body {
   }
 
   .logo img {
-    height: 3rem;
+    height: 4rem;
   }
 
   .nav-actions {
