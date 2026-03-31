@@ -16,6 +16,7 @@ import { IoSend } from "react-icons/io5";
 import { CiYoutube, CiMail } from "react-icons/ci";
 import Button from "../../Components/ui/Button/Button";
 import FooterIcon from "./../Footer/FooterIcon";
+import { RxFontStyle } from "react-icons/rx";
 
 const sendToWhatsApp = (data) => {
   const phoneNumber = "919042649000";
@@ -136,7 +137,7 @@ function Contact() {
       <div className="royal-viewport">
         <div className="heritage-panel">
           <div className="heritage-content">
-            <h1 className="royal-title" style={{color:"var(--gold)"}}>
+            <h1 className="royal-title" style={{color:"var(--gold)", fontFamily:"inherit"}}>
               Get In Touch
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
@@ -274,9 +275,9 @@ function Contact() {
                 </div>
 
                 <Button
-                  text={`submit `}
+                  text={`Submit `}
                   className="royal-submit-btn"
-                  styles={{fontSize:"1.5rem"}}
+                  styles={{fontSize:"1.5rem", padding:"0.75rem"}}
                 ></Button>
               </form>
             )}
