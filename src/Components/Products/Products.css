@@ -73,7 +73,7 @@
   }
 
   .product-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .amount {
@@ -90,4 +90,5 @@
   .products-grid{
     grid-template-columns: repeat(2,1fr);
   }
+  
 }
