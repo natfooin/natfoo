@@ -97,7 +97,7 @@ body {
 
 @media (max-width: 500px) {
   .hero-container {
-    background-image: url("/public/phone-hero-bg.png");
+    background : transparent;
   }
   .swiper_container {
     height: 47rem;
