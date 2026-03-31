@@ -1,5 +1,6 @@
 import React from "react";
 import "./Heading.css";
+
 const Heading = ({
   title = "",
   subTitle = "",
@@ -12,7 +13,7 @@ const Heading = ({
       <h1 className="title" style={{ color: titleColor }}>
         {title}
       </h1>
-      <h2 className="sub-title" style={{ color: subTitleColor, fontWeight:"600", fontSize:"2.6rem" }}>
+      <h2 className="sub-title" style={{ color: subTitleColor }}>
         {subTitle}
       </h2>
     </div>
