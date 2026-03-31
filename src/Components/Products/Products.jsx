@@ -5,8 +5,8 @@ import Button from "./../ui/Button/Button";
 import { Link } from "react-router-dom";
 const Products = ({ id, image, name, price }) => {
   return (
-      <Link to={`/product/${id}`} style={{textDecoration:"none"}}>
-    <div className="page-wrapper">
+    <Link to={`/product/${id}`} style={{ textDecoration: "none" }}>
+      <div className="page-wrapper">
         <div className="vertical-card">
           <div className="image-container">
             <img
@@ -14,7 +14,6 @@ const Products = ({ id, image, name, price }) => {
               alt="Product"
               className="card-img"
               loading="lazy"
-              
             />
           </div>
 
@@ -23,7 +22,10 @@ const Products = ({ id, image, name, price }) => {
             <div className="footer-row">
               <div className="price-block">
                 <FaRupeeSign size={window.innerWidth < 768 ? 10 : 14} />{" "}
-                <span className="amount">{price}{"  "}</span>
+                <span className="amount">
+                  {price}
+                  {"  "}
+                </span>
               </div>
               <div className="button">
                 <Button
@@ -36,8 +38,8 @@ const Products = ({ id, image, name, price }) => {
             </div>
           </div>
         </div>
-    </div>
-      </Link>
+      </div>
+    </Link>
   );
 };
 
