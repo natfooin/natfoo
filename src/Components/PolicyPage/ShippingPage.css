@@ -17,7 +17,8 @@
 }
 
 .shipping-header {
-  background-color: #363F25;
+  background-image: url("/public/laptop-footer-texture.png");
+
   color: white;
   padding: 4rem 2rem;
   text-align: center;

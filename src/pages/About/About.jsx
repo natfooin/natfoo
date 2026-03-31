@@ -14,7 +14,6 @@ const About = () => {
     <div className="about-section">
       <div className="about-header">
         <h2>About Us</h2>
-        <p className="about-slogan">Nourishing Life with Natural Goodness</p>
       </div>
 
       <div className="about-container">

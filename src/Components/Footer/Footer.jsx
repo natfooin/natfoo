@@ -13,14 +13,17 @@ function Footer() {
         <div className="footer-left">
           <div className="logo">
             <Link to="/">
-              <img src={logo} alt="Natfoo Logo" loading="lazy"  />
+              <img src={logo} alt="Natfoo Logo" loading="lazy" />
             </Link>
           </div>
           <div className="logo-para">
             <p>
-              Natfoo is dedicated to bringing the pure essence of nature to your
-              doorstep. Specializing in premium, organic millet products and
-              natural foods crafted for a healthier lifestyle.
+              With Natfoo, you're choosing more than just food—you're choosing
+              care, purity, and nourishment you can trust. Every product is
+              thoughtfully prepared to support your energy, well-being, and
+              everyday balance. It's a choice that aligns with a more mindful,
+              healthier way of living—giving you confidence in what you bring to
+              your table.
             </p>
           </div>
         </div>
@@ -34,13 +37,16 @@ function Footer() {
             <li>
               <Link to="/privacy-policy">privacy & policy</Link>
             </li>
-             <li>
-              <Link to="/refund-and-cancellation-policy">refund & cancellation</Link>
+            <li>
+              <Link to="/refund-and-cancellation-policy">
+                refund & cancellation
+              </Link>
             </li>
             <li>
-              <Link to="/shipping-and-delivery-policy">shipping and delivery policy</Link>
+              <Link to="/shipping-and-delivery-policy">
+                shipping and delivery policy
+              </Link>
             </li>
-           
           </ul>
         </div>
 
@@ -67,15 +73,35 @@ function Footer() {
 
       <div className="footer-bottom">
         <div className="site-rights">
-          <h6 style={{color:"white"}}>Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. All Rights Reserved</h6>
+          <h6 style={{ color: "white" }}>
+            Copyright 2026 &copy; VARIETAS GREEN ENERGY PVT LTD. All Rights
+            Reserved
+          </h6>
         </div>
 
         <div className="iconContainer">
-          <FooterIcon icon={<FaWhatsapp size={25} color="white" />} link={"https://wa.me/919042649000"}/>
-          <FooterIcon icon={<CiMail size={25} color="white" />} link={"mailto:natfooin@gmail.com"}/>
-          <FooterIcon icon={<CiYoutube size={25} color="white" />} link={"https://youtube.com/@natfookitchen95?si=4hSvWVSIKXkATsdg"} />
-          <FooterIcon icon={<FaFacebook size={35} color="white" />} link={"https://www.facebook.com/share/1FYPUa9BeU/"} />
-          <FooterIcon icon={<FaInstagram size={25} color="white" />} link={"https://www.instagram.com/natfoo_naturalfoods?igsh=MWxoam1oY2pkZTF2NQ=="} />
+          <FooterIcon
+            icon={<FaWhatsapp size={25} color="white" />}
+            link={"https://wa.me/919042649000"}
+          />
+          <FooterIcon
+            icon={<CiMail size={25} color="white" />}
+            link={"mailto:natfooin@gmail.com"}
+          />
+          <FooterIcon
+            icon={<CiYoutube size={25} color="white" />}
+            link={"https://youtube.com/@natfookitchen95?si=4hSvWVSIKXkATsdg"}
+          />
+          <FooterIcon
+            icon={<FaFacebook size={35} color="white" />}
+            link={"https://www.facebook.com/share/1FYPUa9BeU/"}
+          />
+          <FooterIcon
+            icon={<FaInstagram size={25} color="white" />}
+            link={
+              "https://www.instagram.com/natfoo_naturalfoods?igsh=MWxoam1oY2pkZTF2NQ=="
+            }
+          />
         </div>
       </div>
     </footer>
