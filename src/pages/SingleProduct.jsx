@@ -90,14 +90,12 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-          <div className="image-border-animate">
             <img
               src={productData.image}
               alt={productData.name}
               loading="       "
               
             />
-          </div>
           {productData["similar-products"] && (
             <div className="similar-products-container">
               <h3>What you find inside</h3>

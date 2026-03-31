@@ -21,7 +21,7 @@
 }
 
 .policy-header {
-  background-color: #363F25;
+  background-image: url("/public/laptop-footer-texture.png");
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -80,6 +80,10 @@
   padding-bottom: 8px;
 }
 
+.item-header h2{
+  font-size: large;
+}
+
 .section-icon {
   color: #D4AF37;
   font-size: 1.3rem;
@@ -105,6 +109,7 @@
 
 .policy-item p, 
 .policy-bullets li {
+  
   color: #444;
   line-height: 1.3;
   font-size: 1.2rem;

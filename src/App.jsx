@@ -50,11 +50,14 @@ const App = () => {
             path="/"
             element={
               <>
+              <div class="app-ct">
                 <Hero setActiveCategory={setActiveCategory} />
                 <div className="app-container">
                   <AllProducts setActiveCategory={setActiveCategory} />
+                
                   {/* <Discount /> */}
                 </div>
+              </div>
               </>
             }
           />
@@ -71,7 +74,7 @@ const App = () => {
           <Route
             path="/cart"
             element={
-              <div className="app-container">
+              <div className="app-container app-ct">
                 <Cart
                   setCartPrice={setCartPrice}
                   cartPrice={cartPrice}
@@ -98,7 +101,7 @@ const App = () => {
           <Route
             path="/about"
             element={
-              <div className="app-container">
+              <div className="app-container app-ct">
                 <About />
               </div>
             }

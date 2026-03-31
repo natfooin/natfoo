@@ -69,9 +69,11 @@
   align-items: center;
   text-align: center;
   font-size: 1.7rem;
+  font-family: Poppins, "sans-serif";
 }
 
 .footer h6 {
+  font-family: Balooda2-Bold, "sans-serif";
   color: var(--gold);
   font-size: 1.6rem ;
   letter-spacing: 1px;
@@ -82,6 +84,7 @@
 
 .footer-bottom .site-rights h6 ,.site-rights h6 span{
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .footer ul {
@@ -95,10 +98,12 @@
 .footer ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-transform: capitalize;
   transition: 0.3s ease;
   opacity: 0.75;
+font-family: Poppins, "sans-serif";
+
 }
 
 .footer ul li a:hover {
@@ -176,6 +181,9 @@
   .logo-para {
     padding-top: 2px;
     padding-bottom: 2px;
+  }
+  .logo-para p{
+    font-size: 0.8rem;
   }
   .policy {
     max-width: fit-content;

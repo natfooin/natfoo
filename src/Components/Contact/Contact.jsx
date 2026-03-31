@@ -16,6 +16,7 @@ import { IoSend } from "react-icons/io5";
 import { CiYoutube, CiMail } from "react-icons/ci";
 import Button from "../../Components/ui/Button/Button";
 import FooterIcon from "./../Footer/FooterIcon";
+import { RxFontStyle } from "react-icons/rx";
 
 const sendToWhatsApp = (data) => {
   const phoneNumber = "919042649000";
@@ -80,50 +81,63 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.number ||
-      !formData.message
-    ) {
-      alert("Please fill all fields");
-      return;
-    }
+  const phoneRegex = /^[0-9]{10}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    setView("loading");
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.number ||
+    !formData.message
+  ) {
+    alert("Please fill all fields");
+    return;
+  }
 
-    setTimeout(() => {
-      // sendToWhatsApp(formData);
-      fetch(
-        "https://script.google.com/macros/s/AKfycbwnadt4j0uRJ9YpmqLarVn2dVp7vwbGJ7-NJKmke-ODQqeEvhkQ7fZUOPWO8Rueu-y3/exec",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.number,
-            message: formData.message,
-          }),
-        },
-      );
-      setView("success");
-      setFormData({
-        name: "",
-        email: "",
-        number: "",
-        message: "",
-      });
-    }, 1000);
-  };
+  if (!phoneRegex.test(formData.number)) {
+    alert("Phone number must be exactly 10 digits");
+    return;
+  }
+
+  if (!emailRegex.test(formData.email)) {
+    alert("Enter a valid email address");
+    return;
+  }
+
+  setView("loading");
+
+  setTimeout(() => {
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwnadt4j0uRJ9YpmqLarVn2dVp7vwbGJ7-NJKmke-ODQqeEvhkQ7fZUOPWO8Rueu-y3/exec",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.number,
+          message: formData.message,
+        }),
+      }
+    );
+
+    setView("success");
+    setFormData({
+      name: "",
+      email: "",
+      number: "",
+      message: "",
+    });
+  }, 1000);
+};
 
   return (
     <div className="royal-wrapper">
       <div className="royal-viewport">
         <div className="heritage-panel">
           <div className="heritage-content">
-            <h1 className="royal-title" style={{color:"var(--gold)"}}>
+            <h1 className="royal-title" style={{color:"var(--gold)", fontFamily:"inherit"}}>
               Get In Touch
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
@@ -263,7 +277,7 @@ function Contact() {
                 <Button
                   text={`Submit `}
                   className="royal-submit-btn"
-                  styles={{fontSize:"1.8rem",fontWeight:"bold"}}
+                  styles={{fontSize:"1.5rem"}}
                 ></Button>
               </form>
             )}

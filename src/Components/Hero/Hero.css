@@ -63,8 +63,8 @@ body {
   padding: 0;
   width: 100%;
   margin: 0 auto;
-  background-image: url("/laptop-greenish-cream-texture.png");
   background-size: cover;
+
 }
 
 .heading {
@@ -258,6 +258,7 @@ body {
   border: 1px solid white;
   border-radius: 6px;
   transition: 0.3s;
+  
 }
 
 .buy-btn:hover {
