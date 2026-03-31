@@ -22,8 +22,8 @@ const Products = ({ id, image, name, price }) => {
             <h1 className="product-title">{name}</h1>
             <div className="footer-row">
               <div className="price-block">
-                <FaRupeeSign size={14} />{" "}
-                <span className="amount">{price}</span>
+                <FaRupeeSign size={window.innerWidth < 768 ? 10 : 14} />{" "}
+                <span className="amount">{price}{"  "}</span>
               </div>
               <div className="button">
                 <Button

@@ -7,13 +7,13 @@
 }
 
 .title {
-  font-size: clamp(1.2rem, 4vw, 3rem);
+  font-size: clamp(1.2rem, 3.5vw, 4rem);
   margin: 0;
   white-space: nowrap;
 }
 
 .sub-title {
-  font-size: clamp(0.9rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 2.8vw, 2rem);
   font-weight: 600;
   white-space: nowrap;
 }
