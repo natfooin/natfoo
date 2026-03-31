@@ -125,7 +125,7 @@ font-family: Poppins, "sans-serif";
 .site-rights h6,.site-rights h6 span {
   font-size: 1.25rem;
   opacity: 0.6;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
   
 }
@@ -156,13 +156,32 @@ font-family: Poppins, "sans-serif";
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
+
   .footer-left {
     grid-column: span 2;
     margin-bottom: 2rem;
+
+    /* ADD THIS */
+    align-items: center;
+    text-align: center;
   }
+
   .footer .footer-top .footer-left .logo {
     position: relative;
+    justify-content: center; /* center logo */
+  }
 
+  /* ADD THIS BLOCK */
+  .logo-para {
+    border-left: none;              /* remove left border */
+    border-top: 1px solid var(--gold); /* optional nice look */
+    padding-left: 0;
+    padding-top: 1rem;
+    text-align: justify;
+  }
+
+  .logo-para p {
+    margin: 0 auto; /* center paragraph width */
   }
 }
 
