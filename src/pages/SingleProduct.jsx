@@ -121,7 +121,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    loading="lazy"
+                    loading="eager"
                     
                   />
                   <span>{item.name}</span>
