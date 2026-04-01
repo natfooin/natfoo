@@ -6,6 +6,8 @@ import { CiYoutube, CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import logo from "/logo.png";
 
+import {
+  FaPhoneAlt} from "react-icons/fa";
 function Footer() {
   return (
     <footer className="footer">
@@ -57,15 +59,16 @@ function Footer() {
               <li>
                 <Link to="/">home</Link>
               </li>
+               <li>
+                <Link to="/about">about</Link>
+              </li>
               <li>
                 <Link to="/products">products</Link>
               </li>
               <li>
                 <Link to="/contact">contact</Link>
-              <li>
-                <Link to="/about">about</Link>
               </li>
-              </li>
+             
             </ul>
           </div>
         </div>
@@ -80,7 +83,7 @@ function Footer() {
 
         <div className="iconContainer">
           <FooterIcon
-            icon={<FaWhatsapp size={25} color="white" />}
+            icon={<FaPhoneAlt size={20} color="white" />}
             link={"https://wa.me/919962199321"}
           />
           <FooterIcon

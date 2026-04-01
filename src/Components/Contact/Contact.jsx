@@ -142,7 +142,7 @@ function Contact() {
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaBuilding className="ledger-icon" />
-                <span style={{fontSize:"18px"}}>Varietas Green Energy Pvt Ltd</span>
+                <span style={{fontSize:"18px",whiteSpace:"nowrap"}}>Varietas Green Energy Pvt Ltd</span>
               </div>
                <div
                 className="ledger-entry"
@@ -157,7 +157,7 @@ function Contact() {
                 </span>
               </div>
               <div
-                className="ledger-entry"
+                className="ledger-entry" 
                 style={{ alignItems: "flex-start", gap: "3px" }}
               >
                 <div style={{ paddingTop: "2px" }}>
@@ -176,13 +176,13 @@ function Contact() {
             <div className="contact-ledger" style={{ gap: "2px" }}>
               <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaPhoneAlt className="ledger-icon" />
-                <span>+91 98765 43210</span>
+                <span>+91 99621 99321</span>
               </div>
              
 
             <div className="iconContainer" style={{paddingTop:"1rem"}}>
               <FooterIcon
-                icon={<FaWhatsapp size={25} color="white" />}
+                icon={<FaPhoneAlt size={20} color="white" />}
                 link={"https://wa.me/919962199321"}
               />
               <FooterIcon
