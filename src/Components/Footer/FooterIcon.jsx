@@ -1,6 +1,6 @@
 import React from 'react'
 import './FooterIcon.css'
-function FooterIcon({icon,link}) {
+function FooterIcon({icon,link,linknum}) {
 
   return (
     <>

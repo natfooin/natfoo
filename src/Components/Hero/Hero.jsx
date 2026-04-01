@@ -36,7 +36,7 @@ function Hero({ setActiveCategory }) {
     <div className="hero-container">
       <Heading
         title="Designed by Nature. Crafted for Well being."
-        subTitle="Made with traditional methods, for today's lifestyle."
+        subTitle="Made the traditional way, for today's lifestyle."
         titleColor="var(--heading)"
         subTitleColor="var(--site-honey-badger)"
       />
