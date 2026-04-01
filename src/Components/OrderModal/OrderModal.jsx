@@ -145,7 +145,7 @@ function OrderModal({
 
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder="Email"
                 name="email"
                 onChange={(e) => handleEmailChange(e)}
                 required
@@ -153,7 +153,7 @@ function OrderModal({
 
               <input
   type="tel"
-  placeholder="Phone Number"
+  placeholder="Mobile"
   name="phone"
   maxLength={10}
   onChange={(e) => handleContactChange(e)}
