@@ -30,7 +30,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="policy">
+        <div className="policy" >
           <h6 style={{ marginBottom: "1.2rem" }}>policy information</h6>
           <ul>
             <li>
@@ -84,7 +84,7 @@ function Footer() {
         <div className="iconContainer">
           <FooterIcon
             icon={<FaPhoneAlt size={20} color="white" />}
-            link={"https://wa.me/919962199321"}
+            link={"tel:+91-996-219-9321"}
           />
           <FooterIcon
             icon={<CiMail size={25} color="white" />}

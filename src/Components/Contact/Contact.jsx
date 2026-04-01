@@ -142,7 +142,7 @@ function Contact() {
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaBuilding className="ledger-icon" />
-                <span style={{fontSize:"18px",whiteSpace:"nowrap"}}>Varietas Green Energy Pvt Ltd</span>
+                <span style={{fontSize:"17px",whiteSpace:"nowrap"}}>Varietas Green Energy Pvt Ltd</span>
               </div>
                <div
                 className="ledger-entry"
@@ -181,9 +181,10 @@ function Contact() {
              
 
             <div className="iconContainer" style={{paddingTop:"1rem"}}>
-              <FooterIcon
+              <FooterIcon 
                 icon={<FaPhoneAlt size={20} color="white" />}
-                link={"https://wa.me/919962199321"}
+                link={"tel:+91-996-219-9321"}
+                
               />
               <FooterIcon
                 icon={<CiMail size={25} color="white" />}
