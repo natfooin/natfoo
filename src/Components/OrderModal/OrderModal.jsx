@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./OrderModal.css";
-import logo from "/logo.png";
+import logo_R_Black from "/logo-R-black.png";
 import sendOrderToWhatsApp from "./whatsApp.js";
 import sendOrderEmail from "./email.js";
 import { Link } from "react-router-dom";
@@ -123,10 +123,10 @@ function OrderModal({
             <button className="close-btn" onClick={closeModal}>
               ✖
             </button>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"10px"}}>
               <img
-                src={logo}
-                width={"15%"}
+                src={logo_R_Black}
+                width={"30%"}
                 height={"10%"}
                 alt="logo"
                 loading="eager"

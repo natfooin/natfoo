@@ -12,6 +12,7 @@
 /* PAGE */
 
 .single-product-page-container {
+  overflow-x: hidden;
   width: 100%;
   background-image: url("/laptop-cream-texture.png");
   background-repeat: no-repeat;
@@ -87,7 +88,7 @@
 /* DESCRIPTION */
 
 .product-desc {
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   color: #e8e2d6;
   opacity: 0.95;
@@ -233,6 +234,7 @@
   gap: 10px;
   margin-bottom: 8px;
   text-decoration: none;
+  align-items: center;
 }
 
 .similar-product-item img {

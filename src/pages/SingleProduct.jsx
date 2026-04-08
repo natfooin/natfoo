@@ -72,7 +72,11 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
 
     setQuantity(1);
     navi(-1);
-    toast(`${productData.name} added to cart!`, {type:"success"}, {position:"bottom-right"});
+    toast(
+      `${productData.name} added to cart!`,
+      { type: "success" },
+      { position: "bottom-right" },
+    );
   };
 
   useEffect(() => {
@@ -90,12 +94,11 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
       <div className="product-wrapper">
         {/* IMAGE */}
         <div className="product-display">
-            <img
-              src={productData.image}
-              alt={productData.name}
-              loading="       "
-              
-            />
+          <img
+            src={productData.image}
+            alt={productData.name}
+            loading="       "
+          />
           {productData["similar-products"] && (
             <div className="similar-products-container">
               <h3>What you find inside</h3>
@@ -105,7 +108,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                   src={productData["similar-products"][0]}
                   alt={productData["similar-products"][1]}
                 />
-                <span>{productData["similar-products"][1]}</span>
+                <span>{productData["similar-products"][1]} ( 10 nos )</span>
               </div>
             </div>
           )}
@@ -135,9 +138,9 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
         <div className="product-details">
           <h1 className="product-head">{productData.name}</h1>
 
-          <p className="product-catch">
+          {/* <p className="product-catch">
             <TiTick color="lightgreen" /> Healthy • Tasty • Natural
-          </p>
+          </p> */}
 
           <hr style={{ border: "1px solid gold" }} />
           <p className="product-desc">
@@ -150,29 +153,30 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
           {productData.desc3 && (
             <p className="product-desc">{productData.desc3}</p>
           )}
-          
 
           {/* PRICE */}
-          <span>
-            <h3 className="price">
-              <FaRupeeSign size={22} />
-              {productData.price}
-            </h3>
-
-            <h3 className="discount-amount">
-              <DiscountToolTip
-                label="View Discounts"
-                styles={{ color: "white" }}
-                slabs={slabs}
-              />
-            </h3>
-          </span>
 
           {/* QUANTITY */}
-          <div className="quatity-setter">
-            <button onClick={subQuantity}>-</button>
-            <span>{quantity}</span>
-            <button onClick={addQuantity}>+</button>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <div className="quatity-setter">
+              <button onClick={subQuantity}>-</button>
+              <span>{quantity}</span>
+              <button onClick={addQuantity}>+</button>
+            </div>
+            <span>
+              <h3 className="price">
+                <FaRupeeSign size={22} />
+                {productData.price}
+              </h3>
+
+              <h3 className="discount-amount">
+                <DiscountToolTip
+                  label="View Discounts"
+                  styles={{ color: "white" }}
+                  slabs={slabs}
+                />
+              </h3>
+            </span>
           </div>
 
           {/* ADD TO CART */}
