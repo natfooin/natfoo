@@ -20,10 +20,7 @@
 }
 
 .heritage-panel {
-  background: var(--dark-green);
-  background-image:
-    linear-gradient(rgba(54, 63, 37, 0.9), rgba(54, 63, 37, 0.9)),
-    url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  background: url("./../../../public/tab-phone-footer-contact-green.png")   ;
   color: white;
   padding: 4rem ;
   display: flex;
@@ -66,9 +63,11 @@
   margin-bottom: 1.2rem;
   font-size: 1.3rem;
   opacity: 0.9;
-  font-family: 'poppins' !important;
+  
 }
-
+ .ledger-entry span{
+  font-family:  "poppins" !important;
+  }
 .ledger-icon {
   color: var(--gold);
   flex-shrink: 0;
@@ -205,10 +204,9 @@
   .ledger-entry {
     justify-content: center;
     text-align: center;
-    font-family: sans-serif !important;
   }
   .ledger-entry span{
-  font-family:  "poppins", sans-serif !important;
+  font-family:  "poppins" !important;
   }
   .royal-socials {
     justify-content: center;
@@ -244,4 +242,5 @@
     padding: 14px 20px;
     font-size: 0.9rem;
   }
+ 
 }

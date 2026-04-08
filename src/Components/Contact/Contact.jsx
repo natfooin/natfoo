@@ -137,7 +137,7 @@ function Contact() {
       <div className="royal-viewport">
         <div className="heritage-panel">
           <div className="heritage-content">
-            <h1 className="royal-title" style={{color:"var(--gold)", fontFamily:"inherit"}}>
+            <h1 className="royal-title" style={{color:"var(--gold)",fontFamily:"'Balooda2', serif"}}>
               Get In Touch
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
@@ -152,7 +152,7 @@ function Contact() {
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  Varietas Green Energy Pvt Ltd Registered Office: K 804, AWHO,
+                  Registered Office: K 804, AWHO,
                   Nerul, Navi Mumbai - 400706. Maharashtra. India.
                 </span>
               </div>
