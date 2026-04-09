@@ -152,8 +152,8 @@ function Contact() {
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  <span style={{fontSize:'18px'}}>Registered Office:</span> K 804, AWHO,
-                  Nerul, Navi Mumbai - 400706. Maharashtra. India.
+                  <span style={{fontSize:'16px'}}>Registered Office:</span> K 804, AWHO,
+                  Nerul,  <span style={{whiteSpace:"nowrap"}}>Navi Mumbai - 400706.</span> Maharashtra. India.
                 </span>
               </div>
               <div
@@ -164,7 +164,7 @@ function Contact() {
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  <span style={{fontSize:'18px'}}>Corporate Office:</span> 54, 2nd Street, Sriramapuram, Srirangam,
+                  <span style={{fontSize:'16px'}}>Corporate Office:</span> 54, 2nd Street, Sriramapuram, Srirangam,
                    <span style={{whiteSpace:"nowrap"}}>Trichy - 620006.</span> Tamilnadu. India.
                 </span>
               </div>
