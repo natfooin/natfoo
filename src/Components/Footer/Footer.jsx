@@ -15,7 +15,7 @@ function Footer() {
         <div className="footer-left">
           <div className="logo">
             <Link to="/">
-              <img src={logo} alt="Natfoo Logo" loading="lazy" />
+              <img src={logo} alt="Natfoo Logo" loading="eager" />
             </Link>
           </div>
           <div className="logo-para">

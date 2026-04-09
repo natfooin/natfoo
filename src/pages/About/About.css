@@ -1,6 +1,6 @@
 .about-section {
   background: transparent;
-  padding: 80px 20px;
+  padding: 10px 20px 80px;
 }
 
 .about-header {
@@ -31,21 +31,24 @@
   line-height: 1.8;
   color: var(--heading);
 }
-.about-text p{
+
+.about-text p {
   text-align: justify;
 }
+
 /* Clean Bento */
 .about-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 120px;
   gap: 10px;
 }
 
+/* Square + responsive images */
 .about-gallery img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  aspect-ratio: 1 / 1; /* ✅ perfect square */
+  object-fit: cover; /* desktop */
   border-radius: 10px;
   transition: 0.3s;
 }
@@ -73,7 +76,13 @@
   .about-gallery {
     order: 2;
   }
+
+  .about-gallery img {
+    object-fit: cover; /* ✅ no crop */
+    background: #111; /* optional fill space */
+  }
 }
+
 @media (max-width: 393px) {
   .about-text {
     font-size: 1.1rem;

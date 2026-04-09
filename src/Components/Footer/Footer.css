@@ -162,7 +162,7 @@
 }
 @media (max-width: 768px) {
   .footer {
-    background-image: url("public/tab-phone-footer-contact-green.png");
+    background-image: url("/tab-phone-footer-contact-green.png");
     background-position: bottom center;
   }
   footer .footer-top .footer-left {

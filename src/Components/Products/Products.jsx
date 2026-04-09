@@ -13,7 +13,7 @@ const Products = ({ id, image, name, price }) => {
               src={image}
               alt="Product"
               className="card-img"
-              loading="lazy"
+              loading="eager"
             />
           </div>
 

@@ -137,7 +137,7 @@ function Contact() {
       <div className="royal-viewport">
         <div className="heritage-panel">
           <div className="heritage-content">
-            <h1 className="royal-title" style={{color:"var(--gold)", fontFamily:"inherit"}}>
+            <h1 className="royal-title" style={{color:"var(--gold)",fontFamily:"'Balooda2', serif"}}>
               Get In Touch
             </h1>
              <div className="ledger-entry" style={{ gap: "5px" }}>
@@ -152,8 +152,8 @@ function Contact() {
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  Varietas Green Energy Pvt Ltd <span style={{fontSize:'18px'}}>Registered Office:</span> K 804, AWHO,
-                  Nerul, <span style={{whiteSpace:"nowrap"}}>Navi Mumbai - 400706.</span> Maharashtra. India.
+                  Registered Office: K 804, AWHO,
+                  Nerul, Navi Mumbai - 400706. Maharashtra. India.
                 </span>
               </div>
               <div
@@ -171,7 +171,7 @@ function Contact() {
             </div>
               <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaEnvelope className="ledger-icon" />
-                <span>natfooin@gmail.com</span>
+                <span>natfoocare@gmail.com</span>
               </div>
             <div className="contact-ledger" style={{ gap: "2px" }}>
               <div className="ledger-entry" style={{ gap: "5px" }}>

@@ -79,7 +79,7 @@ function Hero({ setActiveCategory }) {
                 <img
                   src={product.image}
                   alt={product.name}
-                  loading="lazy"
+                  loading="eager"
                   
                 />
 

@@ -62,7 +62,7 @@ const CartProduct = ({
           <img
             src={product?.image}
             alt={product?.name}
-            loading="lazy"
+            loading="eager"
           />
         </div>
         <div className="cart-product-mini-content">
@@ -83,7 +83,7 @@ const CartProduct = ({
           >
             <GrSubtract />
           </button>
-          <span style={{fontSize:"20px"}}>{productQuantity}</span>
+          <span style={{fontSize:"18px"}}>{productQuantity}</span>
           <button
             className="btn-add quantity-btn"
             onClick={(amount) => addCartProductQuantity(product?.price)}
