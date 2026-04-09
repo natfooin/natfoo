@@ -146,26 +146,26 @@ function Contact() {
               </div>
                <div
                 className="ledger-entry"
-                style={{ alignItems: "flex-start", gap: "3px" }}
+                style={{ alignItems:"flex-start", gap: "3px" }}
               >
-                <div style={{ paddingTop: "2px" }}>
+                <div style={{ paddingTop: "1.5%"}}>
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  Varietas Green Energy Pvt Ltd Registered Office: K 804, AWHO,
-                  Nerul, Navi Mumbai - 400706. Maharashtra. India.
+                  Varietas Green Energy Pvt Ltd <span style={{fontSize:'18px'}}>Registered Office:</span> K 804, AWHO,
+                  Nerul, <span style={{whiteSpace:"nowrap"}}>Navi Mumbai - 400706.</span> Maharashtra. India.
                 </span>
               </div>
               <div
                 className="ledger-entry" 
                 style={{ alignItems: "flex-start", gap: "3px" }}
               >
-                <div style={{ paddingTop: "2px" }}>
+                <div style={{ paddingTop: "1.5%" }}>
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  Corporate Office: 54, 2nd Street, Sriramapuram, Srirangam,
-                  Trichy - 620006. Tamilnadu. India.
+                  <span style={{fontSize:'18px'}}>Corporate Office:</span> 54, 2nd Street, Sriramapuram, Srirangam,
+                   <span style={{whiteSpace:"nowrap"}}>Trichy - 620006.</span> Tamilnadu. India.
                 </span>
               </div>
             </div>
