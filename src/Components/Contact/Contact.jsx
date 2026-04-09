@@ -152,7 +152,7 @@ function Contact() {
                   <FaMapMarkerAlt color="gold" />
                 </div>
                 <span>
-                  Registered Office: K 804, AWHO,
+                  <span style={{fontSize:'18px'}}>Registered Office:</span> K 804, AWHO,
                   Nerul, Navi Mumbai - 400706. Maharashtra. India.
                 </span>
               </div>
