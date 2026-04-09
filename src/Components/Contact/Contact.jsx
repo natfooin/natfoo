@@ -171,7 +171,7 @@ function Contact() {
             </div>
               <div className="ledger-entry" style={{ gap: "5px" }}>
                 <FaEnvelope className="ledger-icon" />
-                <span>natfooin@gmail.com</span>
+                <span>natfoocare@gmail.com</span>
               </div>
             <div className="contact-ledger" style={{ gap: "2px" }}>
               <div className="ledger-entry" style={{ gap: "5px" }}>

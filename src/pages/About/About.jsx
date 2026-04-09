@@ -18,7 +18,7 @@ const About = () => {
 
       <div className="about-container">
         <div className="about-gallery">
-          <img src={img1} className="g1 big" loading="eager"  />
+          <img src={img1} className="g1 big" loading="eager" />
           <img src={img2} className="g2" loading="eager" />
           <img src={img3} className="g3" loading="eager" />
           <img src={img4} className="g4" loading="eager" />
