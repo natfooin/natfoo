@@ -30,6 +30,7 @@ import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
 import SuccessModal from "./Components/SuccessModal/SuccessModal";
 import ShippingPage from "./Components/PolicyPage/ShippingPage";
 import RefundPage from "./Components/PolicyPage/RefundPage";
+import Feedbackform from "./pages/Feedbackform/Feedbackform";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -50,14 +51,14 @@ const App = () => {
             path="/"
             element={
               <>
-              <div class="app-ct">
-                <Hero setActiveCategory={setActiveCategory} />
-                <div className="app-container">
-                  <AllProducts setActiveCategory={setActiveCategory} />
-                
-                  {/* <Discount /> */}
+                <div class="app-ct">
+                  <Hero setActiveCategory={setActiveCategory} />
+                  <div className="app-container">
+                    <AllProducts setActiveCategory={setActiveCategory} />
+
+                    {/* <Discount /> */}
+                  </div>
                 </div>
-              </div>
               </>
             }
           />
@@ -121,6 +122,7 @@ const App = () => {
             path="/refund-and-cancellation-policy"
             element={<TermsPage />}
           />
+          <Route path="/feedback-form" element={<Feedbackform />} />
         </Route>
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
@@ -145,7 +147,7 @@ const App = () => {
         title="Thank you! Your order has been placed successfully."
         message="Please complete your purchase using the secure payment link sent to your email and mobile."
       />
-      <ToastContainer position="bottom-left" autoClose={2000}  />
+      <ToastContainer position="bottom-left" autoClose={2000} />
     </>
   );
 };
