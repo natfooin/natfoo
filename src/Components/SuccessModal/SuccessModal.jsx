@@ -56,7 +56,7 @@ const SuccessModal = ({
       <div className="modal-overlay">
         <div className="modal-box">
           {/* Success Icon */}
-          <div className="success-icon"><img src="/package-done.gif" alt="Success" width={"55px"} style={{borderRadius:"50%"}}/></div>
+          <div className="success-icon"><img src="/package-done.gif" alt="Success" width={"55px"} style={{borderRadius:"50%"}} draggable = "false"/></div>
 
           {/* Title */}
           <h2 className="modal-title">{title}</h2>

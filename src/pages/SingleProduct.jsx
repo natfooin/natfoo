@@ -98,6 +98,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
             src={productData.image}
             alt={productData.name}
             loading="       "
+            draggable = "false"
           />
           {productData["similar-products"] && (
             <div className="similar-products-container">
@@ -107,6 +108,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                 <img
                   src={productData["similar-products"][0]}
                   alt={productData["similar-products"][1]}
+                  draggable = "false"
                 />
                 <span>{productData["similar-products"][1]} ( 10 nos )</span>
               </div>
@@ -125,6 +127,7 @@ const SingleProduct = ({ setCartPrice, setCartQuantity, setCartProducts }) => {
                     src={item.image}
                     alt={item.name}
                     loading="eager"
+                    draggable = "false"
                     
                   />
                   <span>{item.name}</span>

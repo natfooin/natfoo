@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
         alt="WhatsApp"
         className="whatsapp-icon"
         loading="eager"
-        
+        draggable = "false"
       />
       <span className="whatsapp-text">WhatsApp</span>
     </div>

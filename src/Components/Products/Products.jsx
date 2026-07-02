@@ -14,6 +14,7 @@ const Products = ({ id, image, name, price }) => {
               alt="Product"
               className="card-img"
               loading="eager"
+              draggable = "false"
             />
           </div>
 

@@ -130,6 +130,7 @@ function OrderModal({
                 height={"10%"}
                 alt="logo"
                 loading="eager"
+                draggable = "false"
               />
               <h2>Delivery Details</h2>
             </div>

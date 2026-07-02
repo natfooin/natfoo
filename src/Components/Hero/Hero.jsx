@@ -80,7 +80,7 @@ function Hero({ setActiveCategory }) {
                   src={product.image}
                   alt={product.name}
                   loading="eager"
-                  
+                  draggable = "false"
                 />
 
                 <div className="slide-overlay">

@@ -63,6 +63,7 @@ const CartProduct = ({
             src={product?.image}
             alt={product?.name}
             loading="eager"
+            draggable = "false"
           />
         </div>
         <div className="cart-product-mini-content">
