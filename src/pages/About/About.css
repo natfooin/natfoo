@@ -36,7 +36,6 @@
   text-align: justify;
 }
 
-/* Clean Bento */
 .about-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
