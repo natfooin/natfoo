@@ -64,10 +64,8 @@ body {
 
 .header-right {
   justify-self: end;
-
   display: flex;
   align-items: center;
-
   gap: clamp(0.6rem, 1.5vw, 1.2rem);
 }
 

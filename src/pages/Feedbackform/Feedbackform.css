@@ -6,8 +6,14 @@
 body {
   background-color: #f4f7fc;
   margin: 0;
-  /* padding: 16px; */
   min-height: 100vh;
+
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
 }
 
 .feedback-container {
@@ -16,10 +22,12 @@ body {
   background-color: transparent;
   border-radius: 8px;
   overflow: hidden;
+
 }
 
 .feedback-header {
-  background-color: #0b3c74;
+  background: url('./../../../public/laptop-navbar.png') ;
+  background-position: center ;
   color: #ffffff;
   padding: 24px 20px;
   border-top-left-radius: 8px;
@@ -37,7 +45,7 @@ body {
   margin: 0;
   font-size: 0.85rem;
   line-height: 1.4;
-  color: #cbdcf2;
+  /* color: #cbdcf2; */
 }
 
 .feedback-form {

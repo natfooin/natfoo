@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoSendOutline } from "react-icons/io5";
-
+import Button from './../../Components/ui/Button/Button';
 import './Feedbackform.css';
 const Feedbackform = () => {
   const [formData, setFormData] = useState({
@@ -26,6 +26,7 @@ const Feedbackform = () => {
   };
 
   return (
+    <div className="box">
     <div className="feedback-container">
       <div className="feedback-header">
         <h2>Help Us Improve</h2>
@@ -91,11 +92,9 @@ const Feedbackform = () => {
             ></textarea>
           </div>
         </div>
-        <button type="submit" className="submit-btn">
-          <IoSendOutline className="send-icon" />
-          Submit Feedback
-        </button>
+       <Button text="submit" />
       </form>
+    </div>
     </div>
   );
 };
