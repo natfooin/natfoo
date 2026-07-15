@@ -50,7 +50,7 @@ function NavBar({ cartQuantity }) {
 
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="Millet Logo" loading="eager" />
+          <img src={logo} alt="Millet Logo" loading="eager" draggable = "false"/>
         </Link>
       </div>
 

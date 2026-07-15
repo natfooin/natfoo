@@ -15,7 +15,7 @@ function OpeningScreen() {
 
   return (
     <div className="opening-screen">
-      <img src={logo} alt="logo" className="opening-logo" loading="eager" />
+      <img src={logo} alt="logo" className="opening-logo" loading="eager" draggable = "false"/>
     </div>
   );
 }

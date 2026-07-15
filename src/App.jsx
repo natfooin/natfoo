@@ -39,6 +39,11 @@ const App = () => {
   const [discount, setDiscount] = useState(0.0);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
+
+  document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+  });
+  
   return (
     <>
       {/* <NavBar cartQuantity={cartQuantity} /> */}

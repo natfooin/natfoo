@@ -18,15 +18,20 @@ const About = () => {
 
       <div className="about-container">
         <div className="about-gallery">
-          <img src={img1} className="g1 big" loading="eager" />
-          <img src={img2} className="g2" loading="eager" />
-          <img src={img3} className="g3" loading="eager" />
-          <img src={img4} className="g4" loading="eager" />
-          <img src={img5} className="g5" loading="eager" />
-          <img src={img6} className="g6" loading="eager" />
-          {/* <img src={img1} className="g7" loading="eager"/>
-      <img src={img1} className="g8" loading="eager"/>
-      <img src={img1} className="g9" loading="eager"/> */}
+          <img
+            src={img1}
+            className="g1 big"
+            loading="eager"
+            draggable="false"
+          />
+          <img src={img2} className="g2" loading="eager" draggable="false" />
+          <img src={img3} className="g3" loading="eager" draggable="false" />
+          <img src={img4} className="g4" loading="eager" draggable="false" />
+          <img src={img5} className="g5" loading="eager" draggable="false" />
+          <img src={img6} className="g6" loading="eager" draggable="false" />
+          {/* <img src={img1} className="g7" loading="eager" draggable = "false"/>
+      <img src={img1} className="g8" loading="eager" draggable = "false"/>
+      <img src={img1} className="g9" loading="eager" draggable = "false"/> */}
         </div>
 
         <div className="about-text">
