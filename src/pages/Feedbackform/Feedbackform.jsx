@@ -26,7 +26,7 @@ const Feedbackform = () => {
   const handleStarClick = (starValue) => {
     setRating(starValue);
     setReviewAnswers({}); 
-    
+
   };
 
   const handleOptionClick = (questionId, option) => {
@@ -89,7 +89,7 @@ const Feedbackform = () => {
     console.log(finalFormSubmissionData);
     console.log('------------------------------------');
 
-    alert('Feedback and review submitted successfully! Check your browser console for full details.');
+    alert('Feedback and review submitted successfully!');
   };
 
   return (
