@@ -113,6 +113,10 @@ const App = () => {
             }
           />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Funtime routes fixed with /funtime */}
+          {/* <Route path="/funtime" element={<Funtime />} /> */}
+          
           <Route path="/terms-and-condition" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
           <Route
