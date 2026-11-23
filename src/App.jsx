@@ -31,6 +31,7 @@ import SuccessModal from "./Components/SuccessModal/SuccessModal";
 import ShippingPage from "./Components/PolicyPage/ShippingPage";
 import RefundPage from "./Components/PolicyPage/RefundPage";
 import Feedbackform from "./pages/Feedbackform/Feedbackform";
+import FunTime from "./Components/FunTime/FunTime";
 const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
@@ -115,7 +116,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
 
           {/* Funtime routes fixed with /funtime */}
-          {/* <Route path="/funtime" element={<Funtime />} /> */}
+          <Route path="/funtime" element={<FunTime />} />
           
           <Route path="/terms-and-condition" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PolicyPage />} />
