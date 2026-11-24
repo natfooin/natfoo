@@ -4,10 +4,16 @@ import Button from './../../Components/ui/Button/Button';
 import './Feedbackform.css';
 
 const Feedbackform = () => {
+  const [isTravelling, setIsTravelling] = useState(true);
+
   const [formData, setFormData] = useState({
     fullName: '',
     contactNumber: '',
     emailAddress: '',
+    trainNumber: '',
+    seatNumber: '',
+    coachNumber: '',
+    pnrNumber: '',
     additionalFeedback: ''
   });
 
@@ -25,8 +31,7 @@ const Feedbackform = () => {
 
   const handleStarClick = (starValue) => {
     setRating(starValue);
-    setReviewAnswers({}); 
-
+    setReviewAnswers({});
   };
 
   const handleOptionClick = (questionId, option) => {
@@ -36,23 +41,47 @@ const Feedbackform = () => {
     }));
   };
 
-  const negativeQuestions = [
-    { id: "q1", label: "What aspect of the snack disappointed you the most?" ,newID:"N1"},
-    { id: "q2", label: "How can we improve this product to meet your expectations?" ,newID:"N2"},
-    { id: "q3_neg", label: "Would you give this flavor another chance if we modified it?" ,newID:"N3"},
+const negativeQuestions = [
+    {
+      id: "q1",
+      label: "How would you rate the taste and seasoning of the snack?",
+      newID: "N1"
+    },
+    {
+      id: "q2",
+      label: "How was the freshness and crunchiness of the product?",
+      newID: "N2"
+    },
+    {
+      id: "q3_neg",
+      label: "How would you rate the packaging condition and sealing?",
+      newID: "N3"
+    },
   ];
 
   const positiveQuestions = [
-    { id: "q3_pos", label: "What did you love most about your recent snack purchase?" ,newID:"P1"},
-    { id: "q4", label: "How often do you see yourself purchasing this item?" ,newID:"P2"},
-    { id: "q5", label: "Any creative flavor suggestions you would like us to launch next?" ,newID:"P3"},
+    {
+      id: "q3_pos",
+      label: "How would you rate the overall flavor and crispiness?",
+      newID: "P1"
+    },
+    {
+      id: "q4",
+      label: "How satisfied are you with the quantity and value for money?",
+      newID: "P2"
+    },
+    {
+      id: "q5",
+      label: "How would you rate the packaging quality and delivery condition?",
+      newID: "P3"
+    },
   ];
 
   const activeQuestions = rating > 0 ? (rating <= 3 ? negativeQuestions : positiveQuestions) : [];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (rating === 0) {
       alert('Please select a rating before submitting.');
       return;
@@ -77,9 +106,16 @@ const Feedbackform = () => {
     });
 
     const finalFormSubmissionData = {
+      travelStatus: isTravelling ? 'Travelling' : 'Not Travelling',
       fullName: formData.fullName,
       contactNumber: `+91 ${formData.contactNumber}`,
       emailAddress: formData.emailAddress,
+      ...(isTravelling && {
+        trainNumber: formData.trainNumber,
+        coachNumber: formData.coachNumber,
+        seatNumber: formData.seatNumber,
+        pnrNumber: formData.pnrNumber,
+      }),
       additionalFeedback: formData.additionalFeedback,
       starRating: rating,
       allReviewAnswers: structuredReviewAnswers
@@ -99,7 +135,27 @@ const Feedbackform = () => {
           <h2>Help Us Improve</h2>
           <p>Your taste buds matter. Share your thoughts about your recent snack purchase to help us deliver world-class flavors and quality.</p>
         </div>
-        
+
+        {/* Mode Switch Centered Below Header */}
+        <div className="mode-switch-wrapper">
+          <div className="mode-switch">
+            <button
+              type="button"
+              className={`switch-btn ${isTravelling ? 'active' : ''}`}
+              onClick={() => setIsTravelling(true)}
+            >
+              Travelling
+            </button>
+            <button
+              type="button"
+              className={`switch-btn ${!isTravelling ? 'active' : ''}`}
+              onClick={() => setIsTravelling(false)}
+            >
+              Not Travelling
+            </button>
+          </div>
+        </div>
+
         <form className="feedback-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group flex-1">
@@ -114,13 +170,13 @@ const Feedbackform = () => {
                 required
               />
             </div>
-            
+
             <div className="form-group flex-1">
               <label htmlFor="contactNumber">Phone Number <span className="required-dot">*</span></label>
               <div className="phone-input-wrapper">
                 <span className="country-code">+91</span>
                 <input
-                  type="text" 
+                  type="text"
                   inputMode="numeric"
                   pattern="[0-9]*"
                   id="contactNumber"
@@ -147,7 +203,69 @@ const Feedbackform = () => {
                 required
               />
             </div>
-          </div>  
+          </div>
+
+          {/* Conditional Train Travel Details */}
+          {isTravelling && (
+            <div className="travel-details-wrapper">
+              <div className="form-row">
+                <div className="form-group flex-1">
+                  <label htmlFor="trainNumber">Train Number / Name <span className="required-dot">*</span></label>
+                  <input
+                    type="text"
+                    id="trainNumber"
+                    name="trainNumber"
+                    placeholder="e.g. 12627 / Karnataka Exp"
+                    value={formData.trainNumber}
+                    onChange={handleInputChange}
+                    required={isTravelling}
+                  />
+                </div>
+
+                <div className="form-group flex-1">
+                  <label htmlFor="coachNumber">Coach Number <span className="required-dot">*</span></label>
+                  <input
+                    type="text"
+                    id="coachNumber"
+                    name="coachNumber"
+                    placeholder="e.g. B2, S4, A1"
+                    value={formData.coachNumber}
+                    onChange={handleInputChange}
+                    required={isTravelling}
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group flex-1">
+                  <label htmlFor="seatNumber">Seat / Berth Number <span className="required-dot">*</span></label>
+                  <input
+                    type="text"
+                    id="seatNumber"
+                    name="seatNumber"
+                    placeholder="e.g. 42 (Lower)"
+                    value={formData.seatNumber}
+                    onChange={handleInputChange}
+                    required={isTravelling}
+                  />
+                </div>
+
+                <div className="form-group flex-1">
+                  <label htmlFor="pnrNumber">PNR Number (Optional)</label>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    maxLength="10"
+                    id="pnrNumber"
+                    name="pnrNumber"
+                    placeholder="10-digit PNR"
+                    value={formData.pnrNumber}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="form-row">
             <div className="form-group">
