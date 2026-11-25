@@ -1,12 +1,8 @@
-// All content for Fun Time lives here, so it is easy to edit.
-// To switch Reading Comprehension on later: set `ready: true` for it below
-// and build the game inside the `reading` case of GameRouter (FunTimeGames.jsx).
-
 export const ageCategories = [
   { id: "kids", label: "Kids", range: "Ages 5–8", icon: "🧒", tagline: "Bright, easy & super fun" },
-  { id: "tweens", label: "Tweens", range: "Ages 9–12", icon: "🧑", tagline: "Quick thinking, big laughs" },
   { id: "teens", label: "Teens", range: "Ages 13–17", icon: "🧑‍🎓", tagline: "Fast, sharp & competitive" },
-  { id: "adults", label: "Adults", range: "Ages 18+", icon: "👨‍💼", tagline: "Real brain-teasers to beat" },
+  { id: "adults", label: "Adults", range: "Ages 18–44", icon: "👨‍💼", tagline: "Real brain-teasers to beat" },
+  { id: "elders", label: "Elders", range: "Ages 45+", icon: "🧓", tagline: "Classic wit, calm & sharp" },
 ];
 
 export const subCategories = [
@@ -21,16 +17,14 @@ export const gameInfo = {
   brainrot: { title: "Meme Rush", how: "Tap ONLY the glowing target emoji. Dodge the decoys!" },
   puzzle: {
     kids: { title: "Memory Match", how: "Flip two cards at a time and find all the matching pairs." },
-    tweens: { title: "Slide Puzzle", how: "Slide the tiles into order from 1 to 8. Arrow keys work too!" },
     teens: { title: "Lights Out", how: "Tap a light to flip it and its neighbours. Switch them all off." },
     adults: { title: "Slide Puzzle 4×4", how: "Slide the tiles into order from 1 to 15. Arrow keys work too!" },
+    elders: { title: "Slide Puzzle", how: "Slide the tiles into order from 1 to 8. Arrow keys work too!" },
   },
 };
 
-// Seconds per riddle (0 = no timer)
-export const RIDDLE_TIMER = { kids: 0, tweens: 25, teens: 20, adults: 20 };
+export const RIDDLE_TIMER = { kids: 0, teens: 20, adults: 20, elders: 30 };
 
-// a = correct answer, w = wrong options
 export const riddles = {
   kids: [
     { q: "I have a face and two hands, but no arms or legs. What am I?", a: "A clock", w: ["A cat", "A robot", "The moon"], hint: "I help you know what time it is." },
@@ -41,16 +35,6 @@ export const riddles = {
     { q: "I come in pairs, you wear me on your feet, and I may have laces. What am I?", a: "Shoes", w: ["Hats", "Gloves", "Scarves"], hint: "You put them on before going outside." },
     { q: "I am round, I glow in the night sky, and I change my shape. What am I?", a: "The moon", w: ["The sun", "A cloud", "A plane"], hint: "Sometimes I look like a banana!" },
     { q: "I have lots of pages and I tell you stories. What am I?", a: "A book", w: ["A spoon", "A ball", "A cup"], hint: "You read me at bedtime." },
-  ],
-  tweens: [
-    { q: "What has keys but can't open any locks?", a: "A piano", w: ["A door", "A treasure chest", "A map"], hint: "Musicians press them." },
-    { q: "What gets wetter the more it dries?", a: "A towel", w: ["A sponge", "The sun", "A sock"], hint: "You use it after a shower." },
-    { q: "What has a neck but no head?", a: "A bottle", w: ["A shirt", "A giraffe statue", "A guitar string"], hint: "Water or juice comes in it." },
-    { q: "The more of me you take, the more you leave behind. What am I?", a: "Footsteps", w: ["Photos", "Coins", "Candy"], hint: "Think about walking on a sandy beach." },
-    { q: "What can travel around the world while staying in one corner?", a: "A stamp", w: ["A plane", "A shadow", "A compass"], hint: "It sticks to the corner of an envelope." },
-    { q: "What has many teeth but can never bite?", a: "A comb", w: ["A shark", "A saw blade toy", "A zipper bag"], hint: "You use it on your hair." },
-    { q: "What begins with T, ends with T, and has T inside it?", a: "A teapot", w: ["A tent", "A treat", "A tablet"], hint: "It's something you pour from." },
-    { q: "I'm tall when I'm young and short when I'm old. What am I?", a: "A candle", w: ["A tree", "A pencil case", "A kid"], hint: "I melt as I give light." },
   ],
   teens: [
     { q: "What can you catch but never throw?", a: "A cold", w: ["A ball", "A frisbee", "A fish"], hint: "Achoo!" },
@@ -72,17 +56,25 @@ export const riddles = {
     { q: "What is so fragile that saying its name breaks it?", a: "Silence", w: ["Glass", "A promise", "A secret"], hint: "Say it out loud." },
     { q: "I'm not alive, but I grow. I don't have lungs, but I need air. Water kills me. What am I?", a: "Fire", w: ["A plant", "Mold", "A balloon"], hint: "Handle with care." },
   ],
+  elders: [
+    { q: "What has keys but can't open any locks?", a: "A piano", w: ["A door", "A treasure chest", "A map"], hint: "Musicians press them." },
+    { q: "What gets wetter the more it dries?", a: "A towel", w: ["A sponge", "The sun", "A sock"], hint: "You use it after a bath." },
+    { q: "What has a neck but no head?", a: "A bottle", w: ["A shirt", "A giraffe statue", "A guitar string"], hint: "Water or tea comes in it." },
+    { q: "The more of me you take, the more you leave behind. What am I?", a: "Footsteps", w: ["Photos", "Coins", "Memories"], hint: "Think about walking on a sandy beach." },
+    { q: "What can travel around the world while staying in one corner?", a: "A stamp", w: ["A plane", "A shadow", "A compass"], hint: "It sticks to the corner of an envelope." },
+    { q: "What has many teeth but can never bite?", a: "A comb", w: ["A shark", "A saw blade", "A zipper"], hint: "You use it on your hair." },
+    { q: "What begins with T, ends with T, and has T inside it?", a: "A teapot", w: ["A tent", "A treat", "A ticket"], hint: "It's something you pour from." },
+    { q: "I'm tall when I'm young and short when I'm old. What am I?", a: "A candle", w: ["A tree", "A pencil", "A cane"], hint: "I melt as I give light." },
+  ],
 };
 
-// Meme Rush settings per age group
 export const rushConfig = {
   kids: { duration: 30, spawn: 950, visible: 1800, targets: ["🦄", "🐸", "🍕", "🍦"], decoys: ["🧦", "🥦", "🪨", "🐛"] },
-  tweens: { duration: 30, spawn: 800, visible: 1500, targets: ["🐸", "🍕", "🎮", "⚡"], decoys: ["🧦", "🪨", "🥦", "🦆"] },
   teens: { duration: 30, spawn: 700, visible: 1300, targets: ["🗿", "💀", "🔥", "🫠"], decoys: ["🧢", "📎", "🧦", "🪴"] },
   adults: { duration: 30, spawn: 600, visible: 1100, targets: ["☕", "🚀", "💡", "🎯"], decoys: ["📠", "💾", "📞", "🧾"] },
+  elders: { duration: 30, spawn: 900, visible: 1700, targets: ["🍵", "🌻", "📚", "🎶"], decoys: ["🧦", "🪨", "📎", "🐛"] },
 };
 
-// Memory Match (kids)
 export const MEMORY_EMOJIS = {
   kids: ["🐶", "🐱", "🦊", "🐸", "🦁", "🐼"],
 };

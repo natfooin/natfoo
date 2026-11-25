@@ -1,7 +1,19 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback, lazy, Suspense } from "react";
 import "./FunTime.css";
-import { ageCategories, subCategories, gameInfo } from "./funTimeData";
-import { GameRouter, Stars } from "./FunTimeGames";
+import { ageCategories, subCategories } from "./funTimeData";
+import { Stars } from "./shared/gameShared";
+
+const KidsCategory = lazy(() => import("./kids/KidsCategory"));
+const TeensCategory = lazy(() => import("./teens/TeensCategory"));
+const AdultsCategory = lazy(() => import("./adults/AdultsCategory"));
+const EldersCategory = lazy(() => import("./elders/EldersCategory"));
+
+const AGE_COMPONENTS = {
+  kids: KidsCategory,
+  teens: TeensCategory,
+  adults: AdultsCategory,
+  elders: EldersCategory,
+};
 
 const STORAGE_KEY = "funtime-progress-v1";
 
@@ -39,24 +51,9 @@ function BackgroundFX() {
   );
 }
 
-function Topbar({ onBack, title, subtitle, right }) {
-  return (
-    <div className="topbar">
-      <button className="back-btn" onClick={onBack}>← Back</button>
-      <div className="topbar-title">
-        <h1 className="funtime-title">{title}</h1>
-        <p className="funtime-subtitle">{subtitle}</p>
-      </div>
-      <div className="topbar-right">{right}</div>
-    </div>
-  );
-}
-
 function FunTime() {
   const [selectedAge, setSelectedAge] = useState(null);
-  const [selectedSub, setSelectedSub] = useState(null);
   const [progress, setProgress] = useState(loadProgress);
-  const [shakeId, setShakeId] = useState(null);
 
   useEffect(() => {
     document.title = "Natfoo | Fun Time";
@@ -66,40 +63,37 @@ function FunTime() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
     } catch {
-      /* storage unavailable – progress just won't persist */
+      /* storage unavailable */
     }
   }, [progress]);
 
   const playable = useMemo(() => subCategories.filter((s) => s.ready), []);
-  const getAge = (id) => ageCategories.find((a) => a.id === id);
-  const getSub = (id) => subCategories.find((s) => s.id === id);
-  const entry = (age, sub) => progress[`${age}:${sub}`] || { stars: 0, best: 0 };
+  const entry = useCallback((age, sub) => progress[`${age}:${sub}`] || { stars: 0, best: 0 }, [progress]);
 
   const starsForAge = (age) => playable.reduce((sum, s) => sum + entry(age, s.id).stars, 0);
   const maxPerAge = playable.length * 3;
   const totalStars = ageCategories.reduce((sum, a) => sum + starsForAge(a.id), 0);
   const maxStars = maxPerAge * ageCategories.length;
 
-  const handleComplete = ({ stars, score }) => {
-    const key = `${selectedAge}:${selectedSub}`;
+  const handleComplete = useCallback((ageId, subId, { stars, score }) => {
+    const key = `${ageId}:${subId}`;
     setProgress((prev) => {
       const old = prev[key] || { stars: 0, best: 0 };
-      return { ...prev, [key]: { stars: Math.max(old.stars, stars), best: Math.max(old.best, score) } };
+      return {
+        ...prev,
+        [key]: { stars: Math.max(old.stars, stars), best: Math.max(old.best, score) },
+      };
     });
-  };
+  }, []);
 
-  const gameMeta = (age, sub) => (sub === "puzzle" ? gameInfo.puzzle[age] : gameInfo[sub]);
+  const handleExitAge = useCallback(() => setSelectedAge(null), []);
 
-  const lockedClick = (id) => {
-    setShakeId(id);
-    setTimeout(() => setShakeId(null), 550);
-  };
+  const ActiveAgeComponent = selectedAge ? AGE_COMPONENTS[selectedAge] : null;
 
-  /* ---------- HOME: pick age ---------- */
-  if (!selectedAge) {
-    return (
-      <div className="funtime-container">
-        <BackgroundFX />
+  return (
+    <div className="funtime-container">
+      <BackgroundFX />
+      {!ActiveAgeComponent ? (
         <div className="funtime-shell" key="home">
           <header className="hero">
             <span className="hero-badge">🎮 Play · Learn · Repeat</span>
@@ -126,90 +120,15 @@ function FunTime() {
             ))}
           </div>
         </div>
-      </div>
-    );
-  }
-
-  const age = getAge(selectedAge);
-
-  /* ---------- PICK GAME ---------- */
-  if (!selectedSub) {
-    return (
-      <div className="funtime-container">
-        <BackgroundFX />
-        <div className="funtime-shell" key={`age-${selectedAge}`}>
-          <Topbar
-            onBack={() => setSelectedAge(null)}
-            title={age.label}
-            subtitle={`${age.range} · choose a game`}
-            right={<span className="chip">⭐ {starsForAge(selectedAge)}/{maxPerAge}</span>}
-          />
-          <div className="card-grid">
-            {subCategories.map((s) => {
-              const e = entry(selectedAge, s.id);
-              if (!s.ready) {
-                return (
-                  <button
-                    key={s.id}
-                    className={`pick-card is-locked ${shakeId === s.id ? "shake" : ""}`}
-                    data-sub={s.id}
-                    aria-disabled="true"
-                    onClick={() => lockedClick(s.id)}
-                  >
-                    <span className="pick-icon">{s.icon}</span>
-                    <h3 className="pick-label">{s.label}</h3>
-                    <p className="pick-desc">{s.description}</p>
-                    <span className="pick-foot soon">🔒 Coming Soon</span>
-                  </button>
-                );
-              }
-              const meta = gameMeta(selectedAge, s.id);
-              return (
-                <button key={s.id} className="pick-card" data-sub={s.id} onClick={() => setSelectedSub(s.id)}>
-                  <span className="pick-icon">{s.icon}</span>
-                  <h3 className="pick-label">{s.label}</h3>
-                  <span className="pick-range">{meta.title}</span>
-                  <p className="pick-desc">{s.description}</p>
-                  <span className="pick-foot">
-                    <Stars value={e.stars} />
-                    <span className="dot-sep" />
-                    <span>{e.best ? `Best ${e.best}` : "Play →"}</span>
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  /* ---------- GAME ---------- */
-  const sub = getSub(selectedSub);
-  const meta = gameMeta(selectedAge, selectedSub);
-  const e = entry(selectedAge, selectedSub);
-
-  return (
-    <div className="funtime-container">
-      <BackgroundFX />
-      <div className="funtime-shell" key={`game-${selectedAge}-${selectedSub}`}>
-        <Topbar
-          onBack={() => setSelectedSub(null)}
-          title={meta.title}
-          subtitle={`${age.label} · ${sub.label}`}
-          right={<Stars value={e.stars} className="chip-stars" />}
-        />
-        <div className="game-card">
-          <p className="how-to">{sub.icon} {meta.how}</p>
-          <GameRouter
-            age={selectedAge}
-            sub={selectedSub}
-            best={e.best}
+      ) : (
+        <Suspense fallback={<div className="funtime-shell"><p className="muted">Loading...</p></div>}>
+          <ActiveAgeComponent
+            progress={progress}
             onComplete={handleComplete}
-            onExit={() => setSelectedSub(null)}
+            onBack={handleExitAge}
           />
-        </div>
-      </div>
+        </Suspense>
+      )}
     </div>
   );
 }
