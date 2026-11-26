@@ -55,6 +55,12 @@ export default function MemeRushEngine({ age, best, onComplete, onExit }) {
     setPhase("playing");
   };
 
+  // The shared game frame already shows the "Ready?" screen, so begin straight away.
+  useEffect(() => {
+    start();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const finish = useCallback(() => {
     clearMoleTimers();
     commit(createEmptyHoles());
@@ -154,18 +160,7 @@ export default function MemeRushEngine({ age, best, onComplete, onExit }) {
     );
   }
 
-  if (phase === "ready") {
-    return (
-      <div className="start-panel">
-        <div className="emoji-row">
-          {cfg.targets.map((t) => (<span key={t}>{t}</span>))}
-        </div>
-        <h3>{cfg.duration} seconds. Tap the target. Chain combos!</h3>
-        <p className="muted">The target changes every 10 seconds. Tapping a decoy costs 5 points.</p>
-        <button className="btn btn-primary btn-xl" onClick={start}>▶ Start</button>
-      </div>
-    );
-  }
+  if (phase === "ready") return <div className="rush" />;
 
   return (
     <div className="rush">

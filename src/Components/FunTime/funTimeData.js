@@ -78,3 +78,62 @@ export const rushConfig = {
 export const MEMORY_EMOJIS = {
   kids: ["🐶", "🐱", "🦊", "🐸", "🦁", "🐼"],
 };
+/* ---------- Presentation data (used by the arena-style UI) ---------- */
+export const ageArt = {
+  kids: { hero: ["🧒", "🦄", "🎈", "🍦"], accent: "#ffb020", a: "#ff8a3d", b: "#ff3d81" },
+  teens: { hero: ["🧑‍🎓", "🗿", "🔥", "💀"], accent: "#b77bff", a: "#7b5cff", b: "#c026d3" },
+  adults: { hero: ["👨‍💼", "🚀", "💡", "🎯"], accent: "#ff6fb1", a: "#ff4f9a", b: "#7c2bd9" },
+  elders: { hero: ["🧓", "🍵", "📚", "🎶"], accent: "#2fd4c4", a: "#19c2f0", b: "#2f6bff" },
+};
+
+export const gameArt = {
+  riddles: { emojis: ["🤔", "💡", "❓"], a: "#7b4dff", b: "#2f6bff", cover: "RIDDLE" },
+  brainrot: { emojis: ["🗿", "💀", "🔥"], a: "#ff3d81", b: "#ff9a3d", cover: "MEME" },
+  puzzle: { emojis: ["🧩", "🔢", "🎴"], a: "#19c2f0", b: "#2f6bff", cover: "PUZZLE" },
+  reading: { emojis: ["📖", "✏️", "🔒"], a: "#56627f", b: "#2a3350", cover: "READ" },
+};
+
+/** Short facts shown on each game card / info panel, per age group. */
+export const gameFacts = (sub, age) => {
+  switch (sub) {
+    case "riddles": {
+      const t = RIDDLE_TIMER[age];
+      return {
+        pill: `${riddles[age].length} riddles`,
+        level: t ? `${t}s per riddle` : "No timer",
+        mode: "Quiz",
+      };
+    }
+    case "brainrot":
+      return { pill: `${rushConfig[age].duration}s rush`, level: "Tap the target", mode: "Arcade" };
+    case "puzzle":
+      return {
+        kids: { pill: "6 pairs", level: "Memory", mode: "Cards" },
+        teens: { pill: "5×5 grid", level: "Logic", mode: "Grid" },
+        adults: { pill: "4×4 slide", level: "Hard", mode: "Sliding" },
+        elders: { pill: "3×3 slide", level: "Relaxed", mode: "Sliding" },
+      }[age];
+    default:
+      return { pill: "Soon", level: "Coming soon", mode: "Reading" };
+  }
+};
+
+/** Step-by-step "how to play" lists shown beside every game. */
+export const gameRules = {
+  riddles: [
+    "Read the riddle and pick one of four answers.",
+    "Build a streak for bonus points.",
+    "Use a hint if you are stuck (costs 50 points).",
+  ],
+  brainrot: [
+    "Watch the target emoji at the top.",
+    "Tap it as fast as it pops up. Combos add bonus points.",
+    "Decoys cost 5 points. The target changes every 10 seconds.",
+  ],
+  puzzle: {
+    kids: ["Flip two cards at a time.", "Match every pair with the fewest moves.", "Faster and fewer moves means more stars."],
+    teens: ["Tap a light to flip it and its neighbours.", "Switch every light off.", "Fewer moves means more stars."],
+    adults: ["Slide tiles into the empty space.", "Put the numbers in order, 1 to 15.", "Arrow keys work too."],
+    elders: ["Slide tiles into the empty space.", "Put the numbers in order, 1 to 8.", "Arrow keys work too."],
+  },
+};

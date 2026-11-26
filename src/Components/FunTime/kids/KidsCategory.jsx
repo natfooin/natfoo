@@ -13,14 +13,6 @@ const KIDS_GAMES = {
   reading: KidsReading,
 };
 
-export default function KidsCategory({ progress, onComplete, onBack }) {
-  return (
-    <CategoryShell
-      ageId="kids"
-      games={KIDS_GAMES}
-      progress={progress}
-      onComplete={onComplete}
-      onBack={onBack}
-    />
-  );
+export default function KidsCategory(props) {
+  return <CategoryShell ageId="kids" games={KIDS_GAMES} {...props} />;
 }

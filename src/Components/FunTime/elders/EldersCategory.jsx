@@ -13,14 +13,6 @@ const ELDERS_GAMES = {
   reading: EldersReading,
 };
 
-export default function EldersCategory({ progress, onComplete, onBack }) {
-  return (
-    <CategoryShell
-      ageId="elders"
-      games={ELDERS_GAMES}
-      progress={progress}
-      onComplete={onComplete}
-      onBack={onBack}
-    />
-  );
+export default function EldersCategory(props) {
+  return <CategoryShell ageId="elders" games={ELDERS_GAMES} {...props} />;
 }

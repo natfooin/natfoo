@@ -102,7 +102,7 @@ export default function SlideEngine({ size, best, onComplete, onExit }) {
 
   return (
     <div className="slide">
-      <Hud items={[["Moves", moves], ["Time", fmt(secs)]]} />
+      <Hud items={[["Moves", moves], ["In place", `${board.filter((v, i) => v !== 0 && v === solved[i]).length}/${total - 1}`], ["Time", fmt(secs)]]} />
       <div className="slide-board">
         <div className="slide-inner">
           {board.map((v, i) =>
@@ -122,9 +122,6 @@ export default function SlideEngine({ size, best, onComplete, onExit }) {
             )
           )}
         </div>
-      </div>
-      <div className="actions center">
-        <button className="btn btn-ghost" onClick={replay}>🔀 Reshuffle</button>
       </div>
     </div>
   );

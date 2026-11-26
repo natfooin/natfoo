@@ -85,9 +85,6 @@ export default function TeensPuzzle({ best, onComplete, onExit }) {
           />
         ))}
       </div>
-      <div className="actions center">
-        <button className="btn btn-ghost" onClick={replay}>🔀 New Board</button>
-      </div>
     </div>
   );
 }
